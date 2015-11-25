@@ -1,0 +1,5 @@
+Why did I chose this one file, instead of "Mio_Puntos_Parada.shp"
+- More number of stops than the other
+- Integer values for "ORDEN_RUTA" attribute
+- coordinates in WGS84
+- Same number of relevant attributes

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicleDefinitions xmlns="http://www.matsim.org/files/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.matsim.org/files/dtd http://www.matsim.org/files/dtd/vehicleDefinitions_v1.0.xsd">
+	<vehicleType id="art">
+		<description>
+				Autobús articulado de dos vagones
+		</description>
+		<capacity>
+			<seats persons="48"/>
+			<standingRoom persons="112"/>
+		</capacity>
+		<length meter="18.0"/>
+		<width meter="2.6"/>
+		<accessTime secondsPerPerson="1.0"/>
+		<egressTime secondsPerPerson="1.0"/>
+		<doorOperation mode="parallel"/>
+		<passengerCarEquivalents pce="1.0"/>
+	</vehicleType>
+	<vehicle id="T31_1" type="art"/>
+	<vehicle id="T31_2" type="art"/>
+	<vehicle id="T31_3" type="art"/>
+	<vehicle id="T31_4" type="art"/>
+	<vehicle id="T31_5" type="art"/>
+	<vehicle id="T31_6" type="art"/>
+	<vehicle id="T31_7" type="art"/>
+	<vehicle id="T31_8" type="art"/>
+	<vehicle id="T31_9" type="art"/>
+	<vehicle id="T31_10" type="art"/>
+	<vehicle id="T31_11" type="art"/>
+	<vehicle id="T31_12" type="art"/>
+	<vehicle id="T31_13" type="art"/>
+	<vehicle id="T31_14" type="art"/>
+	<vehicle id="T31_15" type="art"/>
+	<vehicle id="T31_16" type="art"/>
+	<vehicle id="T31_17" type="art"/>
+	<vehicle id="T31_18" type="art"/>
+	<vehicle id="T31_19" type="art"/>
+	<vehicle id="T31_20" type="art"/>
+	<vehicle id="T31_21" type="art"/>
+	<vehicle id="T31_22" type="art"/>
+	<vehicle id="T31_23" type="art"/>
+	<vehicle id="T31_24" type="art"/>
+	<vehicle id="T31_25" type="art"/>
+	<vehicle id="E31_1" type="art"/>
+	<vehicle id="E31_2" type="art"/>
+	<vehicle id="E31_3" type="art"/>
+	<vehicle id="E31_4" type="art"/>
+	<vehicle id="E31_5" type="art"/>
+	<vehicle id="E31_6" type="art"/>
+	<vehicle id="E31_7" type="art"/>
+	<vehicle id="E31_8" type="art"/>
+	<vehicle id="E31_9" type="art"/>
+	<vehicle id="E31_10" type="art"/>
+	<vehicle id="E31_11" type="art"/>
+	<vehicle id="E31_12" type="art"/>
+	<vehicle id="E31_13" type="art"/>
+	<vehicle id="E31_14" type="art"/>
+	<vehicle id="E31_15" type="art"/>
+	<vehicle id="E31_16" type="art"/>
+	<vehicle id="E31_17" type="art"/>
+	<vehicle id="E31_18" type="art"/>
+	<vehicle id="E31_19" type="art"/>
+	<vehicle id="E31_20" type="art"/>
+	<vehicle id="E31_21" type="art"/>
+	<vehicle id="E21_1" type="art"/>
+	<vehicle id="E21_2" type="art"/>
+	<vehicle id="E21_3" type="art"/>
+	<vehicle id="E21_4" type="art"/>
+	<vehicle id="E21_5" type="art"/>
+	<vehicle id="E21_6" type="art"/>
+	<vehicle id="E21_7" type="art"/>
+	<vehicle id="E21_8" type="art"/>
+	<vehicle id="E21_9" type="art"/>
+	<vehicle id="E21_10" type="art"/>
+	<vehicle id="E21_11" type="art"/>
+	<vehicle id="E21_12" type="art"/>
+	<vehicle id="E21_13" type="art"/>
+	<vehicle id="E21_14" type="art"/>
+	<vehicle id="E21_15" type="art"/>
+	<vehicle id="E21_16" type="art"/>
+	<vehicle id="E21_17" type="art"/>
+	<vehicle id="E21_18" type="art"/>
+	<vehicle id="E21_19" type="art"/>
+	<vehicle id="E21_20" type="art"/>
+	<vehicle id="E21_21" type="art"/>
+	<vehicle id="E21_22" type="art"/>
+	<vehicle id="E21_23" type="art"/>
+	<vehicle id="E21_24" type="art"/>
+	<vehicle id="E21_25" type="art"/>
+	<vehicle id="E21_26" type="art"/>
+	<vehicle id="E21_27" type="art"/>
+	<vehicle id="E21_28" type="art"/>
+	<vehicle id="E21_29" type="art"/>
+	<vehicle id="E21_30" type="art"/>
+	<vehicle id="E21_31" type="art"/>
+</vehicleDefinitions>

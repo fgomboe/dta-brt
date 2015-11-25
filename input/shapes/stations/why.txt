@@ -1,0 +1,4 @@
+Why do I chose this one file, instead of "Estaciones_Mio.shp"
+- because it has no NULL names (as the other one)
+- coordinates in WGS84
+- includes "Terminal cañaveralejo"
