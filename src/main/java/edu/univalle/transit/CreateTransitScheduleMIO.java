@@ -25,7 +25,7 @@ import org.matsim.pt.transitSchedule.api.TransitStopFacility;
 import org.matsim.utils.objectattributes.ObjectAttributes;
 import org.matsim.utils.objectattributes.ObjectAttributesXmlReader;
 
-import edu.univalle.brt.utils.CsvReader;
+import edu.univalle.utils.CsvReader;
 
 public class CreateTransitScheduleMIO
 {

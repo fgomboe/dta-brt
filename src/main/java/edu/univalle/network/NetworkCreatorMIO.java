@@ -25,8 +25,8 @@ import org.matsim.utils.objectattributes.ObjectAttributes;
 import org.matsim.utils.objectattributes.ObjectAttributesXmlWriter;
 import org.opengis.feature.simple.SimpleFeature;
 
-import edu.univalle.brt.utils.CsvReader;
-import edu.univalle.brt.utils.Utils;
+import edu.univalle.utils.CsvReader;
+import edu.univalle.utils.Utils;
 
 public class NetworkCreatorMIO
 {

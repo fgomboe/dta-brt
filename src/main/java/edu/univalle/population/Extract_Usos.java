@@ -2,8 +2,8 @@ package edu.univalle.population;
 
 import java.io.*;
 
-import edu.univalle.brt.utils.CsvReader;
-import edu.univalle.brt.utils.CsvWriter;
+import edu.univalle.utils.CsvReader;
+import edu.univalle.utils.CsvWriter;
 
 /**
  * This class extract useful data from file Usos_Detallados 01-04-2014.csv"

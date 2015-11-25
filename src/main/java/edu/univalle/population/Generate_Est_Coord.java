@@ -14,7 +14,7 @@ import org.matsim.core.utils.geometry.transformations.TransformationFactory;
 import org.matsim.core.utils.gis.ShapeFileReader;
 import org.opengis.feature.simple.SimpleFeature;
 
-import edu.univalle.brt.utils.CsvWriter;
+import edu.univalle.utils.CsvWriter;
 
 public class Generate_Est_Coord {
 	private final static Logger log = Logger.getLogger(Generate_Est_Coord.class);

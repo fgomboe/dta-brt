@@ -5,8 +5,8 @@ package edu.univalle.population;
 import java.util.*;
 import java.io.*;
 
-import edu.univalle.brt.utils.CsvReader;
-import edu.univalle.brt.utils.CsvWriter;
+import edu.univalle.utils.CsvReader;
+import edu.univalle.utils.CsvWriter;
 
 public class Count_trips {
 

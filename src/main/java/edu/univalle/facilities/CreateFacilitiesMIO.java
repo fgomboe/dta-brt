@@ -9,7 +9,6 @@ import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
-import org.matsim.core.scenario.ScenarioImpl;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.core.utils.geometry.CoordUtils;
 import org.matsim.core.utils.geometry.CoordinateTransformation;
@@ -53,7 +52,7 @@ public class CreateFacilitiesMIO {
 	}
 	
 	public void write() {
-		new FacilitiesWriter(((ScenarioImpl) this.scenario).getActivityFacilities()).write("./output/facilities.xml.gz");
+		new FacilitiesWriter(this.scenario.getActivityFacilities()).write("./output/facilities.xml.gz");
 	}
 		
 	private void readShapeFile() {
@@ -64,8 +63,8 @@ public class CreateFacilitiesMIO {
 		
 		Iterator<SimpleFeature> it = features.iterator();
 		SimpleFeature ft = null;
-		// Convert from GPS coordinate system to "Bogota 1975 / Colombia West Zone"
-		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation(TransformationFactory.WGS84, "EPSG:21896");
+		// Convert from GPS coordinate system to "MAGNA-SIRGAS"
+		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation(TransformationFactory.WGS84, "EPSG:3115");
 		log.info("Name of stations:");
 		while (it.hasNext()) {
 			ft = it.next();

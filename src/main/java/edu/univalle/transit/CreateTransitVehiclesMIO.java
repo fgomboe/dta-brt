@@ -3,8 +3,6 @@ package edu.univalle.transit;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import edu.univalle.brt.utils.CsvReader;
-
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.ConfigUtils;
@@ -12,6 +10,8 @@ import org.matsim.core.network.NetworkReaderMatsimV1;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.vehicles.*;
 import org.matsim.vehicles.VehicleType.DoorOperationMode;
+
+import edu.univalle.utils.CsvReader;
 
 
 public class CreateTransitVehiclesMIO {

@@ -23,7 +23,7 @@ import org.opengis.referencing.crs.CoordinateReferenceSystem;
 
 import com.vividsolutions.jts.geom.Coordinate;
 
-import edu.univalle.brt.utils.Utils;
+import edu.univalle.utils.Utils;
 
 
 public class CreateNetworkSHP {
