@@ -13,7 +13,7 @@ import org.matsim.core.router.TripRouterModule;
 import org.matsim.core.router.costcalculators.TravelDisutilityModule;
 import org.matsim.core.router.util.TravelTime;
 import org.matsim.core.scoring.functions.CharyparNagelScoringFunctionModule;
-import edu.univalle.brt.network.FelisTravelTime;
+import edu.univalle.network.FelisTravelTime;
 
 @SuppressWarnings("unused")
 public class Controller {

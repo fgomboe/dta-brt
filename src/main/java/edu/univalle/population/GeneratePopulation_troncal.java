@@ -19,7 +19,7 @@ import org.matsim.core.population.PopulationWriter;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.core.utils.geometry.CoordUtils;
 
-import edu.univalle.brt.utils.CsvReader;;
+import edu.univalle.utils.CsvReader;;
 
 public class GeneratePopulation_troncal {
 
