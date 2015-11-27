@@ -249,19 +249,6 @@
 		<attribute name="TIPO_ESTAC" class="java.lang.String">SENCILLA</attribute>
 		<attribute name="VAGONES" class="java.lang.Integer">1</attribute>
 	</object>
-	<object id="20">
-		<attribute name="CORREDOR_T" class="java.lang.String">Carrera 15</attribute>
-		<attribute name="DIRECCION" class="java.lang.String">Carrera 15 - Calle 52</attribute>
-		<attribute name="ESTACION" class="java.lang.String">Villacolombia</attribute>
-		<attribute name="GPS_X" class="java.lang.Double">-76.4988303417</attribute>
-		<attribute name="GPS_Y" class="java.lang.Double">3.4438727192</attribute>
-		<attribute name="ID_ESTACIO" class="java.lang.String">76001E003</attribute>
-		<attribute name="IN_LINES" class="java.lang.String">[T40-Ida, T40-Vuelta, T42-Ida, T42-Vuelta, P27C-Ida, P27C-Vuelta, T47A-Ida, T47A-Vuelta, T47B-Ida, T47B-Vuelta]</attribute>
-		<attribute name="LINES" class="java.lang.String">[T40, T42, P27C, T47A, T47B]</attribute>
-		<attribute name="OUT_LINES" class="java.lang.String">[T40-Ida, T40-Vuelta, T42-Ida, T42-Vuelta, P27C-Ida, P27C-Vuelta, T47A-Ida, T47A-Vuelta, T47B-Ida, T47B-Vuelta]</attribute>
-		<attribute name="TIPO_ESTAC" class="java.lang.String">SENCILLA</attribute>
-		<attribute name="VAGONES" class="java.lang.Integer">1</attribute>
-	</object>
 	<object id="21">
 		<attribute name="CORREDOR_T" class="java.lang.String">Carrera 15</attribute>
 		<attribute name="DIRECCION" class="java.lang.String">Carrera 15 - Calle 58</attribute>
@@ -649,19 +636,6 @@
 		<attribute name="IN_LINES" class="java.lang.String">[E52-Ida, E52-Vuelta, T50-Ida, T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Ida, T57A-Vuelta]</attribute>
 		<attribute name="LINES" class="java.lang.String">[E52, T50, P74A, P74B, T57A]</attribute>
 		<attribute name="OUT_LINES" class="java.lang.String">[E52-Ida, E52-Vuelta, T50-Ida, T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Ida, T57A-Vuelta]</attribute>
-		<attribute name="TIPO_ESTAC" class="java.lang.String">SENCILLA</attribute>
-		<attribute name="VAGONES" class="java.lang.Integer">0</attribute>
-	</object>
-	<object id="51">
-		<attribute name="CORREDOR_T" class="java.lang.String">Aguablanca</attribute>
-		<attribute name="DIRECCION" class="java.lang.String">Transversal 25 - Calle 32</attribute>
-		<attribute name="ESTACION" class="java.lang.String">Villanueva</attribute>
-		<attribute name="GPS_X" class="java.lang.Double">-76.5101412527</attribute>
-		<attribute name="GPS_Y" class="java.lang.Double">3.4321731295</attribute>
-		<attribute name="ID_ESTACIO" class="java.lang.String">76001E051</attribute>
-		<attribute name="IN_LINES" class="java.lang.String">[T50-Ida, T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Ida, T57A-Vuelta]</attribute>
-		<attribute name="LINES" class="java.lang.String">[T50, P74A, P74B, T57A]</attribute>
-		<attribute name="OUT_LINES" class="java.lang.String">[T50-Ida, T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Ida, T57A-Vuelta]</attribute>
 		<attribute name="TIPO_ESTAC" class="java.lang.String">SENCILLA</attribute>
 		<attribute name="VAGONES" class="java.lang.Integer">0</attribute>
 	</object>
@@ -1685,24 +1659,20 @@
 		<attribute name="SHORTNAME" class="java.lang.String">TREB2</attribute>
 	</object>
 	<object id="VICOL1">
-		<attribute name="ASSOCIATE_ID" class="java.lang.Integer">20</attribute>
-		<attribute name="ASSOCIATE_NAME" class="java.lang.String">Villacolombia</attribute>
 		<attribute name="IN_LINES" class="java.lang.String">[T40-Ida, T42-Ida, P27C-Ida, T47A-Ida, T47B-Ida]</attribute>
 		<attribute name="LATITUDE" class="java.lang.Double">3.44396167</attribute>
 		<attribute name="LINES" class="java.lang.String">[T40, T42, P27C, T47A, T47B]</attribute>
 		<attribute name="LONGITUDE" class="java.lang.Double">-76.49896667</attribute>
-		<attribute name="LONGNAME" class="java.lang.String">Villacolombia A1</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Villa Colombia A1</attribute>
 		<attribute name="OUT_LINES" class="java.lang.String">[T40-Ida, T42-Ida, P27C-Ida, T47A-Ida, T47B-Ida]</attribute>
 		<attribute name="SHORTNAME" class="java.lang.String">VICOL1</attribute>
 	</object>
 	<object id="VICOL2">
-		<attribute name="ASSOCIATE_ID" class="java.lang.Integer">20</attribute>
-		<attribute name="ASSOCIATE_NAME" class="java.lang.String">Villacolombia</attribute>
 		<attribute name="IN_LINES" class="java.lang.String">[T40-Vuelta, T42-Vuelta, P27C-Vuelta, T47A-Vuelta, T47B-Vuelta]</attribute>
 		<attribute name="LATITUDE" class="java.lang.Double">3.44376</attribute>
 		<attribute name="LINES" class="java.lang.String">[T40, T42, P27C, T47A, T47B]</attribute>
 		<attribute name="LONGITUDE" class="java.lang.Double">-76.49870667</attribute>
-		<attribute name="LONGNAME" class="java.lang.String">Villacolombia B1</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Villa Colombia B1</attribute>
 		<attribute name="OUT_LINES" class="java.lang.String">[T40-Vuelta, T42-Vuelta, P27C-Vuelta, T47A-Vuelta, T47B-Vuelta]</attribute>
 		<attribute name="SHORTNAME" class="java.lang.String">VICOL2</attribute>
 	</object>
@@ -2696,24 +2666,20 @@
 		<attribute name="SHORTNAME" class="java.lang.String">CONQUIS1</attribute>
 	</object>
 	<object id="VLNUEVA2">
-		<attribute name="ASSOCIATE_ID" class="java.lang.Integer">51</attribute>
-		<attribute name="ASSOCIATE_NAME" class="java.lang.String">Villanueva</attribute>
 		<attribute name="IN_LINES" class="java.lang.String">[T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Vuelta]</attribute>
 		<attribute name="LATITUDE" class="java.lang.Double">3.432075</attribute>
 		<attribute name="LINES" class="java.lang.String">[T50, P74A, P74B, T57A]</attribute>
 		<attribute name="LONGITUDE" class="java.lang.Double">-76.51014417</attribute>
-		<attribute name="LONGNAME" class="java.lang.String">Villanueva B1</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Villa Nueva B1</attribute>
 		<attribute name="OUT_LINES" class="java.lang.String">[T50-Vuelta, P74A-Ida, P74B-Vuelta, T57A-Vuelta]</attribute>
 		<attribute name="SHORTNAME" class="java.lang.String">VLNUEVA2</attribute>
 	</object>
 	<object id="VLNUEVA1">
-		<attribute name="ASSOCIATE_ID" class="java.lang.Integer">51</attribute>
-		<attribute name="ASSOCIATE_NAME" class="java.lang.String">Villanueva</attribute>
 		<attribute name="IN_LINES" class="java.lang.String">[T50-Ida, T57A-Ida]</attribute>
 		<attribute name="LATITUDE" class="java.lang.Double">3.43216278</attribute>
 		<attribute name="LINES" class="java.lang.String">[T50, T57A]</attribute>
 		<attribute name="LONGITUDE" class="java.lang.Double">-76.510235</attribute>
-		<attribute name="LONGNAME" class="java.lang.String">Villanueva A1</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Villa Nueva A1</attribute>
 		<attribute name="OUT_LINES" class="java.lang.String">[T50-Ida, T57A-Ida]</attribute>
 		<attribute name="SHORTNAME" class="java.lang.String">VLNUEVA1</attribute>
 	</object>
@@ -17338,70 +17304,1442 @@
 	</object>
 	<object id="C10K32">
 		<attribute name="IN_LINES" class="java.lang.String">[P27C-Ida, P74B-Vuelta]</attribute>
-		<attribute name="LATITUDE" class="java.lang.Double">3.42825333</attribute>E P sÿi  )  t<e√¬T ˇˇ     ˇˇ      ^È…Ùj∑Èágæ⁄B;ç≥ªZ  †   
-“
-˜	ä»h †m ï_                                                                                            9Ç\  Ö"0GVhx4bjB®@     ˇˇ   9Çb  Ö.0GZJoGCDB¿@     ˇˇ  Ä ˇˇh	FYInFBCA  p dFIWnCzK  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VN4r9FeMDJGMptcyOIQQceVmZKkqPwWjcfpW1xsejmctEno8Ug-cwXm-47PREO0yDAyw4oKA6BA7PBRZHJ57p5Q à	ñ  7p E∞∞:b8wN1viuxwEyazzC1IcfajE-z8Cq6HuMdu4k-oLdqx8 ÿs 	ò  ÿ X fŸ #à923:0*1dl6Wio1j_E/882:1*IDMbJwZK0XEI@ tY<CñœT ˇˇ     ˇˇ  ±Ç_  Ö(0GZhYxS{M®@     ˇˇ  Ä ˇˇh	FYgXwRzL  p cNZEQDbI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@áuEN7JJZwXQz5aOfeBpUHZVsGiM9Xs0v5DN6Mk7DFgMKrBSUm9b9EIhnh1ht-k9IMXTkCXxWY9bXXjRBtdoyUxbuI68lHOO_L0RmUJqtm9qlVly_IIMP7HzNrle62DtO4  Ä ˇˇ	æ  7òÿ∞:bCweA-TOKCGCRkBIaixtgJafQaA3bcgkkqZDvexbWQY 1  sËG %  X t<∆îœT ˇˇ     ˇˇ  
-·Åg  É80GZRz3ZBR∞@     ˇˇ  Ä ˇˇh	FYQy2YAQ  p 8BgDRQSI  u    	@(EXGC-MKBmfk  ( t Ä a +@®rELurxPp0VZR3fcSIoU255zTG7YSSwY4-Z1xtra33kY:`	n  "HàX:6RaiLS08gpVfpr_PHh4UZA? 0ts	<á¬¬T ˇˇ     ˇˇ© Çb  Ö.  ÛÇZ  Ö0GZCWkSkU®@     ˇˇ  Ä ˇˇh	FYBVjRjT  p QVwD1aKA  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅmpIGjufGlK71m89sikCgs7EfyzryBK5JD9Uh6sUaEgwF5vBuWpzdzfBd_kSMTK7kuSf7o0rtHJjNvuZQ1lxiNiktyuACWAUo__oKCcTjpoqE3sfeaCJ5X1pBYb4LU8Jo )	æ  7òÿ∞:E4wJH06s_EfvVTQMew_jinsiwfN869azi34h_2Tft0o 1  sË\ %  X t<ﬂîœT ˇˇ     ˇˇ  	ÇG  Ñx0GZ6SCLTSò@     ˇˇ  Ä ˇˇh	FY5RBKSR  p pcR02Kp  u   @(EXGC-MKBmfk  H t	 Ä a	 k@o8b4Q3kUzRYr62zadnKHxbaii0waM6V_XNBOJubb0K7wGS7RbpzYixrVq2adWuKMwmn0-QClqn9FIZC-PzVN8E-Cwno6P4sMLI62Y-yqyBwg     †	Æ  7à»∞:M3OmZxcNn9zYwqELPbV7TR_LZpveR2By2oy4vzqaw_M P sÿb  X t<ﬁ| V ˇˇ     ˇˇ  	~É  Ü0GWxCkUjbË@     ˇˇ  Ä ˇˇh	FVwBjTia  p oZoz3ZgL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å4r8J2tZtPcfnb7P96afZKYOTgHdIe_1jTv4ljFWXDWLT9jA2DNOgPrJYZ6_vGsWzk1RlURDQv0sBtf-T-atRYxVlijDpL4IagiHTd99Tbmh9QyVbcg5FyUAhUs40zXID )	æ  7 	EXÿ∞:8l2k9MhAnytdzgN10dCjjQ61XmOfoYIUdPfMWNdfgtA 1 s 	˝ %  X f- #D881:0*xd6XaI2GKcA/01*sfHNLgWb2RAI@ tY<0é˛T ˇˇ     ˇˇ   ·Ç1  ÑL0GWqCFChMÄ@     ˇˇ  Ä ˇˇh	FVpBEBgL  p sA4kEIDD  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VDT-k1x9uUtetg4uDyrZr4z1wrTczTy8Tste1kZXC5d-DNB8F3s_oAoc6p0RIvZbQRThJaR9eNdgZMVAxBH37Qw à	ñ  7 	  	6Çg  Ö80GWi4xJiM¿@     ˇˇ  Ä ˇˇh	FVh3wIhL  p 1QghWbYC  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VnJsG8PJRisX11RwB4_fnuA9Enh2_SNb5Tplg1bOW7-kHBc4G-HAVsMIkZw2fUdHGDjvLHiYMQejtblXejQdW3A à	ñ  7p∞∏:W5Bo1O2znSDf_g7I6qmoYbEHfskFbQkYh4IOeY_j3b0  )0 s¿õ  ÿ 	fa	 #†923:0*G4qysJsMXBQ/882:1*G1uXVOQ2wMY     0 tY<ñœT ˇˇ     ˇˇ  ÿÇb  Ö.0GWZ41R6c¿@     ˇˇ  Ä ˇˇh	 FVY30Q5b p 9YwygI5Q  u   0(EXGC-MKBmfk  ( t	 Ä a	 V@VozLgxWH6GCIv_H1MlWjCuMacIlF4eS-6DR1pMoS5bJde4MLK1q4c-XL9rB6F4rGJNCm8ncD4dhToL0-NzTtMYQ à	ñ  7p E∞∞:AwtLG4ivpeUCR95EsrPZZAiy8xQ6R9ygsSskSy1E98Q ÿ s¿ ÿ X fŸ #à882:0*43mh0DrNwMU/881:1*VDWgJ5AAR24J@ tY<Pë˛T ˇˇ     ˇˇ  ÍÇ0  ÑJ0G[KmGLk[Ä@     ˇˇ  Ä ˇˇh	FZJlFKjZ  p oYgnhI7D  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VZFXpfiZhykowdhFgIp08KjV1Qb5NKgVMihDPnAZpvKoRjpzGkjREN4OX9khhL0B7rNaFVoQL-oP-VAjQvlkeQg à	ñ  7p∞∞:YZ33HtDqHLqdXJXRd3yLPOs3DIxOqzRu48Sm_Eeg7rQ ÿs 	Ì ÿ X t<√¬T ˇˇ     ˇˇ  dÇ/  ÑH0G[6CVLSbÄ@     ˇˇ  Ä ˇˇh	FZ5BUKRa  p oFgjnKrA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VaIVk7RmHhMRveqvxwWYp1CmMqmGdLREytT14fqwYm9ARdUcB-FXnwQGvHw32bqkQN1cDaCjaM1XKdwcNRwCfVA à	ñ  7p∞∞:aiOIPxFIL4-CeCN_zMD7N6uNb3fx3UK32Nas5_VAlw8 ÿ s¿  ÿ X t<Ù»¬T ˇˇ     ˇˇ  _Ç0  ÑJ0GZqmISJCÄ@     ˇˇ  Ä ˇˇh	FYplHRIB  p RJ4SGIZA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VP-pAsQsFHIqBsUUEoFaaszVxX9tUDtykRysXiWgjZjqcxIFYb7VNwNn4wH0RCXWImFKMIo4R-wqAYxMNjwJESg à	ñ  7p∞∞:Dkf2MiriBmajU0gCS_NEMbHw1ZI7eqCXmz6fDJHFTo8 ÿs 	; ÿ X t<7œ˙U ˇˇ     ˇˇ      ^È…Ùj∑Èá˘üÚntV;
-   ≥ Ãp˘
-∞¸≥	W                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ÇG  Ñx0FB[VmS6Cò@     ˇˇ  Ä ˇˇh	EAZUlR5B  p YQJGCTDY  u   @$XGC-MKBmfk  ( t	 Ä a	 k@o2mlnAK8qtOZB_pGDwi_5B4NMEVB3FKt6p4cdoX9494PDQ5EZbSx9Uc33xJpD-fKDLX1rf4cmzPUcBA5JnVPCYUv0k2KGOcX8raOwR1YWnNg     †	Æ  7à»∞:bNDouKSDw_NnYowGb6VAE2aCWHropLVcKCOXISArIL8 P sÿ4  X t<˝¿¬T ˇˇ     ˇˇÇY  Ö0FB[BT[EK®@     ˇˇ  Ä ˇˇh	EAZASZDJ  p AIQ2iRBS  u   @$XGC-MKBmfk  ( t	 Ä a	 Ä@ÅM5YYTnXQscYc9d-eXjCTzL6o9qVFLMnsT-iugxr7J0sPolWxySzInvkAWxkhHyBo5myKjKvacPXv9bCtbUMfFqt86GeAtn3KcZF_Ufv9AZYmAQSCc88MQWmlB9MtwGWr )	æ  7òÿ∞:MTpM1CsNMZlh18TnLPC5N7LlmOenIEelPu8CrcP_KiE 1  sË %  X t<·»¬T ˇˇ     ˇˇÇW  Ö0FB[kjTUK®@     ˇˇ  Ä ˇˇh	EAZjiSTJ  p QVoWRAxK  u   @$XGC-MKBmfk  ( t	 Ä a	 Ä@~Izauo89W7VjwVZ5Swj_NeD8ed8w_9gfpNOoUqwBugSp6XPmyPmygpNBsogTdmWpJ8S8Lo4YxL6TxF1aPjoqhKnFyR209d9GvGpnSjAC3BlewmSE1ahYd9HRmmr9MaOZÿ	æ  7òÿ∞:LQlGDGeR3EzdWR69VRv0D3bmPT2U7S_6VPQlDDh3RcQ 1 s 	∆ %  X t<BïœT ˇˇ     ˇˇÇG  Ñx0FB[2URMcò@     ˇˇ  Ä ˇˇh	EAZ1TQLb  p JYJT2QyY  u   @$XGC-MKBmfk  ( t	 Ä a	 k@o-h9V3RUPTyV9RGhGth4UrOkJLykApcvuLi9v3fxBCp8HXsJxDKz0EwMDE9yFf9e2ISWkfvQgFALZE5NNTL3ETK1VFsC4nyligFwBcKBSjIM     † kà 7à»∞:QySFEnYOGuVkLYPh6AHcWX2aPpiI5L2YgS2Ayfbz-Ho P sPg  X t<‡…¬T ˇˇ     ˇˇÇu  ÖT0FBZllKzEÿ@     ˇˇ  Ä ˇˇh	EAYkkJyD  p 1NJUEa4A  u   @$XGC-MKBmfk  ( t	 Ä a	 k@oV7lsKUvko5eVZSJN9cL5cCxZqoSIGNa5QF9Sl0Az32RPJWSODC2Qu_AYvGBkqAfQkIM8THwOEU-CkWNoEMnBcraFCyBCYXNSekrB8T25g6s     †	Æ  7à»∞:FVL17TXXSq-TnvAkCxlEFG9isGJwuJqpGq4PBwbdBKA P	^  ‰˝  X fÒ #D883:0*A6wRn9_6fk0/,1*bf79PELU6L	ö@ tY<Z°^U ˇˇ     ˇˇÇZ  Ö0FBSokBcZ®@     ˇˇ  Ä ˇˇh	EARnjAbY  p dZBDEQwK  u   @$XGC-MKBmfk  ( t	 Ä a	 Ä@Å_8ks4ZJ2SSrVE42BCIQyWY1ugUUF98hXg2EnVmAuJjzCc83R_Xna6vuVPmYJ7-jDjUd7D9nYg6y3tgCFOo9THFqc8qKUeknilmNF8W0gqcTlbIJLaIiaMA-FDTB1uRYn )	æ  7òÿ∞:wAT34DyWTRdM1XVxctf_-z6fgxfknfSoWutrtMfYSiQ 1 s 	 %  X t<AîœT ˇˇ     ˇˇÇ2  ÑN0FBShURkLÄ@     ˇˇ  Ä ˇˇh	EARgTQjK  p xIoSGIzB  u   @$XGC-MKBmfk  ( t	 Ä a	 V@XjbhxvouSU-MdimY4IUtgBqExksvV0RpMX0Tw1YhxetzCguO565l_wTVXaMzrRbQEvKUIjRlpP6xWu1xczPaCTg  `k 	 7∞∞:yZ7TOt1f4jzfy-C_PrIA-1B2W-JPB9p5Nt2fxfgkH3A ÿ s	O a ÿ X t<â∆^U ˇˇ     ˇˇ  
-Û    ^È…Ùj∑ÈásX á
-   Ö †e3	∑ÂÖ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Ç^  Ö&0pOxEBZRb®@     ˇˇ  Ä ˇˇh	oNwDAYQa  p AZgFgRZL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áITXJ0PzAtB7YQuK5MKk0aUpIML5iDLLWDsNgZ-LOh1V5XRJ8QbftUclWX1Ab8rpuJkNzwjBXr63z9tG80vEsyA6AuYoKACLEoF1yxC4rfvEevd0t_maAl734McoE2fpR  Ä ˇˇ	æ  7òÿ∞:TwftnlDCSRcpxgGlzmPsnXbfrQJz9mVmG1n39O2Tc74 1  sËB %  X t<ÒîœT ˇˇ     ˇˇÅP  É
-0pOx4H[hZò@     ˇˇ  Ä ˇˇh	oNw3GZgY  p dMJDCDwD  u   @(EXGC-MKBmfk  ( t Ä a @T6LOdfLY9v6M8OJt3AeCzog8∞	V  "0pX:4qClS6mrR-D61DEdCOjOjA	a 0ts	<Ü¬¬T ˇˇ     ˇˇÇI  Ñ|0pOx2GLx[ò@     ˇˇ  Ä ˇˇh	oNw1FKwZ  p 4c4wAIgY  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o5lUxFH3RRPDyMT4I03KJVUxsWJVSq4AUAJYuMhj43GEGAFxja2Q_-RFlMtC94FUbc84ZkyYfiTo8_K15WvEysRE-2PsdI_KfK4F-yQ5Shtc     †	Æ  7 )»∞:vZx-Gy5rSSoF6GIA9-7v8W6iV6PZ66EhnOZOABraDp4 P sÿÙ  X t<Qx V ˇˇ     ˇˇÇ/  ÑH0pOqiSTUcÄ@     ˇˇ  Ä ˇˇh	oNphRSTb  p QAQ3gawB  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VgTL91simeVpi31l8xjjxFsd0yqKzV3tZMQPY4oJTNY112uSPJl0rriORKcSArpRqHSqImbUoNmzNC6P2NgS8QA à	ñ  7p∞∞:_rJ8VehzK6DaohRSzwcjlk-UhF_m3ufYDewxbU8zC-c ÿ s¿â ÿ X t<π ¬T ˇˇ     ˇˇÇ0  ÑJ0pOqEiL5SÄ@     ˇˇ  Ä ˇˇh	oNpDhK4R  p gAhlDDhK  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VBaEqHeII8J7mjz1vMEdDFyEeTM5v6m7dSGSNJ8Y2E1vQG4Vn5F5irYJJTpw_GyfdYY0xrxowJC-7iAHsVQuz7A à	ñ  7 	∞∞:miRmuTabD3w9PevivpP8bO_CVcWm57kNTzRciNcDUNg ÿ s¿_|âÿ X t</…^U ˇˇ     ˇˇÇ9  Ñ\0pOqBiDSZÄ@     ˇˇ  Ä ˇˇh	oNpAhCRY  p  4  0UBRk2AqK  u    (EXGC-MKBmfk  ( t	 Ä a	 V@X-HlpQTe1q8XWgFlSXQPuN9za28RNDA5E90rqu0wpVMrcKZu8uvNv1QW6e3IuWv28gIIDNP0uokzE8Y0hde9S1w  `	ñ  7 E∞∞:2-5MLrwnW9FFnPx46DipxjsjwmppKZirzVOEq9z2ud8 ÿ s¿O
- ÿ X t<ËÀ¬T ˇˇ     ˇˇÇ^  Ö&0pOpyGbhE®@     ˇˇ  Ä ˇˇh	oNoxFagD  p cQwxUDKT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áWIYobwcqrHA0hwKgt7jDwbsewEHyC4bR--lDZNYr4iCoe4wL3JUH33dLbBa05M-ay-J3xt3XLwTBqyT44pCDBencCf_POnW1H7RUZ9lwxKg4GWzZbwgD5C4Ay8Qm0wMp  Ä ˇˇ	æ  7òÿ∞:4QbSZR29JUHaC7646SuyRTa9RFyY10c9Ml2c-XHeY6M 1  sËê6 %  X t<|ƒ¬T ˇˇ     ˇˇ  }    ^È…Ùj∑Èá9ﬂ|t]‰Ÿb∑ 	 S   	îY#’Ö@ S6	πr∑                                                 ÕÇ^  Ö&0pBhYHSxb®@     ˇˇ  Ä ˇˇh	oAgXGRwa  p BFAGVD5Z  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åj9DquQlBtqs27ly2QDijE7VnV9YYkRtMPhK9dVO-ky8gy2uv8_dZNFd7ty72WVCTjll3pcbJiO17aymKbNh1C0o_zdj83xOVA9676iCOQLFtAfVg1WWrLTFfMycUsuhU )	æ  7ò Eÿ∏:pGarB4tm3lPLf8D-qyZ_rLUlpYghpDF6_h6-moKaeDc  	P sËt %  X t<ªòfU ˇˇ     ˇˇ†ŒÇR  Ö0pFC4nBxbò@     ˇˇ  Ä ˇˇh	oEB3mAwa  p  4 YAHBSbL  u    (EXGC-MKBmfk  ( t	 Ä a	 k@r87-uuqyQSdpcT35MQaGGaCsXKHZY4ZdW-l7T06emKye-jc-nnpfmFb867dQgcdXoaf_XXTSo8TA2qIiS75f4KxZopM8f-2f_xm3k3VmGS5c       %	Æ  7à E»∞:AxMGvROjU2jbvRZZ68Y3tA7KJnJmCbqdW9-JB1UP_Uo Ps 	=X  )@ t<1ì^U ˇˇ     ˇˇ  \Ç]  Ö$0pF533[xK®@     ˇˇ  Ä ˇˇh	oE422ZwJ  p RdYU2agB  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å2yPzH6v5171OqQqJuCMxP4hJu_6sFMw7zYkFAdhXptK_TyJQuotnYqRZbFVanvnpGP77aWSudFNELq1Z-rW6K7eJl9qvn01qzmoE4q47WP-KSsvyEWXadM16zveCSv2V 	»	æ  7òÿ∏:JldwljaJg_L7d7BLNRS3Lv6OHUcW3tiEsLrQTbMFZEY  	P sËå %  X t<üìœT ˇˇ     ˇˇ  "Ç_  Ö(0pCpF  ÇJ  Ñ~0pBRWVEjSò@     ˇˇ  Ä ˇˇh	oAQVUDiR  p sRxnFIYQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oyhXjHw_A43Sz8CcIpL54p6_-MiDcx0pGLPMsuMifwOrcjQJxiDtqLXZu0BYKPRKtHshfWRCCOZ5itWINxrvuxVvQUc2uTG3VAVtvAZxFGts     †	Æ  7à E»∞:D1vztYo2pEL4Evw2ijIzpftYww_Y-YPN3w_GhMxNUCM P	^  3  X t<Ó¿¬T ˇˇ     ˇˇ   %ÇH  Ñz0pB6k{USSò@     ˇˇ  Ä ˇˇh	oA5jzTRR  p lY531BSY  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oZ1jsi4vaYfWjIvmIKsYnu4o1ciyBTxrWz6l9fbRUhV20KmdNHyl0e2J7vfghrWMxJ_462-ioKodueU2ygm-tfROlpB_UQowFEXm6MV1kFCA     †	Æ  7à»∞:NDLT2SPho2cTZZUurnRCTEMQiy9wqPPqrNlEqitlZeg P sÿe&  X t<∞“¬T ˇˇ     ˇˇ  œÇ0  ÑJ0mexWEZpMÄ@     ˇˇ  Ä ˇˇh	ldwVDYoL  p 5coThDyZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VRiYfPXEwJwqpzDHfE1p9MfIvKIwJFnIaeOwc51kOShHrxMly4dpaEVoGpnGCC6sdDMNQF7r0kz5rqik9VQGVbw à kp 7p∞∞:hc8cPlb8OPK3UeveFHZ6kzQ2P1ES60BgVGWzgKZvHxc ÿ sPÆ  ÿ X t<ø¬T ˇˇ     ˇˇ  ÇZ  Ö0mehixL8S®@     ˇˇ  Ä ˇˇh	ldghwK7R  p tI5lkSIQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å8zP9rBRz_k3Iw7ZJfGdBsXCFmvuPdwQ1qFu4mDkZxseqI5eiKmfE1VR1CHw35JaeBZvWhQKJ8VoeDqC6U4mqj-Wn-43cKcSbebGHrDdpyBCr5HeMDvJ_SpdGNkhqaKEw )	æ  7òÿ∞:YAtTySXmlc-WFlv2sUDfq839YqSu_9EUBVFRaEU1nqs 1  sËÛ %  X t<.«^U ˇˇ     ˇˇ  ∫Çw  ÖX0pCBHyREcÿ@     ˇˇ  Ä ˇˇh	oBAGxQDb  p VIB1UZZA  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o1H6Zvzr4Im-rHqDMtqxCHkuhGCIujK091C_7-n0wbEGmMKKRIZaEdfhPB9LGRlnz70TPqKm3r0qqHgleb_9xz9bCPqMarse087re9jIPZRM     †	Æ  7à»∞:z9b75FgCvd8_igCHMmCLd_GjxUWKNToARDSmtwPELcE P sÿΩ X fÒ #D883:0*P1h7dse9-Q8/01*P2XofUHjmxoJ@ tY< ¶^U ˇˇ     ˇˇ   'ÅO  É0pBxTTBDMò@     ˇˇ  Ä ˇˇh	oAwSSACL  p pA43iBj  u   @(EXGC-MKBmfk  H t Ä a @TG_QpRGCSZ7ACJLX9D2b-YA8∞	V  "0pX:gGbYqK1NDWNN75VgPZ_M5w	a 0ts	<wëœT ˇˇ     ˇˇ  öÇ/  ÑH0pBiSU[JcÄ@     ˇˇ  Ä ˇˇh	oAhRTZIb  p 9AYBEKiS  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@V-0bxVXgwTyc83XCy955tGoa1Lj5z6Idr_CXNGnu1PFa15h-tMcF_ffvuefjEZp-tFEJJoE-CrI8hDLa0u_mMdw à	ñ  7p∞∞:EyCzJ_qlpluMWQmrgVO-5d5_eV-_MvoaJ41M9L2Aqro ÿ s¿h ÿ X t<T–¬T ˇˇ     ˇˇ  BÇZ  Ö0pB[4RMKL®@     ˇˇ  Ä ˇˇh	oAZ3QLJK  p cMAF3Yga  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅVvhREK-54qwUftVHBpgVUqRnz7x3jLyFk0oP9WjVVLNHYJwYzP8hvBTVy8dR4yo4uf5dmK8kn_6Qni3MibaNokCMSy_-WQXLPrpkXqWSk_L8V-VKL8rr4imJWgecnigV )	æ  7òÿ∞:N2hrNK_H6vlSNp_VYKErg052o0bNcRsJkyzyX1iBvts 1  sË" %  X t</îœT ˇˇ     ˇˇ  `ÇZ  Ö0pBKooZCM®@     ˇˇ  Ä ˇˇh	oAJnnYBL  p FIA0yCID  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅMbO7cVnHk8QLHUZPazVJHv0qYMR5jN7d8o-1fw8tOhekCsWFN3y76yNYgFXhL_Gf6oDopY4PfLVsnZkbXLFVyGpVhRwgat6faTjxbUw9CkP56-yvM2GWftzTRuskgIc4 )	æ  7òÿ∞:QP8UUTLaY9JtnB8h1-gcI2gYLtADR7nbF57EUdvqOwU 1  sË« %  X t<q√¬T ˇˇ     ˇˇ  ∫    ^È…Ùj∑Èáyçmlü
-™  ` Ó«=â8k	 `5≤                                                                ÇH  Ñz0pC6D4B6Lò@     ˇˇ  Ä ˇˇh	oB5C3A5K  p QIwyCYoB  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oY8DjL32_37zbAnodoOvmtR93Bh1QPNgR_mlBrcjWOYZH7lCAzVAKS-rnkJWOMwFD58xYdTV2nd6LlURZ_PQz7M_KB7l3o0RNzFD425ibhSQ     †	Æ  7à»∞:yMXEywG4zbeBCC6OnuX8dHPclXuGZC89ndTNNkAyU7Q P sÿù  X t<<˚lU ˇˇ     ˇˇÁ \  ÑP0pCBoSDRKÄ@     ˇˇ  Ä ˇˇh	oBAnRCQJ  p kEYw2CrQ  u   @(EXGC-MKÅf  É60pBxUhDqE∞@     ˇˇ  Ä ˇˇh	oAwTgCpD  p 9IZlzR5b  u   @(EXGC-MKBmfk  ( t Ä a +@®zC0RzGHoB5dACi0Xk6exh1YrjB1qKu5Um8x8AloRtfI:`	n  "HàX:MB939pA13A0bFAvKAIY18Q? 0ts	<∆¬T ˇˇ     ˇˇÇM  Ö0pBxjxZcEò@     ˇˇ  Ä ˇˇh	oAwiwYbD  p QcBGla6Q  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oIOnHsn38pJWCJ8CrdomwGl_PHjwDP0sEoDDkyFwuxsP6vF1GOv-6KaQ3pXWXEwIro_f6uM2RavOTdhd4tmtQKy1CAol2GpdPVgqIggfsdWs     †	Æ  7à E»∏:pKLq9yVYHt49nFoX33_5OEoHoLd3PIgNTRColNcC3nw  )H	^  È  X t<à˚lU ˇˇ     ˇˇÇJ  Ñ~0pBylIJMSò@     ˇˇ  Ä ˇˇh	oAxkHILR  p lQACUJDJ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o4Pk1fvXHtlkl9fj-VesBSVDSRYTPKTGu86EPffjU2b7SLMlJ2Y-mmxAjhPRNssGI9IIqSF_hmcqwvzHZiUeHvwe1I0g5OyJA_06mE0JLPNs     †	Æ  7à»∏:Dec9HR050FGMkyw8J5dsB_CVxJ9ftAiRuMbNt3Oy1Zw  )H sÿ  X t<¨–¬T ˇˇ     ˇˇÇ\  Ö"0pC5TCBJT®@     ˇˇ  Ä ˇˇh	oB4SBAIS  p pcwTkYrQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅDO6MbMqZOaesDIO36ck09csBAPw7k6gRt3J6CAUKCPLSVjx7AbgEjd4OBIvNWCb1_4w7RhEKlsDTkrB_bnGd1ZH8h6WK7XgjuthNlXj-Ev4MuXvmnCnlSpTGVHIIlIbp )	æ  7ò Eÿ∞:pI29HuN4EH151nuQ9FoHpUzAfEVBFQ_81oTnnmx-C1k 1  sËÛ' %  X t<} V ˇˇ     ˇˇ
-˙   Ö0pCB4WBEDò@     ˇÇ/  ÑH0pC5DUKkKÄ@     ˇˇ  Ä ˇˇh	oB4CTJjJ  p FJ4gzTJK  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VWbHcgba-nCaQ6cLVRnfJYj9uzY0OxLKHbk3VPyNK7SP9fhjI2ucU-ztTIUoV0PacdHAV8Y-2eLRsw8es1YPlVQ à	ñ  7p∞∞:g0BxppKPDzUDaaFd-ET1Gx1qTegsj6XIFqEJLiG5tqQ ÿ s¿õ ÿ X t< ¬T ˇˇ     ˇˇÇH  Ñz0pC6jFUEEò@     ˇˇ  Ä ˇˇh	oB5iETDD  p 5dATABZ  u   @(EXGC-MKBmfk  H t	 Ä a	 k@o11OdU95q0QIJCEh3sPZXbOKBoGIk2UMhY0ba2IvbS6-aB3M1yiutJUnSuwhwIgMs1qtkgQzgUKcFMQI3SVMo04NRP7GtVxlLQJQClzqJ-1Y     †	Æ  7à»∞:Dn4BGcnlK53m1EIjrh3DEGJLK6oNW6IMFGnpLKkAtLE P sÿ!  Xts	<aˆ˝T ˇˇ     ˇˇÇy  Ö\0pC643cpcÿ@     ˇˇ  Ä ˇˇh	oB532bob  p 0AZDBRaD  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oYV7l8eqZm8mNsb-20eprvRW7WKORtHb8B81-DiKGWgd1cjeJQccS1xKF09U9CfnQUSHhxKVvcL6ySFNlXBCuSxVSr28XUPXmddGiGOPovOs     †	Æ  7à»∞:Yxm1d74cpRh0GBDVnkckCeWchgjcA0LSoeH8aANJcYY P	^  ¸   X fÒ #à884:0*uj5kvaruZk0/883:1*hvI7GEeCd7g%"@ tY<[ô^U ˇˇ     ˇˇ∂ >  ÖH0pBqyBU7S¿@     ˇˇ  Ä ˇˇh	oApxAT6R  p Ç1  ÑL0pC5U4R6[Ä@     ˇˇ  Ä ˇˇh	oB4T3Q5Z  p pEo3jTAD  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@X9vOptqmqd7CFhcYBEv5Mqq0ovIHg6-W2jElS2ZE8mVwtE4I7afs8NR4icP3xai7PIAZX_K3oFDrlFQyuFpdFYQ  `	ñ  7∞∞:f-Yzi-2pm7TxzstbsxpXuVI21L5Bc2aJgw6d4xyCOww ÿ s¿dtÿ X t<u{ V ˇˇ     ˇˇÇI  Ñ|0pC5inSySò@     ˇˇ  Ä ˇˇh	oB4hmRxR  p 1BpCAK7S  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oV2_4eKa29qKxLg1uXgzSEAUmlt-P5Tne05m1iccQPSbDd9WrYxu2jrFaVQnd5T8i8uZxFOvIibSysmwEYMQBRnP7eA5oK1NvVbCnOjDrAkk     †	  7à»∞:6HzgESX03k-0OXPygqXJ99KqKOZliXV1-azLkUCW0uo Ps 	:  X t<√¬T ˇˇ     ˇˇ     É<0pByYTTÅi  É<0pByYTThc∞@     ˇˇ  Ä ˇˇh	oAxXSSgb  p.  BQBnTJI  u    	@(EXGC-MKBmfk  ( t  Ä a +@®fod7A7iueWw9Dt1bpVhDa80N5NwYoyScQLEdet-z2F4:`	n  "Hà\:iMlY7UqeT5GgYo4Bo2CikA  0ts@ ⁄Œ˙U ˇˇ     ˇˇÇL  Ö0pCB4WBEDò@     ˇˇ  Ä ˇˇh	oBA3VADC  p hZIk2KbI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oq_nn5p7ss3rbJDXKh3HQCaR2eh9KyAJprdgwBpUfDZhYyePxtJI-3yGolis-sdK9NAmm4Vc502qa4bG2THgg11uY4Y3mRObMx2oP5vH0INo     †	Æ  7à»∏:WZot3ObXVC8BgpRp4_1qTRLeEvuvxDZZDQuPmxuybhk  ) sÿ‚  	 t<Ûœ¬T ˇˇ     ˇˇ  
-x    ^È…Ùj∑Èá©±ºOóólÆ
-   p pû$≈
-gÎ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Çy  Ö\0SGhyyRhSÿ@     ˇˇ  Ä ˇˇh	RFgxxQgR  p 1R4kGCgT  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oy84g9PyAELVgCdO1Q5Ao726UHS4RKyIuRLMMjSgt7hvYfpV11hub7WrFhMtqMganTMta-CGLEkTT8EyzArCRI1jmVibV88eTyt-lEyfcEY8     †	Æ  7à E»∞:fC2I0rb0uGtz9NswaLhWZIV9IseapiZjXxsVcczyXI4 P sÿi˝  )` fÒ #D883:0*mhPqdXayyHU/,1*Wo5A3MWa51	ö@ tY<ü^U ˇˇ     ˇˇÇz  Ö^0SGiS{Ujcÿ@     ˇˇ  Ä ˇˇh	RFhRzTib  p tAQGlY6R  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oKsicx7_aGP6eD3-vscZ9OxXWjM4sRSzzsu8FJYjeP3pWxWbRPcyeTR09Ib8g3415jK5NKlETGUWE6Fxco_1O8K5rx13kdUPWP2Zrm8hMgFs     †	Æ  7à»∏:8v8-vrzAec9syRhG_he-JjxbxFjyV2zEBFUIp1SgHqo  )H	^  4  X fÒ #à924:0*mKf3HAlXcuk/882:1*pUZGVB2kZDw%"@ tY<¶ßÀT ˇˇ     ˇˇÇ\  Ö"0SGiSxbqU®@     ˇˇ  Ä ˇˇh	RFhRwapT  p kRpWgTab  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅzBNynQi5cPa01U70mh-UQPSxzshCOUiO90C_Q9xu-WBwczpNdcEdv4APHprZkHtb3LuAK43sTFnB5uKBYSZSPZfqZbDdBXW-E3hhV-r_rTxeyDoRekMEpAB39pByiNtK )	æ  7 	ÿ∞:FdnIhLNUaNARL5fgFEoAnhpXxxwj15G50okiaHLe_3o 1 s 	¢ %  X t<ﬂl±U ˇˇ     ˇˇÇ]  Ö$0SGiInKUZ®@     ˇˇ  Ä ˇˇh	RFhHmJTY  p dB4BxAiK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅOwkoFJ4nuZM5pV5ZRMvf7uq-MPc3xZ0WGeGkWueBy17QDng6j7gDhAJ0F9YX_6MXRUNf_1GPkgqXsYKKpwe73o0w1IiqLE6yvbuPKT01029CszRVeBXRPG_HHPi7b2d_ )	æ  7 	ÿ∏:FrJFYUA8PpiQWV1Zq0QRnhb6LhEUqUCGphmPbisE0fo  	@ sËß %  X t<LîœT ˇˇ     ˇˇÇx  ÖZ0SGi1EZxTÿ@     ˇˇ  Ä ˇˇh	RFh0DYwS  p Ud5E2QTb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o4Rf8SXCuTD42iLiAAbFm-YLo6EGBDPElWjnIoftNSuCIow5IbyEMNLdGW_Jhp1hs31wri7Yl3n8881T9M9ln6rjypMJ9y37CDPY6rno1f4s     †	Æ  7à»∞:S8CQRNJ6wYqqi9M04cDfbJxIEwdzDYvP1cKSle6YP50 P	^  `˙  X fÒ #à884:0*efsAsaXGImc/883:1*NK5YHeAUh5U%"@ tY<c¨€U ˇˇ     ˇˇÇ`  Ö*0SGhzzKUJ®@     ˇˇ  Ä ˇˇh	RFgyyJTI  p  4	 YVYVXQwQ  u    (EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅaE9VeEgdVSj9SF7YXja0rjzEmUPzQKDiEZR-Rjsf5qX-Y1DJiBuhfr6paD25FBQP8Ij9eE1Pmvz-WtDi9QA7ibVVvMHmXVQOMZGY5hnMrWgfn_JNj6TLd8zSSmGtXzyL 	Ë	æ  7ò Eÿ∞:utBMvqfl2vMV8IikjXUjT8be3x4miUC6n0WIuKeAdfo 1  sË∞ %  X t<îœT ˇˇ     ˇˇ  	ü    ^È…Ùj∑Èá¿ ç¢¸‘î›
-   u ¢X˙
-∞	du3’ê3‘                                                                                                                                                                                                                                                                                                                                                       Ç]  Ö$0ZRpolS[K®@     ˇˇ  Ä ˇˇh	YQonkRZJ  p ZIZ3WLYb  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅpvcGyhoX1_7ZPFWBsxNL1z5au4NZMLBSFBcoRl_DGqD3qjnQxChvV65mHmzdU0QCfApkuvUlCTr7gv6Ys2yPWNPMHsFpl2-to7tkAbj1WI-94izCN1cnQX4KqHKhitn8 ) kò 7òÿ∞:2PJl6laQiSebW3938k8fzZuVPgN5xMYnRze77kEd_v0 1  sP$“3   ˇˇ 	h t<Uƒ¬T ˇˇ     ˇˇÇ]  Ö$0ZRxBDM{J®@     ˇˇ  Ä ˇˇh	YQwACLzI  p gdhRyYoY  u     P(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅWz-QYC6FJoM3ztaILXdS49zxvR_qbxbEXYga9YFYWLlqD99wcoABPDAQ1TInfVp5VNUBqubI91s2fd55g4cgPFvUktqsJhRWIkseHsAph8gw9EgdyDABdk17j_6v66TA 	»	æ  7òÿ∞:W0rvF1R92dZtls2maNzDeRiBO0Hn5xPPXK6Mu8IWZjQ 1  sËk  !  X t<ßìœT ˇˇ     ˇˇÇ[  Ö 0ZRq{hSpM®@     ˇˇ  Ä ˇˇh	YQpzgRoL  p UJIiRKxR  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅYMQ8Y0-ic4PkVzap2IN-32cWU-NNhs8SlvlrnraGCJa160fsaukV9tKxWo1l1EPwfRylKffyL0Q1yG7nI0Smo8SXGL_yYZKj39mQC63KL6lu2DX1Urj3GxXEwK2bYX5F )	æ  7òÿ∞:uKUm_0HtryBqTz1nAkdSRjCDIJqbb4f0R1GLahS3hhs 1 s 	? %  X t<sîœT ˇˇ     ˇˇÇC  Ñp0ZRqynDRDò@     ˇˇ  Ä ˇˇh	YQpxmCQC  p xdRgGaqK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ibh1V2WI9Gw1iLLnlR6cKvCi27ehSSghlmhIZ1vtlXELiffEBFH_ySGpVuup7_SeC90DitJgSdt8JiSsaeg0KAG6-dgumaGt7GuTCAIrTXU6† 	  7à»∞:-YRDrq0z7bK1PY3kZhmcuKnXQ6J7H1tYyc_FDLCAkfg  sÿß  X t< ¬T ˇˇ     ˇˇÇ\  Ö"0ZRqS2UhK®@     ˇˇ  Ä ˇˇh	YQpR1TgJ  p NcAUQR6  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@ÅckCATRyEenl251PTdSwVDlD_GDF46ix-YnXr903g3rMVh7Dfg9Rn3WOdTAX7j771C19S08bODjjgxX2G0LsVHu2Dxo51a-TC9RA_nBKrg9U-aO0GWP5VLyFWdzqlQTHE )	æ  7 	ÿ∏:uhwLB8ZeDW-ETIZcGnLcUbLf9164hgYgUzp_obnqt0E  	@ sË$ %  X t<tïœT ˇˇ     ˇˇÇ/  ÑH0ZRqHTLSDÄ@     ˇˇ  Ä ˇˇh	YQpGSKRC  p wJQTCTwL  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VljZEZMj-HJnmxCQqoKIvRvstWbcdWgIRbLcZC3oYrYHSY9umW5RLEjCxV3JHh-gStzCF5qbPx0oRD3Ei1yfOSg à kp 7p∞∞:tMmhB6RhBpJ0CeI5vsRqkqIGp9jKgcDpM1O_LkWI_Es ÿ sP Ù7ÿ X t<6äT ˇˇ     ˇˇÇJ  Ñ~0ZRpYXb5Jò@     ˇˇ  Ä ˇˇh	YQoXWa4I  p hIBwCSJC  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@ohenO0687X0jyuTOQPB6BWy41n2ySLuCmeUr57v7zIzhj1plvj_5C6cpo5UgYlFFV4OBBsCep_WSs5ywYpTTnr51eVZLK0tsbVuMQ-RxBrys     †	Æ  7 B» ∞:CAp6mX6MNfwSwg0nGqFo0lJDA17LDzbnBpvPQV37L8Q P	^      X t<;™±U ˇˇ     ˇˇÇH  Ñz0ZRpRxKR[ò@     ˇˇ  Ä ˇˇh	YQoQwJQZ  p lAQHhCAQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oaChtvp7SS-LJ4tmGXyhHPSziFaDq5x2_F6BhnCqTaF5QswV2KpET8oav9VUH7VOToMdjMKlfiojDEzJgvVZNjBsEYIMfBbCgBeSJhTGHcv8     †	Æ  7à»∞:Zlg5j1E2GcHL6gwDToQfVW-1WiYDTuBrFkYcE6oPLKM P sÿ§  X t<V…¬T ˇˇ     ˇˇÇ\  Ö"0ZRpRkEqM®@     ˇˇ  Ä ˇˇh	YQoQjDpL  p FApQXBRS  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åmtp4B90QwfC0sbLxP12Hm89F3DU0JaQ_qc1oHfQFDngmmjPz_q6B6JUj096gSmHZCNN2mzTVLX2a4Y1npC-sqOORRAGo5gte-nAqb5tzJxMNlKKsrOyRKBnK14-JTh0w )	æ  7 	ÿ∞:U70xTJgchKVY8qPn7bFtiURjNTBzGjD8oHSviBF0N7g 1 s 	v %  X t<ÉîœT ˇˇ     ˇˇÇH  Ñz0ZRpG{D7cò@     ˇˇ  Ä ˇˇh	YQoFzC6b  p gRplkCoK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@iIZOheElfxXfpQO24VnMrH2IfT3-glEvHG92X236jOUKvrOz0KXyHOHI_TJ2aIRVOM3XZvlqUTTc8wRfh-EnQHC7wtK3pqyUcgMT0jIhe20z x	Æ  7»∞:YpLLN-xKnxKIAs-jd7yMMgsrWuB95LkOyXYaNt4o9L0 P s^  .)  X t<Ï“¬T ˇˇ     ˇˇÇ\  Ö"0ZRp4DRB[®@     ˇˇ  Ä ˇˇh	YQo3CQAZ  p REwhjShL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅeQDYE7jSnkgEV9qOVbtbfqOHJmSjQheaIqKPUzBDO3tVtNi209JynHa_V0NRZNTngUMuKBYCGwMTS2Ma8ZC5MNUXLExchsrlqVr9Ly0GqeZHsNZr36BnSgDe0nQRNcBY )	æ  7òÿ∏:J_yfZiZ_tlXQBdR-jM3tg9u3wWAvS52O20qg21T_2Yw  	Ps  %  X t<4ïœT ˇˇ     ˇˇ  v    ^È…Ùj∑Èá⁄à=·Ì]û_
-    x ù ’
-ã	@X	√v x–                                                                                        ÇV  Ö0BJ5lTBiL®@     ˇˇ  Ä ˇˇh	AI4kSAhK  p QQg0ADqD u 	 @(EXGC-MKBmfk( t	 Ä a	 Ä@Å30Da_cqbBgksAs_qnhfltTM2s0Ud04QJibNKZer7LBwok2YlJn65e_kQjVCzbHx6-Sev74vFapnMaYE0LmezNJJOvmqclk5oB0kdHJehkVGfMKlZg92jN8yTkxrwhCom )	æ  7òÿ∞:G1wFsrdMRCcdLZHi_-Ta0FYEx6hjo1PTP029TLV4r8g 1  sË√
- %  X t<Kœ˙U ˇˇ     ˇˇÇJ  Ñ~0BJ6D3S{Zò@     ˇˇ  Ä ˇˇh	AI5C2RzY  p ZJJ1iApL  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oMUGFuNZLH1hpho39wNJCNELX522FbXmpojdKB91OKFc1JuC596tTyUXGWegE78AQ_1KZ6oVgJV-VI8D2GDg0ENbQDKGB6IPUfuMXPQWoySg     †	Æ  7 )»∞:ER6WvbUZJIE91rLjqlFOIFX-WUnyPWvyeaSQj_w2xaI Ps 	ü   X t<6ı˝T ˇˇ     ˇˇÇX  Ö0BJ6BETLK®@     ˇˇ  Ä ˇˇh	AI5ADSKJ  p FJZkgCqD u 	 @(EXGC-MKBmfk( t	 Ä a	 Ä@ÅYi-By6uJcXhznsRrvtJy98TOHBCzIBE6QF6gb_O10lXg2v8_y76J-aPAkmxvaHnAUetN8aLdxGmm762nCT44Zc4nRy_uxA_mr3f8hx3SBrK0j8cuRDQPOdCYAJ3KEQ3C )	æ  7 	ÿ∞:mNXVhm7RkDSM_38UagafT2MitT0H1dZCaVcVD-i4VVQ 1 s 	 %  X t<ãìœT ˇˇ     ˇˇÇK  Ö 0BJ5UEDrDò@     ˇˇ  Ä ˇˇh	AI4TDCqC  p tRgW3QYY  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oaRKwyQ9iNFDZ2zPwljDJZ-SmqBMgK8XS88Wu1_jZcJmpiFTdjg6YssllMhSzyFUUrERmCnyQ-GksdbLgw0WjMVxgGJ0xNrqPyIT_TiZ-FFw     †	Æ  7à»∏:r6peJEqxZZG_iL4tiKxqXU1cQ8o_yXOSEsAZr7kzDVs  )H sÿ&   X t<	«^U ˇˇ     ˇˇÇD  Ñr0BJ5ToJTZò@     ˇˇ  Ä ˇˇh	AI4SnISY  p VMBilDoZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@iaZKpTiMyVFGK9iHfYS2QK-26gscIPBhQUaKDHPlxmijOleIDKAvpV-MU8RW3-324yVYWxQ0yQRMVPOHLWgA-Ob3htOMkEJktWSH_NLgtPf6† 	  7à»∞:zWimK_NDWEVUZm5hLoAotunZ5CvKLP047uVmEjbKT70  sÿ   X t<mé^U ˇˇ     ˇˇÇM  Ö0BGyi{Lhcò@     ˇˇ  Ä ˇˇh	AFxhzKgb  p oc5GRYZC  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@rB1gtXWXBJH0wc8NFbONuq38hwCubVLWPkbDRiswEJH1PWjs9kTTaEdAvNmV3ga8m2B4lqKBWqYWO8qrbgAIZwYxjF9acHRImjeDoTUyW6BA       %	Æ  7à»∞:0-6Jkb0CqgyfF9QjJdv_dVC0KPoJTpR2ZAQ63D5LavA P sÿ∑   X t<T¡¬T ˇˇ     ˇˇÅf  É60BGyhl[sD∞@     ˇˇ  Ä ˇˇh	AFxgkZrC  p 0ZgVDbQS  u   @(EXGC-MKBmfk  ( t Ä a +@®bc_Gb92LmvIJ4Nhty8DxUdn1tsyfuJpjyb-Ezx1w7Do:`	n  "HàX:jZPJAc36FvvKU8jzdth8WA? 0ts	<É¬¬T ˇˇ     ˇˇÇI  Ñ|0BGyHjJkRò@     ˇˇ  Ä ˇˇh	AFxGiIjQ  p dVw1hQKB  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o2M_4q074F0OKzlldIP9TQDxqE323fZnRJs-TKn7ApxzH1uEl7dBDZMGJa6r1Lbf8_1EfuQ_vjYjhhy0CP6jf9avYf_kpc912CaOtfc1VEGU     † kà7 )»∞:92ok0svLxEI-rXAt2vSjyjnFeR8AMaeZ9YhpHagcD3Q P sP¯  X t<˘l±U ˇˇ     ˇˇÇH  Ñz0BGxxIUbEò@     ˇˇ  Ä ˇˇh	AFwwHTaD  p ZZoCwKy  u   @(EXGC-MKBmfk  H t	 Ä a	 k@ojtcIHwGeifPtkOs8oCFIbY9jAHlMQNR323yZbOmhEXG9flwO6ZluSYBIGWFbWjT1xcI0gZNv_JbEqVLlNtTKKqGIf3syXP43c4Dzmpi-VTY     †	Æ  7 )»∞:BUH56ZHPKbbtp8hnbn88zJbolkOfCm5byzdZHvrj3_g P sÿõ  X t< ìªU ˇˇ     ˇˇÇI  Ñ|0BGxVjSkBò@     ˇˇ  Ä ˇˇh	AFwUiRjA  p 8UhFARZI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oFpZohPm1qVcbPRgBY-kvWPXrSbyxscBbiOmLD2p9C5ebgMkTes2sMR7USrTDb9AYwC8MJdNgSOYIcMrNq581cxAM_JSax8JUaUx26bh_Dho     †	Æ  7à»∞:IiPLuNOmirrplaP7aq6TJePNE1jCJqcwykAtrJ-HD9o P sÿ  X t<òé^U ˇˇ     ˇˇÇ{  Ö`0BGqyT[CSÿ@     ˇˇ  Ä ˇˇh	AFpxSZBR  p FQQS1CrK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@rsH2VdlHSc5xzfpqiappr5z8o7oXt7mGQmDBX3ltb-B4DKDVqh5UnPaRfrxiDmS-jI2P2eftVT5W_2CHLoK91rmGu1PkT6hA8-zJOo3Hgv8Q       %	Æ  7à»∞:Qn6xryudMhvh1LzwLMzQWa3oGnm6SOD9362FNf-ORR4 P sÿ’„   X fÒ #D926:0*Ues9Rq7Gnv8/01*O81HWT1zFp4J@ tY<Â’‹U ˇˇ     ˇˇÇa  Ö,0BGqjyKTT®@     ˇˇ  Ä ˇˇh	AFpixJSS  p UVAz0TBA  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@á1sIxtQX_NRI18ojOATkadMoEwdRtcl9YyUyuTOt6xEHnIceRpupYFjcb8bhA-kpRYWYOoOg1cWgomL5h-RwOEcXdwz7v-z_kUcL0p2G9aphMZ24Zui01EgD9agWnyZKr  Ä ˇˇ	æ  7ò Eÿ∞:_3FWuscPV2Hygm_S2HvQpFPDCiGF4nHFTE6cw2EkTJU 1  sË  !  X t<õîœT ˇˇ     ˇˇ   ñ    ^È…Ùj∑ÈáıMlûÈÙí
-    O % O=
-·œbò	ñÉL‹        Ç\  Ö"0ZJqxnKCJ®@     ˇˇ  Ä ˇˇÇÇG  Ñx0ZJxTjJ{Zò@     ˇˇ  Ä ˇˇh	YIwSiIzY  p ZIZ3WLYb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@iC70MXYg-pMegYU2Rr__wHRPKKTeK8ZH-7oMkAOhCbp7TCigQgMAboeIM1z9dhdLr1MGR0d9pwDNzcHSze6oLSgxxdMOo5_8RDCN2Q0qpFl6† 	  7à»∏:BbUsAXXuhBzJsO9I6OE9hG2ukyh18-6A0hZSDAzkkb0  )H sÿ¢   	 t<@¡¬T ˇˇ     ˇˇÇ5  ÑT0ZJyS4M8KÄ@     ˇˇ  Ä ˇˇh	 YIxR3L7J p tAQ23RaD  u   0(EXGC-MKBmfk  ( t	 Ä a	 V@VuEPy0GStLKloxhhP3eiVv7j-JwtYsRVoXKV2kY8-JZLlNic7JNTi18eplLAO9sWorAqdqLaZ3PXZLhf_0sZUGA à	ñ  7pEX∞∞:Lq2FocWHZTrjwwXQVGwnKc6i6fliiM1PRUv25tKQ8g4 ÿ s¿ i   ˇˇX t<m±U ˇˇ     ˇˇÇG  Ñx0ZJy4oKKDò@     ˇˇ  Ä ˇˇh	YIx3nJJC  p MJ4EwQ7  u   @(EXGC-MKBmfk  H t	 Ä a	 k@otoJlgfypkrUyCxpld3t0hixV726u5K6rMETgIgUuAY4EvLEdQbmMl7HeK-XClWn4_CD_U7v1JHhwrZVNoprDPBPwN8t-H7wexgBdbDlsDF4     †	Æ  7à»∞:GPp6zPE_9DVTUA9o7eKaWDAPICWIqXt0niNvARKIhDA P sÿ¥  X t<› ¬T ˇˇ     ˇˇÇH  Ñz0ZJxoWEqMò@     ˇˇ  Ä ˇˇh	YIwnVDpL  p MQYn2K6T  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ojIVp5tyYxMzfssK0Obab35Oefvn12G1YPnmQHpbAEYJ8BxYf6wR9pKt0I33Zb6jf9YpbYHDVgS0xlx7JSAGinwepCxuZ4B4aguIUmFzckl8     †	Æ  7à»∞:eMQz64gfJ_rBGV4RVAgqxCATRRpqHEoVnVeaanjcIWM P sÿc
-  X t<¸À¬T ˇˇ     ˇˇÇx  ÖZ0ZJyRVcbcÿ@     ˇˇ  Ä ˇˇh	YIxQUbab  p UZZChBwa  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oK264IN-UEkBMINRSAC87u0K90ESLm5gpAnNHJ_57hn6Oj8XpfbzTktPD739g4AsgGd8-abYXXkkxIk1OQPib96MSx8kh2F2aLXI4x9ZOWgU     †	Æ  7à»∞:fVHoY4fP09Z6u24dhfY51hnLAXr2pifgshpMlAbzF7s P sÿ ˜  X fÒ #à883:0*HwvaPELBlG4/926:1*GbmmaKH0K70J@ tY<>ÿ‹U ˇˇ     ˇˇÇn  ÖF0ZJy{2ShL¿@     ˇˇ  Ä ˇˇh	YIxz1RgK  p dVZmzLZ  u   @(EXGC-MKBmfk  H t	 Ä a	 ñ@ñ4CmfhiVYYcsvq4utQ5ZcgPLrz5zoTHMpr81rAt5I5I6apTt-Xf7j36nOBFi4JqHrHl-YrRoWRylQq3TkYIfS5Fe12GVa43ASFXfVwcn3cw0Txx1rzLmzsR0PdHlOjcuGEITdhWmG_vYL1VMp8qSRng »	÷  7∞∞:Qh9A2rlHy22iYqgDqKVf1Zs-eRKkh64ejrBpDItAWqE 1 s- 
- % X t<
-E€U ˇˇ     ˇˇÇH  Ñz0ZJyx4E[Eò@     ˇˇ  Ä ˇˇh	YIxw3DZD  p gQhjATJb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oFN6LxshNy-Kmt3pJFUwb5_rnpNnZN_Gfe8oraBXArktRKWBuXQA1f3lZr49-emogideg3QaJCRTUJNiuzdu700udcPxyPNW-7o2z9rChxK4     †	Æ  7à»∞:-1DgB5zrPMpCWiiVfjD1Ah7D5d9PyeB4rcmvZxpOHEo P sÿÖ  X t<§Œ¬T ˇˇ     ˇˇÇI  Ñ|0ZJyYWBTZò@     ˇˇ  Ä ˇˇh	YIxXVASY  p 0dAm2BJD  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oujE-RukA-ZVLLdLS1ROONthh6Uj67iKkUwesf19twNSEiT4fvENawO2rZu7VhnROJRrgp54D24KhSVHs_N-nQNhMpySbPPipeawhyUuH2wA     †	Æ  7à»∞:Go2w9Bz7sidAosObfqC3LtL-eP_zgFr8L1M_WzJPJlI P sÿ∑    X t<Ëw V ˇˇ     ˇˇÇZ  Ö0ZJxXESqZ®@     ˇˇ  Ä ˇˇh	YIwWDRpY  p cJ4RSAxZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅxIFpopFMi_URRhg3vNwHXJOpWz5b6z0IfefVxr-SRbUTJ1pS5qliMMlTmNarZTl95C6VhkxDvEgT52vmJ3wLszhgbZ1XRgG13V-2jHlefuhxPYLZekZZzPXWe2zCHJrM )	æ  7òÿ∞:ghhssHlU69Z2cv7cJ5TdyWK10obn2NpLxdzlVkSPNag 1  sËd %  X t<tîœT ˇˇ     ˇˇÅf  É60ZJxUSbTS∞@     ˇˇ  Ä ˇˇh	YIwTRaSR  p RARA1YYQ  u   @(EXGC-MKBmfk  ( t Ä a +@®qWpXt9F9w1FR_Q4UZnDZJqjphHrYUF7DyQDZh1_PXqs:`	n  "HàX:OWlCsyk9rNwG-e9peia23w? 0ts	<íw V ˇˇ     ˇˇÇ\  Ö"0ZJqxnKCJ®@     ˇˇ  Ä ˇˇh	YIpwmJBI  p ZcpC3KgC  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åbzqgoj6EADjJVf1PazqEKbSyrjJXLVBitF9rY8kbUp28dlQL1NT8VhwfVa8q6jbOpJYpio5bX9wP4IJwGHCLNjePJuJE8_v6hwElnlV8st4iHepuZwJTy9BtF5JQbi9e 	»	æ  7òÿ∞:d-8erpzZkbypL0T8vMYbXhucAnW5W2qUU3jGYey2KKU 1 s 	O %  X t<˚ìœT ˇˇ     ˇˇÇ{  Ö`0ZJyiU[BUÿ@     ˇˇ  Ä ˇˇh	YIxhTZAT  p kIoE2ahD  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o3vRU1aSUj0CwseQipHkYJZSMoRHLKuJlVZlP9-bIzDqHnloO9xGV2ii1xqUaxYe6d0ltuCxCMpv9B8zK4scCoShUoUWtPdiZO-zpDKS6S6A     †	Æ  7à E»∞:TsPjSaaz17uMSX10zHIZ62te-LPqyT9CV2DsakILMng P sÿa˝   X fÒ #à883:0*IIOjvW6CN44/884:1*P1s03q-lx6kJ@ tY<ƒû^U ˇˇ     ˇˇ  ±    ^È…Ùj∑Èáœ5˘Y}2¬g
-˙  Æ ìS∂Œ"kΩ
-< Æﬁ3                                                                                                                    É  Öz0lNpCmTxbË@   ÇÇJ  Ñ~0lNJT2LKJò@     ˇˇ  Ä ˇˇh	kMIS1KJI  p FEpGnYwD  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oLFy7wsigoajrzMV4qz7BJjqi0EiHMX_OMYv-rLxt1wTmXn-cn30O6ZGemk0XLkNkwx9StM2vvblA1I5fHiPUUrPV0VsMrbCaSvpx7pJVqEg     †	Æ  7à»∞:GcmTDTO5yDtJRJyUPG2Ra7W2iREZDcybsYQiAgNeY6w Ps 	≠  X t<èz V ˇˇ     ˇˇ≠ (  Ö 0lNSDVJqE®@     ˇˇ  Ä ˇˇhÇ/  ÑH0lNCjBBiTÄ@     ˇˇ  Ä ˇˇh	kMBiAAhS  p NZQRVQwA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@Vz3oVgXlWUI7QjS78L0fMlvVLaWIF3dD0t9UavNvFBcHrTSXQlK5ZQ_0uebRXiso_cyY3oKU6S2_yfSklzDh4uQ à	ñ  7p∞∞:f9-EUvUlzvNUstjJCRKa9IAOYANBvDBKYY5Kveoltqk ÿ s¿á ÿ X t<œ˙U ˇˇ     ˇˇÇX  Ö0lNBTDKZC®@     ˇˇ  Ä ˇˇh	kMASCJYB  p cUgDWCjL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅW49pvBVSkbeZRlIo2S8wrk_75SyI0vDYe5xUMVFy9RXrsaA65cYWcvPclVv2zh82ctAWEU5i7B-CdowRNZHHR5zzrJGMIoNzhxAOsZppZQDJ4DfBKtWVmS9kDO2qAIQZ -ò 7òÿ∞:9Lw6xhqwpPfnfadubjfpLYHkaJb_Cj5_S1zWa3k0uSI 1  sPO %  X t<KïœT ˇˇ     ˇˇ   Ö0lNRRjÇH  Ñz0lNCmUcJUò@     ˇˇ  Ä ˇˇh	kMBlTbIT  p QIwyCYoB  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oT4vxDMOS9zP5WvHaOPHp3JgBzAPwxRNCCwfhoXNnFy3ojcEc9DKeb7s14JGbt0FXBwghphkiY4bnmjnWrC-bU3zMdgLcsBJKMuijW3Jj4Po     †	Æ  7à»∞:iitDNpDdJ9MiJ3lCBd42JvoVMAcxPTYBVSFyGB_pNAE P sÿÌ  X t<È˚lU ˇˇ     ˇˇ   ,  Ñz0lNKoCbDcò@     ˇˇ  Ä ˇˇh	Ç^  Ö&0lNK32EiC¿@     ˇˇ  Ä ˇˇh	kMJ21DhB  p 9YwygI5Q  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@V2SXDfZKszR2thpohQQJbjsFu6VDeVq8V9X7XDvYFhWOnOjN7A0qDBdCTC6fAag1EkStAvyDp0K8QQKUHnefNPw à	ñ  7p∞∞:AFFmZ9HLa1esXonofKI-YBjJsSiQPGx6i-HEcU3gnDs ÿ s¿¿  ÿ X fŸ #D882:0*etAPopyBs_o/01*dDDPwSGS56wJ@ tY<Zë˛T ˇˇ     ˇˇÇI  Ñ|0lNBFiKyBò@     ˇˇ  Ä ˇˇh	kMAEhJxA  p 4QI3HZAT  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o3sGAj5mJiI4i0je8bP_ahhcyPuIPVCHuUp-8MtcbriVWvWK9MHDzR79TPNnbR7N7icio8hIo5J5yfsENqFKI6PKapS9izsuWLpU4IkQlxEE     †	Æ  7 )»∞:Cs0khqpWaDwMGMnS7FNpA8FLlyo1yl595YsdImUjj98 P sÿ  X t<µ¬¬T ˇˇ     ˇˇÇ\  Ö"0lNJoiCCJ®@     ˇˇ  Ä ˇˇh	kMInhBBI  p ZdASBKpR  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@År1G1WJ13s-YQt3I-IGcoxqq-bSbHB91UHx5XKzenQGbCNYnl1Cz_GkaLiC-YwAn_uGsIW1xjiJMJ5pDOoQ8Mf5yNs5aAR0XHKQiVcFOGfUSa59KiKIeIyIIau9sihjBd 	»	æ  7òÿ∞:3LAqAA1IjqUZTQyeZvNz2bYHz7jkj2cy8AX6kDbLpPA 1 s 	∏ %  X t<ÚìœT ˇˇ     ˇˇÅQ  É0lNJCBLcUò@     ˇˇ  Ä ˇˇh	 kMIBAKbT p pA43iBjL  u   0(EXGC-MKBmfk  ( t Ä a @TOqu82zM9NRejuyPDAE1oYQ8∞	V  "0pX:5sJ1bDdBzDyd5dsAfr6MNg	a 0ts	<wëœT ˇˇ     ˇˇÇZ  Ö0lNJ4I[UT®@     ˇˇ  Ä ˇˇh	kMI3HZTS  p UEAQDDRC  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅMPcNbxA1i5HF6SHAnR-CkBQd5cZok07CKg3gFP1yPfomOU3p3b14DY2RuQFkyl_K4qrsn1DksP5VcqbZTGX3Yolxi863NvSM640wumcadmfiCc8INQd6WiBV1alyL6jF -ò 7òÿ∏:KQv0cnJf7p3igDwvycTyBRfbFtkfamYf6HLPcYTMT4E  	P sPπ %  X t<üîœT ˇˇ     ˇˇÇa  Ö,0lNCjmJCR¿@     ˇˇ  Ä ˇˇh	kMBilIBQ  p Nd4lTAra  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@Vd7bYyQdFeNjOwzk4TZoraUDT_da08VtwX_59iC7xQlmCsxDqPIV0ygVclsxKU4HwjOeZLZEHBUGLIs4MWH1jTw à	ñ  7p∞∏:KyYh-ltB1ZFPmiCPlcHzPtLKRAYb8lcwOYTG22o3FX0  )0 s¿| ÿ X fŸ #à884:0*PjbPRhH1tJ8/882:1*zREBv7AzDT0J@ tY<‚«¬T ˇˇ     ˇˇÅf  É60lNBoECJE∞@     ˇˇ  Ä ˇˇh	kMAnDBID  p 8IgFmbwY  u   @(EXGC-MKBmfk  ( t Ä a +@®neub52NHN0etB7vmO0bkO9ruryqPqocr0cm2dAYKY5Q:`	n  "HàX:JFMtsPJHdfvOivXIn-aTmQ? 0ts	<ï∆¬T ˇˇ     ˇˇÇH  Ñz0lNBXzL[Bò@     ˇˇ  Ä ˇˇh	kMAWyKZA  p AQoxnLpL  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oV5S8QBkp82_HEd69gQJeIOGCSgAMNRbk2MfLFXGrycQgXgH9_wd58Jd0lWkN2S9KHyJk7bTNay8oZvz7_7GfPkHZznIzZ5_fxGFWtzUrWWc     †	Æ  7à»∞:jYUH1u6t741X9CSLZeUekjzAI0yplxBwzOX6CEVxR8Q P sÿ6  X t<D»¬T ˇˇ     ˇˇ      ^È…Ùj∑Èá(AeÊˇz±
-˚ 
- à ≥
-…	n≈z” à                                                                                                            ÇI  Ñ|0eKyCFT7Jò@     ˇˇ  Ä ˇˇh	dJxBES6I  p 4UAEEAoT  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oqcIwZ2zQ8-Zj6xqTAb4wXU80nJfR1-t5GYEObrEeU8wVcu7DTDIz8Eq1cTW7EQLy5gA7S0khV0fW5ajoifOBnzwjEkOFpf3a-BW2ZMjrJWE     †	Æ  7à»∞:SpWt1SlylHAr91bmQfj9V_1sOvsOk6DIVGCdBoJT7F4 P sÿu  X t<4…¬T ˇˇ     ˇˇÇI  Ñ|0eKy2yRqUò@     ˇˇ  Ä ˇˇh	dJx1xQpT  p tVRXgbBC  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oUMPgGjKXK4iUeU2fnNrQW2hMtZa6q9UMsgXXWVN_0rwthvXPIGwugNwHT_Rr9B-8voH4lZ2CZXY3CyYlikpKRBkO52Q-FjxSs3YoSaSKZ3s     †	Æ  7 )»∞:bn5cEaa8uV0NHsOnnopfgM3L1IGFZ4iRogAEGsLHan8 P	^    X t<áé^U ˇˇ     ˇˇÅf  É60eKxyhcpD∞@     ˇˇ  Ä ˇˇh	dJwxgboC  p ZU5llBgB  u   @(EXGC-MKBmfk  ( t Ä a +@®T7vKSWU5tn8MQTvNY-mrgwDH4JcrXKtRUfuKltItA90:`	n  "HàX:YmzgDHmG2JTvGHy6GaQ9iw? 0ts	<o∆¬T ˇˇ     ˇˇÇr  ÖN0eKxGWLkc¿@     ˇˇ  Ä ˇˇh	dJwFVKjb  p UV5izQjC  u   @(EXGC-MKBmfk  ( t	 Ä a	 ñ@ñ3RkQqaAS_beDps41kn6iVL6XPOe0oG4-YqUIFJxTdw9okb82cIXAlvlMkFbm0zM_KD_WCRsP2skHE1iLl10Jwjf-vDByRoyJlSHOM0g0HCj1I2wZwhR8H_GNIi_e2DQwtecnMyNmKrBxk_xFYGoT7w »	÷  7∞∏:xJzbH_wflaZK0BRK8ooTi4mN4kTxb_96ArZna2V17x8  )p s-   ! X t<iC€U ˇˇ     ˇˇÇI  Ñ|0eKxDDRJTò@     ˇˇ  Ä ˇˇh	dJwCCQIS  p UNgVgD7C  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@odMlNOJjm9jkz0_XDY1xkgeqC5hP5a_S_WrmV6dwIoysj4pMTYMsE3GczZTN04QJEEH7weK7NRxS-5uLADTEy-97ejCjR-M-Y7FtTgayWysE     †	Æ  7à»∞:Y3WWITiHAa9dndqCFzrC_9zUg0e6BulJ-NezzC5yTD0 P sÿ≤   )` t<´∆¬T ˇˇ     ˇˇÇJ  Ñ~0eKqxRUsRò@     ˇˇ  Ä ˇˇh	 dJpwQTrQ p kAo3gD6I  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@o52ndkpVuYed1Ik4dII2VaMRdwFpEjVDj6HQ7yaFfgREP7wD48A4FYFDmUDgA3jvOUvilCFmPH7GsxmwcLRDx_wO9NqxPHlRXjtPqLVr4Myo     †	Æ  7à»∞:ycQLz-UhhlI1hL4gwXbw6KBFwUwBaF9FzJO6COZpqHM P sÿ<X  X t<cè^U ˇˇ     ˇˇÇ[  Ö 0eKqFzUxS®@     ˇˇ  Ä ˇˇh	dJpEyTwR  p pFp1mLIY  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅKT2B13ietlcLNaSuHrjP7aZ8q51jWH9-eGABWPLhBSjhLxoSF5uUyf8UdQwk9fXWegy91-yQV9QACvqFDybtzKOjOKaCEl6_Rxsw3MJnNc4xOWZO7O2J2dt79nXfmfhD )	æ  7òÿ∞:6sap6AYYBDu159OS_zNIcv3RA7UNYtQ57mwi3vXWp2Y 1 s 	\ %  X t<àœ¬T ˇˇ     ˇˇÇY  Ö0eKqCTDKR®@     ˇˇ  Ä ˇˇh	dJpBSCJQ  p 1Ag2GT6  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@ÅqrHBwcg0WvOjLuJY9s8DCbJSny7KeqCaW14c2FryRxFgPUWmgTTBFiGu8QZXjAUBSBQNWkk0YBE42V42GnpyuxuTQO4md8p3L7fIUTBkhV630ROjKLbMfmEbhjbKIDz1 )	æ  7òÿ∞:qZCoyd3f0J1ruTCuFnKHeiH-Mz-5iWLSRJPzpLvDliU 1  sË: %  X t<äŒ¬T ˇˇ     ˇˇÇ0  ÑJ0eKqBkKT[Ä@     ˇˇ  Ä ˇˇh	dJpAjJSZ  p QQZnwRDT  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VymCO9q60ZqOusVSjcGELcOOzTGuG0TRrnJ8CaN-ddxs7JXq1pwarco5BCW0GqjJWi4wpYnz4PCMwFMfXSJDX0w à	ñ  7p∞∞:LrE-qWcTgMiOjJOV-9IW0swVLLwJoavZ0tLpdY061Aw ÿ s¿n  ÿ )H t<ù¬¬T ˇˇ     ˇˇ  ∏  Ö 0eKpV2Cq[ò@     ˇˇ  Ä ˇˇh	dJoU1BpZ  p gIw3WbKb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oOiRIfufZw3NtvP6CAC7txSiXVp46BnWamQkg9Jtrmekc-3xKvFha0AwYGVRqbXwmCY2S5gCczTEtHvKlfuz8ywhcQQGMnCND5FvE-AuXNHM     †	Æ  7à»∏:OkhQqYM8NpgIrxoGh3qx_m_HE74eWGzs3EFC2VKW7M4  )H sÿ©  Xts	<¥íªU ˇˇ     ˇˇÇZ  Ö0eKixE[5K®@     ˇˇ  Ä ˇˇh	dJhwDZ4J  p gIxzkAyK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅOGhCoUCPxrV08cr4e84Biw9BsWKPgPCjnTs8djbf50ehn-CnNulzAqe04GxlAq036R8PEQnXgoyDzci0QmwIFrHiI4UQXhK_cNTIOIC6PfPdD8i9iPyoplGQorVFJiwc )	æ  7òÿ∞:yFDglQQ9hkqlkIrfjFI-Gl8LuTPL5hzrCgrMtL-kbHw 1  sË˜ %  X t<IîœT ˇˇ     ˇˇÇZ  Ö0eKinÇK  Ö 0eKpV2Cq[ò@     ˇˇ  Ä ˇˇh	dJoU1BpZ  p gIw3WbKb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oOiRIfufZw3NtvP6CAC7txSiXVp46BnWamQkg9Jtrmekc-3xKvFha0AwYGVRqbXwmCY2S5gCczTEtHvKlfuz8ywhcQQGMnCND5FvE-AuXNHM     †	Æ  7à»∏:OkhQqYM8NpgIrxoGh3qx_m_HE74eWGzs3EFC2VKW7M4  )H sÿ©  Xts	<¥íªU ˇˇ     ˇˇ  *    ^È…Ùj∑Èá=*›7ºUX~
-    ﬂ ∂Y(w
-´	¡ŸC ô; ﬂ                                                                                                                                                                                               ÇZ  Ö0eKSkVEkC®@     ˇˇ  Ä ˇˇh	dJRjUDjB  p cQwxUDKT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åhp9G-raxVdy1jliZ-xhA5mFL88gXGdTkDPoeIcJN93XzflzWutBaxyjn9Qt6nR24ZPhm4JzWAjZnabxID3g2_xc5vfekXT20pZfIO19SlYKXTIXCw7FESdek-inkSVNC )	æ  7òÿ∞:LK_iWJEcwcWqUk-xlW0MDS3AsOFCjmprQSOIE2DWqAU 1  sË; %  X t<æƒ¬T ˇˇ     ˇˇÇ\  Ö"0eKSYzTSB®@     ˇˇ  Ä ˇˇh	dJRXySRA  p.  coyDKhR  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅVWIPJQmE7Lk8XnIccaLiH68MAcwGGsTqdDqEKPwMqWheV-ifK0CQrPkCveDbjEQyXRQ7OCFmz1hPkZXsT7hk37IUqNX8xxdQsS76KUAuBXSxPGJgINNIhr3Vp58JDA22 ) kò 7òÿ∏:Foi6cWWPPnx6e5HYPAfXWE7x5FmNfphJuLxUyIpqB40  	P sPè %  X t<ÛîœT ˇˇ     ˇˇÇ/  ÑH0eKRzkBpDÄ@     ˇˇ  Ä ˇˇh	dJQyjAoC  p 4d5TVYCY  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VjHaW-Kspn7UoObzGBAPvfTGPaEwskSNmujANS3yatBWg3eMFiu37n7zTaU7iY9wFZrBOMTif3o9c5FBHJg2V2Q à	ñ  7p∞∞:USH4G3rDJsmLQIpmhNCjEKC-iLIhPSvQrV8t-4eyFgM ÿ s¿ú ÿ X t<¨Œ¬T ˇˇ     ˇˇÇw  ÖX0eKRoWZZ[ÿ@     ˇˇ  Ä ˇˇh	dJQnVYYZ  p 0FIngSAK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o8Iy-6zKQmW3vN44OhPtFkfmjeoFlNjabUwkONTS3WGc7AXBRnrKwjUKVkNLJAG3buwUoI0P14MSLRRcX67rQSiwboqr2yaaCTj5pVnTaHkg     †	Æ  7à»∞:D3SxwIl1b_R6i0yvZlzSBAvCvpMpqa4mnIPavw19VoA P sÿÑ X fÒ #D884:0*zvRCTSd5l30/01*9Qcwwgg_6jMJ@ tY<B•^U ˇˇ     ˇˇÇ2  ÑN0eKRklRpJÄ@     ˇˇ  Ä ˇˇh	dJQjkQoI  p YFJ1HYhD  u    	@(EXGC-MKBmfk  ( t	 Ä a	 V@VJ8RTBp9F8ZjFi0kpWR1KINrMJgD1Yhpc4l28ZFuiq1gXsgasfzwGd-wt9-AlUyazM1PDRzH9kNJqxckfNGsyHw à	ñ  7p∞∞:XASVNnxZkgyAAvJjl1ovgxtXEv0ZuAklRMwWTJRp3Rs ÿs 	<  ÿ X t<Ü¬¬T ˇˇ     ˇˇÇ`  Ö*0eKKoESjL®@     ˇˇ  Ä ˇˇh	dJJnDRiK  p YYRnjRpQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áznwJJQm6F2czOQcPy2r5piyEMJidHRuLi9Xn015MY3sX3D1LqAnP9_J5XVETNlTBlKBSjL7j4D5oXjKqnzxOacncUEXXHTwYKhfcwhJR5coX-poFAqh9qTQ_H-56tCdz  Ä ˇˇ	æ  7òÿ∞:o3Xild0lx_nDOwtn9u-EAbf8ndH9AvUnS3-neQ0hsZw 1  sË    ˇˇX t<ûìœT ˇˇ     ˇˇÅf  É60eKRXHJET∞@     ˇˇ  Ä ˇˇh	dJQWGIDS  p ZU5llBgB  u   @(EXGC-MKBmfk  ( t Ä a +@®66o-c0Slabcy6kkt6b_lJTQbSf1fQsbi0vidhSc0hCM:`	n  "HàX:O_pwpajuDSzDw352TRO8hQ? 0ts	<o∆¬T ˇˇ     ˇˇÅh  É:0eKRH1[jT∞@     ˇˇ  Ä ˇˇh	dJQG0ZiS  p QQYUyIBB  u   @(EXGC-MKBmfk  ( t Ä a +@∞hnzCpdyLgDnqbVxXTvjWqcDjRJaMSoHkF707upOv5lI  	P»	n  "HàX:gp-2D02GDrUxhBX-HtTxcw? 0ts	<y¬¬T ˇˇ     ˇˇÇ{  Ö`0eKR1XEhMÿ@     ˇˇ  Ä ˇˇh	dJQ0WDgL  p 1QoRAaSa  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@okVkh5iuf2kEB3uyEHvSxeIcvf0SHg6RjY8AZhEUHaSQYcz3UVfjdI-Y3tQhkncjmvT1bqBRHYnClTQAbnkfPRvjtocvnIZ8YpBbjExjILI0     †	Æ  7à E»∏:5WDnNXi_iDxUgRI2hgq3nWV5kcIFQXCoWcG4XwKpiWc  )H sÿÑ˝  X fÒ #D883:0*xBVq_M_1G_o/01*orukWn_yOAQJ@ tY<üü^U ˇˇ     ˇˇÇ/  ÑH0eKKnyZUDÄ@     ˇˇ  Ä ˇˇh	dJJmxYTC  p 0VxSCDzQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@Vkv1Ue5bdaCMU6cjNhJaIdZhKEiZ4rQUnrdx5D0mFAUYYXQwFUbTXR-5BELeYjyv3iuoGXSmnlrf94w71xPynSg à	ñ  7p∞∞:yOQ_s900w88IR7KrV67WDNmsraPaAYiga6B9uEKNf8A ÿ s¿" ÿ X t<[—¬T ˇˇ     ˇˇÇ[  Ö 0eKKShECD®@     ˇˇ  Ä ˇˇh	dJJRgDBC  p lAgCAI5D  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅA_H868Yp4bvmf5wjrmrXJOo77ghSrfxEmmMCo7st_gD0YhigUpxH3PTVvoENGapHFs3nfI5y4pg6xbK6jVzASdwcSm1_L1wOqE-ip69oq7bcQuODulu6gLpOUaRCkbC8 ) kò7 	ÿ∞:xl-H_g72yV6npumIoDLUv2jR3l0lZyVlcDwkpl60pWY 1  sP1 %  X t</–˙U ˇˇ     ˇˇÇH  Ñz0eKKFDJZRò@     ˇˇ  Ä ˇˇh	dJJECIYQ  p YURh1JpR  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oJgXND-JE5JAjSSYjyuAy6BPVWkzh9z9SxL_wRdDJ9rkUauzKoBkbUH-vkscSK1X8rwJXaQ0noePv-9vkV_DX1pFixa9SWf4U4ExQWyh0i6Y     †	Æ  7à»∞:2F-Jt0HglPDUXy9GR57_ALohda1xpExTNmqo1WvVRls P sÿÁo  X t<C’¬T ˇˇ     ˇˇ   «    ^È…Ùj∑Èáπ€zÓe@o„
-    h œr
-»	}1–Üù hS«                                                                        Ç]  Ö$0eBSHWDbT®@     ˇˇ  Ä ˇˇh	dARGVCaS  p JI4QBQjA  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åudny-QGQl7VpPxRrrOzAHE7HLWUJNaUUFwtCi8cFrf2AHXDlIOW-qJwj1iUXkxU1T_f4W1Fl9Xq0erUYP31LJHPBxzhS4YKpXyyuBYfj3B1-eObAWyCWkL6b8dZfTLau 	»	æ  7òÿ∏:1svnEYoP8QY-3fgXE5mnr1FFI1KmmmdKsEHxztxEhJo  	P sËÕ+ %  X t<dîœT ˇˇ     ˇˇÉ
-  Ö~0eBSIo[pRË@     ˇˇ  Ä ˇˇh	dARHnZoQ  p 5NIQjZpT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅQO-AozTle8uI7BveDFkXwYayW5G9rGPW9R0Qe_1Y6Le6pLkNTd2z4RkGCrdAsykS_C3jVshTLpA2xQGPqUST6sH0sSlSXvzNF0BNvm5rg7BWO4rqwR8BcSKQlvB_mdPv ) kò 7òÿ∞:3pbjQKDuV7jkgCEuXVdJS0MzEsqOk_IIg9SRmGv7vQ4 1  sPÌ   !  X f- #D881:0*nwQVhcWxfYw/01*yfEawlLSi7oJ@ tY<ò˛T ˇˇ     ˇˇÇH  Ñz0eBSICRTcò@     ˇˇ  Ä ˇˇh	dARHBQSb  p YNJSUAJD  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oMgvlAw5NjM2UYcyDRqLGU1tfFn5QvXdhA9zSwiWvr6rKNnaP-VEWjNbLZdv3LsIpZ5RPvDv7oZ2Su7IXIWLJPwIY6bOdRP1ZrQrz7Fmf-OA     †	Æ  7à»∞:GM4Bs1KwFlIdY8VRQVxtQjWAthRTuBIVc6AHp7g_CeI P sÿÊ  X t<Mx V ˇˇ     ˇˇÅg  É80eBSGjEKU∞@     ˇˇ  Ä ˇˇh	dARFiDJT  p BEYQkJRb  u   @(EXGC-MKBmfk  ( t Ä a +@®Sswj_AkZx9dLXnqULFiEc9CwS2OheusgnOkoTxJP1YY:` k  "HàX:fTODLcAU8YxUPrvtxYTEfw	1 0ts	<∆¬T ˇˇ     ˇˇÇH  Ñz0eBR{xK{Cò@     ˇˇ  Ä ˇˇh	dAQzwJzB  p 9FhWgATb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oG5ymVhjcHZTAsksbRvBtKDTo1qFY-7umkNl7bL6BR3Y2zv3PMoTEHII2NqktlsIXhxLO_a4m6l3zf_lBH2-4hUUDzM6AedvALAibwyTb5iE     †	Æ  7à»∞:E56CY9I4Mvn_qy4EQ8RlxvWyD8Dsxl3coSYYg5dazas P sÿ;X  X t<®é^U ˇˇ     ˇˇÇ_  Ö(0eBR{nM[c®@     ˇˇ  Ä ˇˇh	dAQzmLZb  p IAQTEaqK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áFURQd28FBr3tjonrQvIbWPsJeG3FrlCyF6veykEXg7L2jlqf8C14n-koOms7Zuoo4tmd6NAnno7bI-haxJi_QPGysGZca4TjlQNFq5KrF12kO8FHY2YuvgZFFl1qmXWn  Ä ˇˇ	æ  7òÿ∞:Ai0gbAehufS5emmfVpj23IKcBCURQ2g1WV-jPx9DdbU 1 s 	’
- %  X t<8Ã¬T ˇˇ     ˇˇÇJ  Ñ~0eBRziTJLò@     ˇˇ  Ä ˇˇh	dAQyhSIK  p cEpmjbKb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oh7km43LHE4lzgOIPE2TW0jL5TeIazdbts5F1ixQph7TSWKo5I_3TrOKPqJwzQm01q3P0YxzYjeeZC4wkg5gVX7OwkZDroQOiNwHZdOlVujs     †	Æ  7à»∞:0eJfEdkgXqVZJnCihYDsPxyo0qiehFisiRLaIruvoxg P	^  z   )` t<çæÀU ˇˇ     ˇˇÇI  Ñ|0eBRo{Cj[ò@     ˇˇ  Ä ˇˇh	dAQnzBiZ  p 8F5CnZoC  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@o4NaWSZjlKQiQmSypVTqpOz42-Hs33aoj4l7Gdhe8ehprVaoAQEdM_Gr9GJhrkRD6T9NxS7ZKAisXJdMKbj2Uv-bL0PsWHymu3qf9ueVi8B8     †	Æ  7à»∞:9YwFwjbubW2NNn3jfw3v0NNPgxbq6-tr6eyG7mEQ8Hk P sÿ>X  X t<cì^U ˇˇ     ˇˇÇI  Ñ|0eBRVkU7Mò@     ˇˇ  Ä ˇˇh	dAQUjT6L  p hY4WBaqI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@o9CdRQWIEVlWH8sNEgiZ-8E9SdEVQl0UIiqHT6uxwjvZ9NPea1p_W9G9I6nO08B9Uj18wyX1D2xGsrNnIs2AOD_WtMCpKp5Qr3Kae7B7Wt-U     †	Æ  7 B» ∞:hAnSXIga-Rw2Wl51jf3ZwmkhcuHNgyZmN90u73ARXXE P sÿ®  X t<÷Œ˙U ˇˇ     ˇˇÇ]  Ö$0eBR4mRiD®@     ˇˇ  Ä ˇˇh	dAQ3lQhC  p gdAyCZRB  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅR3s13bWTS9l4Tq0zLG60Xmld0rI57f34RhugJeU-Om6_Lm4vOiGqBRamH0bgfy_wMvEjazNqDW4cs9_WWE8ztg1Jljoz3dZDdW-Fps312jXpIl7r48zz-ETzLXlsEHV1 )	æ  7 	ÿ∞:zS3ADd7LbhgVrhe0gmAy_UvCFvgnFNoXKcdJ9rrCJ8Y 1 s 	! %  	X t<¢îœT ˇˇ     ˇˇÇ[  Ö 0eBKY3ZZB®@     ˇˇ  Ä ˇˇh	dAJX2YYA  p ZUpShQaZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅA-pwLPKx4xCUcO5hL5RJRTGGF75WZiRpPppJs-1aycPfgj0FmD-IgbgLgUekkaJ-mouwqAH5vqITCTWuu-k3tRsR0Vt0Sb2y7NsuK18IxMVj346nINa_w8irpYK00ptw )	æ  7òÿ∞:LFuPZJ0tR7Jkqp2mxRdkfKFOrbOKGykdPoSicWtsO2c 1 s 	Ö6 %  X t<”ìœT ˇˇ     ˇˇÇ/  ÑH0eBKHjCJ[Ä@     ˇˇ  Ä ˇˇh	dAJGiBIZ  p 5YICULZA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VC8dlt25EL3eWgYU4kxzTlUTHkHy5zDh098XwaIOwNUJGw-_6bALPC3JFloRstqebJZdw9NfclYCDUT-fKDerEw à	ñ  7p∞∞:F8ExTvIcM5vE8-GT6K-SI4WY94IFwy5fQGIPmU0XLfA ÿ s¿{2 ÿ X t<y”¬T ˇˇ     ˇˇ  e    ^È…Ùj∑ÈáºQ]é >µ
-  4 #≥√
-f		 4†U¯≠P~                    Åf  É60tGSEkDkR∞@     ˇˇ  Ä ˇˇh	sFRDjCjQ  p.  dZGXSCb  u   @(EXGC-MKBmfk  ( t Ä a +@®GAI7flhO7OQWXIArN2x9X5Abw6bN9oeK8iI1R3dTJHY:`	n  "HàX:dYDjodnLCBnFRn-DBy1ABQ? 0ts	<è¬¬T ˇˇ     ˇˇÖ b  Ñ|0tGZCiDJRò@     ˇˇ  Ä ˇˇh	sFYBhCIQ  p kZQz0QgY  u   @(EXGC-MKBmfkÅP  É
-0tGZSkTiKò@     ˇˇ  Ä ˇˇh	sFYRjShJ  p RBYWRLAR  u   @(EXGC-MKBmfk  ( t Ä a @TOZi2nQ82-LVCbn74AHI7eA8∞	V  "0pX:jeQs0NLrUJ-fKY46vBWWdg	a 0ts	<Mø¬T ˇˇ     ˇˇÇ[  Ö 0tGZETDKT®@     ˇˇ  Ä ˇˇh	sFYDSCJS  p cNoTSAQ  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@ÅiCPNjHPfI4AJGbibHO3qxBFT-dmSAid17C2TEO41w4U5kvt12Jm8u2vgQXKDv9Y0iIY73WPkL3RdRKtDwY6sCVgj2yCis4f3v9_f_MOLSGquQj2Fhd6h8QZlQT4tIvzf )	æ  7ò Eÿ∞:Mg-aipMhJf3BtYCgLQwAd4012pnzynHUxXEf484x35U 1  sË %  X t<≠ìœT ˇˇ     ˇˇÇI  Ñ|0tGZCiDJRò@     ˇˇ  Ä ˇˇh	sFYBhCIQ  p kZQz0QgY  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o7ypPLwLX9vM1MY73E_I0lq9sWXQ4VVOTDJUu4l1cTKNcHmmH5WbSvMvuX0BKMfFMnrZMW9XAtQ9Nc-zpOY4UXPag6s6qleWOQUMhERpBhj8     †	Æ  7à»∞:PTx8ug3yp0LBS8Uf_hw7vuzU0QecLBq849U-jPTwayY Ps 	©  X t<¿∆^U ˇˇ     ˇˇÇ[  Ö 0tGZCGC6C®@     ˇˇ  Ä ˇˇh	sFYBFB5B  p REwgVbTD  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@~1e62yZGFhEbYmNvmJCK3QTAGGHHSDeBWtwjId42x406J-yfhiFCyuQoUu97le8aQjk3cwnZ4vX8pUWgXC4H0Fjxm5szsl-2ylLz1zcC1PR56KplXQFaM3scHEmbnhnj¯	æ  7 ) Eÿ∞:z2qxnsyXPUBNMrWQDrqSlf3Xc5xurmr5wmszm226t2M 1 s 	ç %  X t<ÅîœT ˇˇ     ˇˇÇI  Ñ|0tGZBEBCZò@     ˇˇ  Ä ˇˇh	sFYADABY  p lIIQgCDa  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oU1cbkdUXrf_rId8L5AugJ-G7JptdnDdZk397Pe6XTFhoSIppY50wDwQcAP6MeTag61ZoQa5CUwz4nKciL8dvStrqjBoVV8wHtZY4vRBstnE     †	Æ  7à»∞:vHou8GyeppNLuw_HE88vkvCaHrK6A-ihCNN_CxT4d8M Ps 	|   X t<ÀÙ˝T ˇˇ     ˇˇÇg  Ö80tGSXBCsZ®@     ˇˇ  Ä ˇˇh	sFRWABrY  p  4	 UQBFGDpa  u    (EXGC-MKBmfk  ( t	 Ä a	 Ä@êtaF7A1Dxi4wIR3Mm_nI_mGe59xM3vt9MCltgItL4uYmVndjcrsY-84164WVn_chA9rwpbDmsUibNaH2z9fGVxtrEsiFURlh33gocFeRtCq7hKRkdj0DFWAl96xeEtXyC  Ä ˇˇk       7òÿ∞:U9Ioqy9hPFnrcwccQFM0kK9RTvZ08U16zO9kwG8F3G0 1  sN  m
- %  X t<hîœT ˇˇ     ˇˇÇ[  Ö 0tGSDmD{[®@     ˇˇ  Ä ˇˇh	sFRClCzZ  p gYBkxIbI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅCQvuHyHMkLa9Ba3enTf_0gxks4jea_z8nQSiqJ356UvUVSAZRPbQQ51qbMY46CxAS96UYh83evjzKtK8hKpwPGfxw_EXA5NECK0vZ28HiqCvobfwl2Qj9DiS7Z3q4He7 	»	æ  7òÿ∞:sA02EeLdplQQPMEXPS-1LNXEkgdukI4QNIckTut5P8Y 1  sËπ%  X t<öfU ˇˇ     ˇˇÇ[  Ö 0tGRzoCsB®@     ˇˇ  Ä ˇˇh	sFQynBrA  p BJJGRJxD  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åev_TKp-ezaTKQYGERJChtsCrjrl76fCxY2YbxMgDDajIeeSuFHG2LYnt1WQqwhg3km_uPxSQiUfiyL83yUygTxLKmw9e-H3OUgUWwzgBhr7vPc0BgHFI3gGXj_oArOrC )	æ  7òÿ∞:QId7oz4fHtHZlpM028_PT3BnxMqCAWR1mW5S6oqRz84 1 s 	ÿ %  X t<—îœT ˇˇ     ˇˇÇ^  Ö&0tGRxVBRZ®@     ˇˇ  Ä ˇˇh	sFQwUAQY  p 8BwGALC  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@ÅUTCrIT0pdOrvklmRPTcdKzkrueWlnZIhuLjTI-olKOcD6Zl081xJXQylFmu7vo7dV57ZKaq7wGk4X6SwnuQuRfX6cbey_krMUzqj9dgZOiWflaENKPxlYN_y058lESvl )	æ  7òEXÿ∏:Cgm3YGYiBx7t6fkAzlNe_Hi54o74Ewl3mlQXER96zEk  	P sËÛ %  X t<ã…¬T ˇˇ     ˇˇÇ`  Ö*0tGRFlBk[®@     ˇˇ  Ä ˇˇh	sFQEkAjZ  p gYZG3BCR  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áVHQniPCaHk4rAKWEZfJmo-_JDzItde6NuF2KXWx_5A30Jpm713BeunCwSmKVgtpwnv74BYp5JaKHzITMVqs8DEI_KE74H7AQbEQFTbm1Fu5-Nd4M9cFuA0gImPDcgQKU  Ä ˇˇ	æ  7òÿ∞:VwspH5U37iZNQN2He-6clrT6_UeCChX8Oh-6g8Iet0w 1 s 	\ %  	h t<aüœT ˇˇ     ˇˇ   .  Ö\0tGRCWL5Mÿ@     ˇˇ  Ä ˇˇh	ÇK  Ö 0tGRxScRTò@     ˇˇ  Ä ˇˇh	sFQwRbQS  p JZQnEBgR  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@r5vnfgGeFQpjm3iAzFFMLLZpbKlZpmnNjvFt3YnymZ5PLCTlm9mXJFnjAFWNI_YMmpVP007t-yg_akK66ht1KErY1GT2wBMDPsTEOtgtUyhY       %	Æ  7à»∞:p8LOCn5rgo6Qee8dJbFiebCBZGslOjFXKvK2mymNyT4 P sÿ  X t<wz V ˇˇ     ˇˇ  &    ^È…Ùj∑ÈáR©b€ö2(
-   3 ¢–s#	«3ì                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Ç^  Ö&0Vd[kBCJb®@     ˇˇ  Ä ˇˇh	UcZjABIa  p RBoCmaYY  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áI2TYOvr9H4A4-79_kPSwnXeMuSvMWuJxk3ZahHJkm9-jmaBYyxGZwBOMbplwrAFVEigeltL28rT04jqdSntlADAeG-wSUvMAORxDMsPwifKZoqHYri7KjFZCgBOIAY6h  Ä ˇˇ	æ  7òÿ∞:8MmLKb8T8zaJsSBPQRVhvGZfrC35WCKMmSn6pa3V7PI 1  sË~ %  X t<Qœ˙U ˇˇ     ˇˇÇ2  ÑN0Vd[lXJyUÄ@     ˇˇ  Ä ˇˇh	UcZkWIxT  p MEYSSDRK  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VqVtajFHMLql7zdFkQEK77CmN32X37ozuwm9-ORtvMrbWEmxM24sx7mzrbTeuftrJquAiGK_TRYZY-BWAAHR2eQ à	ñ  7p∞∏:YuJgFltNWrmLDosw6mgo0iMcW7-onaz6MR8e-6dVi_A  )0 s¿Ω ÿ 	 t< »¬T ˇˇ     ˇˇÇZ  Ö0Vd[XDLqR®@     ˇˇ  Ä ˇˇh	UcZWCKpQ  p tdIFTJCK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅhyU5Rh2JJnXiPz1J3DN-Vu4TIlBJVM64LPANLgOgrHHLlq40eOSwEFQ2Si8NePSLk_nqWB2H3sIKaadJfTSy5um9j894n3XTSR0EWbpmkR04WVee13iYoLU95qI_4Vp4 ) kò 7òÿ∞:uMEIVuoK0wDu--Orh34FnqGXYOPAjyT70fqoPd5QWds 1  sPn %  X t<}E€U ˇˇ     ˇˇÇN  Ö0VdZy3DDJò@     ˇˇ  Ä ˇˇh	UcYx2CCI  p ZAAy2QCR  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@r_bujBFe5zLus9oKtrNIZ8rQZfEaAKskgfVSXq9rt7Y-mTXvNv2g6NFmbKtCxXqZoBOQl7w8LJhXZbl2Xijl28oc46iwNdwu-v-vs8NSYshE       %	Æ  7 B» ∞:h7a8N4p6Onif5eRVOcr5Drggy-sJzjulqIw5DyyyoR8 Ps 	Tí  X t<weU ˇˇ     ˇˇÇ[  Ö 0VdZnIURJ®@     ˇˇ  Ä ˇˇh	UcYmHTQI  p.  VAz0TBA  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å3znKoUVfnIbozb411rXUx9cxusSrF8HrOaUIuaSPcO55BddW8XYtqzD9ZcNs3Wa3TN2mwN7Hfbddn6Axeej58xcFG_UFvEEnVWpeGK3n3sZEt3qNMFIw2gv6-h4KuNXB 	»	æ  7òÿ∞:8yZx5u65A0oAc7UVw_8yAtTO0W1HsCbRdoBaCyhI82g 1  sË; %  X t<õîœT ˇˇ     ˇˇÅP  É
-0VdZjoRBKò@     ˇˇ  Ä ˇˇh	UcYinQAJ  p gBAxxKbb  u   @(EXGC-MKBmfk  ( t Ä a @TT7b4jlExRR_ztMVA4foryQ8∞	V  "0pX:WgUgNn2CHO3Cs-YHMUN97A	a 0ts	<‹dU ˇˇ     ˇˇÇ\  Ö"0VdZVVE7E®@     ˇˇ  Ä ˇˇh	UcYUUD6D  p YFAVSbgb  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åw3gTcoyBXKszeHHc_c_qLGVhtllxp8WtPExW6e3cU1wl51Emt4ghuxJTqoxFiUHZms_-nkomTK_EFLmrUpx88vyTd25VG7z7A1PBU2ctMTFIHtrtp8oGGtnLpmLBPrp8 )	æ  7òÿ∏:c0fx8_qLR2v3JfAhj8SAiVjIKhsPyVYsVS1fhs1Eokc  	P sË; %  X t<ïœT ˇˇ     ˇˇ  	M    ^È…Ùj∑Èá JùØ»ŸA
-π  —QŒû˛¿ —	ü
-q∑§c                                                                               ÇH  Ñz01GJWmEpLò@     ˇˇ  Ä ˇˇh	0FIVlDoK  p cFhmDBZZ  u   @(EXGC-MKBmfkÅf  É601G5imEqL∞@     ˇˇ  Ä ˇˇh	0F4hlDpK  p pAITXDqZ  u   @(EXGC-MKBmfk  ( t Ä a +@®QyR5gcVSSog4RpGJtVCWUUbooBT0g64QraWD0Ss_GPY:`	n  "HàX:y8_f4wK1TyUp_ZEw3-05Bg? 0ts	<Ç∆¬T ˇˇ     ˇˇ   ÇY  Ö01G5hmSER®@     ˇˇ  Ä ˇˇh	0F4glRDQ  p JQ4lETy  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@ÅnspROitzk8FBpPY-GUNpRId_sfo2htwORaBZlWUZvt73Ds0kccsTRzwRqJrRnvOASsN-3rQJbMIuSuT2nNJehd5QpHrznuW1wM14DCwS0G0USlxDRE6cd2s5FO7VxsZ5 )	æ  7òÿ∞:VYrR1GUFcyoOPQGZciCG1cUQ7hwSH21vOO-FYgyFgdk 1  sËi %  X t<_îœT ˇˇ     ˇˇc 6  Ö01GCU1Mx[®@     ˇˇ  Ä ˇˇh	 0FBT0LwZÇK  Ö 01FxoiKLTò@     ˇˇ  Ä ˇˇh	0EwnhJKS  p UNQxhYIZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o95JXrZOc7TYE1MNTpFwJPYeAxVCMxMi9qtjLhASVAdqjubHaMvufHjn6r3NpNtBuEVqCHRq2KMBGh2qEt0OfKW-ldYq82kkjQIbuuL-i-q8     †	Æ  7à E»∞:xuzITT6akUhndLrctCDSQO3703vT6rH27_9HSY2cG1I P sÿ˝   X t<›»¬T ˇˇ     ˇˇÇ^  Ö&01G5VBSqK®@     ˇˇ  Ä ˇˇh	0F4UARpJ  p dcoyDKhR  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å5khdZNSl3F7gWxbYf5dn3KWsHFKfviKCTy2qARM91r5BWwiNiAosi4bW8HAPE46gJDYWso3JqN-1C-FZVZWHirvvTms8gSUE2kaFVIIZ24muXEu31-3MwLcAX1RVCVbM )	æ  7òÿ∏:xpCf8oC4Du-N0LlOgRqm7voraFugntEhhtkh7anOj7o  	Ps 	L %  	 t<ÚîœT ˇˇ     ˇˇÇ`  Ö*01G5W2R[J¿@     ˇˇ  Ä ˇˇh	0F4V1QZI  p YdJwRCLZ  u    	@(EXGC-MKBmfk  ( t	 Ä a	 V@VMQXOwKrVZb2TLVv3a8WZpWgn_5J8Msl8NZHkkudBzRzBkoVjVCmidcZvHW3HJgu4Xoz0qUYOFbuYC-8tNWV3Vg à	ñ  7p∞∞:4jPCtQDqb9E9wrK_whsW5GIIvYqftqyqvU_-6REE4pg ÿ s¿J ÿ X fŸ #à926:0*LH6Xmtl6ixQ/881:1*B1c8s2N3gzYJ@ tY<KúœT ˇˇ     ˇˇ    T  Ñz01GJVxR6Cò@     ˇˇ  Ä ˇˇh	0FIUwQ5B  p 1cRlGCbQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ozNccgnClx3lcLRy981dP9B5M7uYaRkon0Dpq6DG0_L5XVJg5_N_HunFH3tSW4MWJM7Z4oX24PYomjwVZt5zBxpVpN3pvoBcAi9bnWecDVno     † kà 7à»∞:7L_SRXrhosIWqb3buiZnfdSiRmFTOSPQUQoPD8yK9CE P sP  X t<z V ˇˇ     ˇˇÅQ  ÉÅf  É601GB3UBZb∞@     ˇˇ  Ä ˇˇh	0FA2TAYa  p UQwnmbiK  u   @(EXGC-MKBmfk  ( t Ä a +@®ybGBRmbmmcmFx_4xDN9jcgRYqOb42jRGNrxtawk3K5c:`	n  "HàX:C7yUPX19cBedCrS-QvRI1A? 0ts	<âŒ‹U ˇˇ     ˇˇÅP  É
-01G5{iJpCò@     ˇˇ  Ä ˇˇh	0F4zhIoB  p AY5ygTIZ  u   @(EXGC-MKBmfk  ( t Ä a @TOEMkGfBInTTRwPEptSDDtg8∞	V  "0pX:mDZvpPL0N8jeiv5LG82t_Q	a 0ts	<.œ˙U ˇˇ     ˇˇÇ[  Ö 01G6EoDDc®@     ˇˇ  Ä ˇˇh	0F5DnCCb  p NV4wnRgS  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Åk8jIevQTkJuqL8RsNt7X1wjHvMXFoFwg95vzNeT8TxGYX7BGc9eJfHZuUS7wgj_2AC4L-ePVrKPQDK56WJxvbdd64l38NSLxFqMDlVJZpFTT42KDDeuRG_fEejvNDDkp )	æ  7òÿ∞:X-27zmIikoMGarHo-7FGwwePTBpAet64aj-Gow_DndI 1  sËã, %  X t<ıìœT ˇˇ     ˇˇÇI  Ñ|01G54xcCSò@     ˇˇ  Ä ˇˇh	0F43wbBR  p ANhjRL4a  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ob_gE_aqHPA1COcra76AnTgO4bbOe4MCROpZAWmvWJ2gPL7Rgar9mrZhmr-OKybzNeiTauAn2hrw4Z73vEenCWhe9LuBvkTJOsYaQceCwAfM     †	Æ  7à»∞:qQGyBAI7Nsngwu68SE04fTzqIEx71ZDsVXBQa732OAg Ps 	ü  X t<√¬T ˇˇ     ˇˇÉ	  Ö|01FymjRkZË@     ˇˇ  Ä ˇˇh	0ExliQjY  p oZoz3ZgL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å7Vu7Mv-Jcu0mSIvms7sDGqGxdxs8iK0c5XFHGDXlrCrNCtiBXtIzX6jUslayEEc04mGKi8ryv00TedeuOkur024TMQNMaiRsAmrq4A2YyxtCT8wvmrlJNZVRBWbCqj4N )	æ  7òÿ∞:kWiIblHFdenkHMUn4Vysmen9DHRtLdt9jmTGMCXx8do 1  sË∂ %  X f- #D882:0*t1Sl6TrrChI/01*dfUjhJK6SMAJ@ tY<‡é˛T ˇˇ     ˇˇÇZ  Ö01GBDIRrb®@     ˇˇ  Ä ˇˇh	0FACHQqa  p dBB1BZjT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å3axIzI14qmtLT34YnkKPj5wIyj_u_mjMC8zPh2tse4oNND48xUMxCCk1DI4xPgMCyCuv5CDEC6m1nhJAGZnzvv6aTL65UlJq3gviaRQrSc3UyCTQ6cmlao7d0mLO6yrF )	æ  7òÿ∞:JrA_r7USZcj2pxX0DnU_Qjz7HZZa3kFcq10DVjWAXpM 1  sË %  X t<ö…¬T ˇˇ     ˇˇ  ∑    ^È…Ùj∑Èáµ◊⁄ñìÂ˘
-
-˙  ? †	≈c∞ ? ÂjÕÉ                               Ç_  Ö(0uN[G3T7K®@     ˇˇ  Ä ˇˇh	tMZF2S6J  p UV5FUZpT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áJb6pdehWmuYOqQBSclI2DjIx77p6dCzkJDEO0qA9k0KaXDJx_AY-VpkVvFNFV54oLC66ugfFFJkDlyUugRQNi7C8fMrMn_H0b6Zsy7cIl3DkjzboxdFxVCFOvJgcGrix  Ä ˇˇ	æ  7òÿ∞:me_jq59J6Au6zpvyU38VY5Lg6s1OiXOfa2TqfZ9GPoQ 1 s 	¬ %  X t<¨îœT ˇˇ     ˇˇÇ{  Ö`0uNZxnR{Rÿ@     ˇˇ  Ä ˇˇh	tMYwmQzQ  p oYJ3RRB  u   @(EXGC-MKBmfk  H t	 Ä a	 k@oXpBcwXd8FDHXjvB6lxqXEd-98TcFzvc69EmQzEXab2ww4cvY1bITUcA8McFCjxYyDskYZjX1ODxXvreJAvQ6hSM2h8NjLSg5GgesXeGj0lU     †	Æ  7à»∞:ctLE9-cKpQtcC0rWKO3zc6CZpIFmugV_W6uUuQj3DrE Ps 	 C   ˇˇXfa	 #à923:0*ktmaqqVRj2k/881:1*GSz-hTPMEok1@ tY<œºU ˇˇ     ˇˇÇK  Ö 0uNiT4BJRò@     ˇˇ  Ä ˇˇh	tMhS3AIQ  p 0cQDnBgC  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@rdFHdk4IPCit3lITwqPRJvvnf1IWVqY-nWePCHy5igiMqcgrw828rAS0rMMRJMh8aWEvkNepVOFDk2OfZb_Xln2mWdkL9_J5leXdtTKquuFQ       % kà 7à»∞:ddPS3u71UnYGZ71YLSLqhaV7qUxeiz1uIE6OdzX8oo4 P sP∂   X t<æ¬T ˇˇ     ˇˇÇ^  Ö&0uNhmnUh[®@     ˇˇ  Ä ˇˇh	tMglmTgZ  p ZdASBKpR  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áRCQ-MJqr3SwZ1kA5yNaO9sM7zOll6oVevYYxy8Gf-Yf2FQX5kPc3uoidMOGN_ooukuTNw1vuvkdHp-HjDU0iVxYioTbKPbhzHmTb-SYuLTRkjl01B8q4v1t89O4aquKk  Ä ˇˇ	æ  7òÿ∞:c-8kceE1Rw_Av0AlHHtEiTXoHTSvLOO2u_gMuZrZaH0 1  sË %  X t<ÚìœT ˇˇ     ˇˇÇK  Ö 0uNh1kZDbò@     ˇˇ  Ä ˇˇh	tMg0jYCa  p YEAWCRKR  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oeBoF7Li1sY2TTzXyJogKUkzY4ir6KMW0_DPiLHbRsD4dhRIURIDwrNpD8uXMaO_XFoulL__oJqxIIPwnE3jLz6llNsW5YPQVOZ87UzZeE6o     †	Æ  7à E»∞:2LbF-G1h0RzN7B4EiWlhDnCJc4ooo1ledIXWkvr2mFM Ps 	Á  X t<˙ ¬T ˇˇ     ˇˇÇJ  Ñ~0uN[iUTKJò@     ˇˇ  Ä ˇˇh	tMZhTSJI  p $5NwglaLK 	0 u   (EXGC-MKBmfk  ( t	 Ä a	 k@osgJ4tSZLwYH2quMeXP3lpxyOJrQBSReqvSTQSQI7TLjGaTc9yJ5DH_HdGnsWKhVjukEWd02ryTm9U-6wlthwdy61kj0oefKrERW0q6zcZ24     †	Æ  7à»∞:FKhjvfACMYX--KQ6XPVy8Kj9_HA8mObJ_VWnAf5d7jk P sÿ∑  X t<g–¬T ˇˇ     ˇˇÇ`  Ö*0uN[DoB8B®@     ˇˇ  Ä ˇˇh	tMZCnA7A  p hJZH0T6B  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅeV_u3j2qnPp8nMXLMgBy_aiYJuoJ5wPtikdyW2UC6gFYdBZK1QldRT6GPYActZ679RXL61G7NmB8AH4oxl7PjqqDzuyaFImj8rw-cAGy8cJxw3n0oFQToJHE0f8MiCR7 )	æ  7òÿÿ:fSWCg9vIVXwWSIH8kXUi8VNG2nm6azyjOSTle1Ut80I   Ä ˇˇs 	È %  X t<SîœT ˇˇ     ˇˇÇ3  ÑP0uN[4hMCDÄ@     ˇˇ  Ä ˇˇh	tMZ3gLBC  p  4	 gBAxxKbb  u    (EXGC-MKBmfk  ( t	 Ä a	 V@VfBYpcQfBKLEvlQk9Vb-tsGuHt3F79FAOWM_2Ezo09nAm-7v3ejqq3A3fTJhWSItGQnJlrYj0FhSuuLQdVx7-FA à	ñ  7p∞∞:K1Zt8MR1edBYhcAFIbpxw6xYHywPVBCcNcLK4XPcVEs ÿ s¿  ÿ X t<·dU ˇˇ     ˇˇ   ∂  É:0uNZVoKrU∞@     ˇˇ  Ä ˇˇh	tMYUnJqT  p 8ÇG  Ñx0uNpm4bpZò@     ˇˇ  Ä ˇˇh	tMol3aoY  p 4MpSlKAC  u   @(EXGC-MKBmfk  ( t	 Ä a	 ÅQ  É0uN[E4CrZò@     ˇˇ  Ä ˇˇh	tMZD3BqY p 	  1UIxSYoL  u	  (EXGC-MKBmfk( t   Ä a @THeH00NVKsJcyEXRMbY5_Eg8∞	V  "0pX:Akw-CDBBrrEipi9KwFM8jw	a 0ts	<(∆¬T ˇˇ     ˇˇÇ`  Ö*0uNplBUrZ®@     ˇˇ  Ä ˇˇh	tMokATqY  p VEIXTJaL  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áWvwngsZTJ_bcM6EWCUWhs5_7pI2B5mAsEKJjSQ30yTGOGgdygu1c8_ZDOryhD6etiL9u6BJdggzCw7chiCEjZjq7jefH_gcPdrL5nnr39r6sylPH1-fZwxPmizVby3u3  Ä ˇˇ	æ  7òÿ∞:2SZMHKp76HoXfy1kMTeo_0pEhhc_uQ9CG9IzBx3FCUc 1  sËD  !  	h t<4îœT ˇˇ     ˇˇÅf  É60uNhImbTT∞@     ˇˇ  Ä ˇˇh	tMgHlaSS  p.  BBXkDxQ  u   @(EXGC-MKBmfk  ( t Ä a +@®2trW9iyxDFqMr7iszetiV2XE_fsTcu3j4ifeUU7gz18:`	n  "HàX:vdU5O-W8DzHQNSrUw1bNXw? 0ts	<O«^U ˇˇ     ˇˇÇ1  ÑL0uNpiYBpKÄ@     ˇˇ  Ä ˇˇh	tMohXAoJ  p gZJ33bRA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VPF9q8TpyPasYZksLZC5mNDUy7RsnidOWZm9SR53TLfKLR531B2undoW4tOAGeqtBHYAz6C1CkSGhvUsXQC9QmA à	ñ  7p∞∞:M0Qm1EL6gLPQQ6W5lIX1DsnpUVKhOSRUroaK9Zcvpjo ÿs 	b  ÿ X t<dñ˛T ˇˇ     ˇˇ  €    ^È…Ùj∑Èá∆O¥ŸÛ
-aF
-˛ 
- ˜≠
-b	Ã±Ç	g˛ ∂       ÇI  Ñ|0uOJimDTJò@     ˇˇ  Ä ˇˇh	tNIhlCSI  p VUhiySzA  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oWNaYrKJDxu5yaJk-4h5Ç[  Ö 0uORUCcj[®@     ˇˇ  Ä ˇˇh	tNQTBbiZ  p gZJHzRy  u   @(EXGC-MKBmfk  H tÇH  Ñz0uOBnBKRUò@     ˇˇ  Ä ˇˇh	tNAmAJQT  p AIQ2iRBS  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oRL7Fvk756QPJMaO489DjQcyz8OUEZNJysD8WBWuyVW3pxetvUmq35BCOhG97l_quXTlnLt9LV2v7WtwsOCpXSd_vQlvXo5jSSYVn3hXHVUA     †	Æ  7à»∞:10d6bFMShY3dQthoOtn_UP6g4Sl83T3K_AYbycBLfmY P sÿ@  X t<ä ¬T ˇˇ     ˇˇÇH  Ñz0uOBzGDsBò@     ˇˇ  Ä ˇˇh	tNAyFCrA  p sEQRgYqZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o1oc2kgPHKKd4OwyZtR7CqlmTcTZgm-M3zjBTqELjVBm-t-8bNO3I1OkWIpLKVigElwvzWt3I5dY3PJJwTd4WJlQSi6Et6XFxcBmkqeDaogQ     †	Æ  7à»∞:cwJSXBSX_EyK8hgjtLIBJd5ZpRQeC2beNTofePi12iA Ps 
-  X t<7–˙U ˇˇ     ˇˇÇK  Ö 0uOBWHJCEò@     ˇˇ  Ä ˇˇh	tNAVGIBD  p  YRQwyIiS0 u   (EXGC-MKBmfk  ( t	 Ä a	 k@okLpV974foHphTtZVZlae_IQEWahvsQC5UDN9OMs0kFHjn0eMsKR8goz_66phjGRgst-xzACqtOVXuJsFr1wMbOEPahA9GRa08k0NLy7KswU     †	Æ  7à»∞:W8pTPxIBxLC_Sp1nzRIqn5QLdrZDwM2bXcLOT00tPww P sÿ Ä   ˇˇX t<œ˙U ˇˇ     ˇˇ  ˘  Ñ|0uOJimDTJò@     ˇˇ  Ä ˇˇh	tNIhlCSI  p VUhiySzA  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oWNaYrKJDxu5yaJk-4h553LBmLF1WjFR2vm6fpVC1RID1NgSFkOKLtebHJE1iEB8VYl3l1PFw_ErEqPfbjNzl3-NAH6LOS7usxfNtKTZXvO8     †	Æ  7 B» ∞:9pvkWcTo_yWVndiV3pe0NyEZCgplLlRTCbDZDZDNcm0 P sÿ–  X t<0æÀU ˇˇ     ˇˇÇ4  ÑR0uOJGxTzKÄ@     ˇˇ  Ä ˇˇh	tNIFwSyJ  p YFZARaCI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 V@V5Hafe-fPhuAE3uI2btJZFOSbdGjrun23BjmpcEsGAAGZ8DXy36ÅS  É0uO6Flc7cò@     ˇˇ  Ä ˇˇh	tN5Ekb6b  p pA43iBjL  u   @(EXGC-MKBmfk  ( t Ä a @TK3CwJcF0O0q_zvPkl3INiQ8∞	V  "0 EpX:FZyNKrD-0Dbb62MQIyeI-w	a 	@ts	<yëœT ˇˇ     ˇˇÇI  Ñ|0uOBGU[jBò@     ˇˇ  Ä ˇˇh	tNAFTZiA  p cQ5lRIYT  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ojAD33lBGUXg-_XMinbwh6GIqmE75OjS1wtHV-2B8atDOOdEnnBk6s76y30w7OK99dzAGnUJuZFrs0U_hiBDdYH_Bz5ZaXG5hUfAJ0MJHBek     †	  7à»∞:4c4kE8qugT6QIOuNRT89fjDCbDfKCalIaYG5qOJa4NE Ps 	d  X t<ÉÃ¬T ˇˇ     ˇˇÇI  Ñ|0uOBBCUjDò@     ˇˇ  Ä ˇˇh	tNAABTiC  p pVJiwYpR  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o1sEByGxOuXM_HVQda4Sr-QI7pKAIqSOjDjWT1eZ2SgPlp4l3IxowRksYLH4d1iKhcfQZ5jIglregWjKh0j6z_hE8VlTPvysStVfpeAX_9k8     †	Æ  7 )»∞:epa5MKMAmnVQ-0llHRePoWdKIgro8hf_2qcqNw6Xd0E P sÿ)  X t<Ä–¬T ˇˇ     ˇˇÇI  Ñ|0uO6k1Skcò@     ˇˇ  Ä ˇˇh	tN5j0Rjb  p YAQwxSBD  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o4Ppb2fDxiooCXSZ1na-unou4z1HHAPMXx23dUgdwwmilnlObkH34EXts_cMWdvfujZYA83d6iAl7JMuDxB5REy6ptqCIFRTr1UAt-_wsoDw     †	Æ  7 )»∞:0ccfEDPwn_a2T82c0y2bNeSuy5dBzlGgZJoxEID4Mdk P sÿì  X t<˛E€U ˇˇ     ˇˇÇZ  Ö0uO6hIRyM®@     ˇˇ  Ä ˇˇh	tN5gHQxL  p cR4GyKyK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅvzOXR8nlTtZEgjyhImmrk-fzWjFMg7FgeADWxDNXOScuvyELH_xryT9z74eIVAtEVKIXd4sJmStweSBbQdGpSIMxSPVyrhxqHHsozG3-oTQPPGiJcHi8mZRoYj4utCpc )	æ  7òÿ∞:YaJ9LZpdnAqwlVxbBYZiwq0u4QMDqpEYIWJiIikJCmo 1  sËç¿ %  X t<GôfU ˇˇ     ˇˇÇw  ÖX0uOBxRb{Eÿ@     ˇˇ  Ä ˇˇh	tNAwQazD  p hdYlxDqR  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oP3fveimqEeLnyfmnSEz3X1Yne96OWbkWwCc9x0E61YNwOiL3ne-jMzU-KcHIdUp7LR2Ri6x1T9VqvbWsmORm8hRw83RZXRL6uX7X2Jfgmmo     †	Æ  7à»∞:m86z82NoA3W0jkl5smWbLssURP-dnT1XSmdY542vNwc P sÿŒ˝  X fÒ #D883:0*yeMp3seFM7M/01*QTZQIlkGFqYJ@ tY<
-°^U ˇˇ     ˇˇÇ|  Öb0uOBoUZERÿ@     ˇˇ  Ä ˇˇh	tNAnTYDQ  p sIhXSTKZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@rR0H24KXL-2JmUAAi0h9TqdPGwzwLbg_8LbcxH64gBZ3nU0-PSN64cumQCjw7gBfiMtDX26KRie8VhNtutSDutZHKouGU0aYR_SbkAYBzSZ4       % kà 7à»∞:yrgh6GiSAZCx3mBN2sz-tcHtFVmC1_p-QVQ1UhAdRcg P sP0  X fÒ #D882:0*4FGOtrn-ytI/01*uIm3ln-QW0gJ@ts@ ⁄õœT ˇˇ     ˇˇ  I    ^È…Ùj∑ÈáZ—å¢“:;
-·  5 .Œù@	Ú 5	 Ÿ¯çïπ=                   Ç^  Ö&0uNyDHTxZ¿@     ˇˇ  Ä ˇˇh	tMxCGSwY p 	  9YwygI5Q  u	  (EXGC-MKBmfk( t	 Ä a	 V@VPAoBxij7rLowltYFKMGQo5XDEkJWS8iGLI3CgYOtTlUgjBDMGIs-WmMtdpwHN5ocKU13_DQX_Uz9NO9jplNORg à	ñ  7p∞∞:NnUwlVokmMkQYDxn6ck18YsdMrcIpyGuTHZIu7KvBG0 ÿ s¿  ÿ X fŸ #D882:0*ggkM7km3clg/01*34nUb9SjcKoJ@ tY<¡ë˛T ˇˇ     ˇˇÇJ  Ñ~0uO5WHDCJò@     ˇˇ  Ä ˇˇh	tN4VGCBI  p AFJxyJDa  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oP5hlV8eBz9g2RT4mDFCtAs2raE7oPdjW38abSYeSR4Is5hEkb6EbREHj80PeEd_6V9414obcV6L-wrnnQmTHKahDk5LHwmHW_wJg25SmQl4     †	Æ  7à»∞:f2gz6eRieUwBL5bYR3fEBzufq3VSGmrle9nu_Or3Z9E Ps 	ˇ%  X t<√√¬T ˇˇ     ˇˇ     Ö0uO5{F[Tc®@ ÇC  Ñp0uO5GIKKCò@     ˇˇ  Ä ˇˇh	tN4FHJJB  p sYJhkThC  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@iP4QELNTwVmNaW_f_0YuaHeOqMunDN9vQo5VS_mNhPYR9Ei1ECbuqfNV7ogXvRKeK2emwuBakSXnUo8bduv0v54e3KtxM6CMdmY-t3vO8oG6† 	  7à»∞:si6uRF-j3aAvN2Lw7BLBPGvlPC17LHFsyINRp_UhQy4  sÿ  X t<üé^U ˇˇ     ˇˇÇz  Ö^0uO5yILScÿ@     ˇˇ  Ä ˇˇh	tN4xHKRb  p RFYGnT7I  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oB5zxgbVtb_PzfQEJV9p9yfpFZENW1WqvkdndBA3qmjRtc1vI1BNYE3NptNpzMy0U5Ld2g8nIRAPIHNfBqIImovT-X2rLxu1hUCka6UsPvRo     †	Æ  7à»∏:5-VxMJRRnFpOdHqzm6Dct6dlJpabHhleR4x6Cqou0I0  ) sÿ√{  X fÒ #D882:0*0zN2QzGwxJQ/,1*UNEDE1T8e8	J@ t	@ Ü’¬T ˇˇ     ˇˇÅR  É0uO5mTBqcò@     ˇˇ  Ä ˇˇh	tN4lSApb  p VM4CCY6K  u    	@(EXGC-MKBmfk  ( t Ä a @T79LTgmR9t8GuYLeMMFCc6A8∞	V  " 	pX:SzYVYD6nG9NRkJeoHP2_Uw	a 0ts	<z∆¬T ˇˇ     ˇˇÇJ  Ñ~0uO5HhKLBò@     ˇˇ  Ä ˇˇh	tN4GgJKA  p 0UhnnQiB  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oQR1Wvyw8kj1QIPpzY5vQr6_oxi6fkCT4cA3PnXSv9C8-QYBZT7AJ-35Cgio35mrpLpBg2LCRRBlBHIIJM63Xos3fopw_0EokIgU2WZy38xY     †	Æ  7 )»∞:tBlQk3dtWy5aCL3TtCjD8mdeDyx6DwB7-PEXTVB7SXc P sÿ   X t<éB€U ˇˇ     ˇˇÇE  Ñt0uO5FkC{Mò@     ˇˇ  Ä ˇˇh	tN4EjBzL  p gRJnQIhK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@iX4FrWgolORXaILaZtGehRwTbRhPPwYWER5H6y1Az9Rx-3Wicy7hx01FC0OevV7Bp1F32G9qoT6sMQsVH7X8lpLkriCzDQCHNM1wCR2MFby6† 	  7à E»∞:2ywEZ0MSh_nDBFbppNTJAcim0iikn1OYI4MEyT_a8iI  sÿ  X t<tÃ‹U ˇˇ     ˇˇÅP  É
-0uNyWTULTò@     ˇˇ  Ä ˇˇh	tMxVSTKS  p UJAXBYAB  u   @(EXGC-MKBmfk  ( t Ä a @THEM28Y1CjyfO3sX6J8PG3Q8∞	V  "0pX:RjkaABiL2Ocm76786yTOww	a 0ts	<é¬¬T ˇˇ     ˇˇÇL  Ö0uNyBTJ7Bò@     ˇˇ  Ä ˇˇh	tMxASI6A  p hNZ12CKL  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@r_B7eIga8lPQpLwGAcNcD9A3WNLtvXmsXCGZYh6o0_HqJHSEGUbP3TF3m2Mkz_Pbk-ITBfUtkxRi4fZY0qOoLYr1DETMc0wwj10PA0QGfjwo       %	Æ  7 )»∞:brYuFXXcc2GtbaafJv3jPNqTQJWWHF2xW5d-mi-CVcQ P sÿÓ   X t<≠ëœT ˇˇ     ˇˇÇ[  Ö 0uNx{XUrc®@     ˇˇ  Ä ˇˇh	tMwzWTqb  p  RFxD3CrJ0 u   (EXGC-MKBmfk  ( t	 Ä a	 Ä@Åq_XKWScI0v6QsPDTp29vkbvKs40usHXTYBnUxFv0J4hm1G5lHcHEjmCbSncKG-RuEqb_QgLYV9wy358rsDXf7Ak5bjQj0_FwojbpON7jbAXsCA8u5bG3t4qIpiJilclW )	æ  7òÿ∞:i_16RQs5CTldQw-zdQE5e3WrqbPxV2mRJ_p67B9LkmU 1  sË? %  X t<πìœT ˇˇ     ˇˇÇ/  ÑH0uNxYCEsUÄ@     ˇˇ  Ä ˇˇh	tMwXBDrT  p JFJ2BAiR  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VkOvRuTS_QL6Qqf1Dd6P-62X6ykD3ZG2hC9Eg8_jw9jIUpB7vc7M2kfjZXUQ7armCc5bIU8-pfJremI3bDVliZA à	ñ  7p∞∞:xYFXYWZWo40Sxm87X9Bk7kjhQ8EOEBZEPrytAVynzHU ÿ s¿n  ÿ X t<ú¬¬T ˇˇ     ˇˇÇ^  Ö&0uNqU4B7T®@     ˇˇ  Ä ˇˇh	tMpT3A6S  p cBIDQCoD  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å3JzmycWfKrIW2HTqUzwtOm0wzjgNVG6IEmj6ZFlAL-TjxUyWedgrQOYE1O2r6-fTw9D0dr-DuFeTnSn21RGqs6NBpOF580O1PxoXGEmUTbBCS-7P1jdXRywI1SmT8gCI )	æ  7 	ÿ∏:Tbnz1oAfnerMLdWB7CV0D-O8liXyDCqA2ppI1h7ZF1Y  	@s 	 %  X t<ΩîœT ˇˇ     ˇˇÅP  É
-0uNpzGSMTò@     ˇˇ  Ä ˇˇh	tMoyFRLS  p FIA0yCID  u   @(EXGC-MKBmfk  ( t Ä a @TQnmXpS5VbNLR3QUVm5WwyA8∞	V  "0pX:ddZgPd4untRaaVslMYh0kw	a 0ts	<Ü¬¬T ˇˇ     ˇˇ   U    ^È…Ùj∑Èáuìwê©îøç
-    Ä ∂Õ‡à°@*ˆ
-™	N Ä                                                                                                Ç^  Ö&0[WZlWbJD®@     ˇˇ  Ä ˇˇh	ZVYkVaIC  p hJZH0T6B  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áuz4VG5wt3_el2gXt9N0EsjkbVpUKanGqlhUzLF4m_gnycZzpw2w2g6n03qS7tmSjZwrBkdF-l1ghGA2TIEyxC1ZEETV5arwSUu2WabyiaUme7MYmylnUcdgy_AG2QnXa  Ä ˇˇ	æ  7òÿ∞:pb149yUtAcxOX4--1erX3ciVkEwO_-2HeST42q6NVmQ 1  sËI  %  X t<°œT ˇˇ     ˇˇÇH  Ñz0[WKjiZS[ò@     ˇˇ  Ä ˇˇh	ZVJihYRZ  p sZIwBCKb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oieFhThiQCVms8UsH5QbrohMBxDEep22ZWyHikDn6K-1zT6nVHIPBIi_bxPBvXXKt1thyAGV65QlIyxQVrqGti_8YnQtXGV3NCEK3iPSg9ws     †	Æ  7à»∞:nFlsDd1b7FEhQXA6oLmwbEuY7G9TYNUDy5myDESZWq0 P	^    X t<}é^U ˇˇ     ˇˇÇ\  Ö"0[WRS1U[L®@     ˇˇ  Ä ˇˇh	ZVQR0TZK  p RN4iRaIA  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅmOd2EnDoiMKwBA3i_MOBy8Ydc6K9uqV_xhePl_G6OPBz_7kNMHXSad9bQ8CWUoDQHqIcCL2fgt1L8_THtlLbsrBzALQ3r-FX-uMAVRE7obA7zEvMFVxAwrMDmubF30cd )	æ  7òÿ∏:ORLlgQPcJlWFmUU0_qoDRRHhxImpDOQP-Fti2siWyKY  	P sË=5 %  X t<ØìœT ˇˇ     ˇˇÇC  Ñp0[WR2{DjBò@     ˇˇ  Ä ˇˇh	ZVQ1zCiA  p UdZynb5 u 	 @(EXGC-MKBmfkH t	 Ä a	 k@ouf27GSC3PHbBkuW72GeACUbv7U3gfG7HFItoxrYbpsi3CNzNIO8Pqjj_QnJNxfhP2rQ9z1VoBGokamgx9jyYGHn0MyFKDKRIErDKMRK1qrE     †	Æ  7à»∞:JLU3455OJ0PjDHFteo_yeWgebvffgt94rebt24ri5wQ P sÿ  X t<©…¬T ˇˇ     ˇˇÅg  É80[WJVYcDJ∞@     ˇˇ  Ä ˇˇh	ZVIUXbCI  p AFxgkZrC  u    	@(EXGC-MKBmfk  ( t Ä a +@®RCv5tk4gzGPs6bq_Xo0nBNXHAYgRrAINJxG6xFR0KtQ:`	n  " Bà X:QGcWvG9T8H6_G20bYVQiAw? 0ts	<˙≈¬T ˇˇ     ˇˇÇL  Ö0[WJD3LEJò@     ˇˇ  Ä ˇˇh	ZVIC2KDI  p $8ZpDXCoC 	0 u   (EXGC-MKBmfk  ( t	 Ä a	 k@ouAQCo7MGtLKAUtGVmLqbzWw9l6VAlhag3DBQe0fJgNFsm0gJaUD_VpnVrfN1RczpeOB43FCMuE1BzQbe_LUZGZuc1HqvRyLyRGe0i5cLlL4     †	Æ  7à E»∞:P3KPHyZ32QBpp9RHwP0UAQ7kDoZ5uwWqx6RNDoWQCSI P sÿ  X t<y V ˇˇ     ˇˇÇH  Ñz0[WClhJE[ò@     ˇˇ  Ä ˇˇh	ZVBkgIDZ  p MZpETKJa  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o7NCD7UEKxQ65MOozXup8n4YAi6DFlCTuL1OuReNqjVaWNVVHzPezeMOb9deDnK3BdWn2TQl2H0sBte6UPtNdHoVkpZcWUVB2hNmEQVgzxKw     †	Æ  7à»∞:Adl3x1EgoG5jOGKEgLPuJmQoYmkPtZyp9_O_aTB6Yrc P sÿ†  X t<R…¬T ˇˇ     ˇˇÇZ  Ö0[WSknD6[®@     ˇˇ  Ä ˇˇh	ZVRjmC5Z  p dIRUjCia  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅhNlfAyFaeexQ3tbSjfTJdCANk-3hlKBcYwLsqIba5uKLlvykcL2TruR6FYrCLeNxZ2aQP7-J2LIH80aeAWfbqouQhmr0Y4-KRXgNjJDcsly-RuZpwFpK7FvL7GBlvpwu )	æ  7òÿ∞:x5GG6tWrwASWVz1mAqizcACuDy7ZK4-Sb3TDI3saFO0 1  sË0 %  X t<XôœT ˇˇ     ˇˇÇJ  Ñ~0[WSTGDMLò@     ˇˇ  Ä ˇˇh	ZVRSFCLK  p URoQlJLa  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oAvWIsENd1vjHd7-senZeh7wvgNQug8x41bwsODlSzUzm7H4DbQl_y-A3YloJmZD4aSrTHlmEqchK5PRQdB-AkCS3xI5ACDGMpgiGTgVWr98     † kà 7à»∞:lWjEYar74Z0bmugJw-6KGVgdKfbP9iMCsbKcUAyJds8 P sP ı   ˇˇX t<+øÀU ˇˇ     ˇˇÇH  Ñz0[WRm3SKTò@     ˇˇ  Ä ˇˇh	ZVQl2RJS  p BMRG2LJb  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oeUAVzPrA8mjA1w2YngNmb67qOARQI84Y9ydp95cYRP5Upeh3hSxZMhRPqiZ3NZFlkyuL6MUBj1IFsCpt-vnB-h3Hp2DzMtKwN45aGy1lK4M     †	Æ  7à»∞:wYNOlsqMKaeFOwBHf1l1p7vopZhUx-Tq-CQow76Ezfc P sÿ(  X t<«^U ˇˇ     ˇˇÇ_  Ö(0[WRIxcKE®@     ˇˇ  Ä ˇˇh	ZVQHwbJD  p.  cpC3KgC  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@áFvuEoQx-pkR0RHuxNkJDMO_bHYS2KCUYG7vX3CzW4d9mg2kuwQxS8bRj00ehoZPBLcitnjaN1GnvSWYf8LgFZfBIXbJZ6coKG-XC3u04rcIyD9a-CcqKR745B3-DOW9P  Ä ˇˇ	æ  7òÿ∞:sr_dkQ6TleF0mh31AoSEEGyKv0Zq0PdfQL1MZRA5bRE 1 s 	‚ %  X t<˚ìœT ˇˇ     ˇˇÇ]  Ö$0[WR31LBD®@     ˇˇ  Ä ˇˇh	ZVQ20KAC  p dBYTTDpI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 Ä@Å1KW35U8QvFaBGMrbIHJRTYEZ8bZkWMzT4p0snQZJPe7_sNLOgdxP5Y0w7h3waf541b8mA2uWIhW-tsYkQirWaUj4y6okTEB_RgoZEzdIEXmvHWav09v7lu2vLHp-9s9Z 	»k 	 7òÿ∞:Oou8MFHTisyXbGX0jLTqM-Cz0dmkn3_dhs0TOZ8P4YM 1  s	O ' %  X t<>îœT ˇˇ     ˇˇ  r    ^È…Ùj∑Èárp¡ATCN
-‚ d ï¥Ãd]
-#Ÿè¶7                                         Åj  É>0[Z5BxLiE∞@    ÅP  É
-0[WykTU[Cò@     ˇˇ  Ä ˇˇh	ZVxjSTZB  p JQ4QnRCL  u   @(EXGC-MKBmfk  ( t Ä a @XmehPUDyc_xyAGPE6e0M2vg H	V  "0pX:wB0rwB37D06AyAXOcMjP8w	a 	‡ts	<‘§ÀT ˇˇ     ˇˇÇw  ÖX0[WynWcSTÿ@     ˇˇ  Ä ˇˇh	Ç/  ÑH0[WqC1ZDDÄ@     ˇˇ  Ä ˇˇh	ZVpB0YCC  p sZ50QLYA  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@V_LO_1RsIYlOF8eOuUpJD9D0PQtyG9so8Rr5XzrfxZrdWJJ8G-3ZhBng8SZRJDxiEcnxCEqc-EYIKEmE_GOCYGg à kp 7p∞∞:MfPtWu47Gty-70E3bAeZXEKpBXnFft7FYE57HRt2GOA ÿ sPí ÿ X t<®™˛T ˇˇ     ˇˇÇK  Ö 0[Wi{xTbJò@     ˇˇ  Ä ˇˇh	ZVhzwSaI  p JNx2nKDY  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@oDK12JWoxSgU7q9BUhdha00czgDv1rEgmaTap1lgFVa20VP4cCIl0-DVKkts-sdOm_Sp_yr99_n3SOBZQ1Rrwcb-fJwuI0GrbfsnmkdKjajc     †	Æ  7à E»∞:UzztOeSTCyeKz4SZPuYkAvDBJjs_QcSrx3V6ge4g8VQ P sÿ‡  X t<˛˙lU ˇˇ     ˇˇ   0  ÖZ0[Wi{GCScÿ@     ˇˇ  Ä ˇˇh	ZVÇI  Ñ|0[Wqhz[xbò@     ˇˇ  Ä ˇˇh	ZVpgyZwa  p cB423TxK  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@ojOGKj5fl_E0C3ADpF4UJgDPut4fZJpdMF79whYjNX8KnI47qKzM6iloM64rjAYuygMUFKWWfzfoBBhI7LtjleeD_N89xW-rMZvYmSAPquA8     †	Æ  7à»∞:Y5fG8yaU1m_mGnVB8kggxbU7OpkXyTQ2ILnTtR46lp4 Ps 	  X t<wé^U ˇˇ     ˇˇÇG  Ñx0[WqXUZSZò@     ˇˇ  Ä ˇˇh	ZVpWTYRY p 	  5Upm0CYC  u	  (EXGC-MKBmfk( t	 Ä a	 k@opkAm3MLJ8FxXOjoyTKcRJMNA15hPow2OafIYkkM4Z_sLHdzE3jdegm8ogNTJ_JQwLEE-cxJYyOlFLavA6XT-pikMWMCaQq0_ReU0u1Oh-RY     † kà 7à»∞:T6zyuWftSo0-LoioGqb1nJhmy20Mr0ZRiSnIhI152_s P sPÿ	  X t<ïÀ¬T ˇˇ     ˇˇÅg  É80[WxG1Zr[∞@     ˇˇ  Ä ˇˇh	ZVwF0YqZ  p wBZBWJJQ  u   @(EXGC-MKBmfk  ( t Ä a +@®PSO91x5LoZLlJceCyjS16SgNnh-R3tZdwqBBeFQfQa8:` k  "HàX:Zm0r2ygtouVkonqZNi2pmA	1 0ts	<Ä¬¬T ˇˇ     ˇˇÇH  Ñz0[WxDCUJRò@     ˇˇ  Ä ˇˇh	ZVwCBTIQ  p wBpWXKjS  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oYJ7XKm5iEZQPazdFteD15TTP4-wSqPmPnXK3fb7MnBJSH8R8TUJLUM3lnk07c7KRweA-Jbo0w1pRgFlw5z1qL7ZPZMvFQrE4e6c60ymH5Dc     †	Æ  7à»∞:z-r5_DUNam_xHleVLsf0CtdHCRk3cC46ZYlICY2rcNE P sÿ°  X t< ¬T ˇˇ     ˇˇÇH  Ñz0[Wq{mZMBò@     ˇˇ  Ä ˇˇh	ZVpzlYLA  p FFhiBSoQ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@oCQGpgAhFDSaWauY202EFPX7WcXnPUjoYPGOjLGormD8vgQcxyakJlmD2MSmuEofx61lESldBs-XbvZvDyUUsRY3shhv_lAKx8CEsJVeeEyY     † kà 7à»∞:P8lbKfqLDB5gVV7UhXuijlrYuI8gd4McccmjW-HwRAk P sP  X t<Ï»¬T ˇˇ     ˇˇÇZ  Ö0[WqjyZkc®@     ˇˇ  Ä ˇˇh	ZVpixYjb  p cJ4RSAxZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅWIKdDYXdNl4tye6Yb4vBH_qJEje6JpsjPv1T7Gl2dgSpHRLl1c8Fowxw_n0HdzSzXGiQGfSJcoBSzw_JkWNyqFIfz3sqIqROOkUd1BkjjpbXMZbuDz8_BBMkxAywih02 ) kò 7òÿ∞:D_IRfLXGvTRDuxDMTtyWWoZ4N36LU49HToZu2S5pSs4 1  sP´ %  X t<tîœT ˇˇ     ˇˇÇK  Ö 0[WqHYE6Jò@     ˇˇ  Ä ˇˇh	ZVpGXD5I  p 1Ap1jRAY  u     P(EXGC-MKBmfk  ( t	 Ä a	 k@oUufGfT4DTWAK2lkj3tlOqpRHNW_iFi7t6-nh39esPaDyospk6Fg0CZGm4nAsEPlI27kdEIT_vLxyAsyO2enwt9UgD-EotOWJNKrJ8n8bHpc     †	Æ  7à»∞:RgV4ghjUTGVKLpmlP2YlJsEB-AgobSgxnGpxtuML2jo P sÿı'   X t<{ V ˇˇ     ˇˇÅf  É60[Wq4yMKU∞@     ˇˇ  Ä ˇˇh	ZVp3xLJT  p RNYTmCiA  u   @(EXGC-MKBmfk  ( t Ä a +@®QACpz1Tr8XLw-vV_8MxPyLE21Rq_n_vUxnoSXtDq7_8:`	n  "HàX:vqap1rK28nxhKWEi8C6OtQ? 0ts	<πx V ˇˇ     ˇˇÇa  Ö,0[Wp{IcBM®@     ˇˇ  Ä ˇˇh	ZVozHbAL  p YFAVSbgb  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅrulRVXCWPod5OHYFpGPNVWqtoFXC3-3IYEziwjwuJLj-DSwjUQOsw6mWhhFsx7Q1C-L68le7M67cTfAHqrvwoQp7ILDsx5nSjDzT6Xxw_urzF2B6Hhx7AwpJs44xAtiJ )	æ  7òÿÿ:mmSl5Rq_qmXOu_Ylmch4829nTD6pcqCuDD5SwmtxdCE   Ä ˇˇs 	ÈuK  !  X t<	ïœT ˇˇ     ˇˇÅg  É80[WpiyLjD∞@     ˇˇ  Ä ˇˇh	ZVohxKiC  p JMRR0CxY  u   @(EXGC-MKBmfk  ( t Ä a +@®v8oFRZA_toRW1X3QcHT9WBFl6EIngHmedvrfJ8RFjW4:`	n  "HàX:g31ICXFenUXvv27LOtiu8A?  	¯ts	<∆¬T ˇˇ     ˇˇ  G    ^È…Ùj∑ÈáàÕ˘¿Ä="–
-    8 ùµTk
-≤»ax-„ò 8                      Ç^  Ö&0[WiGFJCC®@     ˇˇ  Ä ˇˇh	ZVhFEIBB  p Ud5TTJJ  u   @(EXGC-MKBmfk  H t	 Ä a	 Ä@á_UjZTSSfWe5g6fqj1E-MsGonj5OYMQWQSnGZSI83xW6YsqQXq5TisZ2mGZ86hGQ4AJL-czDxrnI6uIFSPbyki0QJMAdmT1qmhANOQt-oRSnSNCirmssMnJya_-1HA3Y3  Ä ˇˇ	æ  7òÿ∞:Gq-9Ijhq7fqPmluIpYNLSd_pj3SVH9ajCqNxAHVtKbg 1 s 	¢ %  X t<GîœT ˇˇ     ˇˇÇI  Ñ|0[WiDCB7Tò@     ˇˇ  Ä ˇˇh	ZVhCBA6S  p NcIXzRDJ  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@owYI4VwPRxrmQy-ktv9hQa3dUHY8g1ONP0PdOFunkQ1oJYFrEiwIC8kKyONNwPxAP8Ss-Sv0vQb6V3nzQZjB_rxTQPSja8VS4aQtO7phuJOY     † kà 7à»∞:kvDRcHHDiur_zsx1u_5hvR86uNe_itBw0hm512SI-0M P sPµ  )` t<L—¬T ˇˇ     ˇˇÇH  Ñz0[Wh{FCJcò@     ˇˇ  Ä ˇˇh	ZVgzEBIb  p NMYXiQLC  u   @(EXGC-MKBmfk  ( t	 Ä a	 k@o-HiVY9edRp1m9S6Gv7dPD6oUlgASJK037Vk_ewy-dbEIH-5g6Ap_aRUGdjT2segnQeqCWMaXLb9bprbwFgcBxd9QxnDchMoRba3kYe9uLFc     †	Æ  7à»∞:dQi02atAYm73WJJ1gmmbL99O9Osezw11-clgHHBaeSs P sÿy  X t<ÍÕ¬T ˇˇ     ˇˇÇI  Ñ|0[Whk2BTcò@     ˇˇ  Ä ˇˇh	ZVgj1ASb  p BUQwxJyI  u    	@(EXGC-MKBmfk  ( t	 Ä a	 k@o5s75mbwDUHNkl9Rz7ZyDpleIM4VlI-V10Iq47kbURxkUgDzWIPOsYKPXXYDK6e0a54NBOAfUlQDSL0y2nV3--ThN2khHzTLdxigNTpntCu4     †	Æ  7à»∞:i4510Wiu5QsnaHZeKFr5HZsIBUsxERslODuO3URdCTs P sÿô   X t<‰w V ˇˇ     ˇˇÅg  É80[WhhTLrE∞@     ˇˇ  Ä ˇˇh	ZVggSKqD  p INAlWLjL  u    	@(EXGC-MKBmfk  ( t Ä a +@®-dZ50u2a3F5EjwC_7NLbfRV6TJhCfZTXoAdEsU9RzP0:`	n  "HàX:cMAOhw_3kSotE3pTaiqA3A? 0ts	<Ñ¬¬T ˇˇ     ˇˇÇe  Ö40[WhXUKJZ¿@     ˇˇ  Ä ˇˇh	ZVgWTJIY  p UI4QyASZ  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@Xg28lBjeN8r64pBRB1SBvyu0d9uSAGXxv-zahuzKwKTyDcKqwD2wtJGcEVHzza-d1rIKQ_lZElPnBDANrY5Px6A  `	ñ  7∞¿:8pvh6spzXC6T3Dkk1vVN_CKOIBkz0cGmUEOXNRTtUPk   Ä!@ s¿S ÿ X fŸ #à925:0*lLdqgheeMq4/882:1*wR3KzXmcWIIJ@ tY<˜ôœT ˇˇ     ˇˇÅh  É:0[WhRiUKB∞@     ˇˇ  Ä ˇˇh	ZVgQhTJA  p VJoFXDLJ  u   @(EXGC-MKBmfk  ( t Ä a +@®0wc3pUs3oiV7DJhVJTaxY_cGAbEwthpWED_C6qOX1qk:`	n  "H EàX:HLUFsOrhk2jMte7AzgfS_w? 0ts	<∆¬T ˇˇ     ˇˇÇZ  Ö0[WhEzEBK®@     ˇˇ  Ä ˇˇh	ZVgDyDAJ  p FMACTBIK  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅjlzzkbDHsBQQQtt5kGDFR6E3bDBQ96qadDVkJ8r008xpXIwV4OrhhMoxquaUtox7R1mp2qG1xMS194v4WUKzcyy-B2q_Grf7U9UEwosbjQCTmIRdHv3xRcdEgTTS5_yN )	æ  7òÿ∞:iBGbcxNYcucgYhrFRgn7G-bC3SsbQB5UPKx0KiEEkDI 1  sË˜" %  X t<nëªU ˇˇ     ˇˇÇ[  Ö 0[Wh3YBkC®@     ˇˇ  Ä ˇˇh	ZVg2XAjB  p gdxFCKzT  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅKPp-ATm_qCHL2WnmMIzF7ejBHA_-1EgKU0piECn-B-S-FpbmzazZsynOpjZoaFdtvxyfSS2HB39e12lo7IJEdpiva6kHDVp82Xe4miyhV2pcQQxfsAY6kBPTFrQ-LZHq ) kò 7òÿ∞:A9-3BY_DEMcS9uUqJyLSe3oh3-QubCGop5YNcueYIuI 1  sP‡  !  X t<y†œT ˇˇ     ˇˇÅg  É80[W[jHEjZ∞@     ˇˇ  Ä ˇˇh	ZVZiGDiY  p 9QARnBKL  u   @(EXGC-MKBmfk  ( t Ä a +@®yrG96vnaGxFx7wKC9c-DhwQR45XKT5vpIAuHsl8Sm3I:`	n  "HàX:8LLVn6q1BgxOUniZwoKI2A?  	¯ts	<î¬¬T ˇˇ     ˇˇÇ_  Ö(0[W[iH[qZ¿@     ˇˇ  Ä ˇˇh	ZVZhGZpY  p IZZE3YKb  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@Vw0QaXWLNbS-PRuQeGjemiAQSB7fNeaZqUNn6m_iwL9ZUYsKdkzQvcHMHIi5na4rUmtadB5G_k-ymhUnyWfeqnQ à	ñ  7p∞∞:dQWz_54vj6S6jiF33DJTDNyMHQAEGqnlfhT1ojuRVYI ÿ s¿•  ÿ X fŸ #à927:0*YVBcbU2Idfw/882:1*bq46c69Hem0J@ tY<¥∆¬T ˇˇ     ˇˇÅf  É60[W[HCTRR∞@     ˇˇ  Ä ˇˇh	ZVZGBSQQ  p tF5xWT7b  u   @(EXGC-MKBmfk  ( t Ä a +@®lHdAq_8vgD3XwForQErBJ-dA39IrnYp3Fn0XQIfpFOs:`	n  "HàX:Egc9Gu_K1Pa8tEnAFL6kOg? 0ts	<l∆¬T ˇˇ     ˇˇÇa  Ö,0[W[FxZ[C¿@     ˇˇ  Ä ˇˇh	ZVZEwYZB  p QYpRjZqC  u   @(EXGC-MKBmfk  ( t	 Ä a	 V@VaBf5AggsWjnE0ry_KmgqEoTDOnVKkRNnxPk7SKcjisC53nT2m8LOwPwJAvS4goWETjSqQaq8sfFKLDJLmwTe5g à	ñ  7p E∞∞:UfOEnDTqH72O_9au3UYw9PjLA5p0IHeZOdzlffU6X64 ÿ s¿™ ÿ X fŸ #à923:0*DmJM_suH7z0/881:1*o6H--BnsY3IJ@ tY<∂«¬T ˇˇ     ˇˇ  
-$    ^È…Ùj∑Èáπ-À+”Çº
-   Ç ¢WÇ˘
-≤	‡                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Ç\  Ö"0dBJVI[{B®@     ˇˇ  Ä ˇˇh	cAIUHZzA  p REJm3AKY  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅijZ5jARbw2mHsCJX5MQea9bNvGGh0E8MLvNl_KxFVrskk5CPgw7xkXxU6qU-6yY48vDTPNdDfcQf9OjjI_UxtCmsZ7qA1cDfccyt1kh18jwPG3WtJHb8k6Szmm15EKrk )	æ  7òÿ∏:c5PHFI_mwojIjySV4fnwzVHKexSJ_cYVCrhnFa1UGVc  	P sË» %  X t<‘ìœT ˇˇ     ˇˇÅP  É
-0dBKyCTULò@     ˇˇ  Ä ˇˇh	cAJxBSTK  p ZMhE2R6T  u   @(EXGC-MKBmfk  ( t Ä a @TkrEiSa02JJWApH1eQJP_oA8∞	V  "0pX:YTeWm3o8ZazTPoizZtyTeA	a 0ts	<ç¬¬T ˇˇ     ˇˇÇE  Ñt0dBKU4JhDò@     ˇˇ  Ä ˇˇh	cAJT3IgC  p FAwwGIjK u 	 @(EXGC-MKBmfk( t	 Ä a	 k@oO4VlVewJagJo6sPxvlhCD38l_xWEVyMqygtJ_mnJWoGh9Zv6Rc-lHugXAz7gdoRZn6S58ZCGMA_60HOGYheW2zFKARqAzozukewog_pYiCI     †	Æ  7à»∞:Q4OhMPJ0D3rlIN5MftR7rE4h9FW9MNRrFueIOWAll4U Ps 	»  X t<∞Õ¬T ˇˇ     ˇˇÇ\  Ö"0dBKBxBRZ®@     ˇˇ  Ä ˇˇh	cAJAwAQY  p xNYSwK7Q  u   @(EXGC-MKBmfk  ( t	 Ä a	 Ä@ÅpuWG6oDWfwcDL12xVL48gvWcmAhqaOrgCJgOCmBB7_N3HUe68s0IYY5cLn79u8l
+		<attribute name="LATITUDE" class="java.lang.Double">3.42825333</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27C, P74B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.532775</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 30 y 32</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27C-Ida, P74B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K32</attribute>
+	</object>
+	<object id="C10K31">
+		<attribute name="IN_LINES" class="java.lang.String">[P27C-Vuelta, P74A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.42848667</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27C, P74A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53199333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 31 y 30</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27C-Vuelta, P74A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K31</attribute>
+	</object>
+	<object id="D23T11">
+		<attribute name="IN_LINES" class="java.lang.String">[P27C-Ida, P74B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43033167</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27C, P74B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53024833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Dg 23 entre Tr 11 y 10</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27C-Ida, P74B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">D23T11</attribute>
+	</object>
+	<object id="D23T12">
+		<attribute name="IN_LINES" class="java.lang.String">[P27C-Vuelta, P74A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43020833</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27C, P74A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52958639</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Dg 23 entre Tr 12A y 13</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27C-Vuelta, P74A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">D23T12</attribute>
+	</object>
+	<object id="C13D231">
+		<attribute name="IN_LINES" class="java.lang.String">[P10A-Vuelta, P10B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43302472</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10A, P10B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52818111</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Kr 23D y D23</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10A-Vuelta, P10B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13D231</attribute>
+	</object>
+	<object id="C13D232">
+		<attribute name="IN_LINES" class="java.lang.String">[P72-Ida, P10A-Ida, P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43286917</attribute>
+		<attribute name="LINES" class="java.lang.String">[P72, P10A, P10B, P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.527915</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Dg 23 y K23D</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P72-Ida, P10A-Ida, P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13D232</attribute>
+	</object>
+	<object id="C13K22B">
+		<attribute name="IN_LINES" class="java.lang.String">[P72-Ida, P10A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43622694</attribute>
+		<attribute name="LINES" class="java.lang.String">[P72, P10A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52812222</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Kr 23 y 22B</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P72-Ida, P10A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13K22B</attribute>
+	</object>
+	<object id="C13K20">
+		<attribute name="IN_LINES" class="java.lang.String">[P10A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43820472</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52846583</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Kr 20 y 21</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13K20</attribute>
+	</object>
+	<object id="C13K21">
+		<attribute name="IN_LINES" class="java.lang.String">[P72-Ida, P10A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43845167</attribute>
+		<attribute name="LINES" class="java.lang.String">[P72, P10A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52822167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Kr 21 y 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P72-Ida, P10A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13K21</attribute>
+	</object>
+	<object id="C9K32A">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.42762806</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53689722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 32A y 32</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K32A</attribute>
+	</object>
+	<object id="C9K31">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.42956944</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53631556</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 31 y 30</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K31</attribute>
+	</object>
+	<object id="C9K27">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43227611</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53550278</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 28 y 27</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K27</attribute>
+	</object>
+	<object id="C9K23D">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43488028</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53471667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 23D y 23C</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K23D</attribute>
+	</object>
+	<object id="C9K19">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.438955</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53347667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 19 y 17</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K19</attribute>
+	</object>
+	<object id="C21K1">
+		<attribute name="IN_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45769</attribute>
+		<attribute name="LINES" class="java.lang.String">[P21A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.525755</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 21 entre Kr 1 y 2</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C21K1</attribute>
+	</object>
+	<object id="K5C21">
+		<attribute name="IN_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45518389</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52421972</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 5 entre Cl 21 y 22</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K5C21</attribute>
+	</object>
+	<object id="K5C24">
+		<attribute name="IN_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.456755</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.520755</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 5 entre Cl 24 y 25</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K5C24</attribute>
+	</object>
+	<object id="A4NC5">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A05-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45380278</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54614361</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 5 y 6 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A05-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC5</attribute>
+	</object>
+	<object id="A4NC6">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A05-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45444972</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54863861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 6 y 7 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A05-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC6</attribute>
+	</object>
+	<object id="K1C9OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45201361</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55072389</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 1 entre Cl 9 y 10 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K1C9OE</attribute>
+	</object>
+	<object id="C7OEAV1">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A05-Ida, A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45327</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54957278</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 7 Oe con Av 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C7OEAV1</attribute>
+	</object>
+	<object id="C5OEK1A">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4530925</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54669139</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 Oeste entre Kr 1A y 1B Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5OEK1A</attribute>
+	</object>
+	<object id="K1C5OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45056472</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54495556</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 1 entre Kr 1C y Cl 5 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K1C5OE</attribute>
+	</object>
+	<object id="K8C25">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.452715</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A, P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.519765</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 8 entre Cl 25 y 24</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K8C25</attribute>
+	</object>
+	<object id="K8C21">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45166056</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A, P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52341833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 8 entre Cl 21 y 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K8C21</attribute>
+	</object>
+	<object id="K8C16">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.450215</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A, P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52799333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 8 entre Cl 16 y 15</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Ida, P40B-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K8C16</attribute>
+	</object>
+	<object id="K5C15">
+		<attribute name="IN_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45299639</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52896472</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 5 entre Cl 15  y 16</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K5C15</attribute>
+	</object>
+	<object id="K5C19">
+		<attribute name="IN_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45454333</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5257</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 5 entre Cl 19 y 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K5C19</attribute>
+	</object>
+	<object id="C9K12">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44472972</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5332325</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 13 y 12</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K12</attribute>
+	</object>
+	<object id="C10K10">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44650806</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53263528</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 10 y 12</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K10</attribute>
+	</object>
+	<object id="C10K13">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44368472</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53220611</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 13 y 14</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K13</attribute>
+	</object>
+	<object id="K23AC12A">
+		<attribute name="IN_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43500889</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52857861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 23A entre Cl 12A y 13</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K23AC12A</attribute>
+	</object>
+	<object id="C10K19">
+		<attribute name="IN_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43899611</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53158083</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 19 y 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K19</attribute>
+	</object>
+	<object id="C15K19A">
+		<attribute name="IN_LINES" class="java.lang.String">[P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43947444</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10B, P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.525925</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 15 entre Kr 19A y 18A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C15K19A</attribute>
+	</object>
+	<object id="C10K22">
+		<attribute name="IN_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43632667</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10B]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5312725</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 10 entre Kr 22 y 23</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10B-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C10K22</attribute>
+	</object>
+	<object id="C25K12">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44572333</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.51861333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 25 entre Kr 12 y 13A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C25K12</attribute>
+	</object>
+	<object id="C9K15">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44231083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53318861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 15 y 14A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K15</attribute>
+	</object>
+	<object id="C9K8">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44949056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53400056</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 8 y 6</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K8</attribute>
+	</object>
+	<object id="C5K5">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44856333</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53725333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 5 y 6</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K5</attribute>
+	</object>
+	<object id="K4C9">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45110417</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5348625</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 9 y 8</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C9</attribute>
+	</object>
+	<object id="K4C5">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44960139</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53802944</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 5 y 4</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C5</attribute>
+	</object>
+	<object id="K3C1OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44969611</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54140083</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 3 entre Cl 1 y 2 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K3C1OE</attribute>
+	</object>
+	<object id="K2C2OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45083889</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54239944</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 2 entre Cl 2 y 3 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2C2OE</attribute>
+	</object>
+	<object id="K1C11OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45068861</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55344833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 1 entre Cl 11 y 12 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K1C11OE</attribute>
+	</object>
+	<object id="K2OEC14">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.447825</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55675944</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 20E entre Cl 14 y 15 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2OEC14</attribute>
+	</object>
+	<object id="K2C13OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44956556</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55392833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 2 entre Cl 13 y 12 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2C13OE</attribute>
+	</object>
+	<object id="K2C11OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45099</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55094111</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 2 entre Cl 11 y 10 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2C11OE</attribute>
+	</object>
+	<object id="K2C8OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45178556</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54887278</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 2 entre Cl 8 y 7 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2C8OE</attribute>
+	</object>
+	<object id="K1C2A">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta, P27D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45042083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53986917</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 1 entre Cl 2 y 2A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta, P27D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K1C2A</attribute>
+	</object>
+	<object id="K10C7">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A06-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44648028</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A06, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53459611</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 7 y 8</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A06-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C7</attribute>
+	</object>
+	<object id="C5K15">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44262028</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5367725</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 15 y 16</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K15</attribute>
+	</object>
+	<object id="C5K19">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44053417</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53711417</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 19 y 22</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K19</attribute>
+	</object>
+	<object id="K23C5">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43909333</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53817167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 23 entre Cl 5 y 3A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K23C5</attribute>
+	</object>
+	<object id="K23C2">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44064583</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54066333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 23 entre Cl 2 y 1A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K23C2</attribute>
+	</object>
+	<object id="K24CC6">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44189778</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54588139</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 24C entre Cl 6 y 9</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K24CC6</attribute>
+	</object>
+	<object id="K24CC61">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44286056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54818972</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 24C entre Cl 6 y  9</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K24CC61</attribute>
+	</object>
+	<object id="K14C9">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44433</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54797167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 14 entre Cl 9 y 8</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K14C9</attribute>
+	</object>
+	<object id="K14C6">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44421667</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54538667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 14 entre Cl 6 y 7</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K14C6</attribute>
+	</object>
+	<object id="K14C3">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44343583</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54249083</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 14 entre Cl 3 y 2</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K14C3</attribute>
+	</object>
+	<object id="K14C31">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44374083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53860361</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 14 entre Cl 3 y 4</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K14C31</attribute>
+	</object>
+	<object id="C4BK27">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43393222</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54219111</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 4B entre Kr 27 y 34</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C4BK27</attribute>
+	</object>
+	<object id="K34C4">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.434605</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54462667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 34 entre Cl 4 y 3</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K34C4</attribute>
+	</object>
+	<object id="C3OK34">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43667528</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54539639</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 3 Oe entre Kr 34 y 27</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C3OK34</attribute>
+	</object>
+	<object id="K27C5O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43966083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54679444</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 con Cl 5 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C5O</attribute>
+	</object>
+	<object id="K27C9O2">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44337944</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54847861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 con Cl 9 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C9O2</attribute>
+	</object>
+	<object id="K6C8O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44532806</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54723861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 6 con Cl 8 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K6C8O</attribute>
+	</object>
+	<object id="K4C6O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44693139</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54714806</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 6 y 7 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C6O</attribute>
+	</object>
+	<object id="K4C8O2">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44687167</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54865</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 8 y 9 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C8O2</attribute>
+	</object>
+	<object id="K4C11O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44617639</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55056528</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 11 y 12 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C11O</attribute>
+	</object>
+	<object id="K4C12O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44616611</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55047222</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 12 y 11 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C12O</attribute>
+	</object>
+	<object id="K4C9O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44681417</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54869667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 9 y 8 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C9O</attribute>
+	</object>
+	<object id="K4C7O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4468425</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54733944</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 7 y 6 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C7O</attribute>
+	</object>
+	<object id="K6C8O1">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44542056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54794833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 6 con Cl 8 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K6C8O1</attribute>
+	</object>
+	<object id="K27C9O1">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44306194</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04, A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54849889</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 con Cl 9 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C9O1</attribute>
+	</object>
+	<object id="C5OK24E">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44025833</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04, A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5474325</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 Oe entre Kr 24E y 24F</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5OK24E</attribute>
+	</object>
+	<object id="K27C3O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43665528</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04, A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5449925</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 entre Cl 3 y 2 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C3O</attribute>
+	</object>
+	<object id="K27C3">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43543944</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04, A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54366444</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 entre Cl 3 y 4</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C3</attribute>
+	</object>
+	<object id="C1K13A">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44420583</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54127917</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 1 entre Kr 13A y 13</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C1K13A</attribute>
+	</object>
+	<object id="A1K2">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45108306</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54231306</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 1 entre Kr 2 y Cl 2 OE</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, A05-Vuelta, A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A1K2</attribute>
+	</object>
+	<object id="K24CC4OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44097694</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54412417</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 24C entre Cl 4 OE y 5 OE</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K24CC4OE</attribute>
+	</object>
+	<object id="C11OEK24">
+		<attribute name="IN_LINES" class="java.lang.String">[A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44218083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54881389</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 11 Oe con Kr 24D</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C11OEK24</attribute>
+	</object>
+	<object id="C5K22">
+		<attribute name="IN_LINES" class="java.lang.String">[E27-Ida, P27D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43944167</attribute>
+		<attribute name="LINES" class="java.lang.String">[E27, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53765167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr  22 y 23</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[E27-Ida, P27D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K22</attribute>
+	</object>
+	<object id="K10C10">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida, P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44693139</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53231694</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 10 y 11</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida, P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C10</attribute>
+	</object>
+	<object id="K10C12">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida, P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44749306</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53033917</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 12 y 13</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida, P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C12</attribute>
+	</object>
+	<object id="C21K10">
+		<attribute name="IN_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44975806</attribute>
+		<attribute name="LINES" class="java.lang.String">[P21A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.522875</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 21 entre Kr 9 y 10</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C21K10</attribute>
+	</object>
+	<object id="AV2OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44707056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55883028</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 2 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">AV2OE</attribute>
+	</object>
+	<object id="AV2OEC20">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44764917</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56153583</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 2 Oeste con Cl 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">AV2OEC20</attribute>
+	</object>
+	<object id="AV2OEATE">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44793167</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56373722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 2 Oeste Sector Atenas</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">AV2OEATE</attribute>
+	</object>
+	<object id="AV2OC201">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44761583</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56176583</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 2 Oeste con Cl 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">AV2OC201</attribute>
+	</object>
+	<object id="AV2OEBEL">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44703694</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55918056</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 2 Oeste a Bellavista</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">AV2OEBEL</attribute>
+	</object>
+	<object id="K2OEC141">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44791056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55651</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 2 Oeste entre Cl 14 y Kr 2A1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K2OEC141</attribute>
+	</object>
+	<object id="K4C12AO">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44522111</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55279972</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 12A y 13 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C12AO</attribute>
+	</object>
+	<object id="C13OK15">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44360083</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55386528</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 Oeste con Kr 15</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13OK15</attribute>
+	</object>
+	<object id="C14OK23C">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44155889</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55206472</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 oeste entre Kr 23C y 24D</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OK23C</attribute>
+	</object>
+	<object id="C14OK24C">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4419675</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55232389</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 Oeste entre Kr 24C y 24B</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OK24C</attribute>
+	</object>
+	<object id="C14OK15">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.443345</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55394528</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 Oeste entre Kr 15 y 16</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OK15</attribute>
+	</object>
+	<object id="K4C13O">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44518722</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5527275</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 4 entre Cl 13 y 12A Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K4C13O</attribute>
+	</object>
+	<object id="C5K6Y9">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, E27-Ida, P27D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44742833</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, E27, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53693167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 6 y 9 Clinica Comfenalco</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, E27-Ida, P27D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K6Y9</attribute>
+	</object>
+	<object id="C5K13">
+		<attribute name="IN_LINES" class="java.lang.String">[E27-Ida, P27D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44418333</attribute>
+		<attribute name="LINES" class="java.lang.String">[E27, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53676</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 13 y 14</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[E27-Ida, P27D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K13</attribute>
+	</object>
+	<object id="C7K25">
+		<attribute name="IN_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43589833</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53728833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 7 entre Kr 25 y 24 Bomberos</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C7K25</attribute>
+	</object>
+	<object id="C5K14Y13">
+		<attribute name="IN_LINES" class="java.lang.String">[A02-Vuelta, E27-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.444355</attribute>
+		<attribute name="LINES" class="java.lang.String">[A02, E27, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.536535</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 14 y 13 Puente Peatonal</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A02-Vuelta, E27-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K14Y13</attribute>
+	</object>
+	<object id="K10C15">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44796639</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5270225</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 15 y 16</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C15</attribute>
+	</object>
+	<object id="K10C19">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44885</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52370833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 19 y 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C19</attribute>
+	</object>
+	<object id="K10C22A">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44961806</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52061139</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 10 entre Cl 22A y 23</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K10C22A</attribute>
+	</object>
+	<object id="C13K231">
+		<attribute name="IN_LINES" class="java.lang.String">[P10A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43562111</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52835667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 13 entre Kr 23 y 23A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C13K231</attribute>
+	</object>
+	<object id="C14OK24B">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44206806</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55283722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 Oe entre Kr 24C y 24B</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OK24B</attribute>
+	</object>
+	<object id="K32C8">
+		<attribute name="IN_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.42833</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53818833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 32 entre Cl 8 y 7</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K32C8</attribute>
+	</object>
+	<object id="C7K30">
+		<attribute name="IN_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43139667</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53746833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 7 entre Kr 30 y 29</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C7K30</attribute>
+	</object>
+	<object id="C7K23B">
+		<attribute name="IN_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43730833</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53664667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 7 entre  Kr 23B y 23</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C7K23B</attribute>
+	</object>
+	<object id="K23C13A">
+		<attribute name="IN_LINES" class="java.lang.String">[P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43585028</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10B, P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52716222</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 23 entre Cl 13A y 14</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10B-Ida, P10D-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K23C13A</attribute>
+	</object>
+	<object id="C8K19">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4388775</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53492833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 19 y 22</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K19</attribute>
+	</object>
+	<object id="C15K23">
+		<attribute name="IN_LINES" class="java.lang.String">[P72-Vuelta, P10D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43540167</attribute>
+		<attribute name="LINES" class="java.lang.String">[P72, P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52622389</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 15 entre Kr 23 y 23A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P72-Vuelta, P10D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C15K23</attribute>
+	</object>
+	<object id="K14C2Y2A">
+		<attribute name="IN_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44341417</attribute>
+		<attribute name="LINES" class="java.lang.String">[A03]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54034472</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 14 entre Cl 2 y 2A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A03-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K14C2Y2A</attribute>
+	</object>
+	<object id="A4NC3">
+		<attribute name="IN_LINES" class="java.lang.String">[A05-Ida, A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45142917</attribute>
+		<attribute name="LINES" class="java.lang.String">[A05, A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54405167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 3 y 4 OE</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A05-Ida, A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC3</attribute>
+	</object>
+	<object id="K1C7OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45359833</attribute>
+		<attribute name="LINES" class="java.lang.String">[A05]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54798944</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 1 entre Cl 7 y 5 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K1C7OE</attribute>
+	</object>
+	<object id="C8AV3">
+		<attribute name="IN_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.454055</attribute>
+		<attribute name="LINES" class="java.lang.String">[A05]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53677583</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Av 3 y 4</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8AV3</attribute>
+	</object>
+	<object id="A4NC18">
+		<attribute name="IN_LINES" class="java.lang.String">[E27-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45953333</attribute>
+		<attribute name="LINES" class="java.lang.String">[E27]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52940167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 18 y 19</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[E27-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC18</attribute>
+	</object>
+	<object id="A4NC21">
+		<attribute name="IN_LINES" class="java.lang.String">[A05-Vuelta, E27-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46161</attribute>
+		<attribute name="LINES" class="java.lang.String">[A05, E27]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52786667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 21 y 22</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A05-Vuelta, E27-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC21</attribute>
+	</object>
+	<object id="A4NC23">
+		<attribute name="IN_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46396056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A05]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52638722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4N entre Cl 23 y 24</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A05-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4NC23</attribute>
+	</object>
+	<object id="C7K27">
+		<attribute name="IN_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43408167</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53743167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 7 entre Kr 27 y 26</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C7K27</attribute>
+	</object>
+	<object id="C25K11">
+		<attribute name="IN_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44916556</attribute>
+		<attribute name="LINES" class="java.lang.String">[P40A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.51840722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 25 entre Kr 11 y 11B</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P40A-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C25K11</attribute>
+	</object>
+	<object id="C21K7A">
+		<attribute name="IN_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45279944</attribute>
+		<attribute name="LINES" class="java.lang.String">[P21A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52359194</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 21 entre Kr 7 y 7A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C21K7A</attribute>
+	</object>
+	<object id="C21K5">
+		<attribute name="IN_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45535972</attribute>
+		<attribute name="LINES" class="java.lang.String">[P21A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52471222</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 21 entre Kr 4 y 5</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C21K5</attribute>
+	</object>
+	<object id="C8K6">
+		<attribute name="IN_LINES" class="java.lang.String">[A01A-Ida, P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44876556</attribute>
+		<attribute name="LINES" class="java.lang.String">[A01A, P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5346575</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 6 y 8</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A01A-Ida, P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K6</attribute>
+	</object>
+	<object id="C8K23A">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43614778</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53574472</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 23A y 23C</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K23A</attribute>
+	</object>
+	<object id="C8K27">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43265417</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53650889</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 27 y 28</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K27</attribute>
+	</object>
+	<object id="C8K30">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.42983444</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53723417</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 30 y 30A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K30</attribute>
+	</object>
+	<object id="C8K32">
+		<attribute name="IN_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.427865</attribute>
+		<attribute name="LINES" class="java.lang.String">[P27A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53783611</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 8 entre Kr 32 y 32A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P27A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C8K32</attribute>
+	</object>
+	<object id="A4OEC5">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45532472</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5481925</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4 Oeste con  Cl 5</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A4OEC5</attribute>
+	</object>
+	<object id="A15OEC7">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45799556</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54958222</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste con Cl 7</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OEC7</attribute>
+	</object>
+	<object id="A15OEC9A">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45950528</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55101917</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste Cl 9A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OEC9A</attribute>
+	</object>
+	<object id="A15OC9A2">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46018444</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55322139</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste Cl 9A 2</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OC9A2</attribute>
+	</object>
+	<object id="PRAUSA1">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45965944</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55562056</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Puente del Rio Aguacatal Urbanizacion Se</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">PRAUSA1</attribute>
+	</object>
+	<object id="C11OEK15">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46191722</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55908472</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 11 Oeste con Kr 15A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C11OEK15</attribute>
+	</object>
+	<object id="C14OEK12">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46131889</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55998139</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 Oeste con Kr 12A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OEK12</attribute>
+	</object>
+	<object id="A9OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45960972</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5614</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9 Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9OE</attribute>
+	</object>
+	<object id="A9OE2">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4575775</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56317056</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9 Oeste 2</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9OE2</attribute>
+	</object>
+	<object id="A9AOE22A">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.455775</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5646125</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 22 Oeste entre  Cl 22A y 23 Bis</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9AOE22A</attribute>
+	</object>
+	<object id="A9AOE24">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4559325</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56520722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9A Oeste con Cl 24</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9AOE24</attribute>
+	</object>
+	<object id="A9AOE241">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.455865</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5655325</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9A Oeste con Cl 24 - 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9AOE241</attribute>
+	</object>
+	<object id="A9AOE23B">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45561722</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56439</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9A Oeste entre Cl 23 Bis y 22A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9AOE23B</attribute>
+	</object>
+	<object id="A9OE1">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45778389</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56279889</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9 Oeste - 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9OE1</attribute>
+	</object>
+	<object id="A9OE3">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.460115</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.56087111</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 9 Oeste - 3</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A9OE3</attribute>
+	</object>
+	<object id="C14OK121">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.4607725</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55997333</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 14 Oeste con Kr 12A Oeste</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C14OK121</attribute>
+	</object>
+	<object id="C11OK15A">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46155667</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55905861</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 11 Oeste con Kr 15A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C11OK15A</attribute>
+	</object>
+	<object id="PRAUSA2">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45951556</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55552361</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Puente del Rio Aguacatal Urbanizacion Se</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">PRAUSA2</attribute>
+	</object>
+	<object id="A15OC9A1">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.46005333</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.55323972</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste con Cl 9A - 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OC9A1</attribute>
+	</object>
+	<object id="A15OC9A3">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45964389</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5513575</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste con Cl 9A</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OC9A3</attribute>
+	</object>
+	<object id="A15OEC71">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45784667</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54968583</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 15 Oeste con Cl 7 - 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A15OEC71</attribute>
+	</object>
+	<object id="A40OEC51">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.45514694</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5481375</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Av 4 Oeste con Cl 5 - 1</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">A40OEC51</attribute>
+	</object>
+	<object id="C15K18A">
+		<attribute name="IN_LINES" class="java.lang.String">[P72-Vuelta, P10D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44011056</attribute>
+		<attribute name="LINES" class="java.lang.String">[P72, P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52611917</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 15 entre Kr 18A y 19</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P72-Vuelta, P10D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C15K18A</attribute>
+	</object>
+	<object id="K27C4">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43810417</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54581889</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 entre Cl 4 y 5 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C4</attribute>
+	</object>
+	<object id="K27C5OE">
+		<attribute name="IN_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43822056</attribute>
+		<attribute name="LINES" class="java.lang.String">[A04, A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54590972</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Kr 27 entre  Cl 5  y 4 Oe</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A04-Vuelta, A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K27C5OE</attribute>
+	</object>
+	<object id="C5K7">
+		<attribute name="IN_LINES" class="java.lang.String">[E27-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44803167</attribute>
+		<attribute name="LINES" class="java.lang.String">[E27]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53681833</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 7 y 6</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[E27-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K7</attribute>
+	</object>
+	<object id="C5K15C6">
+		<attribute name="IN_LINES" class="java.lang.String">[E27-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44166667</attribute>
+		<attribute name="LINES" class="java.lang.String">[E27, P27D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.5363</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 15 y Cl 6</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[E27-Vuelta, P27D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K15C6</attribute>
+	</object>
+	<object id="C9K14A">
+		<attribute name="IN_LINES" class="java.lang.String">[A06-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44284028</attribute>
+		<attribute name="LINES" class="java.lang.String">[A06]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.53318889</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 9 entre Kr 14A y 14</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A06-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C9K14A</attribute>
+	</object>
+	<object id="C5K27">
+		<attribute name="IN_LINES" class="java.lang.String">[A70-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.43363528</attribute>
+		<attribute name="LINES" class="java.lang.String">[A70]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.54202694</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 5 entre Kr 27 y 34</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[A70-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C5K27</attribute>
+	</object>
+	<object id="C15K16">
+		<attribute name="IN_LINES" class="java.lang.String">[P10D-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44156389</attribute>
+		<attribute name="LINES" class="java.lang.String">[P10D]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52612667</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 15 entre Kr 16 y 17</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P10D-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C15K16</attribute>
+	</object>
+	<object id="C21K11B">
+		<attribute name="IN_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.44733</attribute>
+		<attribute name="LINES" class="java.lang.String">[P21A]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52217722</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">Cl 21 entre Kr 11B y 11D</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P21A-Ida]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">C21K11B</attribute>
+	</object>
+	<object id="K125C20">
+		<attribute name="IN_LINES" class="java.lang.String">[P17-Vuelta]</attribute>
+		<attribute name="LATITUDE" class="java.lang.Double">3.33845389</attribute>
+		<attribute name="LINES" class="java.lang.String">[P17]</attribute>
+		<attribute name="LONGITUDE" class="java.lang.Double">-76.52950167</attribute>
+		<attribute name="LONGNAME" class="java.lang.String">K 125 con CL 20</attribute>
+		<attribute name="OUT_LINES" class="java.lang.String">[P17-Vuelta]</attribute>
+		<attribute name="SHORTNAME" class="java.lang.String">K125C20</attribute>
+	</object>
+</objectAttributes>

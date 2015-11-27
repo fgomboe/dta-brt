@@ -55,8 +55,8 @@ public class CreateTransitScheduleMIO
 		this.scenario = ScenarioUtils.createScenario(ConfigUtils.createConfig());
 		new NetworkReaderMatsimV1(this.scenario).parse(networkFile);
 		this.network = scenario.getNetwork();
-		this.scenario.getConfig().scenario().setUseTransit(true);
-		this.scenario.getConfig().scenario().setUseVehicles(true);
+		//this.scenario.getConfig().scenario().setUseTransit(true);
+		//this.scenario.getConfig().scenario().setUseVehicles(true);
 		schedule = this.scenario.getTransitSchedule();
 	}
 

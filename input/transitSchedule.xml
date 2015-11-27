@@ -3,78 +3,78 @@
 
 <transitSchedule>
 	<transitStops>
-		<stopFacility id="ALAMOS1" x="1062683.3841409932" y="877082.6972831498" linkRefId="47-ALAMOS1" name="Alamos A1" isBlocking="true"/>
-		<stopFacility id="ALAMOS2" x="1062698.5558593157" y="877107.9559569778" linkRefId="47-ALAMOS2" name="Alamos B1" isBlocking="true"/>
-		<stopFacility id="BUITRE1" x="1059733.605234052" y="864703.9549159982" linkRefId="2-BUITRE1" name="Buitrera A1" isBlocking="true"/>
-		<stopFacility id="BUITRE2" x="1059680.243567798" y="864736.3627927025" linkRefId="2-BUITRE2" name="Buitrera B1" isBlocking="true"/>
-		<stopFacility id="CAICED1" x="1060690.0790887089" y="873537.1408338097" linkRefId="42-CAICED1" name="Plaza de Caicedo A1" isBlocking="true"/>
-		<stopFacility id="CALDAS1" x="1059065.6788703888" y="867105.4496556506" linkRefId="5-CALDAS1" name="Caldas A1" isBlocking="true"/>
-		<stopFacility id="CALDAS2" x="1059084.587829866" y="867074.8650553474" linkRefId="5-CALDAS2" name="Caldas B1" isBlocking="true"/>
-		<stopFacility id="CAPRI2" x="1059198.8712468848" y="866393.3685526713" linkRefId="4-CAPRI2" name="Capri B1" isBlocking="true"/>
-		<stopFacility id="CAPRI3" x="1059177.5760225898" y="866383.772628948" linkRefId="4-CAPRI3" name="Capri A2" isBlocking="true"/>
-		<stopFacility id="CENTRO1" x="1060823.1162760358" y="873112.5771166869" linkRefId="28-CENTRO1" name="Centro A1" isBlocking="true"/>
-		<stopFacility id="CHIMI2" x="1064384.834735534" y="876767.6435361622" linkRefId="38-CHIMI2" name="Chiminangos B1" isBlocking="true"/>
-		<stopFacility id="CHIMI3" x="1064403.1484273386" y="876802.3040910645" linkRefId="38-CHIMI3" name="Chiminangos A2" isBlocking="true"/>
-		<stopFacility id="ERMI1" x="1060652.4027622112" y="873674.242572993" linkRefId="29-ERMI1" name="La Ermita A1" isBlocking="true"/>
-		<stopFacility id="ESTAD2" x="1059383.0624332854" y="871248.8032022055" linkRefId="11-ESTAD2" name="Estadio B1" isBlocking="true"/>
-		<stopFacility id="ESTAD3" x="1059348.4410272348" y="871227.035501775" linkRefId="11-ESTAD3" name="Estadio A2" isBlocking="true"/>
-		<stopFacility id="FATI1" x="1062225.4993782195" y="874697.1345282773" linkRefId="33-FATI1" name="Fatima A1" isBlocking="true"/>
-		<stopFacility id="FATI2" x="1062258.2749723662" y="874706.7381679" linkRefId="33-FATI2" name="Fatima B1" isBlocking="true"/>
-		<stopFacility id="FLORAI1" x="1063907.058828358" y="876391.4574617113" linkRefId="37-FLORAI1" name="Flora Industrial A1" isBlocking="true"/>
-		<stopFacility id="FLORAI2" x="1063938.5325792835" y="876408.3406906935" linkRefId="37-FLORAI2" name="Flora Industrial B1" isBlocking="true"/>
-		<stopFacility id="FRAY1" x="1060956.3851866587" y="872607.2876922345" linkRefId="27-FRAY1" name="Fray Damian A1" isBlocking="true"/>
-		<stopFacility id="L.AMERI1" x="1061359.9978111857" y="874765.9264792587" linkRefId="44-L.AMERI1" name="Las Americas A1" isBlocking="true"/>
-		<stopFacility id="L.AMERI2" x="1061378.5037763189" y="874789.5280346267" linkRefId="44-L.AMERI2" name="Las Americas B1" isBlocking="true"/>
-		<stopFacility id="LIDO1" x="1058797.6544414326" y="869831.9099137343" linkRefId="9-LIDO1" name="Lido A1" isBlocking="true"/>
-		<stopFacility id="LIDO4" x="1058816.161732224" y="869857.9071071988" linkRefId="9-LIDO4" name="Lido B2" isBlocking="true"/>
-		<stopFacility id="MANZA2" x="1059626.7942483681" y="871587.5075363994" linkRefId="12-MANZA2" name="Manzana del Saber B1" isBlocking="true"/>
-		<stopFacility id="MANZA3" x="1059592.9104108866" y="871570.5328168174" linkRefId="12-MANZA3" name="Manzana del Saber A2" isBlocking="true"/>
-		<stopFacility id="MELEN1" x="1059424.0139522746" y="865198.6432930572" linkRefId="3-MELEN1" name="Melendez A1" isBlocking="true"/>
-		<stopFacility id="MELEN2" x="1059422.6990015432" y="865231.4492219174" linkRefId="3-MELEN2" name="Melendez B1" isBlocking="true"/>
-		<stopFacility id="MZAN1" x="1062679.2237342065" y="875055.1417206473" linkRefId="34-MZAN1" name="Manzanares A1" isBlocking="true"/>
-		<stopFacility id="MZAN2" x="1062703.102252414" y="875076.7197645896" linkRefId="34-MZAN2" name="Manzanares B1" isBlocking="true"/>
-		<stopFacility id="PAMPA1" x="1058967.3171867272" y="868138.055781938" linkRefId="7-PAMPA1" name="Pampalinda A1" isBlocking="true"/>
-		<stopFacility id="PAMPA2" x="1058977.4866664696" y="868168.2881219522" linkRefId="7-PAMPA2" name="Pampalinda B1" isBlocking="true"/>
-		<stopFacility id="PILOT2" x="1061691.9174659087" y="874392.9007823528" linkRefId="32-PILOT2" name="Piloto B1" isBlocking="true"/>
-		<stopFacility id="PLATOR1" x="1058901.385556174" y="868802.7160286538" linkRefId="8-PLATOR1" name="Plaza de Toros A1" isBlocking="true"/>
-		<stopFacility id="PLATOR2" x="1058903.0363086676" y="868832.1132071682" linkRefId="8-PLATOR2" name="Plaza de Toros B1" isBlocking="true"/>
-		<stopFacility id="POPU1" x="1062962.179566718" y="875425.2132751845" linkRefId="35-POPU1" name="Popular A1" isBlocking="true"/>
-		<stopFacility id="POPU4" x="1062997.910467324" y="875448.2725874565" linkRefId="35-POPU4" name="Popular B2" isBlocking="true"/>
-		<stopFacility id="PRADNOR1" x="1061982.5023056758" y="875968.887609364" linkRefId="45-PRADNOR1" name="Prados del Norte A1" isBlocking="true"/>
-		<stopFacility id="PRADNOR2" x="1062007.1365699624" y="875965.5846379262" linkRefId="45-PRADNOR2" name="Prados del Norte B1" isBlocking="true"/>
-		<stopFacility id="PTCUY2" x="1061087.7677573313" y="873128.2112129917" linkRefId="24-PTCUY2" name="Petecuy B1" isBlocking="true"/>
-		<stopFacility id="PTCUY6" x="1061051.5931160476" y="873230.8493450934" linkRefId="24-PTCUY6" name="Petecuy B3" isBlocking="true"/>
-		<stopFacility id="REFUG1" x="1059012.720447864" y="867585.780771436" linkRefId="6-REFUG1" name="Refugio A1" isBlocking="true"/>
-		<stopFacility id="REFUG2" x="1059019.646646902" y="867621.1091984339" linkRefId="6-REFUG2" name="Refugio B1" isBlocking="true"/>
-		<stopFacility id="RIOC1" x="1061356.3071620993" y="874424.589576222" linkRefId="30-RIOC1" name="Rio Cali A1" isBlocking="true"/>
-		<stopFacility id="SALOM1" x="1063399.3542951406" y="875884.9517963653" linkRefId="36-SALOM1" name="Salomia A1" isBlocking="true"/>
-		<stopFacility id="SALOM2" x="1063443.2322904652" y="875910.0443283105" linkRefId="36-SALOM2" name="Salomia B1" isBlocking="true"/>
-		<stopFacility id="SANBO2" x="1060554.9652020135" y="872413.1685252305" linkRefId="14-SANBO2" name="San Bosco B1" isBlocking="true"/>
-		<stopFacility id="SANBO3" x="1060522.185637673" y="872409.0947205096" linkRefId="14-SANBO3" name="San Bosco A2" isBlocking="true"/>
-		<stopFacility id="SANIC2" x="1061330.4957794505" y="874221.4691969822" linkRefId="31-SANIC2" name="San Nicolas B1" isBlocking="true"/>
-		<stopFacility id="SANPAS2" x="1061093.804768889" y="872456.4204701837" linkRefId="15-SANPAS2" name="San Pascual B1" isBlocking="true"/>
-		<stopFacility id="SANPED2" x="1060844.8036241638" y="873724.3003668508" linkRefId="25-SANPED2" name="San Pedro B1" isBlocking="true"/>
-		<stopFacility id="SNTLIB2" x="1060042.8439051313" y="872121.6751713105" linkRefId="13-SNTLIB2" name="Santa Librada B1" isBlocking="true"/>
-		<stopFacility id="SNTLIB3" x="1060019.8916215443" y="872096.9645308293" linkRefId="13-SNTLIB3" name="Santa Librada A2" isBlocking="true"/>
-		<stopFacility id="SUCRE2" x="1061259.2289943716" y="872558.2526807339" linkRefId="23-SUCRE2" name="Sucre B1" isBlocking="true"/>
-		<stopFacility id="TEQUE1" x="1058948.6889117295" y="870346.7570735915" linkRefId="10-TEQUE1" name="Tequendama A1" isBlocking="true"/>
-		<stopFacility id="TEQUE4" x="1058968.4909850054" y="870374.2291031774" linkRefId="10-TEQUE4" name="Tequendama B2" isBlocking="true"/>
-		<stopFacility id="TMENGA5" x="1063286.2612031105" y="877616.9952754494" linkRefId="56-TMENGA5" name="Terminal Menga B1" isBlocking="true"/>
-		<stopFacility id="TMENGA7" x="1063203.090529292" y="877642.0110355464" linkRefId="56-TMENGA7" name="Terminal Menga B3" isBlocking="true"/>
-		<stopFacility id="TORRE2" x="1060804.8160912883" y="874017.1386493202" linkRefId="26-TORRE2" name="Torre de Cali B1" isBlocking="true"/>
-		<stopFacility id="TORRE3" x="1060779.4549112467" y="873995.0073708306" linkRefId="26-TORRE3" name="Torre de Cali A2" isBlocking="true"/>
-		<stopFacility id="TORRE4" x="1060833.6844881533" y="874058.2558077937" linkRefId="26-TORRE4" name="Torre de Cali B2" isBlocking="true"/>
-		<stopFacility id="UDP3" x="1058781.4124867138" y="869392.8866009545" linkRefId="40-UDP3" name="Unidad Deportiva A2" isBlocking="true"/>
-		<stopFacility id="UDP4" x="1058816.229041904" y="869398.6184699709" linkRefId="40-UDP4" name="Unidad Deportiva B2" isBlocking="true"/>
-		<stopFacility id="UDP6" x="1058810.4616044548" y="869446.9035598026" linkRefId="40-UDP6" name="Unidad Deportiva B3" isBlocking="true"/>
-		<stopFacility id="UNIV1" x="1060927.887437057" y="864093.0954880253" linkRefId="39-UNIV1" name="Universidades A1" isBlocking="true"/>
-		<stopFacility id="UNIV4" x="1060911.9475632065" y="864112.8068328516" linkRefId="39-UNIV4" name="Universidades B2" isBlocking="true"/>
-		<stopFacility id="UNIVAL1" x="1060108.2366174238" y="864499.7683060529" linkRefId="1-UNIVAL1" name="Univalle A1" isBlocking="true"/>
-		<stopFacility id="UNIVAL2" x="1060083.0277623257" y="864532.744564115" linkRefId="1-UNIVAL2" name="Univalle B1" isBlocking="true"/>
-		<stopFacility id="VERSALL1" x="1061160.8688310373" y="874504.2808343425" linkRefId="43-VERSALL1" name="Versalles A1" isBlocking="true"/>
-		<stopFacility id="VERSALL2" x="1061182.8998624007" y="874519.9588674709" linkRefId="43-VERSALL2" name="Versalles B1" isBlocking="true"/>
-		<stopFacility id="VIPASA1" x="1062275.7730196577" y="876433.8807725962" linkRefId="46-VIPASA1" name="Vipasa A1" isBlocking="true"/>
-		<stopFacility id="VIPASA2" x="1062294.8376675176" y="876451.4008058603" linkRefId="46-VIPASA2" name="Vipasa B1" isBlocking="true"/>
+		<stopFacility id="ALAMOS1" x="1062683.3841409883" y="877082.6972913838" linkRefId="47-ALAMOS1" name="Alamos A1" isBlocking="true"/>
+		<stopFacility id="ALAMOS2" x="1062698.5558593106" y="877107.9559652132" linkRefId="47-ALAMOS2" name="Alamos B1" isBlocking="true"/>
+		<stopFacility id="BUITRE1" x="1059733.6052340479" y="864703.9549234675" linkRefId="2-BUITRE1" name="Buitrera A1" isBlocking="true"/>
+		<stopFacility id="BUITRE2" x="1059680.2435677939" y="864736.3628001736" linkRefId="2-BUITRE2" name="Buitrera B1" isBlocking="true"/>
+		<stopFacility id="CAICED1" x="1060690.0790887042" y="873537.1408418197" linkRefId="42-CAICED1" name="Plaza de Caicedo A1" isBlocking="true"/>
+		<stopFacility id="CALDAS1" x="1059065.6788703846" y="867105.4496632642" linkRefId="5-CALDAS1" name="Caldas A1" isBlocking="true"/>
+		<stopFacility id="CALDAS2" x="1059084.5878298618" y="867074.8650629591" linkRefId="5-CALDAS2" name="Caldas B1" isBlocking="true"/>
+		<stopFacility id="CAPRI2" x="1059198.8712468806" y="866393.3685602419" linkRefId="4-CAPRI2" name="Capri B1" isBlocking="true"/>
+		<stopFacility id="CAPRI3" x="1059177.5760225859" y="866383.7726365181" linkRefId="4-CAPRI3" name="Capri A2" isBlocking="true"/>
+		<stopFacility id="CENTRO1" x="1060823.1162760311" y="873112.5771246701" linkRefId="28-CENTRO1" name="Centro A1" isBlocking="true"/>
+		<stopFacility id="CHIMI2" x="1064384.834735529" y="876767.6435443759" linkRefId="38-CHIMI2" name="Chiminangos B1" isBlocking="true"/>
+		<stopFacility id="CHIMI3" x="1064403.1484273337" y="876802.3040992805" linkRefId="38-CHIMI3" name="Chiminangos A2" isBlocking="true"/>
+		<stopFacility id="ERMI1" x="1060652.4027622065" y="873674.2425810115" linkRefId="29-ERMI1" name="La Ermita A1" isBlocking="true"/>
+		<stopFacility id="ESTAD2" x="1059383.062433281" y="871248.803210073" linkRefId="11-ESTAD2" name="Estadio B1" isBlocking="true"/>
+		<stopFacility id="ESTAD3" x="1059348.4410272304" y="871227.035509641" linkRefId="11-ESTAD3" name="Estadio A2" isBlocking="true"/>
+		<stopFacility id="FATI1" x="1062225.4993782146" y="874697.1345363602" linkRefId="33-FATI1" name="Fatima A1" isBlocking="true"/>
+		<stopFacility id="FATI2" x="1062258.2749723615" y="874706.7381759833" linkRefId="33-FATI2" name="Fatima B1" isBlocking="true"/>
+		<stopFacility id="FLORAI1" x="1063907.058828353" y="876391.4574699013" linkRefId="37-FLORAI1" name="Flora Industrial A1" isBlocking="true"/>
+		<stopFacility id="FLORAI2" x="1063938.5325792786" y="876408.3406988843" linkRefId="37-FLORAI2" name="Flora Industrial B1" isBlocking="true"/>
+		<stopFacility id="FRAY1" x="1060956.385186654" y="872607.2877001863" linkRefId="27-FRAY1" name="Fray Damian A1" isBlocking="true"/>
+		<stopFacility id="L.AMERI1" x="1061359.9978111808" y="874765.9264873457" linkRefId="44-L.AMERI1" name="Las Americas A1" isBlocking="true"/>
+		<stopFacility id="L.AMERI2" x="1061378.503776314" y="874789.5280427152" linkRefId="44-L.AMERI2" name="Las Americas B1" isBlocking="true"/>
+		<stopFacility id="LIDO1" x="1058797.6544414284" y="869831.9099215145" linkRefId="9-LIDO1" name="Lido A1" isBlocking="true"/>
+		<stopFacility id="LIDO4" x="1058816.1617322199" y="869857.9071149805" linkRefId="9-LIDO4" name="Lido B2" isBlocking="true"/>
+		<stopFacility id="MANZA2" x="1059626.7942483637" y="871587.5075442878" linkRefId="12-MANZA2" name="Manzana del Saber B1" isBlocking="true"/>
+		<stopFacility id="MANZA3" x="1059592.9104108822" y="871570.5328247047" linkRefId="12-MANZA3" name="Manzana del Saber A2" isBlocking="true"/>
+		<stopFacility id="MELEN1" x="1059424.0139522704" y="865198.6433005561" linkRefId="3-MELEN1" name="Melendez A1" isBlocking="true"/>
+		<stopFacility id="MELEN2" x="1059422.699001539" y="865231.4492294183" linkRefId="3-MELEN2" name="Melendez B1" isBlocking="true"/>
+		<stopFacility id="MZAN1" x="1062679.2237342016" y="875055.1417287526" linkRefId="34-MZAN1" name="Manzanares A1" isBlocking="true"/>
+		<stopFacility id="MZAN2" x="1062703.1022524093" y="875076.7197726961" linkRefId="34-MZAN2" name="Manzanares B1" isBlocking="true"/>
+		<stopFacility id="PAMPA1" x="1058967.317186723" y="868138.0557896146" linkRefId="7-PAMPA1" name="Pampalinda A1" isBlocking="true"/>
+		<stopFacility id="PAMPA2" x="1058977.4866664654" y="868168.2881296305" linkRefId="7-PAMPA2" name="Pampalinda B1" isBlocking="true"/>
+		<stopFacility id="PILOT2" x="1061691.917465904" y="874392.9007904163" linkRefId="32-PILOT2" name="Piloto B1" isBlocking="true"/>
+		<stopFacility id="PLATOR1" x="1058901.3855561698" y="868802.7160363707" linkRefId="8-PLATOR1" name="Plaza de Toros A1" isBlocking="true"/>
+		<stopFacility id="PLATOR2" x="1058903.0363086634" y="868832.113214887" linkRefId="8-PLATOR2" name="Plaza de Toros B1" isBlocking="true"/>
+		<stopFacility id="POPU1" x="1062962.179566713" y="875425.2132833133" linkRefId="35-POPU1" name="Popular A1" isBlocking="true"/>
+		<stopFacility id="POPU4" x="1062997.9104673192" y="875448.2725955866" linkRefId="35-POPU4" name="Popular B2" isBlocking="true"/>
+		<stopFacility id="PRADNOR1" x="1061982.5023056709" y="875968.887617527" linkRefId="45-PRADNOR1" name="Prados del Norte A1" isBlocking="true"/>
+		<stopFacility id="PRADNOR2" x="1062007.1365699577" y="875965.5846460892" linkRefId="45-PRADNOR2" name="Prados del Norte B1" isBlocking="true"/>
+		<stopFacility id="PTCUY2" x="1061087.7677573266" y="873128.211220976" linkRefId="24-PTCUY2" name="Petecuy B1" isBlocking="true"/>
+		<stopFacility id="PTCUY6" x="1061051.593116043" y="873230.849353084" linkRefId="24-PTCUY6" name="Petecuy B3" isBlocking="true"/>
+		<stopFacility id="REFUG1" x="1059012.7204478597" y="867585.780779079" linkRefId="6-REFUG1" name="Refugio A1" isBlocking="true"/>
+		<stopFacility id="REFUG2" x="1059019.6466468978" y="867621.1092060788" linkRefId="6-REFUG2" name="Refugio B1" isBlocking="true"/>
+		<stopFacility id="RIOC1" x="1061356.3071620946" y="874424.5895842875" linkRefId="30-RIOC1" name="Rio Cali A1" isBlocking="true"/>
+		<stopFacility id="SALOM1" x="1063399.3542951357" y="875884.9518045231" linkRefId="36-SALOM1" name="Salomia A1" isBlocking="true"/>
+		<stopFacility id="SALOM2" x="1063443.2322904603" y="875910.0443364698" linkRefId="36-SALOM2" name="Salomia B1" isBlocking="true"/>
+		<stopFacility id="SANBO2" x="1060554.965202009" y="872413.1685331702" linkRefId="14-SANBO2" name="San Bosco B1" isBlocking="true"/>
+		<stopFacility id="SANBO3" x="1060522.1856376682" y="872409.0947284489" linkRefId="14-SANBO3" name="San Bosco A2" isBlocking="true"/>
+		<stopFacility id="SANIC2" x="1061330.4957794456" y="874221.469205035" linkRefId="31-SANIC2" name="San Nicolas B1" isBlocking="true"/>
+		<stopFacility id="SANPAS2" x="1061093.8047688846" y="872456.420478126" linkRefId="15-SANPAS2" name="San Pascual B1" isBlocking="true"/>
+		<stopFacility id="SANPED2" x="1060844.8036241592" y="873724.3003748725" linkRefId="25-SANPED2" name="San Pedro B1" isBlocking="true"/>
+		<stopFacility id="SNTLIB2" x="1060042.843905127" y="872121.6751792321" linkRefId="13-SNTLIB2" name="Santa Librada B1" isBlocking="true"/>
+		<stopFacility id="SNTLIB3" x="1060019.8916215398" y="872096.9645387493" linkRefId="13-SNTLIB3" name="Santa Librada A2" isBlocking="true"/>
+		<stopFacility id="SUCRE2" x="1061259.2289943672" y="872558.2526886829" linkRefId="23-SUCRE2" name="Sucre B1" isBlocking="true"/>
+		<stopFacility id="TEQUE1" x="1058948.688911725" y="870346.7570814032" linkRefId="10-TEQUE1" name="Tequendama A1" isBlocking="true"/>
+		<stopFacility id="TEQUE4" x="1058968.490985001" y="870374.2291109909" linkRefId="10-TEQUE4" name="Tequendama B2" isBlocking="true"/>
+		<stopFacility id="TMENGA5" x="1063286.2612031056" y="877616.9952837175" linkRefId="56-TMENGA5" name="Terminal Menga B1" isBlocking="true"/>
+		<stopFacility id="TMENGA7" x="1063203.0905292868" y="877642.0110438161" linkRefId="56-TMENGA7" name="Terminal Menga B3" isBlocking="true"/>
+		<stopFacility id="TORRE2" x="1060804.8160912837" y="874017.1386573602" linkRefId="26-TORRE2" name="Torre de Cali B1" isBlocking="true"/>
+		<stopFacility id="TORRE3" x="1060779.454911242" y="873995.0073788692" linkRefId="26-TORRE3" name="Torre de Cali A2" isBlocking="true"/>
+		<stopFacility id="TORRE4" x="1060833.684488149" y="874058.2558158364" linkRefId="26-TORRE4" name="Torre de Cali B2" isBlocking="true"/>
+		<stopFacility id="UDP3" x="1058781.4124867097" y="869392.8866087075" linkRefId="40-UDP3" name="Unidad Deportiva A2" isBlocking="true"/>
+		<stopFacility id="UDP4" x="1058816.2290418998" y="869398.6184777243" linkRefId="40-UDP4" name="Unidad Deportiva B2" isBlocking="true"/>
+		<stopFacility id="UDP6" x="1058810.4616044506" y="869446.903567559" linkRefId="40-UDP6" name="Unidad Deportiva B3" isBlocking="true"/>
+		<stopFacility id="UNIV1" x="1060927.8874370528" y="864093.095495458" linkRefId="39-UNIV1" name="Universidades A1" isBlocking="true"/>
+		<stopFacility id="UNIV4" x="1060911.9475632024" y="864112.8068402854" linkRefId="39-UNIV4" name="Universidades B2" isBlocking="true"/>
+		<stopFacility id="UNIVAL1" x="1060108.2366174196" y="864499.7683135098" linkRefId="1-UNIVAL1" name="Univalle A1" isBlocking="true"/>
+		<stopFacility id="UNIVAL2" x="1060083.0277623218" y="864532.7445715738" linkRefId="1-UNIVAL2" name="Univalle B1" isBlocking="true"/>
+		<stopFacility id="VERSALL1" x="1061160.8688310327" y="874504.280842413" linkRefId="43-VERSALL1" name="Versalles A1" isBlocking="true"/>
+		<stopFacility id="VERSALL2" x="1061182.8998623958" y="874519.9588755423" linkRefId="43-VERSALL2" name="Versalles B1" isBlocking="true"/>
+		<stopFacility id="VIPASA1" x="1062275.7730196528" y="876433.880780789" linkRefId="46-VIPASA1" name="Vipasa A1" isBlocking="true"/>
+		<stopFacility id="VIPASA2" x="1062294.8376675127" y="876451.4008140541" linkRefId="46-VIPASA2" name="Vipasa B1" isBlocking="true"/>
 	</transitStops>
 	<transitLine id="E21">
 		<transitRoute id="Ida">

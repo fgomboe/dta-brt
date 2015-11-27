@@ -36,8 +36,8 @@ public class CreateTransitVehiclesMIO {
 		this.scenario = ScenarioUtils.createScenario(ConfigUtils.createConfig());
 		new NetworkReaderMatsimV1(this.scenario).parse(networkFile);
 		scenario.getNetwork();
-		this.scenario.getConfig().scenario().setUseTransit(true);
-		this.scenario.getConfig().scenario().setUseVehicles(true);
+		//this.scenario.getConfig().scenario().setUseTransit(true);
+		//this.scenario.getConfig().scenario().setUseVehicles(true);
 		vehiculos = this.scenario.getVehicles();
 
 	}
