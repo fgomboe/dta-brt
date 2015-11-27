@@ -301,6 +301,25 @@ public class CsvReader {
 	}
 
 	/**
+	 * Whether parsing will be case sensitive or not.
+	 * 
+	 * @return Whether parsing will be case sensitive or not.
+	 */
+	public boolean getCaseSensitive() {
+		return userSettings.CaseSensitive;
+	}
+
+	/**
+	 * Sets whether parsing will be case sensitive or not.
+	 * 
+	 * @param caseSensitive
+	 *            Whether to be sensitive to case while parsing or not.
+	 */
+	public void setCaseSensitive(boolean caseSensitive) {
+		userSettings.CaseSensitive = caseSensitive;
+	}
+
+	/**
 	 * Gets the character to use as a text qualifier in the data.
 	 * 
 	 * @return The character to use as a text qualifier in the data.
