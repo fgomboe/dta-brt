@@ -26,6 +26,7 @@ import org.matsim.utils.objectattributes.ObjectAttributesXmlWriter;
 import org.opengis.feature.simple.SimpleFeature;
 
 import edu.univalle.utils.CsvReader;
+import edu.univalle.utils.CsvWriter;
 import edu.univalle.utils.Utils;
 
 public class NetworkCreatorMIO
@@ -43,6 +44,8 @@ public class NetworkCreatorMIO
 	// working with shape files
 	// private String stopsShapeFile = "input/shapes/stops/mio_paradas_140714.shp";
 	private String stationsShapeFile = "input/shapes/stations/mio_estaciones.shp";
+	
+	private String stationsCodingFile = "output/stationsCoding.csv";
 
 	// // working with shape files
 	// private static final String stopsAttributes[] = {"X", "Y", "RUTA", "DIRECCION", "PLAN", "ZONA", "ESTRUCTURA", "ORDEN_RUTA", "OBSERVACIO"};
@@ -90,23 +93,39 @@ public class NetworkCreatorMIO
 		int id = 1;
 		shapeFileReader.readFileAndInitialize(stationsShapeFile);
 		features = shapeFileReader.getFeatureSet();
-
-		it = features.iterator();
-		log.info("stations processed:");
-		while (it.hasNext()) {
-			ft = it.next();
-			//Coord coord = new CoordImplTest(ft.getAttribute(stationsAttLabels[0]).toString(), ft.getAttribute(stationsAttLabels[1]).toString());
-			Coord coord = CoordUtils.createCoord(Double.parseDouble(ft.getAttribute(stationsAttLabels[0]).toString()), Double.parseDouble(ft.getAttribute(stationsAttLabels[1]).toString()));
-			Node node = network.getFactory().createNode(Id.createNodeId(id), ct.transform(coord));
-
-			for (String att : stationsAttLabels)
-				nodeAttributes.putAttribute(Integer.toString(id), att, ft.getAttribute(att));
-
-			network.addNode(node);
-
-			System.out.println("Id: " + id + " - " + ft.getAttribute(stationsAttLabels[3]));
-			id++;
-		}
+		
+		try {
+            CsvWriter writer = new CsvWriter(stationsCodingFile);
+            writer.writeRecord(new String[]{"NAME","UV_CODING","METROCALI_CODING"});
+    
+    		it = features.iterator();
+    		log.info("stations processed:");
+    		while (it.hasNext()) {
+    			ft = it.next();
+    			Coord coord = CoordUtils.createCoord(Double.parseDouble(ft.getAttribute(stationsAttLabels[0]).toString()), Double.parseDouble(ft.getAttribute(stationsAttLabels[1]).toString()));
+    			Node node = network.getFactory().createNode(Id.createNodeId(id), ct.transform(coord));
+    
+    			for (String att : stationsAttLabels)
+    				nodeAttributes.putAttribute(Integer.toString(id), att, ft.getAttribute(att));
+    
+    			network.addNode(node);
+    
+    			System.out.println("Id: " + id + " - " + ft.getAttribute(stationsAttLabels[3]));
+    			writer.write((String) ft.getAttribute("ESTACION"));
+    			writer.write(Integer.toString(id));
+    			writer.write((String) ft.getAttribute("ID_ESTACIO"));
+    			writer.endRecord();
+                
+    			id++;
+    		}
+    		writer.close();
+		} 
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } 
+		catch (IOException e) {
+            e.printStackTrace();
+        }
 		features.clear();
 		// ------------------------------------------------------------------------------------------
 
@@ -147,9 +166,11 @@ public class NetworkCreatorMIO
 
 				System.out.println("Id: " + nodes.get(1) + " - " + nodes.get(2));
 			}
-		} catch (FileNotFoundException e) {
+		} 
+		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 		// ------------------------------------------------------------------------------------------
