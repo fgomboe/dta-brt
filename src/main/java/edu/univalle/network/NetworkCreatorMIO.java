@@ -96,7 +96,7 @@ public class NetworkCreatorMIO
 		
 		try {
             CsvWriter writer = new CsvWriter(stationsCodingFile);
-            writer.writeRecord(new String[]{"NAME","UV_CODING","METROCALI_CODING"});
+            writer.writeRecord(new String[]{"NAME","UV_CODES","METROCALI_CODES"});
     
     		it = features.iterator();
     		log.info("stations processed:");
@@ -111,10 +111,7 @@ public class NetworkCreatorMIO
     			network.addNode(node);
     
     			System.out.println("Id: " + id + " - " + ft.getAttribute(stationsAttLabels[3]));
-    			writer.write((String) ft.getAttribute("ESTACION"));
-    			writer.write(Integer.toString(id));
-    			writer.write((String) ft.getAttribute("ID_ESTACIO"));
-    			writer.endRecord();
+    			writer.writeRecord(new String[]{(String) ft.getAttribute("ESTACION"), Integer.toString(id), (String) ft.getAttribute("ID_ESTACIO")});
                 
     			id++;
     		}
