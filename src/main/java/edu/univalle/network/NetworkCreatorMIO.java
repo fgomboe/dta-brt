@@ -83,7 +83,7 @@ public class NetworkCreatorMIO
 		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation(TransformationFactory.WGS84, "EPSG:3115");
 
 		// ------------------------------------------------------------------------------------------
-		// read nodes from the stations shape file
+		// read nodes from the stations shape file and write csv file of stations codification
 		// ------------------------------------------------------------------------------------------
 		ShapeFileReader shapeFileReader = new ShapeFileReader();
 		Collection<SimpleFeature> features = null;
