@@ -18,15 +18,14 @@ import org.matsim.core.scoring.EventsToLegs;
 
 import edu.univalle.utils.CsvWriter;
 
-public class JourneyTimes 
+public class JourneyTimes
 {
 
     private final static Logger log = Logger.getLogger(JourneyTimes.class);
-    
-    private class MyLegHandler implements EventsToLegs.LegHandler 
+
+    private class MyLegHandler implements EventsToLegs.LegHandler
     {
-        
-        @Override
+
         public void handleLeg(Id<Person> agentId, Leg leg) {
             try {
                 String s_agentId = agentId.toString();
@@ -36,40 +35,41 @@ public class JourneyTimes
                 String s_origin = leg.getRoute().toString().split(" ")[1].split("=")[1];
                 String s_destination = leg.getRoute().toString().split(" ")[2].split("=")[1];
                 String s_routeDescription = leg.getRoute().getRouteDescription();
-                
-                if (leg.getDepartureTime() >= 21600 && leg.getDepartureTime() <= 28800 && !leg.getMode().equals("transit_walk") && !leg.getMode().equals("car"))
-                    writer.writeRecord(new String[]{s_agentId, s_travelTime, s_mode, s_departureTime, s_origin, s_destination, s_routeDescription});
-                    
-            }
-            catch (IOException e) {
+
+                if (leg.getDepartureTime() >= 21600 && leg.getDepartureTime() <= 28800
+                        && !leg.getMode().equals("transit_walk") && !leg.getMode().equals("car"))
+                    writer.writeRecord(new String[] { s_agentId, s_travelTime, s_mode, s_departureTime, s_origin,
+                            s_destination, s_routeDescription });
+
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-            
+
         }
-        
+
     }
 
     private String testFile = "output/legStats.csv";
-	private String eventsFile = "output20_BestScore70_Reroute30/ITERS/it.20/20.events.xml.gz";
+    private String eventsFile = "output20_BestScore70_Reroute30/ITERS/it.20/20.events.xml.gz";
 
     private CsvWriter writer;
-	private Config config;
-	private Scenario scenario;
-	private MatsimEventsReader eventsReader;
+    private Config config;
+    private Scenario scenario;
+    private MatsimEventsReader eventsReader;
     private final EventsManager manager = EventsUtils.createEventsManager();
     private EventsToLegs handler;
     private MyLegHandler legHandler;
 
-	public static void main(String[] args) {
-	    JourneyTimes calc = new JourneyTimes();
-	    calc.init();
-	    calc.openWriter();
-	    calc.readFile();
-	    calc.closeWriter();
-	    
-	}
-	
-	public void init() {
+    public static void main(String[] args) {
+        JourneyTimes calc = new JourneyTimes();
+        calc.init();
+        calc.openWriter();
+        calc.readFile();
+        calc.closeWriter();
+
+    }
+
+    public void init() {
         this.config = ConfigUtils.loadConfig("input/config.xml");
         this.scenario = ScenarioUtils.loadScenario(config);
         this.handler = new EventsToLegs(scenario);
@@ -77,30 +77,29 @@ public class JourneyTimes
         handler.setLegHandler(legHandler);
         manager.addHandler(handler);
         this.eventsReader = new MatsimEventsReader(manager);
-        
-	}
-	
-	public void readFile() {
-	    this.eventsReader.readFile(eventsFile);
-	    log.info("process finished!");
-	    
-	}
-	
-	public void openWriter() {
-	    try {
-	        writer = new CsvWriter(testFile);
-            writer.writeRecord(new String[]{"AgentId", "TravelTime", "Mode", "DepartureTime", "Origin", "Destination", "RouteDescription"});
-        }
-	    catch (FileNotFoundException e) {
-	        e.printStackTrace();
-	    }
-        catch (IOException e) {
+
+    }
+
+    public void readFile() {
+        this.eventsReader.readFile(eventsFile);
+        log.info("process finished!");
+
+    }
+
+    public void openWriter() {
+        try {
+            writer = new CsvWriter(testFile);
+            writer.writeRecord(new String[] { "AgentId", "TravelTime", "Mode", "DepartureTime", "Origin", "Destination",
+                    "RouteDescription" });
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-	}
-	
-	public void closeWriter() {
-	    writer.close();
-	}
+    }
+
+    public void closeWriter() {
+        writer.close();
+    }
 
 }
