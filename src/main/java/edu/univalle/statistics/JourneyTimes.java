@@ -34,7 +34,7 @@ public class JourneyTimes
     private Config config;
     private Scenario scenario;
     private MatsimEventsReader eventsReader;
-    private final EventsManager manager = EventsUtils.createEventsManager();
+    private EventsManager manager;
     private EventsToLegs handler;
     private MyLegHandler legHandler;
 
@@ -79,13 +79,17 @@ public class JourneyTimes
     }
 
     public void init() {
-        this.config = ConfigUtils.loadConfig(configFile);
-        this.scenario = ScenarioUtils.loadScenario(config);
-        this.handler = new EventsToLegs(scenario);
-        this.legHandler = new MyLegHandler();
+        config = ConfigUtils.loadConfig(configFile);
+        scenario = ScenarioUtils.loadScenario(config);
+
+        legHandler = new MyLegHandler();
+        handler = new EventsToLegs(scenario);
         handler.setLegHandler(legHandler);
+
+        manager = EventsUtils.createEventsManager();
         manager.addHandler(handler);
-        this.eventsReader = new MatsimEventsReader(manager);
+
+        eventsReader = new MatsimEventsReader(manager);
 
     }
 
