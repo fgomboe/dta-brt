@@ -41,6 +41,7 @@ public class JourneyTimes
     private class MyLegHandler implements EventsToLegs.LegHandler
     {
 
+        @Override
         public void handleLeg(Id<Person> agentId, Leg leg) {
             try {
                 String s_agentId = agentId.toString();
@@ -56,7 +57,8 @@ public class JourneyTimes
                     writer.writeRecord(new String[] { s_agentId, s_travelTime, s_mode, s_departureTime, s_origin,
                             s_destination, s_routeDescription });
 
-            } catch (IOException e) {
+            }
+            catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -98,9 +100,11 @@ public class JourneyTimes
             writer = new CsvWriter(testFile);
             writer.writeRecord(new String[] { "AgentId", "TravelTime", "Mode", "DepartureTime", "Origin", "Destination",
                     "RouteDescription" });
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -111,6 +115,7 @@ public class JourneyTimes
 
     public static void main(String[] args) {
         JourneyTimes calc = new JourneyTimes(21600, 28800);
+        calc.init();
         calc.openWriter();
         calc.readFile();
         calc.closeWriter();
