@@ -14,3 +14,6 @@ hs_err_pid*
 
 # All in output folder
 /output/*
+
+# Temporal files in windows
+~$*
