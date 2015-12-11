@@ -52,6 +52,7 @@ public class JourneyTimes
                 String s_destination = leg.getRoute().toString().split(" ")[2].split("=")[1];
                 String s_routeDescription = leg.getRoute().getRouteDescription();
 
+                // excludes transit walkers and bus drivers
                 if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() <= endTime
                         && !leg.getMode().equals("transit_walk") && !leg.getMode().equals("car"))
                     writer.writeRecord(new String[] { s_agentId, s_travelTime, s_mode, s_departureTime, s_origin,
@@ -118,7 +119,7 @@ public class JourneyTimes
     }
 
     public static void main(String[] args) {
-        JourneyTimes calc = new JourneyTimes(21600, 28800);
+        JourneyTimes calc = new JourneyTimes();
         calc.init();
         calc.openWriter();
         calc.readFile();
