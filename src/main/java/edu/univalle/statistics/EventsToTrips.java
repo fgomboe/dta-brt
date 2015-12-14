@@ -154,7 +154,7 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     @Override
     public void handleEvent(LinkEnterEvent event) {
-        List<Id<Link>> route = experiencedRoutes.get(event.getPersonId());
+        List<Id<Link>> route = experiencedRoutes.get(event.getDriverId());
         route.add(event.getLinkId());
     }
 
