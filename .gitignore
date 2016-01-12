@@ -15,5 +15,8 @@ hs_err_pid*
 # All in output folder
 /output/*
 
+# All in temporal_Feli folder
+/temporal_Feli/*
+
 # Temporal files in windows
 ~$*
