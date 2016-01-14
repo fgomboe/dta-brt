@@ -22,13 +22,12 @@ import org.opengis.referencing.crs.CoordinateReferenceSystem;
 
 import com.vividsolutions.jts.geom.Coordinate;
 
-import edu.univalle.utils.CsvReader;
 import edu.univalle.utils.Utils;
 
 public class CreateNetworkSHP
 {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         String configFile = "input/config.xml";
         Config config = ConfigUtils.loadConfig(configFile);
@@ -39,7 +38,6 @@ public class CreateNetworkSHP
         ObjectAttributes nodeAttributes = new ObjectAttributes();
         new ObjectAttributesXmlReader(linkAttributes).parse("./input/specialLinkAttributes.xml");
         new ObjectAttributesXmlReader(nodeAttributes).parse("./input/specialNodeAttributes.xml");
-        String std_codeFile = "./input/networkMIO/std_code.csv";    // File with coding for stations, according to detailed card validations of Metrocali
 
         CoordinateReferenceSystem crs = MGC.getCRS("EPSG:3115");		// EPSG Code for MAGNA-SIRGAS / Colombia West Zone coordinate system
 
@@ -49,9 +47,6 @@ public class CreateNetworkSHP
                 .addAttribute("gpsX", Double.class).addAttribute("gpsY", Double.class)
                 .addAttribute("lines", String.class).addAttribute("inLines", String.class)
                 .addAttribute("outLines", String.class).create();
-
-        CsvReader nodes = new CsvReader(std_codeFile);
-        nodes.readHeaders();
 
         for (Node node : network.getNodes().values()) {
             if (node.getId().toString().length() <= 2) {
