@@ -1,4 +1,4 @@
-package base.parse_population;
+package edu.univalle.population;
 
 import java.io.File;
 import java.io.FileNotFoundException;
