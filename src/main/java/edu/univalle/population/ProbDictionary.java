@@ -152,6 +152,15 @@ public class ProbDictionary
         return 0;
     }
 
+    /**
+     * Returns a double indicating the probability that a passenger travels from
+     * origin station 'orig' to destination station 'dest' at time bin 'bin'
+     * 
+     * @param bin The time bin for the travel probability
+     * @param orig The origin station for which to compute probability
+     * @param dest The destination station for which to compute probability
+     * @return double value of probability
+     */
     public double getProbability(int bin, int orig, int dest) {
         if (!probTableDone) {
             System.out.println("Construct the probabilities table first!");
@@ -168,33 +177,90 @@ public class ProbDictionary
         return 0.0;
     }
 
+    /**
+     * Returns a HashMap containing the probabilities for every possible destination
+     * from the input origin station during the time bin specified
+     * 
+     * @param bin The time bin for the travel probabilities
+     * @param orig The origin station for which to compute probabilities
+     * @return HashMap<Integer, Double> of probabilities for origin station at time bin
+     */
+    public HashMap<Integer, Double> getProbability(int bin, int orig) {
+        if (!probTableDone) {
+            System.out.println("Construct the probabilities table first!");
+            return null;
+        }
+
+        HashMap<Integer, Double> probs = new HashMap<Integer, Double>(numberOfStations, 1);
+        if (probTable.containsKey(bin)) {
+            if (probTable.get(bin).containsKey(orig)) {
+                return probTable.get(bin).get(orig);
+            }
+        }
+
+        return probs;
+    }
+
     public int calcBin(int time) {
         double bin = Math.floor((time - initialTime) / (float) timeSpan);
         return (int) bin;
     }
 
-    private void writeProbabilities(CsvWriter writer) {
-        for (int bin : probTable.keySet()) {
-            for (int orig : probTable.get(bin).keySet()) {
-                for (int dest : probTable.get(bin).get(orig).keySet()) {
-                    int initTime = bin * this.timeSpan + initialTime;
-                    String s_initTime = Integer.toString(initTime);
-                    int endingTime = initTime + this.timeSpan;
-                    String s_endingTime = Integer.toString(endingTime);
-                    String s_originStation = Integer.toString(orig);
-                    String s_destStation = Integer.toString(dest);
-                    String s_prob = Double.toString(probTable.get(bin).get(orig).get(dest));
-                    try {
-                        writer.writeRecord(
-                                new String[] { "START_TIME", "END_TIME", "ORIGIN", "DESTINATION", "PROBABILITY" });
+    public void writeProbabilities(String fileName) {
+        try {
+            CsvWriter writer = new CsvWriter(fileName);
+            writer.writeRecord(new String[] { "START_TIME", "END_TIME", "ORIGIN", "DESTINATION", "PROBABILITY" });
+
+            for (int bin : probTable.keySet()) {
+                for (int orig : probTable.get(bin).keySet()) {
+                    for (int dest : probTable.get(bin).get(orig).keySet()) {
+                        int initTime = bin * this.timeSpan + initialTime;
+                        String s_initTime = Integer.toString(initTime);
+                        int endingTime = initTime + this.timeSpan;
+                        String s_endingTime = Integer.toString(endingTime);
+                        String s_originStation = Integer.toString(orig);
+                        String s_destStation = Integer.toString(dest);
+                        String s_prob = Double.toString(probTable.get(bin).get(orig).get(dest));
                         writer.writeRecord(
                                 new String[] { s_initTime, s_endingTime, s_originStation, s_destStation, s_prob });
                     }
-                    catch (IOException e) {
-                        e.printStackTrace();
+                }
+            }
+
+            writer.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeProbabilities(String fileName, int bin, int orig) {
+        try {
+            CsvWriter writer = new CsvWriter(fileName);
+            writer.writeRecord(new String[] { "ORIGIN", "DESTINATION", "PROBABILITY" });
+
+            if (probTable.containsKey(bin)) {
+                if (probTable.get(bin).containsKey(orig)) {
+                    for (int dest : probTable.get(bin).get(orig).keySet()) {
+                        String s_originStation = Integer.toString(orig);
+                        String s_destStation = Integer.toString(dest);
+                        String s_prob = Double.toString(probTable.get(bin).get(orig).get(dest));
+                        writer.writeRecord(new String[] { s_originStation, s_destStation, s_prob });
                     }
                 }
             }
+
+            writer.close();
+
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -202,8 +268,7 @@ public class ProbDictionary
         ProbDictionary dict = new ProbDictionary();
         dict.constructTripTable("./temporal_Feli/ready_closed_trips_noUniviaje.csv");
         dict.constructProbTable();
-        CsvWriter writer = new CsvWriter("./output/probabilities.csv");
-        dict.writeProbabilities(writer);
+        dict.writeProbabilities("./output/probabilities.csv", 8, 12);
 
         System.out.println("Finished!");
     }
