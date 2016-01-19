@@ -17,36 +17,34 @@ public class GenerateOD_troncal
         CsvReader matriz_usos;
         CsvReader estaciones;
         String st_ID_ESTACION = null;
-        String st_N_ESTACION;
+        String st_ID_ESTACION_D = null;
         String st_HORA = null;
         String troncal;
-        String estacion_matriz;
-        String st_ID_ESTACION_D = null;
-        // String st_ID_pass = null;
-        String st_N_ESTACION_D;
-        String[] estaciones_troncal = new String[42];
-        String[] estaciones_troncal_d = new String[42];
+        String[][] matriz_od = new String[1600][5];
+        String[] estaciones_troncal_names = new String[40];
+        String[] estaciones_troncal_codes = new String[40];
         int count_estaciones;
         int hora_inicio = 21600;
         int hora_fin = 28800;
-        String[][] matriz_od = new String[1764][5];
 
         try {
             // Para sacar la lista de las estaciones de la troncal
-            estaciones = new CsvReader("input/estaciones_matrizUsos2.csv");
+            estaciones = new CsvReader("input/std_code.csv");
             System.out.println("### extracting data from " + estaciones.toString() + " ###");
             estaciones.readHeaders();
             count_estaciones = 0;
+
             while (estaciones.readRecord()) {
                 troncal = estaciones.get("TRONCAL");
-                estacion_matriz = estaciones.get("MATRIZ USOS");
+
                 if (troncal.equals("YES")) {
-                    estaciones_troncal[count_estaciones] = estacion_matriz;
+                    estaciones_troncal_codes[count_estaciones] = estaciones.get("UV_CODES");
+
+                    estaciones_troncal_names[count_estaciones] = estaciones.get("STA_NAME");
                     count_estaciones++;
                 }
             }
-            estaciones_troncal_d = estaciones_troncal;
-            System.out.print(Arrays.toString(estaciones_troncal));
+            System.out.print(Arrays.toString(estaciones_troncal_names));
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -57,33 +55,26 @@ public class GenerateOD_troncal
 
         int contador = 0;
         int od_index = 0;
-
-        for (String est_o : estaciones_troncal) {
-            for (String est_d : estaciones_troncal_d) {
-                contador = 0;
+        int count_o = 0;
+        for (String est_o : estaciones_troncal_codes) {
+            int count_d = 0;
+            for (String est_d : estaciones_troncal_codes) {
                 try {
-
-                    matriz_usos = new CsvReader("data_filtered_troncal_od4.csv");
+                    contador = 0;
+                    matriz_usos = new CsvReader("input/usos_ready.csv");
                     matriz_usos.readHeaders();
                     while (matriz_usos.readRecord())
 
                     {
-                        st_N_ESTACION = matriz_usos.get("O_ESTACION");
-                        st_N_ESTACION_D = matriz_usos.get("D_ESTACION");
-                        st_HORA = matriz_usos.get("HORA");
-                        // st_ID_pass=matriz_usos.get("ID_PAS");
+                        st_ID_ESTACION = matriz_usos.get("O_ID_ESTACION");
+                        st_ID_ESTACION_D = matriz_usos.get("D_ID_ESTACION");
+                        st_HORA = matriz_usos.get("HORA_MATSIM");
                         if (Integer.parseInt(st_HORA) >= hora_inicio && Integer.parseInt(st_HORA) <= hora_fin
-                                && st_N_ESTACION.equals(est_o) && st_N_ESTACION_D.equals(est_d)) {
+                                && st_ID_ESTACION.equals(est_o) && st_ID_ESTACION_D.equals(est_d)) {
                             contador++;
-                            st_ID_ESTACION = matriz_usos.get("ID_ESTACION_O");
-                            st_ID_ESTACION_D = matriz_usos.get("ID_ESTACION_D");
                         }
+
                     }
-                    matriz_od[od_index][0] = st_ID_ESTACION;
-                    matriz_od[od_index][1] = est_o;
-                    matriz_od[od_index][2] = st_ID_ESTACION_D;
-                    matriz_od[od_index][3] = est_d;
-                    matriz_od[od_index][4] = Integer.toString(contador);
                     matriz_usos.close();
                 }
                 catch (FileNotFoundException e) {
@@ -92,12 +83,17 @@ public class GenerateOD_troncal
                 catch (IOException e) {
                     e.printStackTrace();
                 }
-
-                // System.out.println(matriz_od[od_index][0]+"-"+matriz_od[od_index][1]+"-"+matriz_od[od_index][2]+"-"+matriz_od[od_index][3]+"-"+matriz_od[od_index][4]);
                 System.out.println("INDEX=" + od_index);
+                System.out.println("origen=" + est_o + "destino=" + est_d + "conteo=" + contador);
+                matriz_od[od_index][0] = est_o;
+                matriz_od[od_index][1] = estaciones_troncal_names[count_o];
+                matriz_od[od_index][2] = est_d;
+                matriz_od[od_index][3] = estaciones_troncal_names[count_d];
+                matriz_od[od_index][4] = Integer.toString(contador);
                 od_index++;
+                count_d++;
             }
-
+            count_o++;
         }
         // aqui escribir el archivo
         String outputFile_coord = "matriz_od_6_8.csv";
