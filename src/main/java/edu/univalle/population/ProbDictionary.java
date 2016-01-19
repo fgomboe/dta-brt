@@ -186,6 +186,8 @@ public class ProbDictionary
                     String s_prob = Double.toString(probTable.get(bin).get(orig).get(dest));
                     try {
                         writer.writeRecord(
+                                new String[] { "START_TIME", "END_TIME", "ORIGIN", "DESTINATION", "PROBABILITY" });
+                        writer.writeRecord(
                                 new String[] { s_initTime, s_endingTime, s_originStation, s_destStation, s_prob });
                     }
                     catch (IOException e) {
@@ -200,15 +202,8 @@ public class ProbDictionary
         ProbDictionary dict = new ProbDictionary();
         dict.constructTripTable("./temporal_Feli/ready_closed_trips_noUniviaje.csv");
         dict.constructProbTable();
-
         CsvWriter writer = new CsvWriter("./output/probabilities.csv");
-        try {
-            writer.writeRecord(new String[] { "START_TIME", "END_TIME", "ORIGIN", "DESTINATION", "PROBABILITY" });
-            dict.writeProbabilities(writer);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        dict.writeProbabilities(writer);
 
         System.out.println("Finished!");
     }
