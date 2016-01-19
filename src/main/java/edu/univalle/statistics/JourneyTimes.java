@@ -14,7 +14,6 @@ import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.events.EventsUtils;
 import org.matsim.core.events.MatsimEventsReader;
 import org.matsim.core.scenario.ScenarioUtils;
-import org.matsim.core.scoring.EventsToLegs;
 
 import edu.univalle.utils.CsvWriter;
 
@@ -23,9 +22,10 @@ public class JourneyTimes
 
     private final static Logger log = Logger.getLogger(JourneyTimes.class);
 
-    private String configFile = "input/config.xml";
-    private String testFile = "output/legStats.csv";
-    private String eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+    private String configFile;
+    private String eventsFile;
+
+    private String outputFile;
 
     private double startTime;
     private double endTime;
@@ -35,10 +35,10 @@ public class JourneyTimes
     private Scenario scenario;
     private MatsimEventsReader eventsReader;
     private EventsManager manager;
-    private EventsToLegs handler;
+    private EventsToTrips handler;
     private MyLegHandler legHandler;
 
-    private class MyLegHandler implements EventsToLegs.LegHandler
+    private class MyLegHandler implements EventsToTrips.LegHandler
     {
 
         @Override
@@ -71,11 +71,19 @@ public class JourneyTimes
         this.startTime = 0;
         this.endTime = 86400;
 
+        this.configFile = "input/config.xml";
+        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.outputFile = "output/legStats.csv";
+
     }
 
     public JourneyTimes(double startTime, double endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
+
+        this.configFile = "input/config.xml";
+        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.outputFile = "output/legStats.csv";
 
     }
 
@@ -84,7 +92,7 @@ public class JourneyTimes
         scenario = ScenarioUtils.loadScenario(config);
 
         legHandler = new MyLegHandler();
-        handler = new EventsToLegs(scenario);
+        handler = new EventsToTrips(scenario);
         handler.setLegHandler(legHandler);
 
         manager = EventsUtils.createEventsManager();
@@ -94,15 +102,29 @@ public class JourneyTimes
 
     }
 
+    public void setConfigFile(String file) {
+        configFile = file;
+    }
+
+    public void setEventsFile(String file) {
+        eventsFile = file;
+    }
+
+    public void setOutputFile(String file) {
+        outputFile = file;
+    }
+
     public void readFile() {
-        this.eventsReader.readFile(eventsFile);
+        openWriter();
+        eventsReader.readFile(eventsFile);
+        closeWriter();
         log.info("process finished!");
 
     }
 
-    public void openWriter() {
+    private void openWriter() {
         try {
-            writer = new CsvWriter(testFile);
+            writer = new CsvWriter(outputFile);
             writer.writeRecord(new String[] { "AgentId", "TravelTime", "Mode", "DepartureTime", "Origin", "Destination",
                     "RouteDescription" });
         }
@@ -114,16 +136,14 @@ public class JourneyTimes
         }
     }
 
-    public void closeWriter() {
+    private void closeWriter() {
         writer.close();
     }
 
     public static void main(String[] args) {
         JourneyTimes calc = new JourneyTimes();
         calc.init();
-        calc.openWriter();
         calc.readFile();
-        calc.closeWriter();
 
     }
 }
