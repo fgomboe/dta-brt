@@ -9,7 +9,6 @@ import edu.univalle.utils.CsvWriter;
 
 public class ProbDictionary
 {
-    // HashMap <(bin, origin, destination), numberOfTrips>
     private HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>> tripTable;
     private HashMap<Integer, HashMap<Integer, HashMap<Integer, Double>>> probTable;
 
@@ -29,7 +28,6 @@ public class ProbDictionary
         this.initialTime = 0;
         this.endTime = SECONDS_DAY;
         this.timeSpan = SECONDS_HOUR;
-        // TODO prove this division for correctness (I need a float value as result)
         this.timeBins = (int) Math.ceil((this.endTime - this.initialTime) / (float) this.timeSpan);
 
         tripTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>(this.timeBins, 1);
@@ -40,7 +38,6 @@ public class ProbDictionary
         this.initialTime = initialTime;
         this.endTime = endTime;
         this.timeSpan = timeSpan;
-        // TODO prove this division for correctness (I need a float value as result)
         this.timeBins = (int) Math.ceil((this.endTime - this.initialTime) / (float) this.timeSpan);
 
         tripTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>(this.timeBins, 1);
@@ -56,7 +53,8 @@ public class ProbDictionary
                 int destinationStation = Integer.parseInt(reader.get("D_ID_ESTACION"));
                 int tripTime = Integer.parseInt(reader.get("HORA_MATSIM"));
                 // Trips done exactly at the end time are not included
-                if (tripTime >= initialTime && tripTime < endTime) addTrip(tripTime, originStation, destinationStation);
+                if (tripTime >= initialTime && tripTime < endTime)
+                    addTrip(tripTime, originStation, destinationStation);
             }
         }
         catch (FileNotFoundException e) {
@@ -188,7 +186,6 @@ public class ProbDictionary
     }
 
     private int calcBin(int time) {
-        // TODO prove this division for correctness (I need a float value as result)
         double bin = Math.floor((time - initialTime) / (float) timeSpan);
         return (int) bin;
     }
@@ -209,7 +206,6 @@ public class ProbDictionary
                                 new String[] { s_initTime, s_endingTime, s_originStation, s_destStation, s_prob });
                     }
                     catch (IOException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                 }
@@ -218,16 +214,9 @@ public class ProbDictionary
     }
 
     public static void main(String[] args) {
-        ProbDictionary dict = new ProbDictionary(40, 21600, 28800, 3600);
+        ProbDictionary dict = new ProbDictionary(40, 21600, 28850, 3600);
         dict.constructTripTable("./temporal_Feli/ready_closed_trips_noUniviaje.csv");
         dict.constructProbTable();
-        int noTrips = dict.getNumberOfTrips(0, 9, 39);
-        double probability = dict.getProbability(0, 9, 39);
-        double probability2 = dict.getProbability2(0, 9, 39);
-        System.out.println("Number of Trips: " + noTrips);
-        System.out.println("Probability manual: " + probability);
-        System.out.println("Probability table: " + probability2);
-        System.out.println("Finished!");
 
         CsvWriter writer = new CsvWriter("./output/probabilities.csv");
         try {
@@ -235,8 +224,9 @@ public class ProbDictionary
             dict.writeProbabilities(writer);
         }
         catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        System.out.println("Finished!");
     }
 }
