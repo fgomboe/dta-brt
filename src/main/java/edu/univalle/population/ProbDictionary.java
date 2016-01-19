@@ -152,7 +152,7 @@ public class ProbDictionary
         return 0;
     }
 
-    public double getProbability2(int bin, int orig, int dest) {
+    public double getProbability(int bin, int orig, int dest) {
         if (!probTableDone) {
             System.out.println("Construct the probabilities table first!");
             return 0.0;
@@ -168,24 +168,7 @@ public class ProbDictionary
         return 0.0;
     }
 
-    public double getProbability(int bin, int orig, int dest) {
-        double probability = 0.0;
-        if (tripTable.containsKey(bin)) {
-            if (tripTable.get(bin).containsKey(orig)) {
-                if (tripTable.get(bin).get(orig).containsKey(dest)) {
-                    int totalTrips = 0;
-                    for (int destination : tripTable.get(bin).get(orig).keySet()) {
-                        totalTrips += getNumberOfTrips(bin, orig, destination);
-                    }
-                    System.out.println("Total trips from that origin: " + totalTrips);
-                    probability = tripTable.get(bin).get(orig).get(dest) / (double) totalTrips;
-                }
-            }
-        }
-        return probability;
-    }
-
-    private int calcBin(int time) {
+    public int calcBin(int time) {
         double bin = Math.floor((time - initialTime) / (float) timeSpan);
         return (int) bin;
     }
@@ -214,7 +197,7 @@ public class ProbDictionary
     }
 
     public static void main(String[] args) {
-        ProbDictionary dict = new ProbDictionary(40, 21600, 28850, 3600);
+        ProbDictionary dict = new ProbDictionary();
         dict.constructTripTable("./temporal_Feli/ready_closed_trips_noUniviaje.csv");
         dict.constructProbTable();
 
