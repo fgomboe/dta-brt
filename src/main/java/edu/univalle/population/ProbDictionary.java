@@ -43,6 +43,18 @@ public class ProbDictionary
         tripTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>(this.timeBins, 1);
     }
 
+    /**
+     * Constructs an internal attribute consisting of a HashMap that contains,
+     * for every time bin, every origin and every destination the number of trips
+     * occurred.
+     * This HashMap is constructed reading a csv file that MUST contain the following
+     * headers:
+     * - "O_ID_ESTACION" Integer identifier of origin station
+     * - "D_ID_ESTACION" Integer identifier of destination station
+     * - "HORA_MATSIM" Integer number of seconds for the departure time
+     * 
+     * @param fileName csv file containing a collection of public transport trips
+     */
     public void constructTripTable(String fileName) {
         try {
             CsvReader reader = new CsvReader(fileName);
@@ -67,6 +79,12 @@ public class ProbDictionary
         tripTableDone = true;
     }
 
+    /**
+     * Initialize and constructs an internal attribute consisting of a HashMap
+     * that contains, for every time bin, every origin and every destination the
+     * travel probabilities.
+     * The value of the attribute can be obtained via the "getProbablity" methods.
+     */
     public void constructProbTable() {
         if (!tripTableDone) {
             System.out.println("Construct the trips table first!");
@@ -136,6 +154,15 @@ public class ProbDictionary
         }
     }
 
+    /**
+     * Returns an integer indicating how many trips there is from origin station
+     * 'orig' to destination station 'dest' at time bin 'bin'
+     * 
+     * @param bin The time bin for the number of trips
+     * @param orig The origin station for which to get trips
+     * @param dest The origin station for which to get trips
+     * @return integer indicating number of trips
+     */
     public int getNumberOfTrips(int bin, int orig, int dest) {
         if (!tripTableDone) {
             System.out.println("Construct the trips table first!");
@@ -157,8 +184,8 @@ public class ProbDictionary
      * origin station 'orig' to destination station 'dest' at time bin 'bin'
      * 
      * @param bin The time bin for the travel probability
-     * @param orig The origin station for which to compute probability
-     * @param dest The destination station for which to compute probability
+     * @param orig The origin station for which to get probability
+     * @param dest The destination station for which to get probability
      * @return double value of probability
      */
     public double getProbability(int bin, int orig, int dest) {
@@ -182,7 +209,7 @@ public class ProbDictionary
      * from the input origin station during the time bin specified
      * 
      * @param bin The time bin for the travel probabilities
-     * @param orig The origin station for which to compute probabilities
+     * @param orig The origin station for which to get probabilities
      * @return HashMap<Integer, Double> of probabilities for origin station at time bin
      */
     public HashMap<Integer, Double> getProbability(int bin, int orig) {
@@ -201,11 +228,31 @@ public class ProbDictionary
         return probs;
     }
 
+    /**
+     * Computes the time bin which contains the specified time, taking into account
+     * the set initial time (default 0 sec), end time (default 86400 sec) and the
+     * time span to divide the analyzed time period (default 3600 sec)
+     * 
+     * @param time The time for which to compute time bin
+     * @return integer indicating the time bin the specified time belongs to
+     */
     public int calcBin(int time) {
         double bin = Math.floor((time - initialTime) / (float) timeSpan);
         return (int) bin;
     }
 
+    /**
+     * Writes a csv file in the directory and filename specified in the argument
+     * containing the travel probabilities for every origin, to every destination
+     * happened during every one of the time bins computed.
+     * If there were no travels either for an entire time bin, an origin station,
+     * or to a destination station, the corresponding entry will not be present
+     * in the file.
+     * The specified directory must exist before calling this method. The file
+     * must not exist.
+     * 
+     * @param fileName "Directory" + "Filename" + ".csv" to save the results to
+     */
     public void writeProbabilities(String fileName) {
         try {
             CsvWriter writer = new CsvWriter(fileName);
@@ -237,6 +284,20 @@ public class ProbDictionary
         }
     }
 
+    /**
+     * Writes a scv file in the directory and filename specified in the argument
+     * containing the travel probabilities for every destination in the specified
+     * time bin and origin station.
+     * If there were no travels in the specified time bin from the specified origin
+     * station to some destination station, the corresponding entry will not be
+     * present in the file.
+     * The specified directory must exist before calling this method. The file
+     * must not exist.
+     * 
+     * @param fileName "Directory" + "Filename" + ".csv" to save the results to
+     * @param bin Time bin for which to get the probabilities to write
+     * @param orig Origin station for which to get the probabilities to write
+     */
     public void writeProbabilities(String fileName, int bin, int orig) {
         try {
             CsvWriter writer = new CsvWriter(fileName);
