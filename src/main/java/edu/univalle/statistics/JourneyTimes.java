@@ -2,6 +2,8 @@ package edu.univalle.statistics;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
@@ -14,7 +16,6 @@ import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.events.EventsUtils;
 import org.matsim.core.events.MatsimEventsReader;
 import org.matsim.core.scenario.ScenarioUtils;
-import org.matsim.core.scoring.EventsToLegs;
 
 import edu.univalle.utils.CsvWriter;
 
@@ -23,9 +24,10 @@ public class JourneyTimes
 
     private final static Logger log = Logger.getLogger(JourneyTimes.class);
 
-    private String configFile = "input/config.xml";
-    private String testFile = "output/legStats.csv";
-    private String eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+    private String configFile;
+    private String eventsFile;
+
+    private String outputFile;
 
     private double startTime;
     private double endTime;
@@ -35,32 +37,57 @@ public class JourneyTimes
     private Scenario scenario;
     private MatsimEventsReader eventsReader;
     private EventsManager manager;
-    private EventsToLegs handler;
+    private EventsToTrips handler;
     private MyLegHandler legHandler;
 
-    private class MyLegHandler implements EventsToLegs.LegHandler
+    private HashMap<Integer, ArrayList<Leg>> trips = new HashMap<Integer, ArrayList<Leg>>();
+
+    private class MyLegHandler implements EventsToTrips.LegHandler
     {
 
         @Override
         public void handleLeg(Id<Person> agentId, Leg leg) {
-            try {
+            // exclude bus drivers
+            if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() < endTime
+                    && !leg.getMode().equals("car")) {
+
+                int i_agentId = Integer.parseInt(agentId.toString());
                 String s_agentId = agentId.toString();
-                String s_travelTime = Double.toString(leg.getTravelTime());
                 String s_mode = leg.getMode();
                 String s_departureTime = Double.toString(leg.getDepartureTime());
-                String s_origin = leg.getRoute().toString().split(" ")[1].split("=")[1];
-                String s_destination = leg.getRoute().toString().split(" ")[2].split("=")[1];
-                String s_routeDescription = leg.getRoute().getRouteDescription();
+                String s_travelTime = Double.toString(leg.getTravelTime());
+                String s_travelDistance = Double.toString(leg.getRoute().getDistance());
+                String s_origin = "";
+                String s_dest = "";
+                String s_line = "";
+                String s_route = "";
+                if (leg.getMode().equals("pt")) {
+                    s_origin = leg.getRoute().toString().split(" ")[1].split("=")[1];
+                    s_dest = leg.getRoute().toString().split(" ")[2].split("=")[1];
+                    s_line = leg.getRoute().toString().split(" ")[3].split("=")[1] + "_";
+                    s_route = leg.getRoute().toString().split(" ")[4].split("=")[1];
+                }
+                else if (leg.getMode().equals("transit_walk")) {
+                    s_origin = leg.getRoute().getStartLinkId().toString();
+                    s_dest = leg.getRoute().getEndLinkId().toString();
+                }
 
-                // excludes transit walkers and bus drivers
-                if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() <= endTime
-                        && !leg.getMode().equals("transit_walk") && !leg.getMode().equals("car"))
-                    writer.writeRecord(new String[] { s_agentId, s_travelTime, s_mode, s_departureTime, s_origin,
-                            s_destination, s_routeDescription });
+                if (!trips.containsKey(i_agentId)) {
+                    ArrayList<Leg> legList = new ArrayList<Leg>();
+                    legList.add(leg);
+                    trips.put(i_agentId, legList);
+                }
+                else {
+                    trips.get(i_agentId).add(leg);
+                }
 
-            }
-            catch (IOException e) {
-                e.printStackTrace();
+                try {
+                    writer.writeRecord(new String[] { s_agentId, s_mode, s_departureTime, s_travelTime,
+                            s_travelDistance, s_origin, s_dest, s_line + s_route });
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
         }
@@ -71,11 +98,19 @@ public class JourneyTimes
         this.startTime = 0;
         this.endTime = 86400;
 
+        this.configFile = "input/config.xml";
+        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.outputFile = "output/legStats.csv";
+
     }
 
     public JourneyTimes(double startTime, double endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
+
+        this.configFile = "input/config.xml";
+        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.outputFile = "output/legStats.csv";
 
     }
 
@@ -84,7 +119,7 @@ public class JourneyTimes
         scenario = ScenarioUtils.loadScenario(config);
 
         legHandler = new MyLegHandler();
-        handler = new EventsToLegs(scenario);
+        handler = new EventsToTrips(scenario);
         handler.setLegHandler(legHandler);
 
         manager = EventsUtils.createEventsManager();
@@ -94,17 +129,31 @@ public class JourneyTimes
 
     }
 
+    public void setConfigFile(String file) {
+        configFile = file;
+    }
+
+    public void setEventsFile(String file) {
+        eventsFile = file;
+    }
+
+    public void setOutputFile(String file) {
+        outputFile = file;
+    }
+
     public void readFile() {
-        this.eventsReader.readFile(eventsFile);
-        log.info("process finished!");
+        openWriter();
+        eventsReader.readFile(eventsFile);
+        closeWriter();
+        log.info("Process finished!");
 
     }
 
-    public void openWriter() {
+    private void openWriter() {
         try {
-            writer = new CsvWriter(testFile);
-            writer.writeRecord(new String[] { "AgentId", "TravelTime", "Mode", "DepartureTime", "Origin", "Destination",
-                    "RouteDescription" });
+            writer = new CsvWriter(outputFile);
+            writer.writeRecord(new String[] { "AgentId", "Mode", "DepartureTime", "TravelTime", "TravelDistance",
+                    "Origin", "Destination", "Route_Line" });
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -114,16 +163,15 @@ public class JourneyTimes
         }
     }
 
-    public void closeWriter() {
+    private void closeWriter() {
         writer.close();
     }
 
     public static void main(String[] args) {
         JourneyTimes calc = new JourneyTimes();
         calc.init();
-        calc.openWriter();
         calc.readFile();
-        calc.closeWriter();
+        // calc.exportFile();
 
     }
 }

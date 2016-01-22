@@ -14,7 +14,7 @@ import org.matsim.vehicles.Vehicle;
  * @author michaz
  *
  */
-public class FelisTravelTime implements TravelTime
+public class MIOTravelTime implements TravelTime
 {
 	int seed = 12475;
 	Random rand = new Random(seed);
