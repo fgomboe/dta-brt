@@ -31,12 +31,14 @@ import org.matsim.api.core.v01.events.LinkLeaveEvent;
 import org.matsim.api.core.v01.events.PersonArrivalEvent;
 import org.matsim.api.core.v01.events.PersonDepartureEvent;
 import org.matsim.api.core.v01.events.PersonEntersVehicleEvent;
+import org.matsim.api.core.v01.events.PersonLeavesVehicleEvent;
 import org.matsim.api.core.v01.events.TransitDriverStartsEvent;
 import org.matsim.api.core.v01.events.handler.LinkEnterEventHandler;
 import org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler;
+import org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler;
 import org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.population.Leg;
@@ -51,6 +53,7 @@ import org.matsim.core.population.routes.GenericRouteImpl;
 import org.matsim.core.population.routes.NetworkRoute;
 import org.matsim.core.population.routes.RouteUtils;
 import org.matsim.pt.routes.ExperimentalTransitRoute;
+import org.matsim.pt.transitSchedule.api.Departure;
 import org.matsim.pt.transitSchedule.api.TransitLine;
 import org.matsim.pt.transitSchedule.api.TransitRoute;
 import org.matsim.pt.transitSchedule.api.TransitStopFacility;
@@ -71,7 +74,7 @@ import org.matsim.vehicles.Vehicle;
  */
 public final class EventsToTrips implements PersonDepartureEventHandler, PersonArrivalEventHandler,
         LinkLeaveEventHandler, LinkEnterEventHandler, TeleportationArrivalEventHandler, TransitDriverStartsEventHandler,
-        PersonEntersVehicleEventHandler, VehicleArrivesAtFacilityEventHandler
+        PersonEntersVehicleEventHandler, VehicleArrivesAtFacilityEventHandler, PersonLeavesVehicleEventHandler
 {
 
     private class PendingTransitTravel
@@ -93,12 +96,15 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
         final Id<TransitLine> transitLineId;
         final Id<TransitRoute> transitRouteId;
         final Id<Person> driverId;
+        final Id<Departure> departureId;
         Id<TransitStopFacility> lastFacilityId;
 
-        LineAndRoute(Id<TransitLine> transitLineId, Id<TransitRoute> transitRouteId, Id<Person> driverId) {
+        LineAndRoute(Id<TransitLine> transitLineId, Id<TransitRoute> transitRouteId, Id<Person> driverId,
+                Id<Departure> departureId) {
             this.transitLineId = transitLineId;
             this.transitRouteId = transitRouteId;
             this.driverId = driverId;
+            this.departureId = departureId;
         }
 
     }
@@ -213,7 +219,7 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
     @Override
     public void handleEvent(TransitDriverStartsEvent event) {
         LineAndRoute lineAndRoute = new LineAndRoute(event.getTransitLineId(), event.getTransitRouteId(),
-                event.getDriverId());
+                event.getDriverId(), event.getDepartureId());
         transitVehicle2currentRoute.put(event.getVehicleId(), lineAndRoute);
     }
 
@@ -225,6 +231,15 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     public void setLegHandler(LegHandler legHandler) {
         this.legHandler = legHandler;
+    }
+
+    @Override
+    public void handleEvent(PersonLeavesVehicleEvent event) {
+        LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(event.getVehicleId());
+        if (lineAndRoute != null && event.getPersonId().equals(lineAndRoute.driverId)) {
+            transitVehicle2currentRoute.remove(event.getVehicleId());
+        }
+
     }
 
 }
