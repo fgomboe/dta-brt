@@ -24,8 +24,8 @@ public class GenerateOD_troncal
         String[] estaciones_troncal_names = new String[40];
         String[] estaciones_troncal_codes = new String[40];
         int count_estaciones;
-        int hora_inicio = 21600;
-        int hora_fin = 28800;
+        int hora_inicio = 0 * 3600;
+        int hora_fin = 24 * 3600;
 
         try {
             // Para sacar la lista de las estaciones de la troncal
@@ -61,7 +61,7 @@ public class GenerateOD_troncal
             for (String est_d : estaciones_troncal_codes) {
                 try {
                     contador = 0;
-                    matriz_usos = new CsvReader("input/usos_ready.csv");
+                    matriz_usos = new CsvReader("input/usos_xls/csv_closed/general.csv");
                     matriz_usos.readHeaders();
                     while (matriz_usos.readRecord())
 
@@ -84,7 +84,6 @@ public class GenerateOD_troncal
                     e.printStackTrace();
                 }
                 System.out.println("INDEX=" + od_index);
-                System.out.println("origen=" + est_o + "destino=" + est_d + "conteo=" + contador);
                 matriz_od[od_index][0] = est_o;
                 matriz_od[od_index][1] = estaciones_troncal_names[count_o];
                 matriz_od[od_index][2] = est_d;
@@ -96,7 +95,7 @@ public class GenerateOD_troncal
             count_o++;
         }
         // aqui escribir el archivo
-        String outputFile_coord = "matriz_od_6_8.csv";
+        String outputFile_coord = "output/matriz_od_24h.csv";
         boolean alreadyExists_coord = new File(outputFile_coord).exists();
 
         try {

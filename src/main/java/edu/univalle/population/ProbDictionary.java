@@ -184,6 +184,9 @@ public class ProbDictionary
      * origin station 'orig' to destination station 'dest' at time bin 'bin'
      * 
      * @param bin The time bin for the travel probability
+     * @param orig The origin station for which to compute probability
+     * @param dest The destination station for which to compute probability
+     * @param bin The time bin for the travel probability
      * @param orig The origin station for which to get probability
      * @param dest The destination station for which to get probability
      * @return double value of probability
@@ -208,6 +211,8 @@ public class ProbDictionary
      * Returns a HashMap containing the probabilities for every possible destination
      * from the input origin station during the time bin specified
      * 
+     * @param bin The time bin for the travel probabilities
+     * @param orig The origin station for which to compute probabilities
      * @param bin The time bin for the travel probabilities
      * @param orig The origin station for which to get probabilities
      * @return HashMap<Integer, Double> of probabilities for origin station at time bin
@@ -327,7 +332,7 @@ public class ProbDictionary
 
     public static void main(String[] args) {
         ProbDictionary dict = new ProbDictionary();
-        dict.constructTripTable("./temporal_Feli/ready_closed_trips_noUniviaje.csv");
+        dict.constructTripTable("./input/ready_closed_trips_noUniviaje.csv");
         dict.constructProbTable();
         dict.writeProbabilities("./output/probabilities.csv", 8, 12);
 
