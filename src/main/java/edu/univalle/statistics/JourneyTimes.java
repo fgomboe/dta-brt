@@ -47,47 +47,47 @@ public class JourneyTimes
 
         @Override
         public void handleLeg(Id<Person> agentId, Leg leg) {
-            try {
-                // exclude bus drivers
-                if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() < endTime
-                        && !leg.getMode().equals("car")) {
+            // exclude bus drivers
+            if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() < endTime
+                    && !leg.getMode().equals("car")) {
 
-                    int i_agentId = Integer.parseInt(agentId.toString());
-                    String s_agentId = agentId.toString();
-                    String s_mode = leg.getMode();
-                    String s_departureTime = Double.toString(leg.getDepartureTime());
-                    String s_travelTime = Double.toString(leg.getTravelTime());
-                    String s_travelDistance = Double.toString(leg.getRoute().getDistance());
-                    String s_origin = "";
-                    String s_dest = "";
-                    String s_line = "";
-                    String s_route = "";
-                    if (leg.getMode().equals("pt")) {
-                        s_origin = leg.getRoute().toString().split(" ")[1].split("=")[1];
-                        s_dest = leg.getRoute().toString().split(" ")[2].split("=")[1];
-                        s_line = leg.getRoute().toString().split(" ")[3].split("=")[1] + "_";
-                        s_route = leg.getRoute().toString().split(" ")[4].split("=")[1];
-                    }
-                    else if (leg.getMode().equals("transit_walk")) {
-                        s_origin = leg.getRoute().getStartLinkId().toString();
-                        s_dest = leg.getRoute().getEndLinkId().toString();
-                    }
+                int i_agentId = Integer.parseInt(agentId.toString());
+                String s_agentId = agentId.toString();
+                String s_mode = leg.getMode();
+                String s_departureTime = Double.toString(leg.getDepartureTime());
+                String s_travelTime = Double.toString(leg.getTravelTime());
+                String s_travelDistance = Double.toString(leg.getRoute().getDistance());
+                String s_origin = "";
+                String s_dest = "";
+                String s_line = "";
+                String s_route = "";
+                if (leg.getMode().equals("pt")) {
+                    s_origin = leg.getRoute().toString().split(" ")[1].split("=")[1];
+                    s_dest = leg.getRoute().toString().split(" ")[2].split("=")[1];
+                    s_line = leg.getRoute().toString().split(" ")[3].split("=")[1] + "_";
+                    s_route = leg.getRoute().toString().split(" ")[4].split("=")[1];
+                }
+                else if (leg.getMode().equals("transit_walk")) {
+                    s_origin = leg.getRoute().getStartLinkId().toString();
+                    s_dest = leg.getRoute().getEndLinkId().toString();
+                }
 
-                    if (!trips.containsKey(i_agentId)) {
-                        ArrayList<Leg> legList = new ArrayList<Leg>();
-                        legList.add(leg);
-                        trips.put(i_agentId, legList);
-                    }
-                    else {
-                        trips.get(i_agentId).add(leg);
-                    }
+                if (!trips.containsKey(i_agentId)) {
+                    ArrayList<Leg> legList = new ArrayList<Leg>();
+                    legList.add(leg);
+                    trips.put(i_agentId, legList);
+                }
+                else {
+                    trips.get(i_agentId).add(leg);
+                }
 
+                try {
                     writer.writeRecord(new String[] { s_agentId, s_mode, s_departureTime, s_travelTime,
                             s_travelDistance, s_origin, s_dest, s_line + s_route });
                 }
-            }
-            catch (IOException e) {
-                e.printStackTrace();
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
         }
@@ -171,6 +171,7 @@ public class JourneyTimes
         JourneyTimes calc = new JourneyTimes();
         calc.init();
         calc.readFile();
+        // calc.exportFile();
 
     }
 }
