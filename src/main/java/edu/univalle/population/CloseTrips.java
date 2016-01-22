@@ -23,10 +23,6 @@ public class CloseTrips
         String D_ESTACION;
         String O_ID_ESTACION;
         String D_ID_ESTACION;
-        String O_COORD_X;
-        String D_COORD_X;
-        String O_COORD_Y;
-        String D_COORD_Y;
         String TRONCAL;
         String HORA_MATSIM;
         String USO;
@@ -35,14 +31,12 @@ public class CloseTrips
 
         String t_D_ESTACION = null;
         String t_D_ID_ESTACION = null;
-        String t_D_COORD_X = null;
-        String t_D_COORD_Y = null;
-
         try {
-            usos_ready = new CsvReader("input/usos_ready_noUniviaje.csv");
+            usos_ready = new CsvReader(
+                    "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_ready/usos_normal_sin1uso.csv");
             usos_ready.readHeaders();
 
-            String outputFile_coord = "ready_closed_trips_noUniviaje.csv";
+            String outputFile_coord = "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/closed_trips_normal.csv";
             boolean alreadyExists_coord = new File(outputFile_coord).exists();
             try {
                 CsvWriter new_closed_trips = new CsvWriter(new FileWriter(outputFile_coord, true), ',');
@@ -55,10 +49,6 @@ public class CloseTrips
                     new_closed_trips.write("D_ESTACION");
                     new_closed_trips.write("O_ID_ESTACION");
                     new_closed_trips.write("D_ID_ESTACION");
-                    new_closed_trips.write("O_COORD_X");
-                    new_closed_trips.write("D_COORD_X");
-                    new_closed_trips.write("O_COORD_Y");
-                    new_closed_trips.write("D_COORD_Y");
                     new_closed_trips.write("TRONCAL");
                     new_closed_trips.write("HORA_MATSIM");
                     new_closed_trips.write("1_USO");
@@ -76,10 +66,6 @@ public class CloseTrips
                         D_ESTACION = usos_ready.get("D_ESTACION");
                         O_ID_ESTACION = usos_ready.get("O_ID_ESTACION");
                         D_ID_ESTACION = usos_ready.get("D_ID_ESTACION");
-                        O_COORD_X = usos_ready.get("O_COORD_X");
-                        D_COORD_X = usos_ready.get("D_COORD_X");
-                        O_COORD_Y = usos_ready.get("O_COORD_Y");
-                        D_COORD_Y = usos_ready.get("D_COORD_Y");
                         TRONCAL = usos_ready.get("TRONCAL");
                         HORA_MATSIM = usos_ready.get("HORA_MATSIM");
                         USO = usos_ready.get("1_USO");
@@ -89,15 +75,13 @@ public class CloseTrips
                         if (START.equals("YES")) {
                             t_D_ESTACION = O_ESTACION;
                             t_D_ID_ESTACION = O_ID_ESTACION;
-                            t_D_COORD_X = O_COORD_X;
-                            t_D_COORD_Y = O_COORD_Y;
+
                         }
 
                         if (END.equals("YES")) {
                             D_ESTACION = t_D_ESTACION;
                             D_ID_ESTACION = t_D_ID_ESTACION;
-                            D_COORD_X = t_D_COORD_X;
-                            D_COORD_Y = t_D_COORD_Y;
+
                         }
 
                         new_closed_trips.write(PRODUCTO);
@@ -108,10 +92,6 @@ public class CloseTrips
                         new_closed_trips.write(D_ESTACION);
                         new_closed_trips.write(O_ID_ESTACION);
                         new_closed_trips.write(D_ID_ESTACION);
-                        new_closed_trips.write(O_COORD_X);
-                        new_closed_trips.write(D_COORD_X);
-                        new_closed_trips.write(O_COORD_Y);
-                        new_closed_trips.write(D_COORD_Y);
                         new_closed_trips.write(TRONCAL);
                         new_closed_trips.write(HORA_MATSIM);
                         new_closed_trips.write(USO);
