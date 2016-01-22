@@ -65,7 +65,8 @@ public class ProbDictionary
                 int destinationStation = Integer.parseInt(reader.get("D_ID_ESTACION"));
                 int tripTime = Integer.parseInt(reader.get("HORA_MATSIM"));
                 // Trips done exactly at the end time are not included
-                if (tripTime >= initialTime && tripTime < endTime) addTrip(tripTime, originStation, destinationStation);
+                if (tripTime >= initialTime && tripTime < endTime)
+                    addTrip(tripTime, originStation, destinationStation);
             }
         }
         catch (FileNotFoundException e) {
@@ -182,18 +183,12 @@ public class ProbDictionary
      * Returns a double indicating the probability that a passenger travels from
      * origin station 'orig' to destination station 'dest' at time bin 'bin'
      * 
-<<<<<<< HEAD
-     * @param bin
-     *            The time bin for the travel probability
-     * @param orig
-     *            The origin station for which to compute probability
-     * @param dest
-     *            The destination station for which to compute probability
-=======
+     * @param bin The time bin for the travel probability
+     * @param orig The origin station for which to compute probability
+     * @param dest The destination station for which to compute probability
      * @param bin The time bin for the travel probability
      * @param orig The origin station for which to get probability
      * @param dest The destination station for which to get probability
->>>>>>> 2c8b0b2bb64129f492d57419c780e84604028614
      * @return double value of probability
      */
     public double getProbability(int bin, int orig, int dest) {
@@ -216,15 +211,10 @@ public class ProbDictionary
      * Returns a HashMap containing the probabilities for every possible destination
      * from the input origin station during the time bin specified
      * 
-<<<<<<< HEAD
-     * @param bin
-     *            The time bin for the travel probabilities
-     * @param orig
-     *            The origin station for which to compute probabilities
-=======
+     * @param bin The time bin for the travel probabilities
+     * @param orig The origin station for which to compute probabilities
      * @param bin The time bin for the travel probabilities
      * @param orig The origin station for which to get probabilities
->>>>>>> 2c8b0b2bb64129f492d57419c780e84604028614
      * @return HashMap<Integer, Double> of probabilities for origin station at time bin
      */
     public HashMap<Integer, Double> getProbability(int bin, int orig) {
