@@ -26,6 +26,7 @@ import java.util.Map;
 
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
+import org.matsim.api.core.v01.events.ActivityStartEvent;
 import org.matsim.api.core.v01.events.LinkEnterEvent;
 import org.matsim.api.core.v01.events.LinkLeaveEvent;
 import org.matsim.api.core.v01.events.PersonArrivalEvent;
@@ -33,6 +34,7 @@ import org.matsim.api.core.v01.events.PersonDepartureEvent;
 import org.matsim.api.core.v01.events.PersonEntersVehicleEvent;
 import org.matsim.api.core.v01.events.PersonLeavesVehicleEvent;
 import org.matsim.api.core.v01.events.TransitDriverStartsEvent;
+import org.matsim.api.core.v01.events.handler.ActivityStartEventHandler;
 import org.matsim.api.core.v01.events.handler.LinkEnterEventHandler;
 import org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler;
@@ -41,7 +43,6 @@ import org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler;
 import org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler;
 import org.matsim.api.core.v01.network.Link;
-import org.matsim.api.core.v01.population.Leg;
 import org.matsim.api.core.v01.population.Person;
 import org.matsim.api.core.v01.population.Route;
 import org.matsim.core.api.experimental.events.TeleportationArrivalEvent;
@@ -72,9 +73,10 @@ import org.matsim.vehicles.Vehicle;
  * @author michaz
  *
  */
-public final class EventsToTrips implements PersonDepartureEventHandler, PersonArrivalEventHandler,
-        LinkLeaveEventHandler, LinkEnterEventHandler, TeleportationArrivalEventHandler, TransitDriverStartsEventHandler,
-        PersonEntersVehicleEventHandler, VehicleArrivesAtFacilityEventHandler, PersonLeavesVehicleEventHandler
+public final class EventsToTrips
+        implements PersonDepartureEventHandler, PersonArrivalEventHandler, LinkLeaveEventHandler, LinkEnterEventHandler,
+        TeleportationArrivalEventHandler, TransitDriverStartsEventHandler, PersonEntersVehicleEventHandler,
+        VehicleArrivesAtFacilityEventHandler, PersonLeavesVehicleEventHandler, ActivityStartEventHandler
 {
 
     private class PendingTransitTravel
@@ -109,18 +111,18 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     }
 
-    public interface LegHandler
+    public interface TripHandler
     {
-        void handleLeg(Id<Person> agentId, Leg leg);
+        void handleTrip(Id<Person> agentId, List<LegImpl> trip);
     }
 
     private Scenario scenario;
-    private Map<Id<Person>, LegImpl> legs = new HashMap<>();
+    private Map<Id<Person>, List<LegImpl>> trips = new HashMap<>();
     private Map<Id<Person>, List<Id<Link>>> experiencedRoutes = new HashMap<>();
     private Map<Id<Person>, TeleportationArrivalEvent> routelessTravels = new HashMap<>();
     private Map<Id<Person>, PendingTransitTravel> transitTravels = new HashMap<>();
     private Map<Id<Vehicle>, LineAndRoute> transitVehicle2currentRoute = new HashMap<>();
-    private LegHandler legHandler;
+    private TripHandler tripHandler;
 
     public EventsToTrips(Scenario scenario) {
         this.scenario = scenario;
@@ -130,7 +132,16 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
     public void handleEvent(PersonDepartureEvent event) {
         LegImpl leg = new LegImpl(event.getLegMode());
         leg.setDepartureTime(event.getTime());
-        legs.put(event.getPersonId(), leg);
+
+        if (!trips.containsKey(event.getPersonId())) {
+            List<LegImpl> legs = new ArrayList<>();
+            legs.add(leg);
+            trips.put(event.getPersonId(), legs);
+        }
+        else {
+            trips.get(event.getPersonId()).add(leg);
+        }
+
         List<Id<Link>> route = new ArrayList<>();
         route.add(event.getLinkId());
         experiencedRoutes.put(event.getPersonId(), route);
@@ -171,7 +182,8 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     @Override
     public void handleEvent(PersonArrivalEvent event) {
-        LegImpl leg = legs.get(event.getPersonId());
+        List<LegImpl> legs = trips.get(event.getPersonId());
+        LegImpl leg = legs.get(legs.size() - 1);
         leg.setArrivalTime(event.getTime());
         double travelTime = leg.getArrivalTime() - leg.getDepartureTime();
         leg.setTravelTime(travelTime);
@@ -213,7 +225,9 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
             }
             leg.setRoute(genericRoute);
         }
-        legHandler.handleLeg(event.getPersonId(), leg);
+
+        // TODO Verify if I need this
+        // legHandler.handleLeg(event.getPersonId(), leg);
     }
 
     @Override
@@ -225,12 +239,12 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     @Override
     public void reset(int iteration) {
-        legs.clear();
+        trips.clear();
         experiencedRoutes.clear();
     }
 
-    public void setLegHandler(LegHandler legHandler) {
-        this.legHandler = legHandler;
+    public void setTripHandler(TripHandler tripHandler) {
+        this.tripHandler = tripHandler;
     }
 
     @Override
@@ -240,6 +254,14 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
             transitVehicle2currentRoute.remove(event.getVehicleId());
         }
 
+    }
+
+    @Override
+    public void handleEvent(ActivityStartEvent event) {
+        if (event.getActType().equals("w") || event.getActType().equals("h")) {
+            tripHandler.handleTrip(event.getPersonId(), trips.get(event.getPersonId()));
+            trips.remove(event.getPersonId());
+        }
     }
 
 }

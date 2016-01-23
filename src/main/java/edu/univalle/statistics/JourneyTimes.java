@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
@@ -15,6 +17,7 @@ import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.events.EventsUtils;
 import org.matsim.core.events.MatsimEventsReader;
+import org.matsim.core.population.LegImpl;
 import org.matsim.core.scenario.ScenarioUtils;
 
 import edu.univalle.utils.CsvWriter;
@@ -38,19 +41,28 @@ public class JourneyTimes
     private MatsimEventsReader eventsReader;
     private EventsManager manager;
     private EventsToTrips handler;
-    private MyLegHandler legHandler;
+    private MyTripHandler tripHandler;
 
     private HashMap<Integer, ArrayList<Leg>> trips = new HashMap<Integer, ArrayList<Leg>>();
 
-    private class MyLegHandler implements EventsToTrips.LegHandler
+    private class MyTripHandler implements EventsToTrips.TripHandler
     {
 
         @Override
-        public void handleLeg(Id<Person> agentId, Leg leg) {
+        public void handleTrip(Id<Person> agentId, List<LegImpl> leg) {
+            if (agentId.toString().equals("3")) {
+                System.out.println(agentId.toString());
+                Iterator<LegImpl> it = leg.iterator();
+                while (it.hasNext()) {
+                    System.out.println(it.next().toString());
+                }
+            }
+
+            /*
             // exclude bus drivers
             if (leg.getDepartureTime() >= startTime && leg.getDepartureTime() < endTime
                     && !leg.getMode().equals("car")) {
-
+            
                 int i_agentId = Integer.parseInt(agentId.toString());
                 String s_agentId = agentId.toString();
                 String s_mode = leg.getMode();
@@ -71,7 +83,7 @@ public class JourneyTimes
                     s_origin = leg.getRoute().getStartLinkId().toString();
                     s_dest = leg.getRoute().getEndLinkId().toString();
                 }
-
+            
                 if (!trips.containsKey(i_agentId)) {
                     ArrayList<Leg> legList = new ArrayList<Leg>();
                     legList.add(leg);
@@ -80,7 +92,7 @@ public class JourneyTimes
                 else {
                     trips.get(i_agentId).add(leg);
                 }
-
+            
                 try {
                     writer.writeRecord(new String[] { s_agentId, s_mode, s_departureTime, s_travelTime,
                             s_travelDistance, s_origin, s_dest, s_line + s_route });
@@ -89,6 +101,7 @@ public class JourneyTimes
                     e.printStackTrace();
                 }
             }
+            */
 
         }
 
@@ -118,9 +131,9 @@ public class JourneyTimes
         config = ConfigUtils.loadConfig(configFile);
         scenario = ScenarioUtils.loadScenario(config);
 
-        legHandler = new MyLegHandler();
+        tripHandler = new MyTripHandler();
         handler = new EventsToTrips(scenario);
-        handler.setLegHandler(legHandler);
+        handler.setTripHandler(tripHandler);
 
         manager = EventsUtils.createEventsManager();
         manager.addHandler(handler);
@@ -142,9 +155,9 @@ public class JourneyTimes
     }
 
     public void readFile() {
-        openWriter();
+        // openWriter();
         eventsReader.readFile(eventsFile);
-        closeWriter();
+        // closeWriter();
         log.info("Process finished!");
 
     }
