@@ -11,6 +11,8 @@ public class ProbDictionary
 {
     private HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>> tripTable;
     private HashMap<Integer, HashMap<Integer, HashMap<Integer, Double>>> probTable;
+    private HashMap<Integer, HashMap<Integer, Double>> probTableDay;
+    private HashMap<Integer, String> stationIds;
 
     private final int SECONDS_DAY = 86400;
     private final int SECONDS_HOUR = 3600;
@@ -23,8 +25,8 @@ public class ProbDictionary
     private boolean tripTableDone = false;
     private boolean probTableDone = false;
 
-    public ProbDictionary() {
-        this.numberOfStations = TRUNK_STATIONS;
+    public ProbDictionary(String std_code) {
+        this.numberOfStations = readStations(std_code);
         this.initialTime = 0;
         this.endTime = SECONDS_DAY;
         this.timeSpan = SECONDS_HOUR;
@@ -33,8 +35,8 @@ public class ProbDictionary
         tripTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>(this.timeBins, 1);
     }
 
-    public ProbDictionary(int numberOfStations, int initialTime, int endTime, int timeSpan) {
-        this.numberOfStations = numberOfStations;
+    public ProbDictionary(String std_code, int initialTime, int endTime, int timeSpan) {
+        this.numberOfStations = readStations(std_code);
         this.initialTime = initialTime;
         this.endTime = endTime;
         this.timeSpan = timeSpan;
@@ -43,17 +45,40 @@ public class ProbDictionary
         tripTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>(this.timeBins, 1);
     }
 
+    private int readStations(String std_code) {
+        try {
+            stationIds = new HashMap<Integer, String>();
+            CsvReader reader = new CsvReader(std_code);
+            reader.readHeaders();
+            while (reader.readRecord()) {
+                if (reader.get("TRONCAL").equals("YES"))
+                    stationIds.put(Integer.parseInt(reader.get("UV_CODES")), reader.get("STA_NAME"));
+            }
+
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return stationIds.size();
+    }
+
     /**
-     * Constructs an internal attribute consisting of a HashMap that contains,
-     * for every time bin, every origin and every destination the number of trips
-     * occurred.
-     * This HashMap is constructed reading a csv file that MUST contain the following
-     * headers:
+     * Must be called before constructProbTable() method. Once run, it is possible to
+     * get the number of trips for a time bin, origin station and destination station
+     * using method getNumberOfTrips(int bin, int orig, int dest); or for an origin
+     * station and destination station for the entire analysis time period using method
+     * getNumberOfTrips(int orig, int dest)
+     * 
+     * This method requires a csv file that MUST contain the following headers:
      * - "O_ID_ESTACION" Integer identifier of origin station
      * - "D_ID_ESTACION" Integer identifier of destination station
      * - "HORA_MATSIM" Integer number of seconds for the departure time
      * 
-     * @param fileName csv file containing a collection of public transport trips
+     * @param fileName csv file containing a list of public transport trips
      */
     public void constructTripTable(String fileName) {
         try {
@@ -80,10 +105,11 @@ public class ProbDictionary
     }
 
     /**
-     * Initialize and constructs an internal attribute consisting of a HashMap
-     * that contains, for every time bin, every origin and every destination the
-     * travel probabilities.
-     * The value of the attribute can be obtained via the "getProbablity" methods.
+     * Method constructTripTable() must be called first.
+     * 
+     * Once run, it is possible to get the travel probability for a time bin, origin
+     * station and destination station using method getProbability(int bin, int orig, int dest);
+     * or for a time bin and origin station using method getProbability(int bin, int orig)
      */
     public void constructProbTable() {
         if (!tripTableDone) {
@@ -92,25 +118,45 @@ public class ProbDictionary
         }
 
         this.probTable = new HashMap<Integer, HashMap<Integer, HashMap<Integer, Double>>>(this.timeBins, 1);
+        this.probTableDay = new HashMap<Integer, HashMap<Integer, Double>>(this.numberOfStations, 1);
 
         HashMap<Integer, HashMap<Integer, Double>> aux1;
         HashMap<Integer, Double> aux2;
 
         for (int bin : tripTable.keySet()) {
             aux1 = new HashMap<Integer, HashMap<Integer, Double>>(numberOfStations, 1);
+
             for (int orig : tripTable.get(bin).keySet()) {
+
                 aux2 = new HashMap<Integer, Double>(numberOfStations, 1);
+
                 for (int dest : tripTable.get(bin).get(orig).keySet()) {
                     int totalTrips = 0;
+
                     for (int destination : tripTable.get(bin).get(orig).keySet()) {
                         totalTrips += getNumberOfTrips(bin, orig, destination);
                     }
+
                     double probability = getNumberOfTrips(bin, orig, dest) / (double) totalTrips;
                     aux2.put(dest, probability);
                 }
                 aux1.put(orig, aux2);
             }
             probTable.put(bin, aux1);
+        }
+
+        for (int orig : stationIds.keySet()) {
+            if (!probTableDay.containsKey(orig))
+                probTableDay.put(orig, new HashMap<Integer, Double>(this.numberOfStations, 1));
+            for (int dest : stationIds.keySet()) {
+                if (!probTableDay.get(orig).containsKey(dest)) {
+                    int totalTripsDay = 0;
+                    for (int destination : stationIds.keySet()) {
+                        totalTripsDay += getNumberOfTrips(orig, destination);
+                    }
+                    probTableDay.get(orig).put(dest, getNumberOfTrips(orig, dest) / (double) totalTripsDay);
+                }
+            }
         }
 
         probTableDone = true;
@@ -121,7 +167,6 @@ public class ProbDictionary
         HashMap<Integer, Integer> aux2 = null;
 
         int bin = calcBin(time);
-        // System.out.println("for the time: " + time + " - calculated bin: " + bin);
 
         if (tripTable.containsKey(bin)) {
             if (tripTable.get(bin).containsKey(orig)) {
@@ -160,8 +205,8 @@ public class ProbDictionary
      * 
      * @param bin The time bin for the number of trips
      * @param orig The origin station for which to get trips
-     * @param dest The origin station for which to get trips
-     * @return integer indicating number of trips
+     * @param dest The destination station for which to get trips
+     * @return integer indicating number of trips for the time bin
      */
     public int getNumberOfTrips(int bin, int orig, int dest) {
         if (!tripTableDone) {
@@ -169,14 +214,39 @@ public class ProbDictionary
             return 0;
         }
 
+        int numberOfTrips = 0;
         if (tripTable.containsKey(bin)) {
             if (tripTable.get(bin).containsKey(orig)) {
                 if (tripTable.get(bin).get(orig).containsKey(dest)) {
-                    return tripTable.get(bin).get(orig).get(dest);
+                    numberOfTrips = tripTable.get(bin).get(orig).get(dest);
                 }
             }
         }
-        return 0;
+        return numberOfTrips;
+    }
+
+    /**
+     * Returns an integer indicating how many trips there are from origin station
+     * 'orig' to destination station 'dest' during the entire analysis time period
+     * 
+     * @param orig The origin station for which to get trips
+     * @param dest The destination station for which to get trips
+     * @return integer indicating number of trips for whole analysis period
+     */
+    public int getNumberOfTrips(int orig, int dest) {
+        if (!tripTableDone) {
+            System.out.println("Construct the trips table first!");
+            return 0;
+        }
+
+        int numberOfTrips = 0;
+        for (int bin : tripTable.keySet()) {
+            if (tripTable.get(bin).containsKey(orig))
+                if (tripTable.get(bin).get(orig).containsKey(dest))
+                    numberOfTrips += getNumberOfTrips(bin, orig, dest);
+        }
+
+        return numberOfTrips;
     }
 
     /**
@@ -206,7 +276,11 @@ public class ProbDictionary
 
     /**
      * Returns a HashMap containing the probabilities for every possible destination
-     * from the input origin station during the time bin specified
+     * from the input origin station during the time bin specified.
+     * If, for the specified time bin, there are no trips from the specified origin
+     * station, the method returns probabilities for the entire time period.
+     * If, for the entire time period, there are no trips from the specified origin
+     * station, the method returns null.
      * 
      * @param bin The time bin for the travel probabilities
      * @param orig The origin station for which to get probabilities
@@ -221,7 +295,12 @@ public class ProbDictionary
         HashMap<Integer, Double> probs = null;
         if (probTable.containsKey(bin)) {
             if (probTable.get(bin).containsKey(orig)) {
-                return probTable.get(bin).get(orig);
+                probs = probTable.get(bin).get(orig);
+            }
+            else {
+                // if for the specified time bin there is no trip from the specified origin
+                // station, take probability for all day
+                probs = probTableDay.get(orig);
             }
         }
 
