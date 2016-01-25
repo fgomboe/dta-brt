@@ -218,7 +218,7 @@ public class ProbDictionary
             return null;
         }
 
-        HashMap<Integer, Double> probs = new HashMap<Integer, Double>(numberOfStations, 1);
+        HashMap<Integer, Double> probs = null;
         if (probTable.containsKey(bin)) {
             if (probTable.get(bin).containsKey(orig)) {
                 return probTable.get(bin).get(orig);
@@ -323,14 +323,5 @@ public class ProbDictionary
         catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        ProbDictionary dict = new ProbDictionary();
-        dict.constructTripTable("./input/ready_closed_trips_noUniviaje.csv");
-        dict.constructProbTable();
-        dict.writeProbabilities("./output/probabilities.csv", 8, 12);
-
-        System.out.println("Finished!");
     }
 }
