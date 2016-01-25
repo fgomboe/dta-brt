@@ -105,12 +105,12 @@ public class ProbDictionary
                     for (int destination : tripTable.get(bin).get(orig).keySet()) {
                         totalTrips += getNumberOfTrips(bin, orig, destination);
                     }
-                    double probability = tripTable.get(bin).get(orig).get(dest) / (double) totalTrips;
+                    double probability = getNumberOfTrips(bin, orig, dest) / (double) totalTrips;
                     aux2.put(dest, probability);
-                    aux1.put(orig, aux2);
-                    probTable.put(bin, aux1);
                 }
+                aux1.put(orig, aux2);
             }
+            probTable.put(bin, aux1);
         }
 
         probTableDone = true;
