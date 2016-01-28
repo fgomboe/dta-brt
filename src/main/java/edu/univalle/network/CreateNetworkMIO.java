@@ -10,26 +10,25 @@ import org.matsim.utils.objectattributes.ObjectAttributes;
 public class CreateNetworkMIO
 {
 
-	public static void main(String[] args)
-	{
-		Config config = ConfigUtils.createConfig();
-		Scenario sc = ScenarioUtils.createScenario(config);
-		Network net = sc.getNetwork();
-		ObjectAttributes nodeAttributes = new ObjectAttributes();
-		ObjectAttributes linkAttributes = new ObjectAttributes();
+    public static void main(String[] args) {
+        Config config = ConfigUtils.createConfig();
+        Scenario sc = ScenarioUtils.createScenario(config);
+        Network net = sc.getNetwork();
+        ObjectAttributes nodeAttributes = new ObjectAttributes();
+        ObjectAttributes linkAttributes = new ObjectAttributes();
 
-//		 NetworkCreatorMIO simplifiedNetworkCreator = new NetworkCreatorMIO();
-//		 simplifiedNetworkCreator.init(net);
-//		 simplifiedNetworkCreator.run("simplified");
-////		 new NetworkCleanerMIO().run(net);
-//		 simplifiedNetworkCreator.write("simplified");
+        // NetworkCreatorMIO simplifiedNetworkCreator = new NetworkCreatorMIO();
+        // simplifiedNetworkCreator.init(net, nodeAttributes, linkAttributes);
+        // simplifiedNetworkCreator.run("simplified");
+        // // new NetworkCleanerMIO().run(net);
+        // simplifiedNetworkCreator.write("simplified");
 
-		NetworkCreatorMIO specialNetworkCreator = new NetworkCreatorMIO();
-		specialNetworkCreator.init(net, nodeAttributes, linkAttributes);
-		specialNetworkCreator.run("special");
-		new NetworkCleanerMIO().run(net, nodeAttributes, linkAttributes);
-		specialNetworkCreator.write("special");
+        NetworkCreatorMIO specialNetworkCreator = new NetworkCreatorMIO();
+        specialNetworkCreator.init(net, nodeAttributes, linkAttributes);
+        specialNetworkCreator.run("special");
+        new NetworkCleanerMIO().run(net, nodeAttributes, linkAttributes);
+        specialNetworkCreator.write("special");
 
-	}
+    }
 
 }
