@@ -74,7 +74,7 @@ public class GeneratePopulation_final
                         Double.parseDouble(st_O_COORD_Y));
 
                 // For single trip
-                if (st_START.equals("YES") && (st_END.equals("YES"))) {
+                if (st_START.equals("YES") && (st_END.equals("YES")) || (producto.equals("UNIVIAJE-II"))) {
 
                     person = populationFactory.createPerson(Id.create(st_ID_PAS, Person.class));
                     population.addPerson(person);
