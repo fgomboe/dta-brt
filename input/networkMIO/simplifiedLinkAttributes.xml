@@ -4078,17 +4078,17 @@
 		<attribute name="SENTIDO" class="java.lang.String">Ida</attribute>
 	</object>
 	<object id="900">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-ESTAD2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E21</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Ida</attribute>
 	</object>
 	<object id="901">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">ESTAD2-SANBO2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E21</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Ida</attribute>
 	</object>
 	<object id="902">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-SANPAS2</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">SANBO2-SANPAS2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E21</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Ida</attribute>
 	</object>
@@ -4508,17 +4508,17 @@
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="992">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-ESTAD2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E31</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="993">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">ESTAD2-SANPAS2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E31</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="994">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TORRE2</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">SANPAS2-TORRE2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E31</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
@@ -4598,17 +4598,17 @@
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="1013">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-MANZA2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E37</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="1014">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-TEQUE4</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">MANZA2-SNTLIB2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E37</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
 	<object id="1015">
-		<attribute name="CONCAT_SHT" class="java.lang.String">TEQUE4-PTCUY2</attribute>
+		<attribute name="CONCAT_SHT" class="java.lang.String">SNTLIB2-PTCUY2</attribute>
 		<attribute name="LINEA" class="java.lang.String">E37</attribute>
 		<attribute name="SENTIDO" class="java.lang.String">Vuelta</attribute>
 	</object>
