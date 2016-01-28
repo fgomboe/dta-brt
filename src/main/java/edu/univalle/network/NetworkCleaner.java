@@ -50,207 +50,210 @@ import org.matsim.utils.objectattributes.ObjectAttributes;
 public class NetworkCleaner implements NetworkRunnable
 {
 
-	private static final Logger log = Logger.getLogger(NetworkCleaner.class);
+    private static final Logger log = Logger.getLogger(NetworkCleaner.class);
 
-	/**
-	 * Finds the cluster of nodes of which <code>startNode</code> is part of. The cluster contains all nodes which can be reached starting at <code>startNode</code> and from where
-	 * it is also possible to return again to <code>startNode</code>.
-	 *
-	 * @param startNode
-	 *            the node to start building the cluster
-	 * @param network
-	 *            the network the startNode is part of
-	 * @return cluster of nodes of which <code>startNode</code> is part of
-	 */
-	public Map<Id<Node>, Node> findCluster(final Node startNode, final Network network)
-	{
+    /**
+     * Finds the cluster of nodes of which <code>startNode</code> is part of. The cluster contains all nodes which can be reached starting at <code>startNode</code> and from where
+     * it is also possible to return again to <code>startNode</code>.
+     *
+     * @param startNode
+     *            the node to start building the cluster
+     * @param network
+     *            the network the startNode is part of
+     * @return cluster of nodes of which <code>startNode</code> is part of
+     */
+    public Map<Id<Node>, Node> findCluster(final Node startNode, final Network network) {
 
-		final Map<Node, DoubleFlagRole> nodeRoles = new HashMap<Node, DoubleFlagRole>(network.getNodes().size());
+        final Map<Node, DoubleFlagRole> nodeRoles = new HashMap<Node, DoubleFlagRole>(network.getNodes().size());
 
-		ArrayList<Node> pendingForward = new ArrayList<Node>();
-		ArrayList<Node> pendingBackward = new ArrayList<Node>();
+        ArrayList<Node> pendingForward = new ArrayList<Node>();
+        ArrayList<Node> pendingBackward = new ArrayList<Node>();
 
-		TreeMap<Id<Node>, Node> clusterNodes = new TreeMap<Id<Node>, Node>();
-		clusterNodes.put(startNode.getId(), startNode);
-		DoubleFlagRole r = getDoubleFlag(startNode, nodeRoles);
-		r.forwardFlag = true;
-		r.backwardFlag = true;
+        TreeMap<Id<Node>, Node> clusterNodes = new TreeMap<Id<Node>, Node>();
+        clusterNodes.put(startNode.getId(), startNode);
+        DoubleFlagRole r = getDoubleFlag(startNode, nodeRoles);
+        r.forwardFlag = true;
+        r.backwardFlag = true;
 
-		pendingForward.add(startNode);
-		pendingBackward.add(startNode);
+        pendingForward.add(startNode);
+        pendingBackward.add(startNode);
 
-		// step through the network in forward mode
-		while (pendingForward.size() > 0) {
-			int idx = pendingForward.size() - 1;
-			Node currNode = pendingForward.remove(idx); // get the last element to prevent object shifting in the array
-			for (Link link : currNode.getOutLinks().values()) {
-				Node node = link.getToNode();
-				r = getDoubleFlag(node, nodeRoles);
-				if (!r.forwardFlag) {
-					r.forwardFlag = true;
-					pendingForward.add(node);
-				}
-			}
-		}
+        // step through the network in forward mode
+        while (pendingForward.size() > 0) {
+            int idx = pendingForward.size() - 1;
+            Node currNode = pendingForward.remove(idx); // get the last element to prevent object shifting in the array
+            for (Link link : currNode.getOutLinks().values()) {
+                Node node = link.getToNode();
+                r = getDoubleFlag(node, nodeRoles);
+                if (!r.forwardFlag) {
+                    r.forwardFlag = true;
+                    pendingForward.add(node);
+                }
+            }
+        }
 
-		// now step through the network in backward mode
-		while (pendingBackward.size() > 0) {
-			int idx = pendingBackward.size() - 1;
-			Node currNode = pendingBackward.remove(idx); // get the last element to prevent object shifting in the array
-			for (Link link : currNode.getInLinks().values()) {
-				Node node = link.getFromNode();
-				r = getDoubleFlag(node, nodeRoles);
-				if (!r.backwardFlag) {
-					r.backwardFlag = true;
-					pendingBackward.add(node);
-					if (r.forwardFlag) {
-						// the node can be reached forward and backward, add it to the cluster
-						clusterNodes.put(node.getId(), node);
-					}
-				}
-			}
-		}
+        // now step through the network in backward mode
+        while (pendingBackward.size() > 0) {
+            int idx = pendingBackward.size() - 1;
+            Node currNode = pendingBackward.remove(idx); // get the last element to prevent object shifting in the array
+            for (Link link : currNode.getInLinks().values()) {
+                Node node = link.getFromNode();
+                r = getDoubleFlag(node, nodeRoles);
+                if (!r.backwardFlag) {
+                    r.backwardFlag = true;
+                    pendingBackward.add(node);
+                    if (r.forwardFlag) {
+                        // the node can be reached forward and backward, add it to the cluster
+                        clusterNodes.put(node.getId(), node);
+                    }
+                }
+            }
+        }
 
-		return clusterNodes;
-	}
+        return clusterNodes;
+    }
 
-	/**
-	 * Searches the biggest cluster in the given Network. The Network is not modified.
-	 */
-	public Map<Id<Node>, Node> searchBiggestCluster(Network network)
-	{
-		final Map<Id<Node>, Node> visitedNodes = new TreeMap<Id<Node>, Node>();
-		Map<Id<Node>, Node> biggestCluster = new TreeMap<Id<Node>, Node>();
+    /**
+     * Searches the biggest cluster in the given Network. The Network is not modified.
+     */
+    public Map<Id<Node>, Node> searchBiggestCluster(Network network) {
+        final Map<Id<Node>, Node> visitedNodes = new TreeMap<Id<Node>, Node>();
+        Map<Id<Node>, Node> biggestCluster = new TreeMap<Id<Node>, Node>();
 
-		// search the biggest cluster of nodes in the network
-		log.info("  checking " + network.getNodes().size() + " nodes and " + network.getLinks().size() + " links for dead-ends...");
-		boolean stillSearching = true;
-		Iterator<? extends Node> iter = network.getNodes().values().iterator();
-		while (iter.hasNext() && stillSearching) {
-			Node startNode = iter.next();
-			if (!visitedNodes.containsKey(startNode.getId())) {
-				Map<Id<Node>, Node> cluster = this.findCluster(startNode, network);
-				visitedNodes.putAll(cluster);
-				if (cluster.size() > biggestCluster.size()) {
-					biggestCluster = cluster;
-					if (biggestCluster.size() >= (network.getNodes().size() - visitedNodes.size())) {
-						// stop searching here, because we cannot find a bigger cluster in the lasting nodes
-						stillSearching = false;
-					}
-				}
-			}
-		}
-		log.info("    The biggest cluster consists of " + biggestCluster.size() + " nodes.");
-		log.info("  done.");
-		return biggestCluster;
-	}
+        // search the biggest cluster of nodes in the network
+        log.info("  checking " + network.getNodes().size() + " nodes and " + network.getLinks().size()
+                + " links for dead-ends...");
+        boolean stillSearching = true;
+        Iterator<? extends Node> iter = network.getNodes().values().iterator();
+        while (iter.hasNext() && stillSearching) {
+            Node startNode = iter.next();
+            if (!visitedNodes.containsKey(startNode.getId())) {
+                Map<Id<Node>, Node> cluster = this.findCluster(startNode, network);
+                visitedNodes.putAll(cluster);
+                if (cluster.size() > biggestCluster.size()) {
+                    biggestCluster = cluster;
+                    if (biggestCluster.size() >= (network.getNodes().size() - visitedNodes.size())) {
+                        // stop searching here, because we cannot find a bigger cluster in the lasting nodes
+                        stillSearching = false;
+                    }
+                }
+            }
+        }
+        log.info("    The biggest cluster consists of " + biggestCluster.size() + " nodes.");
+        log.info("  done.");
+        return biggestCluster;
+    }
 
-	/**
-	 * Reducing the network so it only contains nodes included in the biggest Cluster. Loop over all nodes and check if they are in the cluster, if not, remove them from the
-	 * network
-	 */
-	public void reduceToBiggestCluster(Network network, Map<Id<Node>, Node> biggestCluster)
-	{
-		List<Node> allNodes2 = new ArrayList<Node>(network.getNodes().values());
-		for (Node node : allNodes2) {
-			if (!biggestCluster.containsKey(node.getId())) {
-				network.removeNode(node.getId()); // removeNode takes care of removing links too in the network
-//				log.info("node " + node.getId().toString() + " removed from network...");
-			}
-		}
-		log.info("  resulting network contains " + network.getNodes().size() + " nodes and " + network.getLinks().size() + " links.");
-		log.info("done.");
-	}
+    /**
+     * Reducing the network so it only contains nodes included in the biggest Cluster. Loop over all nodes and check if they are in the cluster, if not, remove them from the
+     * network
+     */
+    public void reduceToBiggestCluster(Network network, Map<Id<Node>, Node> biggestCluster) {
+        List<Node> allNodes2 = new ArrayList<Node>(network.getNodes().values());
+        for (Node node : allNodes2) {
+            if (!biggestCluster.containsKey(node.getId())) {
+                network.removeNode(node.getId()); // removeNode takes care of removing links too in the network
+                // log.info("node " + node.getId().toString() + " removed from network...");
+            }
+        }
+        log.info("  resulting network contains " + network.getNodes().size() + " nodes and " + network.getLinks().size()
+                + " links.");
+        log.info("done.");
+    }
 
-	// Feli's work
-	/**
-	 * Removes the links with zero (0) length from the network and adjust the nodes and adjacent links acordingly.
-	 * 
-	 * @param network
-	 * @author Feli
-	 */
-	public void removeZeroLengthLinks(Network network, ObjectAttributes linkAttributes)
-	{
+    // Feli's work
+    /**
+     * Removes the links with zero (0) length from the network and adjust the nodes and adjacent links acordingly.
+     * 
+     * @param network
+     * @author Feli
+     */
+    public void removeZeroLengthLinks(Network network, ObjectAttributes linkAttributes) {
 
-		log.info("  checking " + network.getLinks().size() + " links for zero length links...");
+        log.info("  checking " + network.getLinks().size() + " links for zero length links...");
 
-		List<Link> allLinks = new ArrayList<Link>(network.getLinks().values());
-		List<Id<Link>> removedLinks = new ArrayList<Id<Link>>();
-		for (Link link : allLinks) {
-			if (link.getLength() == 0.0) {
-				if (!removedLinks.contains(link.getId())) {
-					Node fromNode = link.getFromNode();
-					Node toNode = link.getToNode();
-					removedLinks.add(link.getId());
-					network.removeLink(link.getId());
-					if (linkAttributes != null) linkAttributes.removeAllAttributes(link.getId().toString());
+        List<Link> allLinks = new ArrayList<Link>(network.getLinks().values());
+        List<Id<Link>> removedLinks = new ArrayList<Id<Link>>();
+        for (Link link : allLinks) {
+            if (link.getLength() == 0.0) {
+                if (!removedLinks.contains(link.getId())) {
+                    Node fromNode = link.getFromNode();
+                    Node toNode = link.getToNode();
+                    removedLinks.add(link.getId());
+                    network.removeLink(link.getId());
+                    if (linkAttributes != null)
+                        linkAttributes.removeAllAttributes(link.getId().toString());
 
-					for (Link link2 : fromNode.getInLinks().values()) {
-						if (link2.getLength() == 0.0) {
-							removedLinks.add(link2.getId());
-							network.removeLink(link2.getId());
-							if (linkAttributes != null) linkAttributes.removeAllAttributes(link2.getId().toString());
-						} else {
-							link2.setToNode(toNode);
-							fromNode.getInLinks().remove(link2.getId());
-						}
-					}
+                    for (Link link2 : fromNode.getInLinks().values()) {
+                        if (link2.getLength() == 0.0) {
+                            removedLinks.add(link2.getId());
+                            network.removeLink(link2.getId());
+                            if (linkAttributes != null)
+                                linkAttributes.removeAllAttributes(link2.getId().toString());
+                        }
+                        else {
+                            link2.setToNode(toNode);
+                            fromNode.getInLinks().remove(link2.getId());
+                        }
+                    }
 
-					for (Link link2 : fromNode.getOutLinks().values()) {
-						if (link2.getLength() == 0.0) {
-							removedLinks.add(link2.getId());
-							network.removeLink(link2.getId());
-							if (linkAttributes != null) linkAttributes.removeAllAttributes(link2.getId().toString());
-						} else {
-							link2.setFromNode(toNode);
-							fromNode.getOutLinks().remove(link2.getId());
-						}
-					}
-				}
-			}
-		}
+                    for (Link link2 : fromNode.getOutLinks().values()) {
+                        if (link2.getLength() == 0.0) {
+                            removedLinks.add(link2.getId());
+                            network.removeLink(link2.getId());
+                            if (linkAttributes != null)
+                                linkAttributes.removeAllAttributes(link2.getId().toString());
+                        }
+                        else {
+                            link2.setFromNode(toNode);
+                            fromNode.getOutLinks().remove(link2.getId());
+                        }
+                    }
+                }
+            }
+        }
 
-		log.info("    " + removedLinks.size() + " links removed from the network.");
-		log.info("  done.");
-	}
+        log.info("    " + removedLinks.size() + " links removed from the network.");
+        log.info("  done.");
+    }
 
-	public void run(final Network network)
-	{
+    public void run(final Network network) {
 
-		FileAppender appender;
-		try {
-			appender = new FileAppender(new PatternLayout("[%d{MMM dd HH:mm:ss}] %-5p (%F:%L) - %m%n"), "./output/cleaner.log", false);
-			BasicConfigurator.configure(appender);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		log.info("running " + this.getClass().getName() + " algorithm...");
+        FileAppender appender;
+        try {
+            appender = new FileAppender(new PatternLayout("[%d{MMM dd HH:mm:ss}] %-5p (%F:%L) - %m%n"),
+                    "./output/cleaner.log", false);
+            BasicConfigurator.configure(appender);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        log.info("running " + this.getClass().getName() + " algorithm...");
 
-		// Feli's work
-		this.removeZeroLengthLinks(network, null);
-		Map<Id<Node>, Node> biggestCluster = this.searchBiggestCluster(network);
-		this.reduceToBiggestCluster(network, biggestCluster);
-	}	
-	
-	public void run(final Network network, final ObjectAttributes nodeAttributes, final ObjectAttributes linkAttributes)
-	{
-		
-	}
+        // Feli's work
+        this.removeZeroLengthLinks(network, null);
+        Map<Id<Node>, Node> biggestCluster = this.searchBiggestCluster(network);
+        this.reduceToBiggestCluster(network, biggestCluster);
+    }
 
-	private static DoubleFlagRole getDoubleFlag(final Node n, final Map<Node, DoubleFlagRole> nodeRoles)
-	{
-		DoubleFlagRole r = nodeRoles.get(n);
-		if (null == r) {
-			r = new DoubleFlagRole();
-			nodeRoles.put(n, r);
-		}
-		return r;
-	}
+    public void run(final Network network, final ObjectAttributes nodeAttributes,
+            final ObjectAttributes linkAttributes) {
+        // This method is overridden in class 'NetworkCleanerMIO.java'
+    }
 
-	static class DoubleFlagRole
-	{
-		boolean forwardFlag = false;
-		boolean backwardFlag = false;
-	}
+    private static DoubleFlagRole getDoubleFlag(final Node n, final Map<Node, DoubleFlagRole> nodeRoles) {
+        DoubleFlagRole r = nodeRoles.get(n);
+        if (null == r) {
+            r = new DoubleFlagRole();
+            nodeRoles.put(n, r);
+        }
+        return r;
+    }
+
+    static class DoubleFlagRole
+    {
+        boolean forwardFlag = false;
+        boolean backwardFlag = false;
+    }
 
 }
