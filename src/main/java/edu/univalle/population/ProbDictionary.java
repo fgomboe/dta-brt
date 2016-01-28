@@ -16,7 +16,6 @@ public class ProbDictionary
 
     private final int SECONDS_DAY = 86400;
     private final int SECONDS_HOUR = 3600;
-    private final int TRUNK_STATIONS = 40;
 
     private int numberOfStations;
     private int initialTime, endTime, timeSpan;

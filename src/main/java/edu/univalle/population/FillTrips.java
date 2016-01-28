@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Random;
 
 import edu.univalle.utils.CsvReader;
 import edu.univalle.utils.CsvWriter;
@@ -20,7 +21,10 @@ public class FillTrips
         HashMap<Integer, Double> probTable_acum = probTable;
         Iterator<Integer> it = probTable.keySet().iterator();
         double acum = 0;
-        double dize = Math.random();
+        Random generator = new Random(10);
+        double dize = generator.nextDouble();
+
+        // double dize = Math.random();
         int destination = -1;
 
         if (probTable.size() == 0) {
@@ -47,7 +51,7 @@ public class FillTrips
 
     public static void main(String[] args) {
         HashMap<Integer, String> stations_code = Map_Codes.map_codes("input/std_code.csv");
-        ProbDictionary dict = new ProbDictionary();
+        ProbDictionary dict = new ProbDictionary("input/std_code.csv");
         dict.constructTripTable("C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/closed_trips_normal.csv");
         dict.constructProbTable();
 
