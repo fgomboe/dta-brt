@@ -32,7 +32,9 @@ public class JourneyTimes
 
     private String outputFile;
 
+    @SuppressWarnings("unused")
     private double startTime;
+    @SuppressWarnings("unused")
     private double endTime;
 
     private CsvWriter writer;
@@ -43,6 +45,7 @@ public class JourneyTimes
     private EventsToTrips handler;
     private MyTripHandler tripHandler;
 
+    @SuppressWarnings("unused")
     private HashMap<Integer, ArrayList<Leg>> trips = new HashMap<Integer, ArrayList<Leg>>();
 
     private class MyTripHandler implements EventsToTrips.TripHandler
@@ -155,9 +158,9 @@ public class JourneyTimes
     }
 
     public void readFile() {
-        // openWriter();
+        openWriter();
         eventsReader.readFile(eventsFile);
-        // closeWriter();
+        closeWriter();
         log.info("Process finished!");
 
     }
