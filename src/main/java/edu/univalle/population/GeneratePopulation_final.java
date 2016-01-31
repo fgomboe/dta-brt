@@ -43,7 +43,7 @@ public class GeneratePopulation_final
             String producto;
             int counter_uv = 0;
 
-            matriz_usos = new CsvReader("C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/general_final.csv");
+            matriz_usos = new CsvReader("C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/normal_final.csv");
             System.out.println("### extracting data from " + matriz_usos.toString() + " ###");
             matriz_usos.readHeaders();
 
@@ -135,7 +135,7 @@ public class GeneratePopulation_final
             }
 
             MatsimWriter popWriter = new PopulationWriter(population, network);
-            popWriter.write("./input/plans_sitm_cali_01.04.2014_final.xml");
+            popWriter.write("./input/plans_sitm_cali_01.04.2014_40porc_final.xml");
 
         }
         catch (FileNotFoundException e) {

@@ -32,8 +32,8 @@ public class Add_Coordinates
         String D_X_COORD;
         String O_Y_COORD;
         String D_Y_COORD;
-        String final_file = "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/general_final.csv";
-        String source_file = "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/general.csv";
+        String final_file = "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/normal_final.csv";
+        String source_file = "C:/MATSim/workspace_mars/dta-brt/input/usos_xls/csv_closed/closed_trips_normal.csv";
         HashMap<Integer, String> x_coord = Map_coord.map_x_coord("input/std_code.csv");
         HashMap<Integer, String> y_coord = Map_coord.map_y_coord("input/std_code.csv");
 
