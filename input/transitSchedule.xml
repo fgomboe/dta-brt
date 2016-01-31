@@ -78,7 +78,7 @@
 	</transitStops>
 	<transitLine id="E21">
 		<transitRoute id="Ida">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="UNIV4" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="BUITRE2" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -368,7 +368,7 @@
 			</departures>
 		</transitRoute>
 		<transitRoute id="Vuelta">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="TMENGA7" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="ALAMOS1" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -656,7 +656,7 @@
 	</transitLine>
 	<transitLine id="E31">
 		<transitRoute id="Ida">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="CHIMI3" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="FLORAI1" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -837,7 +837,7 @@
 			</departures>
 		</transitRoute>
 		<transitRoute id="Vuelta">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="UNIV4" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="BUITRE2" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -1020,7 +1020,7 @@
 	</transitLine>
 	<transitLine id="T31">
 		<transitRoute id="Ida">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="CHIMI3" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="FLORAI1" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -1333,7 +1333,7 @@
 			</departures>
 		</transitRoute>
 		<transitRoute id="Vuelta">
-			<transportMode>bus</transportMode>
+			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="UNIV4" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
 				<stop refId="UNIVAL2" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
