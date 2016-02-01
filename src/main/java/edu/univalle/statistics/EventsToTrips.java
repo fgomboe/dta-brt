@@ -98,6 +98,7 @@ public final class EventsToTrips
         final Id<TransitLine> transitLineId;
         final Id<TransitRoute> transitRouteId;
         final Id<Person> driverId;
+        @SuppressWarnings("unused")
         final Id<Departure> departureId;
         Id<TransitStopFacility> lastFacilityId;
 
