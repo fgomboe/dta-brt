@@ -1,8 +1,0 @@
-2016-01-31 12:19:48,719  WARN LinkImpl:111 [from=to=[id=56][coord=[x=1063203.287337012][y=877613.5198577307]][type=null][nof_inlinks=1][nof_outlinks=1] link is a loop]
-2016-01-31 12:19:48,719  WARN LinkImpl:113  Future occurences of this logging statement are suppressed.
-2016-01-31 12:19:48,724  WARN NodeImpl:98 [id=56][coord=[x=1063203.287337012][y=877613.5198577307]][type=null][nof_inlinks=1][nof_outlinks=2][inlink_id=56-56 is now in- and out-link]
-2016-01-31 12:19:48,725  WARN NodeImpl:99  This message given only once.
-2016-01-31 12:19:59,169  WARN CharyparNagelActivityScoring:212 encountering duration < zeroUtilityDuration; the logic for this was changed around mid-nov 2013.
-2016-01-31 12:19:59,170  WARN CharyparNagelActivityScoring:213 your final score thus will be different from earlier runs; set usingOldScoringBelowZeroUtilityDuration to true if you absolutely need the old version.  See https://matsim.atlassian.net/browse/MATSIM-191.
-2016-01-31 12:19:59,170  WARN CharyparNagelActivityScoring:215  This message given only once.
-2016-01-31 12:20:14,564  WARN ExpBetaPlanChanger:86 Would make sense to revise this once more.  See comments in code.  kai, nov08
