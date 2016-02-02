@@ -1,0 +1,7 @@
+pattern	0+	5+	10+	15+	20+	25+	30+	35+	40+	45+	50+	55+	60+
+dummy---dummy	8807	322	34	10	0	3	3	3	2	7	1	0	59
+dummy---pt interaction	80680	3338	205	0	0	0	0	0	0	0	0	0	0
+pt interaction---dummy	78133	5902	47	0	0	0	0	0	0	0	0	0	0
+pt interaction---pt interaction	15104	32126	25455	13334	4722	836	97	61	69	51	49	29	235
+
+average trip duration: 269.54589506310157 seconds = 00:04:29
