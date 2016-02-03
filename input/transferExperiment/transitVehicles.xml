@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicleDefinitions xmlns="http://www.matsim.org/files/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.matsim.org/files/dtd http://www.matsim.org/files/dtd/vehicleDefinitions_v1.0.xsd">
+	<vehicleType id="art">
+		<description>
+				Autobús articulado de dos vagones
+		</description>
+		<capacity>
+			<seats persons="48"/>
+			<standingRoom persons="112"/>
+		</capacity>
+		<length meter="18.0"/>
+		<width meter="2.6"/>
+		<accessTime secondsPerPerson="1.0"/>
+		<egressTime secondsPerPerson="1.0"/>
+		<doorOperation mode="parallel"/>
+		<passengerCarEquivalents pce="1.0"/>
+	</vehicleType>
+	<vehicle id="L1" type="art"/>
+	<vehicle id="L2" type="art"/>
+	<vehicle id="D1" type="art"/>
+</vehicleDefinitions>

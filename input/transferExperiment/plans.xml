@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE population SYSTEM "http://www.matsim.org/files/dtd/population_v5.dtd">
+
+<population>
+
+<!-- ====================================================================== -->
+
+	<person id="1">
+		<plan selected="yes">
+			<act type="dummy" x="1059720.2435677939" y="864753.3628001736" end_time="05:55:00" />
+			<leg mode="pt">
+			</leg>
+			<act type="dummy" x="1060958.3197208308" y="864125.9293772681" />
+		</plan>
+	</person>
+</population>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network SYSTEM "http://www.matsim.org/files/dtd/network_v1.dtd">
+<network>
+	<nodes>
+		<node id="1" x="1059710.8477143445" y="864723.4341702611" />
+		<node id="11" x="1059720.2435677939" y="864753.3628001736" />
+		<node id="12" x="1059694.6052340479" y="864698.9549234675" />
+		
+		<node id="2" x="1060098.5671258294" y="864518.5795635029" />
+		<node id="21" x="1060113.0277623218" y="864552.7445715738" />
+		<node id="22" x="1060082.2366174196" y="864499.7683135098" />
+		
+		<node id="3" x="1060942.3197208308" y="864096.9293772681" />
+		<node id="31" x="1060958.3197208308" y="864125.9293772681" />
+		<node id="32" x="1060921.3197208308" y="864075.9293772681" />
+	</nodes>
+	
+	<links capperiod="01:00:00" effectivecellsize="7.5" effectivelanewidth="3.75">
+		<link id="1-2" from="1" to="2" length="444.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="2-1" from="2" to="1" length="444.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="2-3" from="2" to="3" length="932.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="3-2" from="3" to="2" length="932.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="1-3" from="1" to="3" length="1321.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="3-1" from="3" to="1" length="1321.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		
+		<link id="1-11" from="1" to="11" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="11-1" from="11" to="1" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="1-12" from="1" to="12" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="12-1" from="12" to="1" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		
+		<link id="2-21" from="2" to="21" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="21-2" from="21" to="2" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="2-22" from="2" to="22" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="22-2" from="22" to="2" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		
+		<link id="3-31" from="3" to="31" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="31-3" from="31" to="3" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="3-32" from="3" to="32" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+		<link id="32-3" from="32" to="3" length="19" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
+	</links>
+</network>
