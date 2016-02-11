@@ -17,8 +17,8 @@
 		<transitRoute id="1">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="Uno" departureOffset="00:00:00" />
-				<stop refId="Dos" arrivalOffset="00:00:30" />
+				<stop refId="1A" departureOffset="00:00:00" />
+				<stop refId="2A" arrivalOffset="00:00:30" />
 			</routeProfile>
 			<route>
 				<link refId="1-11"/>
@@ -31,21 +31,23 @@
 				<departure id="1" departureTime="06:00:00" vehicleRefId="L1"/>
 			</departures>
 		</transitRoute>
-		<transitRoute id="2">
+	</transitLine>
+	<transitLine id="Lechera2">
+		<transitRoute id="1">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="Dos" departureOffset="00:00:00" />
-				<stop refId="Tres" arrivalOffset="00:01:00" />
+				<stop refId="2B" departureOffset="00:00:00" />
+				<stop refId="3B" arrivalOffset="00:01:00" />
 			</routeProfile>
 			<route>
-				<link refId="2-21"/>
-				<link refId="21-2"/>
+				<link refId="2-22"/>
+				<link refId="22-2"/>
 				<link refId="2-3"/>
-				<link refId="3-31"/>
-				<link refId="31-3"/>
+				<link refId="3-32"/>
+				<link refId="32-3"/>
 			</route>
 			<departures>
-				<departure id="1" departureTime="06:10:00" vehicleRefId="L2"/>
+				<departure id="1" departureTime="06:05:00" vehicleRefId="L2"/>
 			</departures>
 		</transitRoute>
 	</transitLine>
@@ -53,8 +55,8 @@
 		<transitRoute id="1">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="Uno" departureOffset="00:00:00" />
-				<stop refId="Tres" arrivalOffset="00:05:00" />
+				<stop refId="1A" departureOffset="00:00:00" />
+				<stop refId="3A" arrivalOffset="00:05:00" />
 			</routeProfile>
 			<route>
 				<link refId="1-11"/>
