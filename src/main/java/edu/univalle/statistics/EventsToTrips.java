@@ -45,8 +45,10 @@ import org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.population.Person;
 import org.matsim.api.core.v01.population.Route;
+import org.matsim.core.api.experimental.events.AgentWaitingForPtEvent;
 import org.matsim.core.api.experimental.events.TeleportationArrivalEvent;
 import org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent;
+import org.matsim.core.api.experimental.events.handler.AgentWaitingForPtEventHandler;
 import org.matsim.core.api.experimental.events.handler.TeleportationArrivalEventHandler;
 import org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler;
 import org.matsim.core.population.LegImpl;
@@ -73,21 +75,34 @@ import org.matsim.vehicles.Vehicle;
  * @author michaz
  *
  */
-public final class EventsToTrips
-        implements PersonDepartureEventHandler, PersonArrivalEventHandler, LinkLeaveEventHandler, LinkEnterEventHandler,
-        TeleportationArrivalEventHandler, TransitDriverStartsEventHandler, PersonEntersVehicleEventHandler,
-        VehicleArrivesAtFacilityEventHandler, PersonLeavesVehicleEventHandler, ActivityStartEventHandler
+public final class EventsToTrips implements PersonDepartureEventHandler, PersonArrivalEventHandler,
+        LinkLeaveEventHandler, LinkEnterEventHandler, TeleportationArrivalEventHandler, TransitDriverStartsEventHandler,
+        PersonEntersVehicleEventHandler, VehicleArrivesAtFacilityEventHandler, PersonLeavesVehicleEventHandler,
+        ActivityStartEventHandler, AgentWaitingForPtEventHandler
 {
+
+    class LegPlusWait
+    {
+        final LegImpl leg;
+        double waitingTime;
+
+        public LegPlusWait(LegImpl leg, double waitingTime) {
+            this.leg = leg;
+            this.waitingTime = waitingTime;
+        }
+    }
 
     private class PendingTransitTravel
     {
 
         final Id<Vehicle> vehicleId;
         final Id<TransitStopFacility> accessStop;
+        final double waitingTime;
 
-        public PendingTransitTravel(Id<Vehicle> vehicleId, Id<TransitStopFacility> accessStop) {
+        public PendingTransitTravel(Id<Vehicle> vehicleId, Id<TransitStopFacility> accessStop, double waitingTime) {
             this.vehicleId = vehicleId;
             this.accessStop = accessStop;
+            this.waitingTime = waitingTime;
         }
 
     }
@@ -98,7 +113,6 @@ public final class EventsToTrips
         final Id<TransitLine> transitLineId;
         final Id<TransitRoute> transitRouteId;
         final Id<Person> driverId;
-        @SuppressWarnings("unused")
         final Id<Departure> departureId;
         Id<TransitStopFacility> lastFacilityId;
 
@@ -114,13 +128,14 @@ public final class EventsToTrips
 
     public interface TripHandler
     {
-        void handleTrip(Id<Person> agentId, List<LegImpl> trip);
+        void handleTrip(Id<Person> agentId, List<LegPlusWait> trip);
     }
 
     private Scenario scenario;
-    private Map<Id<Person>, List<LegImpl>> trips = new HashMap<>();
+    private Map<Id<Person>, List<LegPlusWait>> trip = new HashMap<>();
     private Map<Id<Person>, List<Id<Link>>> experiencedRoutes = new HashMap<>();
     private Map<Id<Person>, TeleportationArrivalEvent> routelessTravels = new HashMap<>();
+    private Map<Id<Person>, Double> transitWaits = new HashMap<>();
     private Map<Id<Person>, PendingTransitTravel> transitTravels = new HashMap<>();
     private Map<Id<Vehicle>, LineAndRoute> transitVehicle2currentRoute = new HashMap<>();
     private TripHandler tripHandler;
@@ -134,13 +149,13 @@ public final class EventsToTrips
         LegImpl leg = new LegImpl(event.getLegMode());
         leg.setDepartureTime(event.getTime());
 
-        if (!trips.containsKey(event.getPersonId())) {
-            List<LegImpl> legs = new ArrayList<>();
-            legs.add(leg);
-            trips.put(event.getPersonId(), legs);
+        if (!trip.containsKey(event.getPersonId())) {
+            List<LegPlusWait> legs = new ArrayList<>();
+            legs.add(new LegPlusWait(leg, 0));
+            trip.put(event.getPersonId(), legs);
         }
         else {
-            trips.get(event.getPersonId()).add(leg);
+            trip.get(event.getPersonId()).add(new LegPlusWait(leg, 0));
         }
 
         List<Id<Link>> route = new ArrayList<>();
@@ -157,11 +172,25 @@ public final class EventsToTrips
     }
 
     @Override
+    public void handleEvent(AgentWaitingForPtEvent event) {
+        transitWaits.put(event.getPersonId(), event.getTime());
+
+    }
+
+    @Override
     public void handleEvent(PersonEntersVehicleEvent event) {
         LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(event.getVehicleId());
-        if (lineAndRoute != null && !event.getPersonId().equals(lineAndRoute.driverId)) { // transit drivers are not considered to travel by transit
+        // transit drivers are not considered to travel by transit
+        // passenger must be waiting for a waitingTime to be set
+        if (transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null
+                && !event.getPersonId().equals(lineAndRoute.driverId)) {
+            transitTravels.put(event.getPersonId(), new PendingTransitTravel(event.getVehicleId(),
+                    lineAndRoute.lastFacilityId, event.getTime() - transitWaits.get(event.getPersonId())));
+        }
+        else if (!transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null
+                && !event.getPersonId().equals(lineAndRoute.driverId)) {
             transitTravels.put(event.getPersonId(),
-                    new PendingTransitTravel(event.getVehicleId(), lineAndRoute.lastFacilityId));
+                    new PendingTransitTravel(event.getVehicleId(), lineAndRoute.lastFacilityId, 0));
         }
     }
 
@@ -183,11 +212,11 @@ public final class EventsToTrips
 
     @Override
     public void handleEvent(PersonArrivalEvent event) {
-        List<LegImpl> legs = trips.get(event.getPersonId());
-        LegImpl leg = legs.get(legs.size() - 1);
-        leg.setArrivalTime(event.getTime());
-        double travelTime = leg.getArrivalTime() - leg.getDepartureTime();
-        leg.setTravelTime(travelTime);
+        List<LegPlusWait> legs = trip.get(event.getPersonId());
+        LegPlusWait legPlusWait = legs.get(legs.size() - 1);
+        legPlusWait.leg.setArrivalTime(event.getTime());
+        double travelTime = legPlusWait.leg.getArrivalTime() - legPlusWait.leg.getDepartureTime();
+        legPlusWait.leg.setTravelTime(travelTime);
         List<Id<Link>> experiencedRoute = experiencedRoutes.remove(event.getPersonId());
         assert experiencedRoute.size() >= 1;
         PendingTransitTravel pendingTransitTravel;
@@ -200,7 +229,7 @@ public final class EventsToTrips
             // and add manually distance on first/last link. Newly based on VehicleEnters/LeavesTrafficEvents, which should (newly)
             // contain this information. kai/mz, sep'15
 
-            leg.setRoute(networkRoute);
+            legPlusWait.leg.setRoute(networkRoute);
         }
         else if ((pendingTransitTravel = transitTravels.remove(event.getPersonId())) != null) {
             LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(pendingTransitTravel.vehicleId);
@@ -212,7 +241,8 @@ public final class EventsToTrips
             experimentalTransitRoute.setTravelTime(travelTime);
             experimentalTransitRoute.setDistance(RouteUtils.calcDistance(experimentalTransitRoute,
                     scenario.getTransitSchedule(), scenario.getNetwork()));
-            leg.setRoute(experimentalTransitRoute);
+            legPlusWait.leg.setRoute(experimentalTransitRoute);
+            legPlusWait.waitingTime = pendingTransitTravel.waitingTime;
         }
         else {
             TeleportationArrivalEvent travelEvent = routelessTravels.remove(event.getPersonId());
@@ -224,7 +254,7 @@ public final class EventsToTrips
             else {
                 genericRoute.setDistance(0.0);
             }
-            leg.setRoute(genericRoute);
+            legPlusWait.leg.setRoute(genericRoute);
         }
 
         // TODO Verify if I need this
@@ -240,7 +270,7 @@ public final class EventsToTrips
 
     @Override
     public void reset(int iteration) {
-        trips.clear();
+        trip.clear();
         experiencedRoutes.clear();
     }
 
@@ -260,8 +290,8 @@ public final class EventsToTrips
     @Override
     public void handleEvent(ActivityStartEvent event) {
         if (event.getActType().equals("w") || event.getActType().equals("h")) {
-            tripHandler.handleTrip(event.getPersonId(), trips.get(event.getPersonId()));
-            trips.remove(event.getPersonId());
+            if (trip.containsKey(event.getPersonId()))
+                tripHandler.handleTrip(event.getPersonId(), trip.remove(event.getPersonId())); // method remove returns the value previous to removal
         }
     }
 
