@@ -61,13 +61,13 @@
 	<module name="transitRouter" >
 
 		<!-- additional time the router allocates when a line switch happens. Can be interpreted as a 'safety' time that agents need to safely transfer from one line to another -->
-		<param name="additionalTransferTime" value="0.0" />
+		<param name="additionalTransferTime" value="60.0" />
 
 		<!-- step size to increase searchRadius if no stops are found -->
-		<param name="extensionRadius" value="200.0" />
+		<param name="extensionRadius" value="100.0" />
 
 		<!-- maximum beeline distance between stops that agents could transfer to by walking -->
-		<param name="maxBeelineWalkConnectionDistance" value="10.0" />
+		<param name="maxBeelineWalkConnectionDistance" value="100.0" />
 
 		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
 		<param name="searchRadius" value="500.0" />
@@ -175,7 +175,7 @@
 		<!-- write a plans file in each iteration directory which contains what each agent actually did, and the score it received. -->
 		<param name="writeExperiencedPlans" value="true" />
 		
-		<param name="utilityOfLineSwitch" value="0.0" />
+		<param name="utilityOfLineSwitch" value="-1.0" />
 	
 		<!--param name="PathSizeLogitBeta" value="1.0" /-->
 		<param name="learningRate" value="1.0" />
@@ -183,17 +183,16 @@
 		
 		<!-- all penalties to 0 by recomendation of Kai Nagel. See: http://matsim.org/node/696 -->
 		<!--param name="lateArrival" value="-18.0" /-->
-		<param name="lateArrival" value="0" />
+		<param name="lateArrival" value="0.0" />
+		<param name="earlyDeparture" value="0.0" />
 		<!--param name="traveling" value="-6.0" /-->
-		<param name="traveling" value="0" />
-		<param name="travelingPt" value="2.0" />
-		<param name="traveling_walk" value="-7.0" />
+		<param name="traveling" value="0.0" />
+		<param name="travelingPt" value="0.0" />
+		<param name="traveling_walk" value="-6.0" />
 		<!--param name="travelingPt" value="0" /-->
-		<param name="waitingPt" value="2.0" />
-		
+		<param name="waitingPt" value="-2.0" />
 		<param name="performing" value="6.0" />
-		<param name="earlyDeparture" value="0" />
-		<param name="waiting" value="0" />
+		<param name="waiting" value="0.0" />
 		
 		<param name="activityType_0"            value="dummy" /> <!-- only activity in plans -->
 		<param name="activityTypicalDuration_0" value="12:00:00" />
