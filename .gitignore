@@ -12,7 +12,7 @@
 hs_err_pid*
 /target/
 
-# All in output folder and output experimens
+# All in output folder and output experiments
 /output/*
 /output*
 
