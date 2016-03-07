@@ -53,8 +53,8 @@
 		<!-- Set this parameter to true if transit should be simulated, false if not. -->
 		<param name="useTransit" value="true" />
 		
-		<param name="transitScheduleFile" value="&INBASE;/transitSchedule_MAX_VEHICLES.xml" />
-		<param name="vehiclesFile" value="&INBASE;/transitVehicles_MAX_VEHICLES.xml" />
+		<param name="transitScheduleFile" value="&INBASE;/transitSchedule_time_MAX_VEHICLES.xml" />
+		<param name="vehiclesFile" value="&INBASE;/transitVehicles_40porc_MAX_VEHICLES.xml" />
 		<param name="transitModes" value="pt" />
 	</module>
 	
@@ -72,7 +72,7 @@
 		<param name="maxBeelineWalkConnectionDistance" value="100.0" />
 
 		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
-		<param name="searchRadius" value="500.0" />
+		<param name="searchRadius" value="200.0" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -80,7 +80,7 @@
 	<module name="controler">
 		<param name="outputDirectory" value="&OUTBASE;" />
 		<param name="firstIteration" value="0" />
-		<param name="lastIteration" value="20" />
+		<param name="lastIteration" value="0" />
 		<param name="routingAlgorithmType" value="Dijkstra" />
 		<param name="mobsim" value="qsim" />
 		<param name="writePlansInterval" value="1" />
@@ -176,26 +176,21 @@
 	<module name="planCalcScore">
 		<!-- write a plans file in each iteration directory which contains what each agent actually did, and the score it received. -->
 		<param name="writeExperiencedPlans" value="true" />
-		
-		<param name="utilityOfLineSwitch" value="-1.0" />
 	
 		<!--param name="PathSizeLogitBeta" value="1.0" /-->
 		<param name="learningRate" value="1.0" />
 		<param name="BrainExpBeta" value="2.0" />
 		
 		<!-- all penalties to 0 by recomendation of Kai Nagel. See: http://matsim.org/node/696 -->
-		<!--param name="lateArrival" value="-18.0" /-->
 		<param name="lateArrival" value="0.0" />
-		<!--param name="traveling" value="-6.0" /-->
-		<param name="traveling" value="0.0" />
-		<param name="travelingPt" value="0.0" />
-		<param name="traveling_walk" value="-6.0" />
-		<!--param name="travelingPt" value="0" /-->
-		<param name="waitingPt" value="-2.0" />
-		
-		<param name="performing" value="6.0" />
 		<param name="earlyDeparture" value="0.0" />
+		<param name="performing" value="6.0" />
+		<param name="traveling" value="0.0" />
 		<param name="waiting" value="0.0" />
+		<param name="travelingPt" value="0.0" />
+		<param name="waitingPt" value="-2.0" />
+		<param name="utilityOfLineSwitch" value="-1.0" />
+		<param name="traveling_walk" value="-6.0" />
 		
 		<param name="activityType_0"            value="dummy" /> <!-- only activity in plans -->
 		<param name="activityTypicalDuration_0" value="12:00:00" />
