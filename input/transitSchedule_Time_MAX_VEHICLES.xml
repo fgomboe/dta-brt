@@ -658,20 +658,20 @@
 		<transitRoute id="Ida">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="CHIMI3" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FLORAI1" arrivalOffset="00:02:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SALOM1" arrivalOffset="00:05:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="POPU1" arrivalOffset="00:07:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TORRE3" arrivalOffset="00:14:25" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANBO3" arrivalOffset="00:20:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="ESTAD3" arrivalOffset="00:26:07" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TEQUE1" arrivalOffset="00:28:22" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UDP3" arrivalOffset="00:31:24" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PAMPA1" arrivalOffset="00:35:54" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CAPRI3" arrivalOffset="00:39:19" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MELEN1" arrivalOffset="00:43:09" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="BUITRE1" arrivalOffset="00:44:39" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UNIV1" arrivalOffset="00:49:27" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="CHIMI3" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="FLORAI1" departureOffset="00:02:30" awaitDeparture="true"/>
+				<stop refId="SALOM1" departureOffset="00:05:10" awaitDeparture="true"/>
+				<stop refId="POPU1" departureOffset="00:07:35" awaitDeparture="true"/>
+				<stop refId="TORRE3" departureOffset="00:14:25" awaitDeparture="true"/>
+				<stop refId="SANBO3" departureOffset="00:20:35" awaitDeparture="true"/>
+				<stop refId="ESTAD3" departureOffset="00:26:07" awaitDeparture="true"/>
+				<stop refId="TEQUE1" departureOffset="00:28:22" awaitDeparture="true"/>
+				<stop refId="UDP3" departureOffset="00:31:24" awaitDeparture="true"/>
+				<stop refId="PAMPA1" departureOffset="00:35:54" awaitDeparture="true"/>
+				<stop refId="CAPRI3" departureOffset="00:39:19" awaitDeparture="true"/>
+				<stop refId="MELEN1" departureOffset="00:43:09" awaitDeparture="true"/>
+				<stop refId="BUITRE1" departureOffset="00:44:39" awaitDeparture="true"/>
+				<stop refId="UNIV1" arrivalOffset="00:49:27" />
 			</routeProfile>
 			<route>
 				<link refId="38-CHIMI3"/>
@@ -839,20 +839,20 @@
 		<transitRoute id="Vuelta">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="UNIV4" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="BUITRE2" arrivalOffset="00:03:52" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MELEN2" arrivalOffset="00:07:22" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CAPRI2" arrivalOffset="00:10:27" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PAMPA2" arrivalOffset="00:14:37" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UDP4" arrivalOffset="00:17:25" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TEQUE4" arrivalOffset="00:21:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="ESTAD2" arrivalOffset="00:23:40" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANPAS2" arrivalOffset="00:29:58" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TORRE2" arrivalOffset="00:35:38" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="POPU4" arrivalOffset="00:41:46" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SALOM2" arrivalOffset="00:43:46" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FLORAI2" arrivalOffset="00:46:26" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CHIMI2" arrivalOffset="00:47:26" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="UNIV4" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="BUITRE2" departureOffset="00:03:52" awaitDeparture="true"/>
+				<stop refId="MELEN2" departureOffset="00:07:22" awaitDeparture="true"/>
+				<stop refId="CAPRI2" departureOffset="00:10:27" awaitDeparture="true"/>
+				<stop refId="PAMPA2" departureOffset="00:14:37" awaitDeparture="true"/>
+				<stop refId="UDP4" departureOffset="00:17:25" awaitDeparture="true"/>
+				<stop refId="TEQUE4" departureOffset="00:21:10" awaitDeparture="true"/>
+				<stop refId="ESTAD2" departureOffset="00:23:40" awaitDeparture="true"/>
+				<stop refId="SANPAS2" departureOffset="00:29:58" awaitDeparture="true"/>
+				<stop refId="TORRE2" departureOffset="00:35:38" awaitDeparture="true"/>
+				<stop refId="POPU4" departureOffset="00:41:46" awaitDeparture="true"/>
+				<stop refId="SALOM2" departureOffset="00:43:46" awaitDeparture="true"/>
+				<stop refId="FLORAI2" departureOffset="00:46:26" awaitDeparture="true"/>
+				<stop refId="CHIMI2" arrivalOffset="00:47:26" />
 			</routeProfile>
 			<route>
 				<link refId="39-UNIV4"/>
@@ -1022,33 +1022,33 @@
 		<transitRoute id="Ida">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="CHIMI3" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FLORAI1" arrivalOffset="00:02:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SALOM1" arrivalOffset="00:05:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="POPU1" arrivalOffset="00:07:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MZAN1" arrivalOffset="00:08:50" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FATI1" arrivalOffset="00:10:45" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="RIOC1" arrivalOffset="00:12:50" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TORRE3" arrivalOffset="00:16:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="ERMI1" arrivalOffset="00:18:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CENTRO1" arrivalOffset="00:20:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FRAY1" arrivalOffset="00:21:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANBO3" arrivalOffset="00:24:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SNTLIB3" arrivalOffset="00:27:25" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MANZA3" arrivalOffset="00:28:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="ESTAD3" arrivalOffset="00:31:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TEQUE1" arrivalOffset="00:33:25" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="LIDO1" arrivalOffset="00:35:20" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UDP3" arrivalOffset="00:37:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PLATOR1" arrivalOffset="00:39:05" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PAMPA1" arrivalOffset="00:41:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="REFUG1" arrivalOffset="00:43:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CALDAS1" arrivalOffset="00:44:15" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CAPRI3" arrivalOffset="00:45:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MELEN1" arrivalOffset="00:49:45" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="BUITRE1" arrivalOffset="00:51:15" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UNIVAL1" arrivalOffset="00:53:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UNIV1" arrivalOffset="00:55:55" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="CHIMI3" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="FLORAI1" departureOffset="00:02:30" awaitDeparture="true"/>
+				<stop refId="SALOM1" departureOffset="00:05:10" awaitDeparture="true"/>
+				<stop refId="POPU1" departureOffset="00:07:35" awaitDeparture="true"/>
+				<stop refId="MZAN1" departureOffset="00:08:50" awaitDeparture="true"/>
+				<stop refId="FATI1" departureOffset="00:10:45" awaitDeparture="true"/>
+				<stop refId="RIOC1" departureOffset="00:12:50" awaitDeparture="true"/>
+				<stop refId="TORRE3" departureOffset="00:16:55" awaitDeparture="true"/>
+				<stop refId="ERMI1" departureOffset="00:18:35" awaitDeparture="true"/>
+				<stop refId="CENTRO1" departureOffset="00:20:35" awaitDeparture="true"/>
+				<stop refId="FRAY1" departureOffset="00:21:55" awaitDeparture="true"/>
+				<stop refId="SANBO3" departureOffset="00:24:55" awaitDeparture="true"/>
+				<stop refId="SNTLIB3" departureOffset="00:27:25" awaitDeparture="true"/>
+				<stop refId="MANZA3" departureOffset="00:28:55" awaitDeparture="true"/>
+				<stop refId="ESTAD3" departureOffset="00:31:10" awaitDeparture="true"/>
+				<stop refId="TEQUE1" departureOffset="00:33:25" awaitDeparture="true"/>
+				<stop refId="LIDO1" departureOffset="00:35:20" awaitDeparture="true"/>
+				<stop refId="UDP3" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="PLATOR1" departureOffset="00:39:05" awaitDeparture="true"/>
+				<stop refId="PAMPA1" departureOffset="00:41:30" awaitDeparture="true"/>
+				<stop refId="REFUG1" departureOffset="00:43:00" awaitDeparture="true"/>
+				<stop refId="CALDAS1" departureOffset="00:44:15" awaitDeparture="true"/>
+				<stop refId="CAPRI3" departureOffset="00:45:55" awaitDeparture="true"/>
+				<stop refId="MELEN1" departureOffset="00:49:45" awaitDeparture="true"/>
+				<stop refId="BUITRE1" departureOffset="00:51:15" awaitDeparture="true"/>
+				<stop refId="UNIVAL1" departureOffset="00:53:30" awaitDeparture="true"/>
+				<stop refId="UNIV1" arrivalOffset="00:55:55" />
 			</routeProfile>
 			<route>
 				<link refId="38-CHIMI3"/>
@@ -1335,35 +1335,35 @@
 		<transitRoute id="Vuelta">
 			<transportMode>pt</transportMode>
 			<routeProfile>
-				<stop refId="UNIV4" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UNIVAL2" arrivalOffset="00:02:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="BUITRE2" arrivalOffset="00:04:40" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MELEN2" arrivalOffset="00:08:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CAPRI2" arrivalOffset="00:11:15" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CALDAS2" arrivalOffset="00:12:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="REFUG2" arrivalOffset="00:14:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PAMPA2" arrivalOffset="00:16:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PLATOR2" arrivalOffset="00:18:30" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="UDP4" arrivalOffset="00:20:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="LIDO4" arrivalOffset="00:22:50" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TEQUE4" arrivalOffset="00:24:45" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="ESTAD2" arrivalOffset="00:27:15" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MANZA2" arrivalOffset="00:29:15" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SNTLIB2" arrivalOffset="00:30:45" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANBO2" arrivalOffset="00:32:50" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANPAS2" arrivalOffset="00:35:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SUCRE2" arrivalOffset="00:37:00" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PTCUY2" arrivalOffset="00:39:10" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANPED2" arrivalOffset="00:42:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="TORRE2" arrivalOffset="00:43:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SANIC2" arrivalOffset="00:47:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="PILOT2" arrivalOffset="00:48:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FATI2" arrivalOffset="00:49:50" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="MZAN2" arrivalOffset="00:51:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="POPU4" arrivalOffset="00:52:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="SALOM2" arrivalOffset="00:54:55" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="FLORAI2" arrivalOffset="00:57:35" departureOffset="00:00:00" awaitDeparture="true"/>
-				<stop refId="CHIMI2" arrivalOffset="00:58:35" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="UNIV4" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="UNIVAL2" departureOffset="00:02:00" awaitDeparture="true"/>
+				<stop refId="BUITRE2" departureOffset="00:04:40" awaitDeparture="true"/>
+				<stop refId="MELEN2" departureOffset="00:08:10" awaitDeparture="true"/>
+				<stop refId="CAPRI2" departureOffset="00:11:15" awaitDeparture="true"/>
+				<stop refId="CALDAS2" departureOffset="00:12:35" awaitDeparture="true"/>
+				<stop refId="REFUG2" departureOffset="00:14:35" awaitDeparture="true"/>
+				<stop refId="PAMPA2" departureOffset="00:16:30" awaitDeparture="true"/>
+				<stop refId="PLATOR2" departureOffset="00:18:30" awaitDeparture="true"/>
+				<stop refId="UDP4" departureOffset="00:20:55" awaitDeparture="true"/>
+				<stop refId="LIDO4" departureOffset="00:22:50" awaitDeparture="true"/>
+				<stop refId="TEQUE4" departureOffset="00:24:45" awaitDeparture="true"/>
+				<stop refId="ESTAD2" departureOffset="00:27:15" awaitDeparture="true"/>
+				<stop refId="MANZA2" departureOffset="00:29:15" awaitDeparture="true"/>
+				<stop refId="SNTLIB2" departureOffset="00:30:45" awaitDeparture="true"/>
+				<stop refId="SANBO2" departureOffset="00:32:50" awaitDeparture="true"/>
+				<stop refId="SANPAS2" departureOffset="00:35:00" awaitDeparture="true"/>
+				<stop refId="SUCRE2" departureOffset="00:37:00" awaitDeparture="true"/>
+				<stop refId="PTCUY2" departureOffset="00:39:10" awaitDeparture="true"/>
+				<stop refId="SANPED2" departureOffset="00:42:35" awaitDeparture="true"/>
+				<stop refId="TORRE2" departureOffset="00:43:55" awaitDeparture="true"/>
+				<stop refId="SANIC2" departureOffset="00:47:35" awaitDeparture="true"/>
+				<stop refId="PILOT2" departureOffset="00:48:35" awaitDeparture="true"/>
+				<stop refId="FATI2" departureOffset="00:49:50" awaitDeparture="true"/>
+				<stop refId="MZAN2" departureOffset="00:51:55" awaitDeparture="true"/>
+				<stop refId="POPU4" departureOffset="00:52:55" awaitDeparture="true"/>
+				<stop refId="SALOM2" departureOffset="00:54:55" awaitDeparture="true"/>
+				<stop refId="FLORAI2" departureOffset="00:57:35" awaitDeparture="true"/>
+				<stop refId="CHIMI2" arrivalOffset="00:58:35" />
 			</routeProfile>
 			<route>
 				<link refId="39-UNIV4"/>
