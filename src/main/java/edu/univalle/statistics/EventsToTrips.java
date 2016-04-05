@@ -289,7 +289,7 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
 
     @Override
     public void handleEvent(ActivityStartEvent event) {
-        if (event.getActType().equals("w") || event.getActType().equals("h")) {
+        if (event.getActType().equals("dummy")) {
             if (trip.containsKey(event.getPersonId()))
                 tripHandler.handleTrip(event.getPersonId(), trip.remove(event.getPersonId())); // method remove returns the value previous to removal
         }
