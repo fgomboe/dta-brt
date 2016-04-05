@@ -65,10 +65,10 @@ public class JourneyTimes
 
     public JourneyTimes() {
         this.startTime = 0;
-        this.endTime = 86400;
+        this.endTime = 86400 - 1; // Because in constructor of class org.matsim.analysis.VolumesAnalyzer they use it like that;
 
-        this.configFile = "input/config.xml";
-        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.configFile = "input/config_dummy.xml";
+        this.eventsFile = "output0_DummyPopulation40%_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocationMutator10_ParamsAsInBitacora_VehCap40%Time/ITERS/it.0/0.events.xml.gz";
         this.outputFile = "output/legStats.csv";
 
     }
@@ -77,8 +77,8 @@ public class JourneyTimes
         this.startTime = startTime;
         this.endTime = endTime;
 
-        this.configFile = "input/config.xml";
-        this.eventsFile = "output0_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocatorMutator10/ITERS/it.0/0.events.xml.gz";
+        this.configFile = "input/config_dummy.xml";
+        this.eventsFile = "output0_DummyPopulation40%_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocationMutator10_ParamsAsInBitacora_VehCap40%Time/ITERS/it.0/0.events.xml.gz";
         this.outputFile = "output/legStats.csv";
 
     }
@@ -111,8 +111,8 @@ public class JourneyTimes
     }
 
     public void readFile() {
-        openWriter();
         eventsReader.readFile(eventsFile);
+        openWriter();
         writeTrips();
         closeWriter();
         log.info("Process finished!");
