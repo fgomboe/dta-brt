@@ -8,7 +8,7 @@ public class Controller
 {
 
     public static void main(String[] args) {
-        Config config = ConfigUtils.loadConfig("input/config.xml");
+        Config config = ConfigUtils.loadConfig("input/config_dummy.xml");
         Controler controler = new Controler(config);
 
         /*controler.setModules(new AbstractModule() {
