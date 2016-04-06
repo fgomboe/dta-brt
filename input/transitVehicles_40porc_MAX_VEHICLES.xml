@@ -6,8 +6,8 @@
 				Autobús articulado de dos vagones
 		</description>
 		<capacity>
-			<seats persons="19"/>
-			<standingRoom persons="44"/>
+			<seats persons="19"/> <!-- real value: 19.2 -->
+			<standingRoom persons="44"/> <!-- real value: 44.8 -->
 		</capacity>
 		<length meter="18.0"/>
 		<width meter="2.6"/>
