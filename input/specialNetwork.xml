@@ -2027,7 +2027,7 @@
 
 <!-- ====================================================================== -->
 
-	<links capperiod="01:00:00" effectivecellsize="7.5" effectivelanewidth="3.75">
+	<links capperiod="01:00:00" effectivecellsize="19" effectivelanewidth="3.75">
 		<link id="1-2" from="1" to="2" length="444.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
 		<link id="1-39" from="1" to="39" length="914.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
 		<link id="1-C13K100" from="1" to="C13K100" length="314.0" freespeed="16.666666666666668" capacity="1000.0" permlanes="1.0" oneway="1" modes="pt" />
