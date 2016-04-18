@@ -114,10 +114,15 @@ public class JourneyTimes
 
     public void readFile() {
         eventsReader.readFile(eventsFile);
+        log.info("Read process finished!");
+
+    }
+
+    public void writeResults() {
         openWriter();
         writeTrips();
         closeWriter();
-        log.info("Process finished!");
+        log.info("Results written to file: " + outputFile);
 
     }
 
@@ -193,7 +198,6 @@ public class JourneyTimes
         JourneyTimes calc = new JourneyTimes();
         calc.init();
         calc.readFile();
-        // calc.exportFile();
 
     }
 }
