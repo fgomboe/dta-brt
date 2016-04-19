@@ -198,4 +198,14 @@
 	</module>
 	
 	<!-- ====================================================================== -->
+	
+	<module name="vspExperimental" >
+		<param name="isGeneratingBoardingDeniedEvent" value="true" />
+		
+		<!-- if true then writes output_events in output directory.  default is `false'. Will only work when lastIteration is multiple of events writing interval -->
+		<param name="writingOutputEvents" value="true" />
+		
+	</module>
+
+	<!-- ====================================================================== -->
 </config>
