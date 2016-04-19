@@ -68,17 +68,20 @@ public class WriteLinkVolumes
 
         eventsReader = new MatsimEventsReader(manager);
 
-        // eventsReader = new MatsimEventsReader(manager);
-
     }
 
     public void readFile() {
         eventsReader.readFile(eventsFile);
+        log.info("Read process finished!");
+
+    }
+
+    public void writeResults() {
         openWriter();
         writeVolumes();
+        log.info("No. of passengers that did not board: " + analyzer.getNonBoardingPassengers().size());
         closeWriter();
-        log.info("Process finished!");
-
+        log.info("Results written to file: " + outputFile);
     }
 
     public void writeVolumes() {
@@ -132,12 +135,25 @@ public class WriteLinkVolumes
     }
 
     public static void main(String[] args) {
-        WriteLinkVolumes lvp = new WriteLinkVolumes(21600, 28799, 3600);
+        // construct object this way: (analysis start time, analysis end time - 1, analysis bin time)
+        WriteLinkVolumes lvp = new WriteLinkVolumes(61200, 68399, 3600);
         lvp.setConfigFile("input/config_dummy.xml");
         lvp.setEventsFile("temporal_Feli/0.events.xml.gz");
-        lvp.setOutputFile("output/linkVolumes.csv");
+        lvp.setOutputFile("output/linkVolumes_17-19.csv");
         lvp.init();
+
+        // FileAppender appender;
+        // try {
+        // appender = new FileAppender(new PatternLayout("[%d{MMM dd HH:mm:ss}] %-5p (%F:%L) - %m%n"),
+        // "./output/volumes.log", false);
+        // BasicConfigurator.configure(appender);
+        // }
+        // catch (IOException e) {
+        // e.printStackTrace();
+        // }
+
         lvp.readFile();
+        lvp.writeResults();
 
     }
 }

@@ -34,6 +34,9 @@ import org.matsim.api.core.v01.events.handler.PersonEntersVehicleEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonLeavesVehicleEventHandler;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.network.Network;
+import org.matsim.api.core.v01.population.Person;
+import org.matsim.core.api.experimental.events.BoardingDeniedEvent;
+import org.matsim.core.api.experimental.events.handler.BoardingDeniedEventHandler;
 import org.matsim.vehicles.Vehicle;
 
 /**
@@ -41,8 +44,8 @@ import org.matsim.vehicles.Vehicle;
  *
  * @author mrieser
  */
-public class LinkVolumesPax
-        implements LinkLeaveEventHandler, PersonEntersVehicleEventHandler, PersonLeavesVehicleEventHandler
+public class LinkVolumesPax implements LinkLeaveEventHandler, PersonEntersVehicleEventHandler,
+        PersonLeavesVehicleEventHandler, BoardingDeniedEventHandler
 {
 
     private final static Logger log = Logger.getLogger(LinkVolumesPax.class);
@@ -52,6 +55,7 @@ public class LinkVolumesPax
     private final int maxSlotIndex;
     private final Map<Id<Link>, int[]> links;
     private Map<Id<Vehicle>, Integer> vehicleLoads;
+    private Map<Id<Person>, Integer> nonBoardingPassengers;
 
     // @Inject
     // LinkVolumesPax(Network network, EventsManager eventsManager) {
@@ -70,7 +74,8 @@ public class LinkVolumesPax
         this.timeBinSize = timeBinSize;
         this.maxSlotIndex = (this.endTime - this.startTime) / this.timeBinSize; // because slot 0 contains from startTime to timeBinSize-1 (e.g. from 0 to 3599)
         this.links = new HashMap<>((int) (network.getLinks().size() * 1.1), 0.95f);
-        this.vehicleLoads = new HashMap<>((int) (numOfVehicles * 1.1), 0.95f);
+        this.vehicleLoads = new HashMap<Id<Vehicle>, Integer>((int) (numOfVehicles * 1.1), 0.95f);
+        this.nonBoardingPassengers = new HashMap<Id<Person>, Integer>();
     }
 
     @Override
@@ -82,9 +87,54 @@ public class LinkVolumesPax
                 this.links.put(event.getLinkId(), volumes);
             }
             int timeslot = getTimeSlotIndex(event.getTime());
-            volumes[timeslot] += vehicleLoads.get(event.getVehicleId()) - 1; // minus 1 because of the driver
-
+            if (vehicleLoads.containsKey(event.getVehicleId()))
+                volumes[timeslot] += vehicleLoads.get(event.getVehicleId()) - 1; // minus 1 because of the driver
         }
+
+    }
+
+    @Override
+    public void handleEvent(PersonLeavesVehicleEvent event) {
+        if (event.getTime() >= startTime && event.getTime() <= endTime) {
+            if (vehicleLoads.containsKey(event.getVehicleId())) {
+                int vehicleLoad = vehicleLoads.get(event.getVehicleId());
+                vehicleLoad--;
+                vehicleLoads.put(event.getVehicleId(), vehicleLoad);
+            }
+        }
+
+    }
+
+    @Override
+    public void handleEvent(PersonEntersVehicleEvent event) {
+        if (event.getTime() >= startTime && event.getTime() <= endTime) {
+            if (vehicleLoads.containsKey(event.getVehicleId())) {
+                int vehicleLoad = vehicleLoads.get(event.getVehicleId());
+                vehicleLoad++;
+                vehicleLoads.put(event.getVehicleId(), vehicleLoad);
+                if (vehicleLoad > 64) {
+                    log.warn("Passenger " + event.getPersonId() + " exceeds vehicle capacity for vehicle: "
+                            + event.getVehicleId() + " at time: " + event.getTime());
+                    nonBoardingPassengers.put(event.getPersonId(), null);
+                }
+                else if (nonBoardingPassengers.containsKey(event.getPersonId())) {
+                    log.info("Passenger: " + event.getPersonId() + " boards vehicle: " + event.getVehicleId()
+                            + " at time: " + event.getTime());
+                    nonBoardingPassengers.remove(event.getPersonId());
+                }
+            }
+            else {
+                vehicleLoads.put(event.getVehicleId(), 1);
+            }
+        }
+
+    }
+
+    @Override
+    public void handleEvent(BoardingDeniedEvent event) {
+        // log.warn("Boarding denied to passenger: " + event.getPersonId() + " in vehicle: " + event.getVehicleId()
+        // + ", persons in vehicle: " + vehicleLoads.get(event.getVehicleId()));
+
     }
 
     private int getTimeSlotIndex(final double time) {
@@ -163,34 +213,12 @@ public class LinkVolumesPax
         return this.links.keySet();
     }
 
+    public Map<Id<Person>, Integer> getNonBoardingPassengers() {
+        return this.nonBoardingPassengers;
+    }
+
     @Override
     public void reset(final int iteration) {
         this.links.clear();
-    }
-
-    @Override
-    public void handleEvent(PersonLeavesVehicleEvent event) {
-        if (vehicleLoads.containsKey(event.getVehicleId())) {
-            int vehicleLoad = vehicleLoads.get(event.getVehicleId());
-            vehicleLoad--;
-            vehicleLoads.put(event.getVehicleId(), vehicleLoad);
-        }
-
-    }
-
-    @Override
-    public void handleEvent(PersonEntersVehicleEvent event) {
-        if (vehicleLoads.containsKey(event.getVehicleId())) {
-            int vehicleLoad = vehicleLoads.get(event.getVehicleId());
-            vehicleLoad++;
-            vehicleLoads.put(event.getVehicleId(), vehicleLoad);
-            if (vehicleLoad > 63)
-                log.warn("Vehicle capacity exceeded for vehicle: " + event.getVehicleId() + ". Persons inside: "
-                        + vehicleLoad);
-        }
-        else {
-            vehicleLoads.put(event.getVehicleId(), 1);
-        }
-
     }
 }
