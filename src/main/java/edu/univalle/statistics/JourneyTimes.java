@@ -67,21 +67,11 @@ public class JourneyTimes
         this.startTime = 0;
         this.endTime = 86400 - 1; // Because in constructor of class org.matsim.analysis.VolumesAnalyzer they use it like that;
 
-        this.setConfigFile("input/config_dummy.xml");
-        this.setEventsFile(
-                "output0_DummyPopulation40%_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocationMutator10_ParamsAsInBitacora_VehCap40%Time/ITERS/it.0/0.events.xml.gz");
-        this.setOutputFile(outputFile = "output/legStats.csv");
-
     }
 
     public JourneyTimes(double startTime, double endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
-
-        this.setConfigFile("input/config_dummy.xml");
-        this.setEventsFile(
-                "output0_DummyPopulation40%_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocationMutator10_ParamsAsInBitacora_VehCap40%Time/ITERS/it.0/0.events.xml.gz");
-        this.setOutputFile(outputFile = "output/legStats.csv");
 
     }
 
@@ -196,8 +186,14 @@ public class JourneyTimes
 
     public static void main(String[] args) {
         JourneyTimes calc = new JourneyTimes();
+        calc.setConfigFile("input/config_dummy.xml");
+        calc.setEventsFile(
+                "temporal_Feli/output20_DummyPopulation40%_NormalControler_ChangeExpBeta80_ReRoute10_TimeAllocationMutator10_ParamsAsInBitacora_"
+                        + "VehCap40%Time_EffCellSize19_withBoardDenied/20.events.xml.gz");
+        calc.setOutputFile("output/legStats.csv");
         calc.init();
         calc.readFile();
+        calc.writeResults();
 
     }
 }
