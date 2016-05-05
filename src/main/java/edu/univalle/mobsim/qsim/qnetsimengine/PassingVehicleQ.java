@@ -1,13 +1,9 @@
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import java.util.AbstractQueue;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.VehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicleQ;
 
 final class PassingVehicleQ extends AbstractQueue<QVehicle> implements VehicleQ<QVehicle>
 {

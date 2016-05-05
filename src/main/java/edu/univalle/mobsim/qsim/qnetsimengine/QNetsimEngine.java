@@ -27,14 +27,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.Phaser;
-import java.util.concurrent.ThreadFactory;
-
-import javax.inject.Inject;
+import java.util.concurrent.*;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
@@ -49,18 +42,38 @@ import org.matsim.core.config.groups.QSimConfigGroup.LinkDynamics;
 import org.matsim.core.config.groups.QSimConfigGroup.SnapshotStyle;
 import org.matsim.core.config.groups.QSimConfigGroup.VehicleBehavior;
 import org.matsim.core.gbl.Gbl;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.qsim.InternalInterface;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
-import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink;
+import edu.univalle.mobsim.qsim.qnetsimengine.DefaultLinkSpeedCalculator;
+import edu.univalle.mobsim.qsim.qnetsimengine.DefaultQNetworkFactory;
+import edu.univalle.mobsim.qsim.qnetsimengine.EquiDistAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetsimNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetsimNetworkFactory;
+import edu.univalle.mobsim.qsim.qnetsimengine.PassingVehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLanesNetworkFactory;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkImpl;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngineRunner;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNode;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicularDepartureHandler;
+import edu.univalle.mobsim.qsim.qnetsimengine.WithHolesAgentSnapshotInfoBuilder;
 import org.matsim.core.utils.misc.Time;
 import org.matsim.vehicles.Vehicle;
 
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.qsim.InternalInterface;
 import edu.univalle.mobsim.qsim.QSim;
+import edu.univalle.mobsim.qsim.interfaces.MobsimEngine;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
+
+import javax.inject.Inject;
 
 /**
  * Coordinates the movement of vehicles on the links and the nodes.
@@ -478,7 +491,7 @@ public class QNetsimEngine implements MobsimEngine
 
     void letVehicleArrive(QVehicle veh) {
         double now = this.qsim.getSimTimer().getTimeOfDay();
-        MobsimDriverAgent driver = veh.getDriver();
+        MobsimDriverAgent driver = (MobsimDriverAgent) veh.getDriver();
         this.qsim.getEventsManager().processEvent(new PersonLeavesVehicleEvent(now, driver.getId(), veh.getId()));
         // reset vehicles driver
         veh.setDriver(null);

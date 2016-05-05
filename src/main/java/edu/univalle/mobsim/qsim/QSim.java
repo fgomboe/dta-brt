@@ -41,22 +41,6 @@ import org.matsim.core.api.experimental.events.EventsManager;
 import org.matsim.core.config.groups.QSimConfigGroup;
 import org.matsim.core.events.EventsUtils;
 import org.matsim.core.gbl.Gbl;
-import org.matsim.core.mobsim.framework.AgentSource;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimTimer;
-import org.matsim.core.mobsim.framework.listeners.MobsimListener;
-import org.matsim.core.mobsim.qsim.ActivityEndRescheduler;
-import org.matsim.core.mobsim.qsim.InternalInterface;
-import org.matsim.core.mobsim.qsim.TeleportationEngine;
-import org.matsim.core.mobsim.qsim.interfaces.ActivityHandler;
-import org.matsim.core.mobsim.qsim.interfaces.AgentCounter;
-import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.interfaces.Netsim;
-import org.matsim.core.mobsim.qsim.pt.TransitQSimEngine;
-import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.core.utils.misc.Time;
 import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
@@ -65,7 +49,20 @@ import org.matsim.vis.snapshotwriters.VisMobsim;
 import org.matsim.vis.snapshotwriters.VisNetwork;
 import org.matsim.withinday.mobsim.WithinDayEngine;
 
+import edu.univalle.mobsim.framework.AgentSource;
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimTimer;
+import edu.univalle.mobsim.framework.listeners.MobsimListener;
+import edu.univalle.mobsim.qsim.interfaces.ActivityHandler;
+import edu.univalle.mobsim.qsim.interfaces.AgentCounter;
+import edu.univalle.mobsim.qsim.interfaces.DepartureHandler;
+import edu.univalle.mobsim.qsim.interfaces.MobsimEngine;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
+import edu.univalle.mobsim.qsim.interfaces.Netsim;
+import edu.univalle.mobsim.qsim.pt.TransitQSimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetsimNetwork;
 import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
 
 /**
  * This has developed over the last couple of months/years towards an increasingly pluggable module. The current (dec'2011)
@@ -98,7 +95,8 @@ import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
  * @author dgrether
  * @author knagel
  */
-public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEndRescheduler
+// public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEndRescheduler
+public final class QSim extends Thread implements Netsim, ActivityEndRescheduler
 {
 
     final private static Logger log = Logger.getLogger(QSim.class);
@@ -498,10 +496,10 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
         return this.netEngine.getNetsimNetwork();
     }
 
-    @Override
-    public VisNetwork getVisNetwork() {
-        return this.netEngine.getNetsimNetwork();
-    }
+    // @Override
+    // public VisNetwork getVisNetwork() {
+    // return this.netEngine.getNetsimNetwork();
+    // }
 
     @Override
     public Scenario getScenario() {
@@ -575,10 +573,10 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
         return transitEngine;
     }
 
-    @Override
-    public Collection<MobsimAgent> getAgents() {
-        return Collections.unmodifiableCollection(this.agents.values());
-    }
+    // @Override
+    // public Collection<MobsimAgent> getAgents() {
+    // return (Collections.unmodifiableCollection(this.agents.values());
+    // }
 
     public Map<Id<Person>, MobsimAgent> getAgentMap() {
         return Collections.unmodifiableMap(this.agents);
@@ -588,22 +586,22 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
         agentSources.add(agentSource);
     }
 
-    @Override
-    public VisData getNonNetworkAgentSnapshots() {
-        return new VisData() {
-
-            @Override
-            public Collection<AgentSnapshotInfo> addAgentSnapshotInfo(Collection<AgentSnapshotInfo> positions) {
-                for (MobsimEngine mobsimEngine : mobsimEngines) {
-                    if (mobsimEngine instanceof VisData) {
-                        VisData visData = (VisData) mobsimEngine;
-                        positions = visData.addAgentSnapshotInfo(positions);
-                    }
-                }
-                return positions;
-            }
-
-        };
-    }
+    // @Override
+    // public VisData getNonNetworkAgentSnapshots() {
+    // return new VisData() {
+    //
+    // @Override
+    // public Collection<AgentSnapshotInfo> addAgentSnapshotInfo(Collection<AgentSnapshotInfo> positions) {
+    // for (MobsimEngine mobsimEngine : mobsimEngines) {
+    // if (mobsimEngine instanceof VisData) {
+    // VisData visData = (VisData) mobsimEngine;
+    // positions = visData.addAgentSnapshotInfo(positions);
+    // }
+    // }
+    // return positions;
+    // }
+    //
+    // };
+    // }
 
 }

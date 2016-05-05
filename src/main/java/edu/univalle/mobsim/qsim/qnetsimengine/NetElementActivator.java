@@ -20,7 +20,8 @@
 
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNode;
 
 abstract class NetElementActivator
 {

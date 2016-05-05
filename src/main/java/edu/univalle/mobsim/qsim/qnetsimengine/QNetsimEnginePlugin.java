@@ -1,15 +1,19 @@
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.matsim.core.config.Config;
-import org.matsim.core.mobsim.qsim.AbstractQSimPlugin;
-import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
-
 import com.google.inject.AbstractModule;
 import com.google.inject.Module;
+
+import edu.univalle.mobsim.qsim.AbstractQSimPlugin;
+import edu.univalle.mobsim.qsim.interfaces.DepartureHandler;
+import edu.univalle.mobsim.qsim.interfaces.MobsimEngine;
+
+import org.matsim.core.config.Config;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngineDepartureHandlerProvider;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicularDepartureHandler;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class QNetsimEnginePlugin extends AbstractQSimPlugin
 {

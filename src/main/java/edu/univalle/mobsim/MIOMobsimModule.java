@@ -24,8 +24,9 @@ package edu.univalle.mobsim;
 
 import org.matsim.core.config.groups.ControlerConfigGroup;
 import org.matsim.core.controler.AbstractModule;
-import org.matsim.core.mobsim.jdeqsim.JDEQSimulation;
+import org.matsim.core.mobsim.framework.Mobsim;
 
+import edu.univalle.mobsim.jdeqsim.JDEQSimulation;
 import edu.univalle.mobsim.qsim.QSimModule;
 
 public class MIOMobsimModule extends AbstractModule
@@ -36,7 +37,7 @@ public class MIOMobsimModule extends AbstractModule
             install(new QSimModule());
         }
         else if (getConfig().controler().getMobsim().equals(ControlerConfigGroup.MobsimType.JDEQSim.toString())) {
-            bindMobsim().to(JDEQSimulation.class);
+            bindMobsim().to((Class<? extends Mobsim>) JDEQSimulation.class);
         }
     }
 }

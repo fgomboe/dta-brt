@@ -3,13 +3,17 @@ package edu.univalle.mobsim.qsim.qnetsimengine;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
-class QNetsimEngineDepartureHandlerProvider implements Provider<VehicularDepartureHandler> {
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicularDepartureHandler;
 
-	@Inject
-	QNetsimEngine qNetsimEngine;
+class QNetsimEngineDepartureHandlerProvider implements Provider<VehicularDepartureHandler>
+{
 
-	@Override
-	public VehicularDepartureHandler get() {
-		return qNetsimEngine.getDepartureHandler();
-	}
+    @Inject
+    QNetsimEngine qNetsimEngine;
+
+    @Override
+    public VehicularDepartureHandler get() {
+        return qNetsimEngine.getDepartureHandler();
+    }
 }

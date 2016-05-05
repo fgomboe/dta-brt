@@ -30,10 +30,11 @@ import java.util.Queue;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.core.api.internal.MatsimComparator;
-import org.matsim.core.mobsim.qsim.pt.TransitDriverAgent;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLaneI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.pt.transitSchedule.api.TransitStopFacility;
 
+import edu.univalle.mobsim.qsim.pt.TransitDriverAgent;
 import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink.HandleTransitStopResult;
 
 /**

@@ -24,8 +24,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.NavigableMap;
 import java.util.Queue;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 import org.matsim.api.core.v01.Coord;
@@ -35,15 +38,18 @@ import org.matsim.api.core.v01.Scenario;
 import org.matsim.api.core.v01.TransportMode;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.population.Person;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.framework.PassengerAgent;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.pt.TransitDriverAgent;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.QItem;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo.AgentState;
 
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.framework.PassengerAgent;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
+import edu.univalle.mobsim.qsim.pt.TransitDriverAgent;
 import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer.Hole;
 
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfoFactory;
@@ -148,7 +154,7 @@ abstract class AbstractAgentSnapshotInfoBuilder
     public final void positionAgentOnLink(final Collection<AgentSnapshotInfo> positions, Coord startCoord,
             Coord endCoord, double lengthOfCurve, double euclideanLength, QVehicle veh, double distanceFromFromNode,
             Integer lane, double speedValueBetweenZeroAndOne) {
-        MobsimDriverAgent driverAgent = veh.getDriver();
+        MobsimDriverAgent driverAgent = (MobsimDriverAgent) veh.getDriver();
         AgentSnapshotInfo pos = snapshotInfoFactory.createAgentSnapshotInfo(driverAgent.getId(), startCoord, endCoord,
                 distanceFromFromNode, lane, lengthOfCurve, euclideanLength);
         pos.setColorValueBetweenZeroAndOne(speedValueBetweenZeroAndOne);

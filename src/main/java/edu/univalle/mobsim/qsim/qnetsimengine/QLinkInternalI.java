@@ -24,12 +24,15 @@ import java.util.Set;
 
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.population.Person;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetsimLink;
+import edu.univalle.mobsim.qsim.qnetsimengine.QInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNode;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.vehicles.Vehicle;
+
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
 
 /**
  * Essentially an interface, but since I do not want the methods public for the time being, it is incarnated as an abstract class.

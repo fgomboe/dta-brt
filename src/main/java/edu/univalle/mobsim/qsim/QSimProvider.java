@@ -26,18 +26,17 @@ import java.util.Collection;
 
 import javax.inject.Inject;
 
-import org.matsim.core.mobsim.framework.AgentSource;
-import org.matsim.core.mobsim.framework.listeners.MobsimListener;
-import org.matsim.core.mobsim.qsim.AbstractQSimPlugin;
-import org.matsim.core.mobsim.qsim.interfaces.ActivityHandler;
-import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
-import org.matsim.core.mobsim.qsim.interfaces.Netsim;
-
 import com.google.inject.AbstractModule;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.Provider;
+
+import edu.univalle.mobsim.framework.AgentSource;
+import edu.univalle.mobsim.framework.listeners.MobsimListener;
+import edu.univalle.mobsim.qsim.interfaces.ActivityHandler;
+import edu.univalle.mobsim.qsim.interfaces.DepartureHandler;
+import edu.univalle.mobsim.qsim.interfaces.MobsimEngine;
+import edu.univalle.mobsim.qsim.interfaces.Netsim;
 
 public class QSimProvider implements Provider<QSim>
 {

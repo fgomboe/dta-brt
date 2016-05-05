@@ -34,21 +34,27 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
+import org.matsim.api.core.v01.events.VehicleLeavesTrafficEvent;
 import org.matsim.api.core.v01.events.PersonEntersVehicleEvent;
 import org.matsim.api.core.v01.events.PersonStuckEvent;
 import org.matsim.api.core.v01.events.VehicleAbortsEvent;
-import org.matsim.api.core.v01.events.VehicleLeavesTrafficEvent;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.population.Person;
 import org.matsim.core.api.experimental.events.EventsManager;
 import org.matsim.core.gbl.Gbl;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimAgent.State;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.framework.PassengerAgent;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetElementActivator;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.TransitQLink;
 import org.matsim.vehicles.Vehicle;
+
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.framework.PassengerAgent;
+import edu.univalle.mobsim.framework.MobsimAgent.State;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
 
 /**
  * QLinkInternalI is the interface; this here is an abstract class that contains implementation
@@ -197,7 +203,8 @@ abstract class AbstractQLink extends QLinkInternalI
         for (QVehicle veh : this.parkedVehicles.values()) {
             if (veh.getDriver() != null) {
                 // skip transit driver which perform an activity while their vehicle is parked
-                if (veh.getDriver().getState() != State.LEG)
+                MobsimDriverAgent dAgent = (MobsimDriverAgent) veh.getDriver();
+                if (dAgent.getState() != State.LEG)
                     continue;
 
                 if (stuckAgents.contains(veh.getDriver().getId()))
@@ -335,7 +342,7 @@ abstract class AbstractQLink extends QLinkInternalI
 
     @Override
     final void letVehicleDepart(QVehicle vehicle, double now) {
-        MobsimDriverAgent driver = vehicle.getDriver();
+        MobsimDriverAgent driver = (MobsimDriverAgent) vehicle.getDriver();
         if (driver == null)
             throw new RuntimeException("Vehicle cannot depart without a driver!");
 

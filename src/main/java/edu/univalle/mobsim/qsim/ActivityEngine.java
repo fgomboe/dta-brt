@@ -31,12 +31,12 @@ import org.matsim.api.core.v01.events.PersonStuckEvent;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.population.Person;
 import org.matsim.core.api.experimental.events.EventsManager;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.qsim.InternalInterface;
-import org.matsim.core.mobsim.qsim.interfaces.ActivityHandler;
-import org.matsim.core.mobsim.qsim.interfaces.AgentCounter;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
 import org.matsim.core.utils.misc.Time;
+
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.qsim.interfaces.ActivityHandler;
+import edu.univalle.mobsim.qsim.interfaces.AgentCounter;
+import edu.univalle.mobsim.qsim.interfaces.MobsimEngine;
 
 public class ActivityEngine implements MobsimEngine, ActivityHandler
 {
@@ -208,8 +208,7 @@ public class ActivityEngine implements MobsimEngine, ActivityHandler
                 // re-activate the agent
                 activityEndsList.add(new AgentEntry(agent, newActivityEndTime));
                 internalInterface.registerAdditionalAgentOnLink(agent);
-                ((edu.univalle.mobsim.qsim.AgentCounter) internalInterface.getMobsim().getAgentCounter())
-                        .incLiving();
+                ((edu.univalle.mobsim.qsim.AgentCounter) internalInterface.getMobsim().getAgentCounter()).incLiving();
             }
         }
         else if (newActivityEndTime == Double.POSITIVE_INFINITY) {

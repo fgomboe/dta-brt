@@ -25,11 +25,15 @@ import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.core.config.groups.QSimConfigGroup.VehicleBehavior;
-import org.matsim.core.mobsim.framework.MobsimAgent;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicularDepartureHandler;
 import org.matsim.vehicles.Vehicle;
+
+import edu.univalle.mobsim.framework.MobsimAgent;
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.qsim.interfaces.DepartureHandler;
 
 class VehicularDepartureHandler implements DepartureHandler
 {

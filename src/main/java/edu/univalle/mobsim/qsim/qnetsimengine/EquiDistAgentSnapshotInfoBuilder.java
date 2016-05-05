@@ -20,36 +20,38 @@
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.matsim.api.core.v01.Scenario;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfoFactory;
 
 /**
  * A builder for AgentSnapshotInfo objects that can be used by links with queue logic
+ * 
  * @author dgrether
  */
-final class EquiDistAgentSnapshotInfoBuilder extends AbstractAgentSnapshotInfoBuilder {
+final class EquiDistAgentSnapshotInfoBuilder extends AbstractAgentSnapshotInfoBuilder
+{
 
-	EquiDistAgentSnapshotInfoBuilder( Scenario sc, AgentSnapshotInfoFactory agentSnapshotInfoFactory ){
-		super(sc, agentSnapshotInfoFactory);
-	}
+    EquiDistAgentSnapshotInfoBuilder(Scenario sc, AgentSnapshotInfoFactory agentSnapshotInfoFactory) {
+        super(sc, agentSnapshotInfoFactory);
+    }
 
-	
-	@Override
-	public double calculateVehicleSpacing(double linkLength, double numberOfVehiclesOnLink,
-			double overallStorageCapacity) {
-		return linkLength / numberOfVehiclesOnLink;
-	}
+    @Override
+    public double calculateVehicleSpacing(double linkLength, double numberOfVehiclesOnLink,
+            double overallStorageCapacity) {
+        return linkLength / numberOfVehiclesOnLink;
+    }
 
-	@Override
-	public double calculateDistanceOnVectorFromFromNode2(double length, double spacing,
-			 double lastDistanceFromFromNode, double now, double freespeedTraveltime, double remainingTravelTime) {
-		double distanceOnVector = 0.;
-		if (Double.isNaN(lastDistanceFromFromNode)){
-			distanceOnVector = length - (spacing / 2.0);
-		}
-		else {
-			distanceOnVector = lastDistanceFromFromNode - spacing;
-		}
-		return distanceOnVector;
-	}
+    @Override
+    public double calculateDistanceOnVectorFromFromNode2(double length, double spacing, double lastDistanceFromFromNode,
+            double now, double freespeedTraveltime, double remainingTravelTime) {
+        double distanceOnVector = 0.;
+        if (Double.isNaN(lastDistanceFromFromNode)) {
+            distanceOnVector = length - (spacing / 2.0);
+        }
+        else {
+            distanceOnVector = lastDistanceFromFromNode - spacing;
+        }
+        return distanceOnVector;
+    }
 
 }

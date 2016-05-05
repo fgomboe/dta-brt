@@ -23,8 +23,9 @@ import java.util.Collection;
 
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.network.Link;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
 
 /**
  * Essentially an interface, but since I do not want the methods public for the time being, it is incarnated as an abstract class.

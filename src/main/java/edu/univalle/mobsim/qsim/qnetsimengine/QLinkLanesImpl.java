@@ -37,9 +37,16 @@ import org.matsim.api.core.v01.events.Wait2LinkEvent;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.core.api.experimental.events.LaneEnterEvent;
 import org.matsim.core.api.experimental.events.LaneLeaveEvent;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink;
+import edu.univalle.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLaneI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkLanesImpl;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNode;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer;
+import edu.univalle.mobsim.qsim.qnetsimengine.TransitQLink;
 import org.matsim.core.utils.geometry.CoordinateTransformation;
 import org.matsim.core.utils.geometry.transformations.IdentityTransformation;
 import org.matsim.core.utils.misc.Time;
@@ -52,6 +59,8 @@ import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.SnapshotLinkWidthCalculator;
 import org.matsim.vis.snapshotwriters.VisData;
+
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
 
 /**
  * Please read the docu of QBufferItem, QLane, QLinkInternalI (arguably to be renamed into something

@@ -35,15 +35,19 @@ import org.matsim.api.core.v01.events.VehicleAbortsEvent;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.core.api.experimental.events.LaneLeaveEvent;
 import org.matsim.core.gbl.MatsimRandom;
-import org.matsim.core.mobsim.framework.MobsimDriverAgent;
-import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.pt.TransitDriverAgent;
-import org.matsim.core.mobsim.qsim.qnetsimengine.DefaultSignalizeableItem;
-import org.matsim.core.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.SignalGroupState;
-import org.matsim.core.mobsim.qsim.qnetsimengine.SignalizeableItem;
-import org.matsim.core.mobsim.qsim.qnetsimengine.VehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink;
+import edu.univalle.mobsim.qsim.qnetsimengine.DefaultSignalizeableItem;
+import edu.univalle.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.PassingVehicleQ;
+import edu.univalle.mobsim.qsim.qnetsimengine.QItem;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLaneI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer;
+import edu.univalle.mobsim.qsim.qnetsimengine.SignalGroupState;
+import edu.univalle.mobsim.qsim.qnetsimengine.SignalizeableItem;
+import edu.univalle.mobsim.qsim.qnetsimengine.VehicleQ;
 import org.matsim.core.network.LinkImpl;
 import org.matsim.core.network.NetworkImpl;
 import org.matsim.core.network.NetworkUtils;
@@ -53,6 +57,9 @@ import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.VisData;
 
+import edu.univalle.mobsim.framework.MobsimDriverAgent;
+import edu.univalle.mobsim.qsim.interfaces.MobsimVehicle;
+import edu.univalle.mobsim.qsim.pt.TransitDriverAgent;
 import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink.HandleTransitStopResult;
 
 /**
@@ -466,7 +473,7 @@ final class QueueWithBuffer extends QLaneI implements SignalizeableItem
                 return;
             }
 
-            MobsimDriverAgent driver = veh.getDriver();
+            MobsimDriverAgent driver = (MobsimDriverAgent) veh.getDriver();
 
             if (driver instanceof TransitDriverAgent) {
                 HandleTransitStopResult handleTransitStop = qLink.transitQLink.handleTransitStop(now, veh,

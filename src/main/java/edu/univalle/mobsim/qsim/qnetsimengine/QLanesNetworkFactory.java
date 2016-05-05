@@ -20,9 +20,13 @@
 
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.api.core.v01.network.Node;
+import edu.univalle.mobsim.qsim.qnetsimengine.NetsimNetworkFactory;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkInternalI;
+import edu.univalle.mobsim.qsim.qnetsimengine.QLinkLanesImpl;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetwork;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNode;
 import org.matsim.lanes.ModelLane;
 import org.matsim.lanes.data.v20.Lanes;
 import org.matsim.lanes.data.v20.LanesToLinkAssignment20;
@@ -30,34 +34,34 @@ import org.matsim.lanes.LanesUtils;
 
 import java.util.List;
 
+class QLanesNetworkFactory implements NetsimNetworkFactory
+{
 
-class QLanesNetworkFactory implements NetsimNetworkFactory {
+    private final NetsimNetworkFactory delegate;
+    private final Lanes laneDefinitions;
 
-	private final NetsimNetworkFactory delegate;
-	private final Lanes laneDefinitions;
+    public QLanesNetworkFactory(NetsimNetworkFactory delegate, Lanes laneDefintions) {
+        this.delegate = delegate;
+        this.laneDefinitions = laneDefintions;
+    }
 
-	public QLanesNetworkFactory(NetsimNetworkFactory delegate, Lanes laneDefintions){
-		this.delegate = delegate;
-		this.laneDefinitions = laneDefintions;
-	}
+    @Override
+    public QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode) {
+        QLinkInternalI ql = null;
+        LanesToLinkAssignment20 l2l = this.laneDefinitions.getLanesToLinkAssignments().get(link.getId());
+        if (l2l != null) {
+            List<ModelLane> lanes = LanesUtils.createLanes(link, l2l);
+            ql = new QLinkLanesImpl(link, network, queueNode, lanes);
+        }
+        else {
+            ql = this.delegate.createNetsimLink(link, network, queueNode);
+        }
+        return ql;
+    }
 
-	@Override
-	public QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode) {
-		QLinkInternalI ql = null;
-		LanesToLinkAssignment20 l2l = this.laneDefinitions.getLanesToLinkAssignments().get(link.getId());
-		if (l2l != null){
-			List<ModelLane> lanes = LanesUtils.createLanes(link, l2l);
-			ql = new QLinkLanesImpl(link, network, queueNode, lanes);
-		}
-		else {
-			ql = this.delegate.createNetsimLink(link, network, queueNode);
-		}
-		return ql;
-	}
-
-	@Override
-	public QNode createNetsimNode(Node node, QNetwork network) {
-		return this.delegate.createNetsimNode(node, network);
-	}
+    @Override
+    public QNode createNetsimNode(Node node, QNetwork network) {
+        return this.delegate.createNetsimNode(node, network);
+    }
 
 }

@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author dgrether
  *
  */
-class AgentCounter implements org.matsim.core.mobsim.qsim.interfaces.AgentCounter {
+class AgentCounter implements edu.univalle.mobsim.qsim.interfaces.AgentCounter {
 
     /**
      * Number of agents that have not yet reached their final activity location
