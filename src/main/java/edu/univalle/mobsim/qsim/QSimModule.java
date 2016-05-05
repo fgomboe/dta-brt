@@ -1,4 +1,4 @@
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,7 +18,7 @@ import org.matsim.pt.config.TransitConfigGroup;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
-import edu.univalle.mioQSim.mioQNetsimengine.QNetsimEnginePlugin;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEnginePlugin;
 
 public class QSimModule extends AbstractModule
 {

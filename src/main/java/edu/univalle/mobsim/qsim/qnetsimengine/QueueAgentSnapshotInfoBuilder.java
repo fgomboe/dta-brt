@@ -17,7 +17,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfoFactory;

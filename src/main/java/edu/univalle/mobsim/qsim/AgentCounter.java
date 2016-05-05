@@ -17,7 +17,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

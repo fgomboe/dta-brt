@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,7 +60,7 @@ import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.core.utils.misc.Time;
 import org.matsim.vehicles.Vehicle;
 
-import edu.univalle.mobsim.mioQSim.QSim;
+import edu.univalle.mobsim.qsim.QSim;
 
 /**
  * Coordinates the movement of vehicles on the links and the nodes.

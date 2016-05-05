@@ -17,7 +17,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -208,7 +208,7 @@ public class ActivityEngine implements MobsimEngine, ActivityHandler
                 // re-activate the agent
                 activityEndsList.add(new AgentEntry(agent, newActivityEndTime));
                 internalInterface.registerAdditionalAgentOnLink(agent);
-                ((edu.univalle.mobsim.mioQSim.AgentCounter) internalInterface.getMobsim().getAgentCounter())
+                ((edu.univalle.mobsim.qsim.AgentCounter) internalInterface.getMobsim().getAgentCounter())
                         .incLiving();
             }
         }

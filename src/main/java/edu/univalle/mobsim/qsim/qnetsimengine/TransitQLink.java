@@ -17,7 +17,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -34,7 +34,7 @@ import org.matsim.core.mobsim.qsim.pt.TransitDriverAgent;
 import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.pt.transitSchedule.api.TransitStopFacility;
 
-import edu.univalle.mioQSim.mioQNetsimengine.AbstractQLink.HandleTransitStopResult;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink.HandleTransitStopResult;
 
 /**
  * @author knagel

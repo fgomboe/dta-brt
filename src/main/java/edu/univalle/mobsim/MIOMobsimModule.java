@@ -26,7 +26,7 @@ import org.matsim.core.config.groups.ControlerConfigGroup;
 import org.matsim.core.controler.AbstractModule;
 import org.matsim.core.mobsim.jdeqsim.JDEQSimulation;
 
-import edu.univalle.mobsim.mioQSim.QSimModule;
+import edu.univalle.mobsim.qsim.QSimModule;
 
 public class MIOMobsimModule extends AbstractModule
 {

@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -65,7 +65,7 @@ import org.matsim.vis.snapshotwriters.VisMobsim;
 import org.matsim.vis.snapshotwriters.VisNetwork;
 import org.matsim.withinday.mobsim.WithinDayEngine;
 
-import edu.univalle.mioQSim.mioQNetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
 
 /**
  * This has developed over the last couple of months/years towards an increasingly pluggable module. The current (dec'2011)
@@ -129,7 +129,7 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
     private final Scenario scenario;
     private final List<ActivityHandler> activityHandlers = new ArrayList<>();
     private final List<DepartureHandler> departureHandlers = new ArrayList<>();
-    private final edu.univalle.mobsim.mioQSim.AgentCounter agentCounter;
+    private final edu.univalle.mobsim.qsim.AgentCounter agentCounter;
     // private final Collection<MobsimAgent> agents = new LinkedHashSet<>();
     private final Map<Id<Person>, MobsimAgent> agents = new LinkedHashMap<>();
     private final List<AgentSource> agentSources = new ArrayList<>();
@@ -201,7 +201,7 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
             this.events = events;
         }
         this.listenerManager = new MobsimListenerManager(this);
-        this.agentCounter = new edu.univalle.mobsim.mioQSim.AgentCounter();
+        this.agentCounter = new edu.univalle.mobsim.qsim.AgentCounter();
         this.simTimer = new MobsimTimer(sc.getConfig().qsim().getTimeStepSize());
     }
 

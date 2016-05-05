@@ -1,4 +1,4 @@
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import javax.inject.Inject;
 import javax.inject.Provider;

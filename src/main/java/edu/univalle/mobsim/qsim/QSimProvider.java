@@ -20,7 +20,7 @@
  *  * ***********************************************************************
  */
 
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
 
 import java.util.Collection;
 

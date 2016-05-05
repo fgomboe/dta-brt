@@ -17,7 +17,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.Collection;
 import java.util.Set;

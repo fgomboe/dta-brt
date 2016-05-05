@@ -1,4 +1,4 @@
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 /**
  * @author nagel

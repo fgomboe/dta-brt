@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.matsim.core.gbl.Gbl;
 

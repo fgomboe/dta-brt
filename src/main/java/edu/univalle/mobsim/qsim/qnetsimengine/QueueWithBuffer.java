@@ -17,7 +17,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -53,7 +53,7 @@ import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.VisData;
 
-import edu.univalle.mioQSim.mioQNetsimengine.AbstractQLink.HandleTransitStopResult;
+import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink.HandleTransitStopResult;
 
 /**
  * Separating out the "lane" functionality from the "link" functionality also for QLinkImpl. Ultimate goal is to unite this class here

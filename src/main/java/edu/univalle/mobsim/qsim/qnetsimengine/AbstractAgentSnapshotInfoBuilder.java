@@ -17,7 +17,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package edu.univalle.mioQSim.mioQNetsimengine;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -44,7 +44,7 @@ import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo.AgentState;
 
-import edu.univalle.mioQSim.mioQNetsimengine.QueueWithBuffer.Hole;
+import edu.univalle.mobsim.qsim.qnetsimengine.QueueWithBuffer.Hole;
 
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfoFactory;
 

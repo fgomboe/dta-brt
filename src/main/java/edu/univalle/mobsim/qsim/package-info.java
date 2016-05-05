@@ -5,4 +5,4 @@
  * @author DTA-BRT
  *
  */
-package edu.univalle.mobsim.mioQSim;
+package edu.univalle.mobsim.qsim;
