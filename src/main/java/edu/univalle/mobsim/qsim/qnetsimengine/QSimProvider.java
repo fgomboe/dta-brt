@@ -20,12 +20,9 @@
  *  * ***********************************************************************
  */
 
-package edu.univalle.mobsim.qsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import java.util.Collection;
-
-import javax.inject.Inject;
-
+import com.google.inject.*;
 import org.matsim.core.mobsim.framework.AgentSource;
 import org.matsim.core.mobsim.framework.listeners.MobsimListener;
 import org.matsim.core.mobsim.qsim.AbstractQSimPlugin;
@@ -34,10 +31,8 @@ import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
 import org.matsim.core.mobsim.qsim.interfaces.Netsim;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.Injector;
-import com.google.inject.Module;
-import com.google.inject.Provider;
+import javax.inject.Inject;
+import java.util.Collection;
 
 public class QSimProvider implements Provider<QSim>
 {

@@ -1,9 +1,10 @@
 /* *********************************************************************** *
  * project: org.matsim.*
+ * AgentCounter
  *                                                                         *
  * *********************************************************************** *
  *                                                                         *
- * copyright       : (C) 2008 by the members listed in the COPYING,        *
+ * copyright       : (C) 2010 by the members listed in the COPYING,        *
  *                   LICENSE and WARRANTY file.                            *
  * email           : info at matsim dot org                                *
  *                                                                         *
@@ -16,24 +17,45 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import org.matsim.api.core.v01.network.Link;
-import org.matsim.api.core.v01.network.Node;
-import org.matsim.core.api.internal.MatsimFactory;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkInternalI;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetwork;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+import java.util.concurrent.atomic.AtomicInteger;
+
 
 /**
+ * This class is responsible for living/lost agent counting.
+ *
+ *
  * @author dgrether
+ *
  */
-public interface NetsimNetworkFactory extends MatsimFactory
-{
+class AgentCounter implements org.matsim.core.mobsim.qsim.interfaces.AgentCounter {
 
-    QNode createNetsimNode(Node node, QNetwork network);
+    /**
+     * Number of agents that have not yet reached their final activity location
+     */
+    private final AtomicInteger living = new AtomicInteger(0);
 
-    QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode);
+    /**
+     * Number of agents that got stuck in a traffic jam and were removed from the simulation to solve a possible deadlock
+     */
+    private final AtomicInteger lost = new AtomicInteger(0);
+
+    @Override
+    public final int getLiving() {return living.get();	}
+
+    @Override
+    public final boolean isLiving() {return living.get() > 0;	}
+
+    @Override
+    public final int getLost() {return lost.get();	}
+
+    @Override
+    public final void incLost() {lost.incrementAndGet(); }
+
+    final void incLiving() {living.incrementAndGet();}
+
+    @Override
+    public final void decLiving() {living.decrementAndGet();}
 
 }

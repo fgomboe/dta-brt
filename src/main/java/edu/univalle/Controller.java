@@ -5,7 +5,7 @@ import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.controler.AbstractModule;
 import org.matsim.core.controler.Controler;
 
-import edu.univalle.mobsim.MIOMobsimModule;
+import edu.univalle.mobsim.qsim.qnetsimengine.MIOMobsimModule;
 
 public class Controller
 {

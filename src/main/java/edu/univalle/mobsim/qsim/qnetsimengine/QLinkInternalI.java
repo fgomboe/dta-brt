@@ -27,8 +27,10 @@ import org.matsim.api.core.v01.population.Person;
 import org.matsim.core.mobsim.framework.MobsimAgent;
 import org.matsim.core.mobsim.framework.MobsimDriverAgent;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QInternalI;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.vehicles.Vehicle;
 
 /**

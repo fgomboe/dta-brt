@@ -17,14 +17,12 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.qsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Queue;
 import java.util.concurrent.PriorityBlockingQueue;
-
-import javax.inject.Inject;
 
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.events.PersonStuckEvent;
@@ -37,6 +35,8 @@ import org.matsim.core.mobsim.qsim.interfaces.ActivityHandler;
 import org.matsim.core.mobsim.qsim.interfaces.AgentCounter;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
 import org.matsim.core.utils.misc.Time;
+
+import javax.inject.Inject;
 
 public class ActivityEngine implements MobsimEngine, ActivityHandler
 {
@@ -208,7 +208,7 @@ public class ActivityEngine implements MobsimEngine, ActivityHandler
                 // re-activate the agent
                 activityEndsList.add(new AgentEntry(agent, newActivityEndTime));
                 internalInterface.registerAdditionalAgentOnLink(agent);
-                ((edu.univalle.mobsim.qsim.AgentCounter) internalInterface.getMobsim().getAgentCounter())
+                ((edu.univalle.mobsim.qsim.qnetsimengine.AgentCounter) internalInterface.getMobsim().getAgentCounter())
                         .incLiving();
             }
         }

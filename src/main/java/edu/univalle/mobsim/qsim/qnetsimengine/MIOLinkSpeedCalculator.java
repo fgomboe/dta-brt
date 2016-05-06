@@ -20,8 +20,8 @@
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.matsim.api.core.v01.network.Link;
-import org.matsim.core.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 
 /**
  * A simple link speed calculator taking the vehicle's max speed and the link's
@@ -29,13 +29,12 @@ import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
  * 
  * @author mrieser / Senozon AG
  */
-public class MIOLinkSpeedCalculator implements LinkSpeedCalculator
+/*package*/ class MIOLinkSpeedCalculator implements LinkSpeedCalculator
 {
 
     @Override
     public double getMaximumVelocity(QVehicle vehicle, Link link, double time) {
-        // return Math.min(vehicle.getMaximumVelocity(), link.getFreespeed(time));
-        return 5.0;
+        return 2.0;
     }
 
 }

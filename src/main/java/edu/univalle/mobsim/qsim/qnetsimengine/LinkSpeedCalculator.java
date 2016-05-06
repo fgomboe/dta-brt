@@ -1,10 +1,9 @@
 /* *********************************************************************** *
  * project: org.matsim.*
- * AgentCounter
  *                                                                         *
  * *********************************************************************** *
  *                                                                         *
- * copyright       : (C) 2010 by the members listed in the COPYING,        *
+ * copyright       : (C) 2013 by the members listed in the COPYING,        *
  *                   LICENSE and WARRANTY file.                            *
  * email           : info at matsim dot org                                *
  *                                                                         *
@@ -17,45 +16,29 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package edu.univalle.mobsim.qsim;
 
-import java.util.concurrent.atomic.AtomicInteger;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
+import org.matsim.api.core.v01.network.Link;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 
 /**
- * This class is responsible for living/lost agent counting.
- *
- *
- * @author dgrether
- *
+ * Calculates the maximum speed a vehicle can travel with on a specific link
+ * at a specific time in a specific vehicle. If the speed should be depending
+ * on the person driving it, use vehicle.getDriver(). But remember that not
+ * every vehicle must have a Person as a driver.
+ * 
+ * @author mrieser / Senozon AG
  */
-class AgentCounter implements org.matsim.core.mobsim.qsim.interfaces.AgentCounter {
+public interface LinkSpeedCalculator
+{
 
     /**
-     * Number of agents that have not yet reached their final activity location
+     * @param vehicle
+     * @param link
+     * @param time
+     * @return the maximum speed the vehicle can travel on the given link.
      */
-    private final AtomicInteger living = new AtomicInteger(0);
-
-    /**
-     * Number of agents that got stuck in a traffic jam and were removed from the simulation to solve a possible deadlock
-     */
-    private final AtomicInteger lost = new AtomicInteger(0);
-
-    @Override
-    public final int getLiving() {return living.get();	}
-
-    @Override
-    public final boolean isLiving() {return living.get() > 0;	}
-
-    @Override
-    public final int getLost() {return lost.get();	}
-
-    @Override
-    public final void incLost() {lost.incrementAndGet(); }
-
-    final void incLiving() {living.incrementAndGet();}
-
-    @Override
-    public final void decLiving() {living.decrementAndGet();}
+    public double getMaximumVelocity(QVehicle vehicle, Link link, double time);
 
 }

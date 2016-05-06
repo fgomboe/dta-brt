@@ -1,9 +1,10 @@
 /* *********************************************************************** *
  * project: org.matsim.*
+ * SignalSystemState
  *                                                                         *
  * *********************************************************************** *
  *                                                                         *
- * copyright       : (C) 2008 by the members listed in the COPYING,        *
+ * copyright       : (C) 2009 by the members listed in the COPYING,        *
  *                   LICENSE and WARRANTY file.                            *
  * email           : info at matsim dot org                                *
  *                                                                         *
@@ -16,24 +17,14 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import org.matsim.api.core.v01.network.Link;
-import org.matsim.api.core.v01.network.Node;
-import org.matsim.core.api.internal.MatsimFactory;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkInternalI;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetwork;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
 
 /**
+ * 
  * @author dgrether
+ *
  */
-public interface NetsimNetworkFactory extends MatsimFactory
-{
-
-    QNode createNetsimNode(Node node, QNetwork network);
-
-    QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode);
-
+public enum SignalGroupState {
+	REDYELLOW, GREEN, YELLOW, RED, OFF
 }

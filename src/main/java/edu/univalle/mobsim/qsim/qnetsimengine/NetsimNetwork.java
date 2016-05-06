@@ -19,21 +19,41 @@
 
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
+import java.util.Map;
+
+import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.network.Link;
+import org.matsim.api.core.v01.network.Network;
 import org.matsim.api.core.v01.network.Node;
-import org.matsim.core.api.internal.MatsimFactory;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkInternalI;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetwork;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+import org.matsim.core.api.internal.MatsimNetworkObject;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNode;
+import org.matsim.vis.snapshotwriters.VisNetwork;
 
 /**
- * @author dgrether
+ * @author nagel
+ *
  */
-public interface NetsimNetworkFactory extends MatsimFactory
+public interface NetsimNetwork extends VisNetwork, MatsimNetworkObject
 {
+    // yyyy "extends VisNetwork" possibly a temporary fix
 
-    QNode createNetsimNode(Node node, QNetwork network);
+    @Override
+    Network getNetwork();
 
-    QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode);
+    Map<Id<Link>, ? extends NetsimLink> getNetsimLinks();
+    // yyyy this should arguable be getQLinks() or getMobsimLinks(). Esthetically less pleasing, but imho easier to use. kai, may'10
+
+    Map<Id<Node>, ? extends NetsimNode> getNetsimNodes();
+
+    /**
+     * Convenience method for getLinks().get( id ). May be renamed
+     */
+    public NetsimLink getNetsimLink(final Id<Link> id);
+
+    /**
+     * Convenience method for getNodes().get( id ). May be renamed
+     */
+    public NetsimNode getNetsimNode(final Id<Node> id);
 
 }

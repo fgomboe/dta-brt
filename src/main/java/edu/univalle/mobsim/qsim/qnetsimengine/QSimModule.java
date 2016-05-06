@@ -1,24 +1,23 @@
-package edu.univalle.mobsim.qsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
+import com.google.inject.AbstractModule;
+import com.google.inject.Provides;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.groups.NetworkConfigGroup;
 import org.matsim.core.mobsim.framework.Mobsim;
 import org.matsim.core.mobsim.qsim.AbstractQSimPlugin;
 import org.matsim.core.mobsim.qsim.ActivityEnginePlugin;
 import org.matsim.core.mobsim.qsim.PopulationPlugin;
+//import org.matsim.core.mobsim.qsim.QSimProvider;
 import org.matsim.core.mobsim.qsim.TeleportationPlugin;
 import org.matsim.core.mobsim.qsim.changeeventsengine.NetworkChangeEventsPlugin;
 import org.matsim.core.mobsim.qsim.messagequeueengine.MessageQueuePlugin;
 import org.matsim.core.mobsim.qsim.pt.TransitEnginePlugin;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEnginePlugin;
 import org.matsim.pt.config.TransitConfigGroup;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.Provides;
-
-import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEnginePlugin;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class QSimModule extends AbstractModule
 {

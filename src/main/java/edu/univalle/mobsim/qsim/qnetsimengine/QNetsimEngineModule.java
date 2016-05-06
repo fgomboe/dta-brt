@@ -1,11 +1,11 @@
 /*
  *  *********************************************************************** *
  *  * project: org.matsim.*
- *  * DefaultMobsimModule.java
+ *  * QNetsimEngineModule.java
  *  *                                                                         *
  *  * *********************************************************************** *
  *  *                                                                         *
- *  * copyright       : (C) 2015 by the members listed in the COPYING, *
+ *  * copyright       : (C) 2014 by the members listed in the COPYING, *
  *  *                   LICENSE and WARRANTY file.                            *
  *  * email           : info at matsim dot org                                *
  *  *                                                                         *
@@ -20,23 +20,18 @@
  *  * ***********************************************************************
  */
 
-package edu.univalle.mobsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import org.matsim.core.config.groups.ControlerConfigGroup;
-import org.matsim.core.controler.AbstractModule;
-import org.matsim.core.mobsim.jdeqsim.JDEQSimulation;
+import org.matsim.core.mobsim.qsim.QSim;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEngine;
 
-import edu.univalle.mobsim.qsim.QSimModule;
-
-public class MIOMobsimModule extends AbstractModule
+public class QNetsimEngineModule
 {
-    @Override
-    public void install() {
-        if (getConfig().controler().getMobsim().equals(ControlerConfigGroup.MobsimType.qsim.toString())) {
-            install(new QSimModule());
-        }
-        else if (getConfig().controler().getMobsim().equals(ControlerConfigGroup.MobsimType.JDEQSim.toString())) {
-            bindMobsim().to(JDEQSimulation.class);
-        }
+
+    public static void configure(QSim qsim) {
+        QNetsimEngine netsimEngine = new QNetsimEngine(qsim);
+        qsim.addMobsimEngine(netsimEngine);
+        qsim.addDepartureHandler(netsimEngine.getDepartureHandler());
     }
+
 }

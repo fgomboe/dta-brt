@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.qsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.apache.log4j.Logger;
 import org.matsim.core.api.internal.MatsimManager;

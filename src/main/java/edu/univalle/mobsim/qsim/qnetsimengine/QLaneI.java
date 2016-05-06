@@ -20,7 +20,8 @@
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import org.matsim.api.core.v01.Id;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QInternalI;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.VisData;
 

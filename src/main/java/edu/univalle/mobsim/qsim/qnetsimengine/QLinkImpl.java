@@ -20,20 +20,25 @@
 
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.events.LinkEnterEvent;
 import org.matsim.api.core.v01.events.Wait2LinkEvent;
 import org.matsim.api.core.v01.network.Link;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
-import org.matsim.core.mobsim.qsim.qnetsimengine.SignalGroupState;
-import org.matsim.core.mobsim.qsim.qnetsimengine.SignalizeableItem;
-import org.matsim.core.mobsim.qsim.qnetsimengine.VehicleQ;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.AbstractQLink;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.FIFOVehicleQ;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QLaneI;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkImpl;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetwork;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QueueWithBuffer;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.SignalGroupState;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.SignalizeableItem;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.TransitQLink;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.VehicleQ;
 import org.matsim.core.network.LinkImpl;
 import org.matsim.core.utils.geometry.CoordinateTransformation;
 import org.matsim.core.utils.geometry.transformations.IdentityTransformation;
@@ -43,6 +48,9 @@ import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.SnapshotLinkWidthCalculator;
 import org.matsim.vis.snapshotwriters.VisData;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Please read the docu of QBufferItem, QLane, QLinkInternalI (arguably to be renamed

@@ -1,9 +1,10 @@
 /* *********************************************************************** *
  * project: org.matsim.*
+ * QueueLink
  *                                                                         *
  * *********************************************************************** *
  *                                                                         *
- * copyright       : (C) 2008 by the members listed in the COPYING,        *
+ * copyright       : (C) 2010 by the members listed in the COPYING,        *
  *                   LICENSE and WARRANTY file.                            *
  * email           : info at matsim dot org                                *
  *                                                                         *
@@ -16,24 +17,30 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-
 package edu.univalle.mobsim.qsim.qnetsimengine;
 
+import java.util.Collection;
+
+import org.matsim.api.core.v01.Customizable;
 import org.matsim.api.core.v01.network.Link;
-import org.matsim.api.core.v01.network.Node;
-import org.matsim.core.api.internal.MatsimFactory;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkInternalI;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetwork;
-//import org.matsim.core.mobsim.qsim.qnetsimengine.QNode;
+import org.matsim.core.api.internal.MatsimNetworkObject;
+import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
+import org.matsim.vis.snapshotwriters.VisLink;
 
-/**
- * @author dgrether
- */
-public interface NetsimNetworkFactory extends MatsimFactory
-{
+public interface NetsimLink extends Customizable, VisLink, MatsimNetworkObject {
+	
+	@Override
+	Link getLink();
 
-    QNode createNetsimNode(Node node, QNetwork network);
+	void recalcTimeVariantAttributes(double time);
+	// yyyy my intuition says that this should be moved to the InternalInterface.  kai, dec'11
 
-    QLinkInternalI createNetsimLink(Link link, QNetwork network, QNode queueNode);
+
+	@Override
+	Collection<MobsimVehicle> getAllVehicles();
+	// not terribly efficient, but a possible method also for general mobsims
+
+	Collection<MobsimVehicle> getAllNonParkedVehicles();
+	// not terribly efficient, but a possible method also for general mobsims
 
 }

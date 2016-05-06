@@ -24,8 +24,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.NavigableMap;
 import java.util.Queue;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 import org.matsim.api.core.v01.Coord;
@@ -40,7 +43,10 @@ import org.matsim.core.mobsim.framework.MobsimDriverAgent;
 import org.matsim.core.mobsim.framework.PassengerAgent;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
 import org.matsim.core.mobsim.qsim.pt.TransitDriverAgent;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QItem;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QueueWithBuffer;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo.AgentState;
 

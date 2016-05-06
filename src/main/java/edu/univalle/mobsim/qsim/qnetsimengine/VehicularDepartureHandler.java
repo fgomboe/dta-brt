@@ -28,7 +28,10 @@ import org.matsim.core.config.groups.QSimConfigGroup.VehicleBehavior;
 import org.matsim.core.mobsim.framework.MobsimAgent;
 import org.matsim.core.mobsim.framework.MobsimDriverAgent;
 import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QLinkInternalI;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEngine;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.VehicularDepartureHandler;
 import org.matsim.vehicles.Vehicle;
 
 class VehicularDepartureHandler implements DepartureHandler

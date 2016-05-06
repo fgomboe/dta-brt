@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.qsim;
+package edu.univalle.mobsim.qsim.qnetsimengine;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,8 +27,6 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
@@ -46,17 +44,20 @@ import org.matsim.core.mobsim.framework.MobsimAgent;
 import org.matsim.core.mobsim.framework.MobsimTimer;
 import org.matsim.core.mobsim.framework.listeners.MobsimListener;
 import org.matsim.core.mobsim.qsim.ActivityEndRescheduler;
+//import org.matsim.core.mobsim.qsim.ActivityEngine;
 import org.matsim.core.mobsim.qsim.InternalInterface;
 import org.matsim.core.mobsim.qsim.TeleportationEngine;
 import org.matsim.core.mobsim.qsim.interfaces.ActivityHandler;
-import org.matsim.core.mobsim.qsim.interfaces.AgentCounter;
+//import org.matsim.core.mobsim.qsim.interfaces.AgentCounter;
 import org.matsim.core.mobsim.qsim.interfaces.DepartureHandler;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimEngine;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
 import org.matsim.core.mobsim.qsim.interfaces.Netsim;
 import org.matsim.core.mobsim.qsim.pt.TransitQSimEngine;
 import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork;
-import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEngine;
+//import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.core.utils.misc.Time;
 import org.matsim.vehicles.Vehicle;
 import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
@@ -65,7 +66,7 @@ import org.matsim.vis.snapshotwriters.VisMobsim;
 import org.matsim.vis.snapshotwriters.VisNetwork;
 import org.matsim.withinday.mobsim.WithinDayEngine;
 
-import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import javax.inject.Inject;
 
 /**
  * This has developed over the last couple of months/years towards an increasingly pluggable module. The current (dec'2011)
@@ -129,7 +130,7 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
     private final Scenario scenario;
     private final List<ActivityHandler> activityHandlers = new ArrayList<>();
     private final List<DepartureHandler> departureHandlers = new ArrayList<>();
-    private final edu.univalle.mobsim.qsim.AgentCounter agentCounter;
+    private final edu.univalle.mobsim.qsim.qnetsimengine.AgentCounter agentCounter;
     // private final Collection<MobsimAgent> agents = new LinkedHashSet<>();
     private final Map<Id<Person>, MobsimAgent> agents = new LinkedHashMap<>();
     private final List<AgentSource> agentSources = new ArrayList<>();
@@ -201,7 +202,7 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
             this.events = events;
         }
         this.listenerManager = new MobsimListenerManager(this);
-        this.agentCounter = new edu.univalle.mobsim.qsim.AgentCounter();
+        this.agentCounter = new edu.univalle.mobsim.qsim.qnetsimengine.AgentCounter();
         this.simTimer = new MobsimTimer(sc.getConfig().qsim().getTimeStepSize());
     }
 
@@ -494,8 +495,8 @@ public final class QSim extends Thread implements VisMobsim, Netsim, ActivityEnd
     }
 
     @Override
-    public NetsimNetwork getNetsimNetwork() {
-        return this.netEngine.getNetsimNetwork();
+    public org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork getNetsimNetwork() {
+        return (NetsimNetwork) this.netEngine.getNetsimNetwork();
     }
 
     @Override
