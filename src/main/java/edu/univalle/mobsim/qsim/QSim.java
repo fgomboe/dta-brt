@@ -43,10 +43,10 @@ import org.matsim.core.events.EventsUtils;
 import org.matsim.core.gbl.Gbl;
 import org.matsim.core.utils.misc.Time;
 import org.matsim.vehicles.Vehicle;
-import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
-import org.matsim.vis.snapshotwriters.VisData;
-import org.matsim.vis.snapshotwriters.VisMobsim;
-import org.matsim.vis.snapshotwriters.VisNetwork;
+//import org.matsim.vis.snapshotwriters.AgentSnapshotInfo;
+//import org.matsim.vis.snapshotwriters.VisData;
+//import org.matsim.vis.snapshotwriters.VisMobsim;
+//import org.matsim.vis.snapshotwriters.VisNetwork;
 import org.matsim.withinday.mobsim.WithinDayEngine;
 
 import edu.univalle.mobsim.framework.AgentSource;

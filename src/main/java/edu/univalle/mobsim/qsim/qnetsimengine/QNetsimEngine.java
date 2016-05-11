@@ -44,7 +44,7 @@ import org.matsim.core.config.groups.QSimConfigGroup.VehicleBehavior;
 import org.matsim.core.gbl.Gbl;
 import edu.univalle.mobsim.qsim.qnetsimengine.AbstractAgentSnapshotInfoBuilder;
 import edu.univalle.mobsim.qsim.qnetsimengine.AbstractQLink;
-import edu.univalle.mobsim.qsim.qnetsimengine.DefaultLinkSpeedCalculator;
+import edu.univalle.mobsim.qsim.qnetsimengine.MIOLinkSpeedCalculator;
 import edu.univalle.mobsim.qsim.qnetsimengine.DefaultQNetworkFactory;
 import edu.univalle.mobsim.qsim.qnetsimengine.EquiDistAgentSnapshotInfoBuilder;
 import edu.univalle.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
