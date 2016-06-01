@@ -6,6 +6,7 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.scenario.ScenarioUtils;
 javaaddpath C:\MATSim\workspace_mars\dta-brt\target\classes\edu\univalle\
 import edu.univalle.population.*;
+javaaddpath C:\Users\UV\git\matsim\matsim\target\classes\
 
 o=Config_prueba;
 javaMethod('hacer', o);
@@ -21,7 +22,7 @@ config1.setParam('transit', 'transitModes', 'pt');
 config1.setParam('global', 'coordinateSystem', 'EPSG:3115');
 config1.setParam('global', 'randomSeed', '5399998864266990000');
 
-prueba1.write('prueba14.xml');
+prueba1.write('prueba16.xml');
 %ConfigUtils.modifyFilePaths(config1, 'input/');
 
 scenario = ScenarioUtils.loadScenario(config1);

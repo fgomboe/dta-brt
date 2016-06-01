@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">
+<!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd"
+	[
+		<!ENTITY OUTBASE "./output">
+		<!ENTITY INBASE  "./input">
+	]
+>
 <config>
 
 <!-- ====================================================================== -->
@@ -8,7 +13,7 @@
 		<param name="mutationAffectsDuration" value="true" />
 
 		<!-- Default:1800.0; Defines how many seconds a time mutation can maximally shift a time. -->
-		<param name="mutationRange" value="15.0" />
+		<param name="mutationRange" value="7200.0" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -32,7 +37,7 @@
 		<param name="firstIteration" value="0" />
 
 		<!-- Default=1000;  -->
-		<param name="lastIteration" value="1000" />
+		<param name="lastIteration" value="2" />
 
 		<!-- Defines which mobility simulation will be used. Currently supported: qsim JDEQSim 
 		Depending on the chosen mobsim, you'll have to add additional config modules to configure the corresponding mobsim.
@@ -57,7 +62,7 @@
 		<param name="writeEventsInterval" value="10" />
 
 		<!-- iterationNumber % writePlansInterval == 0 defines (hopefully) in which iterations plans are written to a file. `0' disables plans writing completely.  Some plans in early iterations are always written -->
-		<param name="writePlansInterval" value="10" />
+		<param name="writePlansInterval" value="1" />
 
 		<!-- iterationNumber % writeSnapshotsInterval == 0 defines in which iterations snapshots are written to a file. `0' disables snapshots writing completely -->
 		<param name="writeSnapshotsInterval" value="1" />
@@ -105,7 +110,7 @@
 <!-- ====================================================================== -->
 
 	<module name="global" >
-		<param name="coordinateSystem" value="Atlantis" />
+		<param name="coordinateSystem" value="EPSG:3115" />
 
 		<!-- "global" number of threads.  This number is used, e.g., for replanning, but NOT in the mobsim.  This can typically be set to as many cores as you have available, or possibly even slightly more. -->
 		<param name="numberOfThreads" value="2" />
@@ -125,17 +130,17 @@
 	<module name="linkStats" >
 
 		<!-- Specifies over how many iterations the link volumes should be averaged that are used for the link statistics. Use 1 or 0 to only use the link volumes of a single iteration. This values cannot be larger than the value specified for writeLinkStatsInterval -->
-		<param name="averageLinkStatsOverIterations" value="5" />
+		<param name="averageLinkStatsOverIterations" value="1" />
 
 		<!-- Specifies how often the link stats should be calculated and written. Use 0 to disable the generation of link stats. -->
-		<param name="writeLinkStatsInterval" value="10" />
+		<param name="writeLinkStatsInterval" value="1" />
 	</module>
 
 <!-- ====================================================================== -->
 
 	<module name="network" >
 		<param name="inputChangeEventsFile" value="null" />
-		<param name="inputNetworkFile" value="null" />
+		<param name="inputNetworkFile" value="./input/specialNetwork.xml" />
 		<param name="laneDefinitionsFile" value="null" />
 		<param name="timeVariantNetwork" value="false" />
 	</module>
@@ -158,7 +163,7 @@
 	<module name="planCalcScore" >
 
 		<!-- logit model scale parameter. default: 1.  Has name and default value for historical reasons (see Bryan Raney's phd thesis). -->
-		<param name="BrainExpBeta" value="1.0" />
+		<param name="BrainExpBeta" value="2.0" />
 
 		<param name="PathSizeLogitBeta" value="1.0" />
 
@@ -172,17 +177,32 @@
 		<param name="usingOldScoringBelowZeroUtilityDuration" value="false" />
 
 		<!-- write a plans file in each iteration directory which contains what each agent actually did, and the score it received. -->
-		<param name="writeExperiencedPlans" value="false" />
+		<param name="writeExperiencedPlans" value="true" />
 
 		<parameterset type="scoringParameters" >
-			<param name="earlyDeparture" value="-0.0" />
-			<param name="lateArrival" value="-18.0" />
+			<param name="earlyDeparture" value="0.0" />
+			<param name="lateArrival" value="0.0" />
 			<param name="marginalUtilityOfMoney" value="1.0" />
 			<param name="performing" value="6.0" />
 			<param name="subpopulation" value="null" />
 			<param name="utilityOfLineSwitch" value="-1.0" />
-			<param name="waiting" value="-0.0" />
-			<param name="waitingPt" value="-6.0" />
+			<param name="waiting" value="0.0" />
+			<param name="waitingPt" value="-2.0" />
+
+			<parameterset type="activityParams" >
+				<param name="activityType" value="dummy" />
+				<param name="closingTime" value="undefined" />
+				<param name="earliestEndTime" value="undefined" />
+				<param name="latestStartTime" value="undefined" />
+				<param name="minimalDuration" value="undefined" />
+				<param name="openingTime" value="undefined" />
+				<param name="priority" value="1.0" />
+				<param name="scoringThisActivityAtAll" value="true" />
+				<param name="typicalDuration" value="12:00:00" />
+
+				<!-- method to compute score at typical duration.  Use uniform for backwards compatibility (all activities same score; higher proba to drop long acts). -->
+				<param name="typicalDurationScoreComputation" value="uniform" />
+			</parameterset>
 
 			<parameterset type="modeParams" >
 
@@ -193,7 +213,7 @@
 				<param name="marginalUtilityOfDistance_util_m" value="0.0" />
 
 				<!-- [utils/hr] additional marginal utility of traveling.  normally negative.  this comes on top of the opportunity cost of time -->
-				<param name="marginalUtilityOfTraveling_util_hr" value="-6.0" />
+				<param name="marginalUtilityOfTraveling_util_hr" value="0.0" />
 
 				<param name="mode" value="car" />
 				<param name="monetaryDistanceRate" value="0.0" />
@@ -208,7 +228,7 @@
 				<param name="marginalUtilityOfDistance_util_m" value="0.0" />
 
 				<!-- [utils/hr] additional marginal utility of traveling.  normally negative.  this comes on top of the opportunity cost of time -->
-				<param name="marginalUtilityOfTraveling_util_hr" value="-6.0" />
+				<param name="marginalUtilityOfTraveling_util_hr" value="0.0" />
 
 				<param name="mode" value="pt" />
 				<param name="monetaryDistanceRate" value="0.0" />
@@ -271,7 +291,7 @@
 		<!-- Path to a file containing person attributes (required file format: ObjectAttributes). -->
 		<param name="inputPersonAttributesFile" value="null" />
 
-		<param name="inputPlansFile" value="null" />
+		<param name="inputPlansFile" value="./input/plans_sitm_cali_01.04.2014_40porc_final_dummy.xml" />
 
 		<!-- Defines how routes are stored in memory. Currently supported: LinkNetworkRoute, CompressedNetworkRoute. -->
 		<param name="networkRouteType" value="LinkNetworkRoute" />
@@ -378,14 +398,14 @@
 <!-- ====================================================================== -->
 
 	<module name="qsim" >
-		<param name="endTime" value="undefined" />
+		<param name="endTime" value="28:00:00" />
 		<param name="flowCapacityFactor" value="1.0" />
 
 		<!-- decides if waiting vehicles enter the network after or before the already driving vehicles were moved. Default: false -->
 		<param name="insertingWaitingVehiclesBeforeDrivingVehicles" value="false" />
 
 		<!-- default: FIFO; options: FIFO PassingQ -->
-		<param name="linkDynamics" value="FIFO" />
+		<param name="linkDynamics" value="PassingQ" />
 
 		<!-- The (initial) width of the links of the network. Use positive floating point values. -->
 		<param name="linkWidth" value="30.0" />
@@ -409,7 +429,7 @@
 		<param name="snapshotStyle" value="equiDist" />
 
 		<param name="snapshotperiod" value="00:00:00" />
-		<param name="startTime" value="undefined" />
+		<param name="startTime" value="00:00:00" />
 		<param name="storageCapacityFactor" value="1.0" />
 
 		<!-- time in seconds.  Time after which the frontmost vehicle on a link is called `stuck' if it does not move. -->
@@ -468,6 +488,60 @@
 
 		<!-- name of PlanSelector for plans removal.  Possible defaults: WorstPlanSelector SelectRandom SelectExpBetaForRemoval ChangeExpBetaForRemoval PathSizeLogitSelectorForRemoval . The current default, WorstPlanSelector is not a good choice from a discrete choice theoretical perspective. Alternatives, however, have not been systematically tested. kai, feb'12 -->
 		<param name="planSelectorForRemoval" value="WorstPlanSelector" />
+
+		<parameterset type="strategysettings" >
+
+			<!-- iteration after which strategy will be disabled.  most useful for ``innovative'' strategies (new routes, new times, ...). Normally, better use fractionOfIterationsToDisableInnovation -->
+			<param name="disableAfterIteration" value="-1" />
+
+			<!-- path to external executable (if applicable) -->
+			<param name="executionPath" value="null" />
+
+			<!-- name of strategy.  Possible default names: KeepLastSelected BestScore ChangeExpBeta SelectExpBeta SelectRandom SelectPathSizeLogit  (selectors), ReRoute TimeAllocationMutator ChangeLegMode TimeAllocationMutator_ReRoute ChangeSingleLegMode ChangeSingleTripMode SubtourModeChoice ChangeTripMode TripSubtourModeChoice  (innovative strategies). -->
+			<param name="strategyName" value="ChangeExpBeta" />
+
+			<!-- subpopulation to which the strategy applies. "null" refers to the default population, that is, the set of persons for which no explicit subpopulation is defined (ie no subpopulation attribute) -->
+			<param name="subpopulation" value="null" />
+
+			<!-- weight of a strategy: for each agent, a strategy will be selected with a probability proportional to its weight -->
+			<param name="weight" value="0.8" />
+		</parameterset>
+
+		<parameterset type="strategysettings" >
+
+			<!-- iteration after which strategy will be disabled.  most useful for ``innovative'' strategies (new routes, new times, ...). Normally, better use fractionOfIterationsToDisableInnovation -->
+			<param name="disableAfterIteration" value="-1" />
+
+			<!-- path to external executable (if applicable) -->
+			<param name="executionPath" value="null" />
+
+			<!-- name of strategy.  Possible default names: KeepLastSelected BestScore ChangeExpBeta SelectExpBeta SelectRandom SelectPathSizeLogit  (selectors), ReRoute TimeAllocationMutator ChangeLegMode TimeAllocationMutator_ReRoute ChangeSingleLegMode ChangeSingleTripMode SubtourModeChoice ChangeTripMode TripSubtourModeChoice  (innovative strategies). -->
+			<param name="strategyName" value="ReRoute" />
+
+			<!-- subpopulation to which the strategy applies. "null" refers to the default population, that is, the set of persons for which no explicit subpopulation is defined (ie no subpopulation attribute) -->
+			<param name="subpopulation" value="null" />
+
+			<!-- weight of a strategy: for each agent, a strategy will be selected with a probability proportional to its weight -->
+			<param name="weight" value="0.1" />
+		</parameterset>
+
+		<parameterset type="strategysettings" >
+
+			<!-- iteration after which strategy will be disabled.  most useful for ``innovative'' strategies (new routes, new times, ...). Normally, better use fractionOfIterationsToDisableInnovation -->
+			<param name="disableAfterIteration" value="-1" />
+
+			<!-- path to external executable (if applicable) -->
+			<param name="executionPath" value="null" />
+
+			<!-- name of strategy.  Possible default names: KeepLastSelected BestScore ChangeExpBeta SelectExpBeta SelectRandom SelectPathSizeLogit  (selectors), ReRoute TimeAllocationMutator ChangeLegMode TimeAllocationMutator_ReRoute ChangeSingleLegMode ChangeSingleTripMode SubtourModeChoice ChangeTripMode TripSubtourModeChoice  (innovative strategies). -->
+			<param name="strategyName" value="TimeAllocationMutator" />
+
+			<!-- subpopulation to which the strategy applies. "null" refers to the default population, that is, the set of persons for which no explicit subpopulation is defined (ie no subpopulation attribute) -->
+			<param name="subpopulation" value="null" />
+
+			<!-- weight of a strategy: for each agent, a strategy will be selected with a probability proportional to its weight -->
+			<param name="weight" value="0.1" />
+		</parameterset>
 	</module>
 
 <!-- ====================================================================== -->
@@ -495,16 +569,16 @@
 		<param name="transitModes" value="pt" />
 
 		<!-- Input file containing the transit schedule to be simulated. -->
-		<param name="transitScheduleFile" value="null" />
+		<param name="transitScheduleFile" value="./input/transitSchedule_time_MAX_VEHICLES.xml" />
 
 		<!-- Optional input file containing additional attributes for transit stop facilities, stored as ObjectAttributes. -->
 		<param name="transitStopsAttributesFile" value="null" />
 
 		<!-- Set this parameter to true if transit should be simulated, false if not. -->
-		<param name="useTransit" value="false" />
+		<param name="useTransit" value="true" />
 
 		<!-- Input file containing the vehicles used by the departures in the transit schedule. -->
-		<param name="vehiclesFile" value="null" />
+		<param name="vehiclesFile" value="./input/transitVehicles_40porc_MAX_VEHICLES.xml" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -515,13 +589,13 @@
 		<param name="additionalTransferTime" value="0.0" />
 
 		<!-- step size to increase searchRadius if no stops are found -->
-		<param name="extensionRadius" value="200.0" />
+		<param name="extensionRadius" value="100.0" />
 
 		<!-- maximum beeline distance between stops that agents could transfer to by walking -->
 		<param name="maxBeelineWalkConnectionDistance" value="100.0" />
 
 		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
-		<param name="searchRadius" value="1000.0" />
+		<param name="searchRadius" value="200.0" />
 	</module>
 
 <!-- ====================================================================== -->
@@ -566,18 +640,18 @@
 		<!-- (do not use except of you have to) There was a problem with pt interaction scoring.  Some people solved it by overwriting the parameters of the pt interaction activity type.  Doing this now throws an Exception.  If you still insist on doing this, set the following to true. -->
 		<param name="isAbleToOverwritePtInteractionParams" value="false" />
 
-		<param name="isGeneratingBoardingDeniedEvent" value="false" />
+		<param name="isGeneratingBoardingDeniedEvent" value="true" />
 
 		<!-- if an approximation of the opportunity cost of time is included into the radius calculation for location choice.`true' will be faster, but it is an approximation.  Default is `true'; `false' is available for backwards compatibility. -->
 		<param name="isUsingOpportunityCostOfTimeForLocationChoice" value="true" />
 
 		<param name="logitScaleParamForPlansRemoval" value="1.0" />
 
-		<!-- Options: [Lorg.matsim.core.config.groups.VspExperimentalConfigGroup$VspDefaultsCheckingLevel;@1de0aca6.  When violating VSP defaults, this results in nothing, logfile infos, logfile warnings, or aborts.  Members of VSP should use `abort' or talk to kai. -->
+		<!-- Options: [Lorg.matsim.core.config.groups.VspExperimentalConfigGroup$VspDefaultsCheckingLevel;@5387f9e0.  When violating VSP defaults, this results in nothing, logfile infos, logfile warnings, or aborts.  Members of VSP should use `abort' or talk to kai. -->
 		<param name="vspDefaultsCheckingLevel" value="ignore" />
 
 		<!-- if true then writes output_events in output directory.  default is `false'. Will only work when lastIteration is multiple of events writing interval -->
-		<param name="writingOutputEvents" value="false" />
+		<param name="writingOutputEvents" value="true" />
 	</module>
 
 <!-- ====================================================================== -->
