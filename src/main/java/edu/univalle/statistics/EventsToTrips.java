@@ -182,15 +182,17 @@ public final class EventsToTrips implements PersonDepartureEventHandler, PersonA
         LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(event.getVehicleId());
         // transit drivers are not considered to travel by transit
         // passenger must be waiting for a waitingTime to be set
-        if (transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null
-                && !event.getPersonId().equals(lineAndRoute.driverId)) {
-            transitTravels.put(event.getPersonId(), new PendingTransitTravel(event.getVehicleId(),
-                    lineAndRoute.lastFacilityId, event.getTime() - transitWaits.get(event.getPersonId())));
+        if (transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null) {
+            if (!event.getPersonId().equals(lineAndRoute.driverId)) {
+                transitTravels.put(event.getPersonId(), new PendingTransitTravel(event.getVehicleId(),
+                        lineAndRoute.lastFacilityId, event.getTime() - transitWaits.get(event.getPersonId())));
+            }
         }
-        else if (!transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null
-                && !event.getPersonId().equals(lineAndRoute.driverId)) {
-            transitTravels.put(event.getPersonId(),
-                    new PendingTransitTravel(event.getVehicleId(), lineAndRoute.lastFacilityId, 0));
+        else if (!transitWaits.containsKey(event.getPersonId()) && lineAndRoute != null) {
+            if (!event.getPersonId().equals(lineAndRoute.driverId)) {
+                transitTravels.put(event.getPersonId(),
+                        new PendingTransitTravel(event.getVehicleId(), lineAndRoute.lastFacilityId, 0));
+            }
         }
     }
 
