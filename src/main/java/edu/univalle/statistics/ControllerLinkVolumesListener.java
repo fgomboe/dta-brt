@@ -24,7 +24,7 @@ public class ControllerLinkVolumesListener implements StartupListener, Iteration
     private LinkVolumesPax analyzer;
     private CsvWriter writer;
     Controler controler;
-    private String outputFile = "output/linkVolumes_17-19.csv";
+    private String outputFile = "stats/linkVolumes_17-19.csv";
 
     public ControllerLinkVolumesListener(int startTime, int endTime, int timeBinSize) {
         this.startTime = startTime;
@@ -89,13 +89,6 @@ public class ControllerLinkVolumesListener implements StartupListener, Iteration
                     e.printStackTrace();
                 }
             }
-        }
-
-        try {
-            writer.writeRecord(new String[] {});
-        }
-        catch (IOException e) {
-            e.printStackTrace();
         }
 
     }
