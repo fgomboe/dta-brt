@@ -85,27 +85,10 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
             for (Id<TransitStopFacility> facility : facilities) {
                 int[] simVolumes = analyzer.getVolumesForRouteAndFacility(lineRoute, facility);
                 int[] realVolumes = readRealVolumes();
-                if (!lineRouteFacilityGEH.containsKey(lineRoute)) {
-                    List<FacilityGEH> facilityGEH = new ArrayList<>();
-                    FacilityGEH facGEH = new FacilityGEH(facility);
-                    facGEH.entering = calcGEH(simVolumes[0], realVolumes[0]);
-                    facGEH.leaving = calcGEH(simVolumes[1], realVolumes[1]);
-                    facGEH.passthrough = calcGEH(simVolumes[2], realVolumes[2]);
-                    facGEH.totalVolume = calcGEH(simVolumes[3], realVolumes[3]);
-                    facilityGEH.add(facGEH);
-                    lineRouteFacilityGEH.put(lineRoute, facilityGEH);
-                }
-                else if (checkIdInFacilityVolumeList(facility, lineRouteFacilityGEH.get(lineRoute)) == -1) {
-                    FacilityGEH facGEH = new FacilityGEH(facility);
-                    facGEH.entering = calcGEH(simVolumes[0], realVolumes[0]);
-                    facGEH.leaving = calcGEH(simVolumes[1], realVolumes[1]);
-                    facGEH.passthrough = calcGEH(simVolumes[2], realVolumes[2]);
-                    facGEH.totalVolume = calcGEH(simVolumes[3], realVolumes[3]);
-                    lineRouteFacilityGEH.get(lineRoute).add(facGEH);
-                }
-                System.out.println("listo con los GEHs");
+                mapGEHForLinerouteAndFacility(simVolumes, realVolumes, lineRoute, facility);
             }
         }
+        writeGEHs();
     }
 
     private int checkIdInFacilityVolumeList(Id<TransitStopFacility> id, List<FacilityGEH> list) {
@@ -153,6 +136,27 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         }
     }
 
+    private void writeGEHs() {
+        for (Map.Entry<String, List<FacilityGEH>> entry : lineRouteFacilityGEH.entrySet()) {
+            openWriter("stats/GEH-" + entry.getKey() + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
+                    + (int) Math.ceil((double) endTime / 3600) + ".csv");
+            for (FacilityGEH facGEH : entry.getValue()) {
+                try {
+                    writer.write(facGEH.facilityId.toString());
+                    writer.write(String.valueOf(facGEH.entering));
+                    writer.write(String.valueOf(facGEH.leaving));
+                    writer.write(String.valueOf(facGEH.passthrough));
+                    writer.write(String.valueOf(facGEH.totalVolume));
+                    writer.endRecord();
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            closeWriter();
+        }
+    }
+
     private void openReader(String inputFile) {
         try {
             reader = new CsvReader(inputFile);
@@ -170,10 +174,10 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         int[] volumes = new int[4];
         try {
             reader.readRecord();
-            volumes[0] = reader.getIndex(volumeVariables[1]);
-            volumes[1] = reader.getIndex(volumeVariables[2]);
-            volumes[2] = reader.getIndex(volumeVariables[3]);
-            volumes[3] = reader.getIndex(volumeVariables[4]);
+            volumes[0] = Integer.parseInt(reader.get(volumeVariables[1]));
+            volumes[1] = Integer.parseInt(reader.get(volumeVariables[2]));
+            volumes[2] = Integer.parseInt(reader.get(volumeVariables[3]));
+            volumes[3] = Integer.parseInt(reader.get(volumeVariables[4]));
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -182,7 +186,32 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         return volumes;
     }
 
+    private void mapGEHForLinerouteAndFacility(int[] simVolumes, int[] realVolumes, String lineRoute,
+            Id<TransitStopFacility> facility) {
+        if (!lineRouteFacilityGEH.containsKey(lineRoute)) {
+            List<FacilityGEH> facilityGEH = new ArrayList<>();
+            FacilityGEH facGEH = new FacilityGEH(facility);
+            facGEH.entering = calcGEH(simVolumes[0], realVolumes[0]);
+            facGEH.leaving = calcGEH(simVolumes[1], realVolumes[1]);
+            facGEH.passthrough = calcGEH(simVolumes[2], realVolumes[2]);
+            facGEH.totalVolume = calcGEH(simVolumes[3], realVolumes[3]);
+            facilityGEH.add(facGEH);
+            lineRouteFacilityGEH.put(lineRoute, facilityGEH);
+        }
+        else if (checkIdInFacilityVolumeList(facility, lineRouteFacilityGEH.get(lineRoute)) == -1) {
+            FacilityGEH facGEH = new FacilityGEH(facility);
+            facGEH.entering = calcGEH(simVolumes[0], realVolumes[0]);
+            facGEH.leaving = calcGEH(simVolumes[1], realVolumes[1]);
+            facGEH.passthrough = calcGEH(simVolumes[2], realVolumes[2]);
+            facGEH.totalVolume = calcGEH(simVolumes[3], realVolumes[3]);
+            lineRouteFacilityGEH.get(lineRoute).add(facGEH);
+        }
+    }
+
     private double calcGEH(double sim, double real) {
+        if (sim == real)
+            return 0.0;
+
         double sqDiff = Math.pow(sim - real, 2.0);
         double sum = sim + real;
         return Math.sqrt(2 * (sqDiff / sum));
