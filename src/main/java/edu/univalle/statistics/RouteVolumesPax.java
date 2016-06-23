@@ -90,8 +90,8 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
             LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(event.getVehicleId());
             if (lineAndRoute != null) {
                 if (!event.getPersonId().equals(lineAndRoute.driverId)) {
-                    getVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).entering++;
-                    getVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).totalVolume++;
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).entering++;
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).totalVolume++;
                 }
             }
         }
@@ -118,14 +118,14 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
 
                 if (checkIdInFacilityVolumeList(lineAndRoute.previousFacilityId,
                         lineRouteFacilityVolumes.get(lineRoute)) != -1) {
-                    getVolumesForRouteAndFacility(lineAndRoute,
-                            lineAndRoute.lastFacilityId).totalVolume = getVolumesForRouteAndFacility(lineAndRoute,
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute,
+                            lineAndRoute.lastFacilityId).totalVolume = getFacilityVolumesForRouteAndFacility(lineAndRoute,
                                     lineAndRoute.previousFacilityId).totalVolume;
 
-                    getVolumesForRouteAndFacility(lineAndRoute,
-                            lineAndRoute.lastFacilityId).passthrough = getVolumesForRouteAndFacility(lineAndRoute,
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute,
+                            lineAndRoute.lastFacilityId).passthrough = getFacilityVolumesForRouteAndFacility(lineAndRoute,
                                     lineAndRoute.previousFacilityId).passthrough
-                                    + getVolumesForRouteAndFacility(lineAndRoute,
+                                    + getFacilityVolumesForRouteAndFacility(lineAndRoute,
                                             lineAndRoute.previousFacilityId).entering;
                 }
             }
@@ -138,9 +138,9 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
             LineAndRoute lineAndRoute = transitVehicle2currentRoute.get(event.getVehicleId());
             if (lineAndRoute != null) {
                 if (!event.getPersonId().equals(lineAndRoute.driverId)) {
-                    getVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).leaving++;
-                    getVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).totalVolume--;
-                    getVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).passthrough--;
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).leaving++;
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).totalVolume--;
+                    getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).passthrough--;
                 }
             }
         }
@@ -155,7 +155,7 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
         }
     }
 
-    private FacilityVolumes getVolumesForRouteAndFacility(LineAndRoute lineAndRoute, Id<TransitStopFacility> id) {
+    private FacilityVolumes getFacilityVolumesForRouteAndFacility(LineAndRoute lineAndRoute, Id<TransitStopFacility> id) {
         String lineRoute = lineAndRoute.transitLineId.toString() + "_" + lineAndRoute.transitRouteId.toString();
         int posOfFacility = checkIdInFacilityVolumeList(id, lineRouteFacilityVolumes.get(lineRoute));
         if (posOfFacility != -1) {
