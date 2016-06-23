@@ -22,8 +22,6 @@ import edu.univalle.utils.CsvWriter;
 
 public class ControllerRouteVolumesListener implements StartupListener, IterationEndsListener
 {
-    // TODO Change class, because this is a copy of 'ControllerLinkVolumesListener.java'
-
     private final static Logger log = Logger.getLogger(JourneyTimes.class);
 
     private final int startTime;
@@ -57,6 +55,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         }
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void notifyStartup(StartupEvent event) {
         controler = event.getControler();
@@ -215,5 +214,14 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         double sqDiff = Math.pow(sim - real, 2.0);
         double sum = sim + real;
         return Math.sqrt(2 * (sqDiff / sum));
+    }
+
+    public void getGEHMatrix() {
+        // TODO write function to return GEH cube
+    }
+
+    public int getWorstGEH() {
+        // TODO write function to return the worst GEH of the cube
+        return 0;
     }
 }
