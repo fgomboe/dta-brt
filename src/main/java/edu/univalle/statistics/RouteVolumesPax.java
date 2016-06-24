@@ -126,6 +126,22 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
                 getFacilityVolumesForRouteAndFacility(lineAndRoute, lineAndRoute.lastFacilityId).leaving++;
             }
         }
+
+        // This if checks if the event is ahead of the endTime to make aggregation of volumes
+        if (event.getTime() > endTime) {
+            for (Map.Entry<String, List<FacilityVolumes>> entry : lineRouteFacilityVolumes.entrySet()) {
+                entry.getValue().get(0).totalVolume = entry.getValue().get(0).entering;
+                entry.getValue().get(0).passthrough = 0;
+
+                for (int iii = 1; iii < entry.getValue().size(); ++iii) {
+                    entry.getValue().get(iii).totalVolume = entry.getValue().get(iii - 1).totalVolume
+                            + entry.getValue().get(iii).entering - entry.getValue().get(iii).leaving;
+
+                    entry.getValue().get(iii).passthrough = entry.getValue().get(iii - 1).passthrough
+                            + entry.getValue().get(iii - 1).entering - entry.getValue().get(iii).leaving;
+                }
+            }
+        }
     }
 
     private FacilityVolumes getFacilityVolumesForRouteAndFacility(LineAndRoute lineAndRoute,
