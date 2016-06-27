@@ -29,6 +29,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
 
     private final String std_code = "input/std_code.csv";
     private final String nodeAttStr = "./input/specialNodeAttributes.xml";
+    private final String inputDirectory = "./input/stats/volumes";
     private final int startTime;
     private final int endTime;
     private RouteVolumesPax analyzer;
@@ -79,16 +80,10 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         String[] lineRoutes = analyzer.getLineRoutes();
         for (String lineRoute : lineRoutes) {
             // write results to external csv file
-            openWriter("stats/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
-                    + (int) Math.ceil((double) endTime / 3600) + ".csv");
             writeSimVolumes(lineRoute);
-            closeWriter();
-            log.info("Results written to file: stats/Volumes-" + lineRoute + "_"
-                    + (int) Math.ceil((double) startTime / 3600) + "-" + (int) Math.ceil((double) endTime / 3600)
-                    + ".csv");
 
             // compute GEH index for every measurement
-            openReader("stats/input/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
+            openReader(inputDirectory + "/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
                     + (int) Math.ceil((double) endTime / 3600) + ".csv");
             List<Id<TransitStopFacility>> facilities = analyzer.getFacilities(lineRoute);
             for (Id<TransitStopFacility> facility : facilities) {
@@ -131,6 +126,9 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
     }
 
     private void writeSimVolumes(String lineRoute) {
+        openWriter("stats/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
+                + (int) Math.ceil((double) endTime / 3600) + ".csv");
+
         List<Id<TransitStopFacility>> facilities = analyzer.getFacilities(lineRoute);
         for (Id<TransitStopFacility> facility : facilities) {
             try {
@@ -143,6 +141,10 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
                 e.printStackTrace();
             }
         }
+
+        closeWriter();
+        log.info("Volumes written to file: stats/Volumes-" + lineRoute + "_"
+                + (int) Math.ceil((double) startTime / 3600) + "-" + (int) Math.ceil((double) endTime / 3600) + ".csv");
     }
 
     private void writeGEHs() {
@@ -163,6 +165,9 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
                 }
             }
             closeWriter();
+            log.info("GEHs written to file: stats/GEH-" + entry.getKey() + "_"
+                    + (int) Math.ceil((double) startTime / 3600) + "-" + (int) Math.ceil((double) endTime / 3600)
+                    + ".csv");
         }
     }
 
