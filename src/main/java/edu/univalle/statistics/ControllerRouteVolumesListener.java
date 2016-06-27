@@ -61,7 +61,6 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         controler = event.getControler();
         analyzer = new RouteVolumesPax(startTime, endTime);
         controler.getEvents().addHandler(analyzer);
-
     }
 
     @Override
@@ -216,12 +215,38 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         return Math.sqrt(2 * (sqDiff / sum));
     }
 
-    public void getGEHMatrix() {
-        // TODO write function to return GEH cube
+    public Map<String, double[][]> getGEHMatrix() {
+        Map<String, double[][]> gehCube = new HashMap<>();
+        for (Map.Entry<String, List<FacilityGEH>> lineRouteFacGEH : lineRouteFacilityGEH.entrySet()) {
+            double[][] gehValues = new double[lineRouteFacGEH.getValue().size()][4];
+            int rowCounter = 0;
+            for (FacilityGEH facGEH : lineRouteFacGEH.getValue()) {
+                gehValues[rowCounter][0] = facGEH.entering;
+                gehValues[rowCounter][1] = facGEH.leaving;
+                gehValues[rowCounter][2] = facGEH.passthrough;
+                gehValues[rowCounter][3] = facGEH.totalVolume;
+                rowCounter++;
+            }
+            gehCube.put(lineRouteFacGEH.getKey(), gehValues);
+        }
+
+        return gehCube;
     }
 
-    public int getWorstGEH() {
-        // TODO write function to return the worst GEH of the cube
-        return 0;
+    public double getWorstGEH() {
+        double worstGEH = 0.0;
+        for (List<FacilityGEH> facGEH : lineRouteFacilityGEH.values()) {
+            for (FacilityGEH geh : facGEH) {
+                worstGEH = geh.entering > worstGEH ? geh.entering : worstGEH;
+                worstGEH = geh.leaving > worstGEH ? geh.leaving : worstGEH;
+                worstGEH = geh.passthrough > worstGEH ? geh.passthrough : worstGEH;
+                worstGEH = geh.totalVolume > worstGEH ? geh.totalVolume : worstGEH;
+            }
+        }
+        return worstGEH;
+    }
+
+    public int getNumberOfDepartures(String lineRoute) {
+        return analyzer.getNumberOfDepartures(lineRoute);
     }
 }
