@@ -16,14 +16,19 @@ import org.matsim.core.controler.events.StartupEvent;
 import org.matsim.core.controler.listener.IterationEndsListener;
 import org.matsim.core.controler.listener.StartupListener;
 import org.matsim.pt.transitSchedule.api.TransitStopFacility;
+import org.matsim.utils.objectattributes.ObjectAttributes;
+import org.matsim.utils.objectattributes.ObjectAttributesXmlReader;
 
 import edu.univalle.utils.CsvReader;
 import edu.univalle.utils.CsvWriter;
+import edu.univalle.utils.Map_Codes;
 
 public class ControllerRouteVolumesListener implements StartupListener, IterationEndsListener
 {
     private final static Logger log = Logger.getLogger(JourneyTimes.class);
 
+    private final String std_code = "input/std_code.csv";
+    private final String nodeAttStr = "./input/specialNodeAttributes.xml";
     private final int startTime;
     private final int endTime;
     private RouteVolumesPax analyzer;
@@ -33,9 +38,15 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
     private static final String volumeVariables[] = { "id", "entering", "leaving", "passthrough", "totalVolume" };
     private Map<String, List<FacilityGEH>> lineRouteFacilityGEH = new HashMap<>();
 
+    Map<Integer, String> stations_code;
+    ObjectAttributes nodeAttributes;
+
     public ControllerRouteVolumesListener(int startTime, int endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
+        stations_code = Map_Codes.map_codes(std_code);
+        nodeAttributes = new ObjectAttributes();
+        new ObjectAttributesXmlReader(nodeAttributes).parse(nodeAttStr);
     }
 
     private class FacilityGEH
@@ -123,7 +134,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         List<Id<TransitStopFacility>> facilities = analyzer.getFacilities(lineRoute);
         for (Id<TransitStopFacility> facility : facilities) {
             try {
-                writer.write(facility.toString());
+                writer.write(getStaName(facility));
                 int[] volumes = analyzer.getVolumesForRouteAndFacility(lineRoute, facility);
                 String[] a = Arrays.toString(volumes).split("[\\[\\]]")[1].split(", ");
                 writer.writeRecord(a);
@@ -140,7 +151,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
                     + (int) Math.ceil((double) endTime / 3600) + ".csv");
             for (FacilityGEH facGEH : entry.getValue()) {
                 try {
-                    writer.write(facGEH.facilityId.toString());
+                    writer.write(getStaName(facGEH.facilityId));
                     writer.write(String.valueOf(facGEH.entering));
                     writer.write(String.valueOf(facGEH.leaving));
                     writer.write(String.valueOf(facGEH.passthrough));
@@ -213,6 +224,11 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         double sqDiff = Math.pow(sim - real, 2.0);
         double sum = sim + real;
         return Math.sqrt(2 * (sqDiff / sum));
+    }
+
+    private String getStaName(Id<TransitStopFacility> id) {
+        int uvCode = (int) nodeAttributes.getAttribute(id.toString(), "ASSOCIATE_ID");
+        return stations_code.get(uvCode);
     }
 
     public Map<String, double[][]> getGEHMatrix() {
