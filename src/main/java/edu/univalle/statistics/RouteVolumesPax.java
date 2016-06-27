@@ -197,4 +197,13 @@ public class RouteVolumesPax implements PersonEntersVehicleEventHandler, PersonL
         return facilities;
     }
 
+    public int getNumberOfDepartures(String lineRoute) {
+        int departures = 0;
+        for (LineAndRoute lineAndRoute : transitVehicle2currentRoute.values()) {
+            if (lineRoute.equals(lineAndRoute.transitLineId.toString() + "_" + lineAndRoute.transitRouteId.toString()))
+                departures++;
+        }
+        return departures;
+    }
+
 }
