@@ -3,10 +3,13 @@ package edu.univalle.population;
 import java.io.File;
 import java.util.Map;
 
+import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.config.ConfigWriter;
 import org.matsim.core.config.groups.PlansCalcRouteConfigGroup.ModeRoutingParams;
+import org.matsim.core.controler.Controler;
+import org.matsim.core.scenario.ScenarioUtils;
 
 public class Config_prueba
 {
@@ -59,7 +62,7 @@ public class Config_prueba
 
         config1.setParam("controler", "outputDirectory", "./output");
         config1.setParam("controler", "firstIteration", "0");
-        config1.setParam("controler", "lastIteration", "2");
+        config1.setParam("controler", "lastIteration", "0");
         config1.setParam("controler", "routingAlgorithmType", "Dijkstra");
         config1.setParam("controler", "writePlansInterval", "1");
         config1.setParam("controler", "writeEventsInterval", "10");
@@ -218,11 +221,12 @@ public class Config_prueba
             e.printStackTrace();
         }
 
-        // Config config2 = ConfigUtils.loadConfig("./input/config_param_v2.xml");
-        // Scenario scenario = ScenarioUtils.loadScenario(config2);
+        Config config2 = ConfigUtils.loadConfig("./input/config_param_v3.xml");
+        Scenario scenario = ScenarioUtils.loadScenario(config2);
 
-        // Controler controler = new Controler(scenario);
-        // controler.run();
+        Controler controler = new Controler(scenario);
+        controler.run();
+        System.out.println("lo que sea");
 
     }
 
