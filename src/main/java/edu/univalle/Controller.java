@@ -1,11 +1,28 @@
 package edu.univalle;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
+import org.matsim.core.config.groups.NetworkConfigGroup;
 import org.matsim.core.controler.AbstractModule;
 import org.matsim.core.controler.Controler;
+import org.matsim.pt.config.TransitConfigGroup;
+
+import com.google.inject.Provides;
 
 import edu.univalle.mobsim.MIOMobsimModule;
+import edu.univalle.mobsim.framework.Mobsim;
+import edu.univalle.mobsim.qsim.AbstractQSimPlugin;
+import edu.univalle.mobsim.qsim.ActivityEnginePlugin;
+import edu.univalle.mobsim.qsim.PopulationPlugin;
+import edu.univalle.mobsim.qsim.QSimProvider;
+import edu.univalle.mobsim.qsim.TeleportationPlugin;
+import edu.univalle.mobsim.qsim.changeeventsengine.NetworkChangeEventsPlugin;
+import edu.univalle.mobsim.qsim.messagequeueengine.MessageQueuePlugin;
+import edu.univalle.mobsim.qsim.pt.TransitEnginePlugin;
+import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEnginePlugin;
 
 public class Controller
 {
@@ -45,9 +62,33 @@ public class Controller
         controler.addOverridingModule(new AbstractModule() {
             @Override
             public void install() {
+                this.install(new com.google.inject.AbstractModule() {
+                    @Override
+                    protected void configure() {
+                        bind(Mobsim.class).toProvider(QSimProvider.class);
+                    }
+
+                    @Provides
+                    Collection<AbstractQSimPlugin> provideQSimPlugins(TransitConfigGroup transitConfigGroup,
+                            NetworkConfigGroup networkConfigGroup, Config config) {
+                        final Collection<AbstractQSimPlugin> plugins = new ArrayList<>();
+                        plugins.add(new MessageQueuePlugin(config));
+                        plugins.add(new ActivityEnginePlugin(config));
+                        plugins.add(new QNetsimEnginePlugin(config));
+                        if (networkConfigGroup.isTimeVariantNetwork()) {
+                            plugins.add(new NetworkChangeEventsPlugin(config));
+                        }
+                        if (transitConfigGroup.isUseTransit()) {
+                            plugins.add(new TransitEnginePlugin(config));
+                        }
+                        plugins.add(new TeleportationPlugin(config));
+                        plugins.add(new PopulationPlugin(config));
+                        return plugins;
+                    }
+                });
                 // this.bind(AbstractModule.class).toInstance(new DefaultMobsimModule());
 
-                this.install(new MIOMobsimModule());
+                // this.install(new MIOMob simModule());
 
                 /*this.bindMobsim().toProvider(new Provider<Mobsim>() {
                     @Override
