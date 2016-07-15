@@ -36,6 +36,8 @@ import com.google.inject.Module;
 import com.google.inject.Provider;
 import com.google.inject.Provides;
 
+import edu.univalle.qnetsimengine.BRTProvider;
+
 import org.matsim.core.controler.AbstractModule;
 
 public class Controller
