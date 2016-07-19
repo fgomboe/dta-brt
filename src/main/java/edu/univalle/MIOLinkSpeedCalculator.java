@@ -17,9 +17,12 @@
  *                                                                         *
  * *********************************************************************** */
 
-package edu.univalle.mobsim.qsim.qnetsimengine;
+package edu.univalle;
 
 import org.matsim.api.core.v01.network.Link;
+
+import edu.univalle.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
+import edu.univalle.mobsim.qsim.qnetsimengine.QVehicle;
 
 /**
  * A simple link speed calculator taking the vehicle's max speed and the link's
