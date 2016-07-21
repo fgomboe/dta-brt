@@ -6,8 +6,6 @@ import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.config.groups.QSimConfigGroup;
 import org.matsim.core.controler.Controler;
-import org.matsim.core.mobsim.framework.Mobsim;
-import org.matsim.core.mobsim.jdeqsim.MessageQueue;
 import org.matsim.core.mobsim.qsim.ActivityEngine;
 import org.matsim.core.mobsim.qsim.QSim;
 import org.matsim.core.mobsim.qsim.TeleportationEngine;
@@ -16,14 +14,14 @@ import org.matsim.core.mobsim.qsim.agents.DefaultAgentFactory;
 import org.matsim.core.mobsim.qsim.agents.PopulationAgentSource;
 import org.matsim.core.mobsim.qsim.agents.TransitAgentFactory;
 import org.matsim.core.mobsim.qsim.changeeventsengine.NetworkChangeEventsEngine;
-import org.matsim.core.mobsim.qsim.jdeqsimengine.SteppableScheduler;
 import org.matsim.core.mobsim.qsim.pt.ComplexTransitStopHandlerFactory;
 import org.matsim.core.mobsim.qsim.pt.TransitQSimEngine;
+import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEngine;
+
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
-import edu.univalle.mobsim.qsim.qnetsimengine.MessageQueueEngine;
-import edu.univalle.mobsim.qsim.qnetsimengine.QNetsimEngine;
+import edu.univalle.mobsim.MIOLinkSpeedCalculator;
 
 import org.matsim.core.controler.AbstractModule;
 
@@ -62,17 +60,17 @@ public class Controller
 
             QSim qSim = new QSim(scenario, eventsManager);
 
-            MessageQueue messageQueue = new MessageQueue();
+            /*MessageQueue messageQueue = new MessageQueue();
             SteppableScheduler steppableScheduler = new SteppableScheduler(messageQueue);
             MessageQueueEngine messageQueueEngine = new MessageQueueEngine(steppableScheduler);
-            qSim.addQueueSimulationListeners(messageQueueEngine);
+            qSim.addQueueSimulationListeners(messageQueueEngine);*/
             //
             ActivityEngine activityEngine = new ActivityEngine(eventsManager, qSim.getAgentCounter());
             qSim.addMobsimEngine(activityEngine);
             qSim.addActivityHandler(activityEngine);
             //
             QNetsimEngine netsimEngine = new QNetsimEngine(qSim);
-            // netsimEngine.setLinkSpeedCalculator(new MIOLinkSpeedCalculator());
+            netsimEngine.setLinkSpeedCalculator(new MIOLinkSpeedCalculator());
             qSim.addMobsimEngine(netsimEngine);
             qSim.addDepartureHandler(netsimEngine.getDepartureHandler());
             //
