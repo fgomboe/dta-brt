@@ -32,12 +32,13 @@ public class Controller
         Config config = ConfigUtils.loadConfig("input/config_dummy.xml");
         Controler controler = new Controler(config);
 
-        controler.addOverridingModule(new AbstractModule() {
+        // Uncomment to install custom speed for buses (MIO)
+        /*controler.addOverridingModule(new AbstractModule() {
             @Override
             public void install() {
                 bindMobsim().toProvider(CustomSpeedOnLinks.class);
             }
-        });
+        });*/
 
         controler.run();
     }
