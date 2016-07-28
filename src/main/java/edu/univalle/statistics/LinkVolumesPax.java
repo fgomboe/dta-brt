@@ -220,5 +220,7 @@ public class LinkVolumesPax implements LinkLeaveEventHandler, PersonEntersVehicl
     @Override
     public void reset(final int iteration) {
         this.links.clear();
+        this.vehicleLoads.clear();
+        this.nonBoardingPassengers.clear();
     }
 }

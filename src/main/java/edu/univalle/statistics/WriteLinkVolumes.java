@@ -31,7 +31,7 @@ public class WriteLinkVolumes
     private Config config;
     private Scenario scenario;
     private EventsManager manager;
-    LinkVolumesPax analyzer;
+    private LinkVolumesPax analyzer;
     private MatsimEventsReader eventsReader;
     private CsvWriter writer;
 

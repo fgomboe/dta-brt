@@ -5,6 +5,8 @@ import org.matsim.core.api.experimental.events.EventsManager;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.config.groups.QSimConfigGroup;
+import java.util.Map;
+
 import org.matsim.core.controler.Controler;
 import org.matsim.core.mobsim.qsim.ActivityEngine;
 import org.matsim.core.mobsim.qsim.QSim;
@@ -17,13 +19,11 @@ import org.matsim.core.mobsim.qsim.changeeventsengine.NetworkChangeEventsEngine;
 import org.matsim.core.mobsim.qsim.pt.ComplexTransitStopHandlerFactory;
 import org.matsim.core.mobsim.qsim.pt.TransitQSimEngine;
 import org.matsim.core.mobsim.qsim.qnetsimengine.QNetsimEngine;
-
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 import edu.univalle.mobsim.MIOLinkSpeedCalculator;
-
-import org.matsim.core.controler.AbstractModule;
+import edu.univalle.statistics.ControllerRouteVolumesListener;
 
 public class Controller
 {
@@ -39,6 +39,18 @@ public class Controller
                 bindMobsim().toProvider(CustomSpeedOnLinks.class);
             }
         });*/
+
+        ControllerRouteVolumesListener otroController = new ControllerRouteVolumesListener(61200, 68400);
+        controler.addControlerListener(otroController);
+        controler.run();
+        System.out.println("El peor GEH es: " + otroController.getWorstGEH());
+        Map<String, double[][]> gehValues = otroController.getGEHMatrix();
+        for (double[][] geh : gehValues.values()) {
+            for (double[] estacion : geh) {
+                // System.out.println(estacion[0] + "\t" + estacion[1] + "\t" + estacion[2] + "\t" + estacion[3]);
+            }
+            // System.out.println("");
+        }
 
         controler.run();
     }
