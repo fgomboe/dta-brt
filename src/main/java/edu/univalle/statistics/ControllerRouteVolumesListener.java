@@ -270,4 +270,22 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
     public int getNumberOfDepartures(String lineRoute) {
         return analyzer.getNumberOfDepartures(lineRoute);
     }
+
+    public Map<String, int[][]> getVolumeMatrix() {
+        Map<String, int[][]> volumesCube = new HashMap<>();
+
+        String[] lineRoutes = analyzer.getLineRoutes();
+        for (String lineRoute : lineRoutes) {
+            List<Id<TransitStopFacility>> facilities = analyzer.getFacilities(lineRoute);
+            int[][] facVolumes = new int[facilities.size()][4];
+            int counter = 0;
+            for (Id<TransitStopFacility> facility : facilities) {
+                facVolumes[counter] = analyzer.getVolumesForRouteAndFacility(lineRoute, facility);
+                counter++;
+            }
+            volumesCube.put(lineRoute, facVolumes);
+        }
+
+        return volumesCube;
+    }
 }
