@@ -21,3 +21,6 @@ hs_err_pid*
 
 # Temporal files in windows
 ~$*
+
+# Carpeta stats
+/stats/*
