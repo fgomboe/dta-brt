@@ -27,7 +27,7 @@ import org.matsim.core.mobsim.qsim.qnetsimengine.LinkSpeedCalculator;
 import org.matsim.core.mobsim.qsim.qnetsimengine.QVehicle;
 import org.matsim.utils.objectattributes.ObjectAttributes;
 
-import edu.univalle.statistics.calcLinkSpeedStats;
+import edu.univalle.statistics.CalcLinkSpeedStats;
 
 /**
  * A simple link speed calculator taking the vehicle's max speed and the link's
@@ -37,11 +37,11 @@ import edu.univalle.statistics.calcLinkSpeedStats;
  */
 public class MIOLinkSpeedCalculator implements LinkSpeedCalculator
 {
-    calcLinkSpeedStats calculator;
+    CalcLinkSpeedStats calculator;
     Random r;
 
     public MIOLinkSpeedCalculator() {
-        calculator = new calcLinkSpeedStats();
+        calculator = new CalcLinkSpeedStats();
         calculator.readInput("input/specialNodeAttributes.xml", "input/networkMIO/stops.csv",
                 "input/linkSpeeds/semana_abril.csv");
         r = new Random();

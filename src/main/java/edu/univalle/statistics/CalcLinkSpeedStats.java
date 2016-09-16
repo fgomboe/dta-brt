@@ -17,7 +17,7 @@ import org.matsim.utils.objectattributes.ObjectAttributesXmlReader;
 import edu.univalle.network.NetworkCreatorMIO;
 import edu.univalle.utils.CsvReader;
 
-public class calcLinkSpeedStats
+public class CalcLinkSpeedStats
 {
 
     private final static Logger log = Logger.getLogger(NetworkCreatorMIO.class);
@@ -45,7 +45,7 @@ public class calcLinkSpeedStats
     Map<String, Map<Integer, AvgStdDev>> name2AvgStdDev;
 
     public static void main(String[] args) {
-        calcLinkSpeedStats calculator = new calcLinkSpeedStats();
+        CalcLinkSpeedStats calculator = new CalcLinkSpeedStats();
         calculator.readInput("input/specialNodeAttributes.xml", "input/networkMIO/stops.csv",
                 "input/linkSpeeds/semana_abril.csv");
         System.out.println("5\t" + calculator.getAverage("39-2", 5) + "\t" + calculator.getStdDev("39-2", 5));
