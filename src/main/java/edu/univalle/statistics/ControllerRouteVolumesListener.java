@@ -1,5 +1,6 @@
 package edu.univalle.statistics;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
     private final String std_code = "input/std_code.csv";
     private final String nodeAttStr = "./input/specialNodeAttributes.xml";
     private final String inputDirectory = "./input/stats/volumes";
+    private String outputDirectory = "./output";
     private final int startTime;
     private final int endTime;
     private RouteVolumesPax analyzer;
@@ -110,6 +112,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
 
     private void openWriter(String outputFile) {
         try {
+            new File(outputDirectory).mkdirs();
             writer = new CsvWriter(outputFile);
             writer.writeRecord(volumeVariables);
         }
@@ -126,7 +129,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
     }
 
     private void writeSimVolumes(String lineRoute) {
-        openWriter("stats/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
+        openWriter(outputDirectory + "/Volumes-" + lineRoute + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
                 + (int) Math.ceil((double) endTime / 3600) + ".csv");
 
         List<Id<TransitStopFacility>> facilities = analyzer.getFacilities(lineRoute);
@@ -143,14 +146,14 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         }
 
         closeWriter();
-        log.info("Volumes written to file: stats/Volumes-" + lineRoute + "_"
+        log.info("Volumes written to file: " + outputDirectory + "/Volumes-" + lineRoute + "_"
                 + (int) Math.ceil((double) startTime / 3600) + "-" + (int) Math.ceil((double) endTime / 3600) + ".csv");
     }
 
     private void writeGEHs() {
         for (Map.Entry<String, List<FacilityGEH>> entry : lineRouteFacilityGEH.entrySet()) {
-            openWriter("stats/GEH-" + entry.getKey() + "_" + (int) Math.ceil((double) startTime / 3600) + "-"
-                    + (int) Math.ceil((double) endTime / 3600) + ".csv");
+            openWriter(outputDirectory + "/GEH-" + entry.getKey() + "_" + (int) Math.ceil((double) startTime / 3600)
+                    + "-" + (int) Math.ceil((double) endTime / 3600) + ".csv");
             for (FacilityGEH facGEH : entry.getValue()) {
                 try {
                     writer.write(getStaName(facGEH.facilityId));
@@ -165,7 +168,7 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
                 }
             }
             closeWriter();
-            log.info("GEHs written to file: stats/GEH-" + entry.getKey() + "_"
+            log.info("GEHs written to file: " + outputDirectory + "/GEH-" + entry.getKey() + "_"
                     + (int) Math.ceil((double) startTime / 3600) + "-" + (int) Math.ceil((double) endTime / 3600)
                     + ".csv");
         }
@@ -287,5 +290,9 @@ public class ControllerRouteVolumesListener implements StartupListener, Iteratio
         }
 
         return volumesCube;
+    }
+
+    public void setOutputDirectory(String outDir) {
+        outputDirectory = outDir;
     }
 }
