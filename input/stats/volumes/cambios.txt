@@ -1,0 +1,34 @@
+En la ruta E21-Vuelta, se quitaron las estaciones PLZ TOROS 
+y REFUGIO, ya que no concuerdan con el transitSchedule de 
+MATSim, y adicionalmente, no hay actividad en estas estaciones.
+
+En la ruta E31-Vuelta, se quitó la estación PLZ TOROS, ya que 
+no concuerda con el transitSchedule de MATSim, y 
+adicionalmente, no hay actividad en esta estación.
+
+E21-Vuelta_6-8
+--------------------------
+PLZ TOROS,0,0,630,630
+REFUGIO,0,0,558,558
+
+E21-Vuelta_12-14
+--------------------------
+PLZ TOROS,0,0,820,820
+REFUGIO,0,0,779,779
+
+E21-Vuelta_17-19
+--------------------------
+PLZ TOROS,0,0,1501,1501
+REFUGIO,0,0,1310,1310
+
+E31-Vuelta_6-8
+--------------------------
+PLZ TOROS,0,0,1362,1362
+
+E31-Vuelta_12-14
+--------------------------
+PLZ TOROS,0,0,723,723
+
+E31-Vuelta_17-19
+--------------------------
+PLZ TOROS,0,0,1680,1680
