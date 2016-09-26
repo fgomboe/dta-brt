@@ -655,7 +655,7 @@
 		</transitRoute>
 	</transitLine>
 	<transitLine id="E31">
-		<transitRoute id="Ida">
+		<transitRoute id="Vuelta">
 			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="CHIMI3" departureOffset="00:00:00" awaitDeparture="true"/>
@@ -836,7 +836,7 @@
 				<departure id="99" departureTime="18:12:42" vehicleRefId="E31_99"/>
 			</departures>
 		</transitRoute>
-		<transitRoute id="Vuelta">
+		<transitRoute id="Ida">
 			<transportMode>pt</transportMode>
 			<routeProfile>
 				<stop refId="UNIV4" departureOffset="00:00:00" awaitDeparture="true"/>
